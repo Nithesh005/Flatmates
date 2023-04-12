@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Login</title>
@@ -9,8 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- stylesheet-->
-    <link rel="stylesheet"
-            href="<?php echo base_url(); ?>/assets/css/login.css?version=<?php echo rand(); ?>">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/login.css?version=<?php echo rand(); ?>">
     <!-- google font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A400&display=swap" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -49,7 +49,7 @@
                             <div class="m-3">
                                 <div class="form-outline mb-4 input-container">
                                     <input type="text" name="reg_no" class="input" placeholder=" " id="reg_no" onblur="Alphanumeric()" />
-                                  
+
                                     <label for="reg_no" class="placeholder label">Register No </label>
                                     <span id="studentUid_err"></span>
                                 </div>
@@ -210,10 +210,9 @@
 
         $('#intern_log_btn').on('click', function() {
             console.log(validateDate());
-            if(Alphanumeric() && validateDate()){
+            if (Alphanumeric() && validateDate()) {
                 alert("Success");
-            }
-            else{
+            } else {
                 alert("Fail");
             }
         });
@@ -228,38 +227,37 @@
         //     }
         // });
 
-// admin log in 
-        $(document).on('click','#admin_log_btn',function(event){
+        // admin log in 
+        $(document).on('click', '#admin_log_btn', function(event) {
             event.preventDefault();
             // alert('ahi');
             var user_id = $('#adminId').val();
             var password = $('#adminpasword').val();
             $.ajax({
-                    url:"<?php echo base_url('public/index.php/Intern_controller/admin_login'); ?>",
-                    method:"POST",
-                    dataType:"json",
-                    data:{
-                        user_id:user_id,
-                        password:password,
-                    },
-                    success:function(res){
-                        console.log("Admin Login");
-                        if (res === "success") {
-                            // alert("login success");
-                            location.replace("<?php echo base_url(); ?>public/index.php/Home/load_option/card_show_more");
-                        }
-                        else if(res==="new"){
-                            alert("Invalid Admin");
+                url: "<?php echo base_url('public/index.php/Intern_controller/admin_login'); ?>",
+                method: "POST",
+                dataType: "json",
+                data: {
+                    user_id: user_id,
+                    password: password,
+                },
+                success: function(res) {
+                    console.log("Admin Login");
+                    if (res === "success") {
+                        // alert("login success");
+                        location.replace("<?php echo base_url(); ?>public/index.php/Home/load_option/card_show_more");
+                    } else if (res === "new") {
+                        alert("Invalid Admin");
 
-                        }
-                        // alert(res);
-                        // console.log(res);
-
-                    },
-                    error:function(er){
-                        console.log("Login Error");
-                        console.log(er);
                     }
+                    // alert(res);
+                    // console.log(res);
+
+                },
+                error: function(er) {
+                    console.log("Login Error");
+                    console.log(er);
+                }
             });
 
         });
