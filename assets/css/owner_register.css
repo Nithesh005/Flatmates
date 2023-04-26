@@ -1,0 +1,208 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+  
+  .container{
+    margin-top: 10%;
+  }
+  
+  body{
+    min-height: 100vh;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size:16px;
+  }
+  
+  .navbar{
+    padding:2% ;
+    font-weight: bolder;
+    font-size:16px;
+  }
+  .navbar-brand{
+    color:  #0492c2;
+    opacity:0.8;
+    font-size: 25px;
+    font-weight: bolder;
+  }
+  
+  img{
+    width:150px;
+  }
+  /* chatbot*/
+  #box{
+  width: 400px;
+  height: auto;
+  box-shadow: 5px 5px 20px #000;
+  position: fixed;
+  top: 65%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: none;
+  }
+  .top{
+  width: 100%;
+  height: auto;
+  z-index: 3;
+  background: #2a2f32;
+  }
+  .top h1{
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+  padding-top: 10px;
+  text-align: center;
+  font-family: monospace;
+  }
+  .mid{
+  width: 100%;
+  height: auto;
+  background: white;
+  }
+  .mid .chat{
+  width: 100%;
+  background: white;
+  }
+  .mid .chat h2{
+  margin: 0;
+  font-size: 20px;
+  color: #000;
+  background: white;
+  padding: 30px 20px;
+  
+  }
+  .mid .chat p{
+  margin: 0;
+  font-size: 20px;
+  background: white;
+  padding: 50px 20px;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 0.04;
+  }
+  .input{
+  width: 100%;
+  height:auto;
+  overflow: hidden;
+  }
+  
+  .container{
+      max-width: none;
+  }
+  .input input{
+  width: 80%;
+  height: auto;
+  outline: none;
+  border: none;
+  padding-top: 0;
+  font-family: cursive;
+  color: black;
+  font-size: 20px;
+  background: white;
+  padding: 25px;
+  }
+      .chat{
+        float:right;
+        margin-top:17px;
+      }
+      
+      
+      /* mycode */
+      
+      .signin {
+          text-align: center;
+          border-radius: 20px;
+          background-color: #000000;
+      }
+  
+  
+  .input-container {
+      height: 50px;
+      position: relative;
+      width: 100%;
+  }
+  
+  input {
+      border-width: 1px;
+      opacity: 0.7;
+  }
+  
+  .input {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-sizing: border-box;
+      color: #000000;
+      font-size: 18px;
+      height: 100%;
+      outline: 0;
+      padding: 10px 15px;
+      width: 100%;
+  
+  }
+  
+  
+  
+  
+  
+  .placeholder {
+      color: #000000;
+      background-color: white;
+      font-family: sans-serif;
+      left: 20px;
+      line-height: 14px;
+      pointer-events: none;
+      position: absolute;
+      transform-origin: 0 50%;
+      opacity: 100%;
+      transition: transform 200ms, color 200ms;
+      top: 20px;
+  }
+  
+  .input:focus~.placeholder,
+  .input:not(:placeholder-shown)~.placeholder {
+      transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+  
+  
+  .input:focus~.placeholder {
+      color: #000000;
+  }
+  
+  .pin {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      display: inline-block;
+      right: 20px;
+      position: absolute;
+      top: 15px;
+  }
+  
+  .hidden {
+      display: none;
+  }
+  
+  .pin-icon {
+      font-size: 20px;
+      color: #0000007e;
+  
+  }
+  .button-next-back{
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+  }
+  
+  .btn-lg{
+      width: 120px;
+     margin-left: 10px;
+  }
+  .m-3{
+      padding: 4px;
+  }
+  
+  
+  
+  
+  
