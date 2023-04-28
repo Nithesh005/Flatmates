@@ -7,7 +7,7 @@ class Home extends BaseController
     public function index()
     {
     //     return view('tenat_dashboard');
-    return view('login');
+    return view('tenant');
 
     }
     // public function index()
