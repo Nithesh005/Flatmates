@@ -254,11 +254,11 @@
             var sname = $('#sname').val();
             var sname = $('#sname').val();
             var sname = $('#sname').val();
-            console.log(sname);
+            // console.log(sname);
             $.ajax({
                 url: "<?php echo base_url() ?>./public/index.php/dbcontrollers/reg_user_data",
                 method: "POST",
-                dataType: "json",
+                // dataType: "json",
                 data:{
                     sname: sname,
                 },
