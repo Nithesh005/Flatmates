@@ -23,5 +23,8 @@ class Home extends BaseController
         elseif ($name=="tenant_dashboard") {
             return view('tenant_dashboard');
         }
+        elseif ($name=="tenant_register") {
+            return view('tenant_regiter');
+        }
     }
 }
