@@ -18,7 +18,7 @@
 
 <body>
 
-    <?php require_once "header.php"; ?>
+    <?php require_once "after_login_header.php"; ?>
     <br>
     <div class="container d-flex justify-content-end">
         <button type="button" class="btn btn-outline-primary mt-100" data-bs-toggle="modal" data-bs-target="#popup" data-bs-whatever="@fat"><i class="fa-solid fa-plus"></i> New House</button>

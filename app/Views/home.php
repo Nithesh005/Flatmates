@@ -31,7 +31,7 @@
 
         <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/styles.css?version=<?php echo rand(); ?>">
 
-    <img class="ui large left floated image" src="<?php echo  base_url(); ?>./assests/logo.png">
+    <!-- <img class="ui large left floated image" src="<?php echo  base_url(); ?>./assests/logo.png"> -->
     <!-- <link rel="shortcut icon" type="image/png" href="./assests/logo.png"/> -->
 
 
@@ -41,39 +41,7 @@
 <body>
   
     <!-- header -->
-    
-        <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
-            <div class="container">
-                <a href="" class="navbar-brand">Rooms</a>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavBar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse " id=myNavBar>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#about" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#service" class="nav-link">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#footer" class="nav-link">contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="login.php" class="nav-link text-dark">Sign in</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url('./public/index.php/home/tenant_register')?>" class="nav-link text-dark">Sign up</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <?php require_once "header.php"; ?>
     <!-- header -->
 
     <!-- main -->
@@ -128,10 +96,11 @@
                         <div class="col-lg-6">
                             <div class="row g-3">
                                 <div class="col-6 text-end">
-                                    <img class="img-fluid rounded w-90 wow zoomIn" data-wow-delay="0.1s" src="./assests/part1.png" >
+                                <!-- <img class="" src="<?php echo base_url(); ?>./assests/part1.png"> -->
+                                <img class="ui large left floated image" src=" <?php echo base_url(); ?>/assets/assets_img/part1.png">
                                 </div>
                                 <div class="col-6 text-start">
-                                    <img class="img-fluid rounded w-90 wow zoomIn" data-wow-delay="0.3s" src="./assests/part2.png" >
+                                    <img class="img-fluid rounded w-90 wow zoomIn" data-wow-delay="0.3s" src=" <?php echo base_url(); ?>/assets/assets_img/part1.png" >
                                 </div>
                                 <div class="col-6 text-end">
                                     <img class="img-fluid rounded w-90 wow zoomIn" data-wow-delay="0.5s" src="./assests/part3.png" >
@@ -140,8 +109,7 @@
                                     <img class="img-fluid rounded w-90 wow zoomIn" data-wow-delay="0.7s" src="./assests/part4.png">
                                 </div>
                             </div>
-                        </div>
-                          
+                        </div>                          
                         <div class="col-lg-6">
                             <h1 class="mb-4"><span class="text-primary text-uppercase">Benefits</span> of our co-living</h1>
                             <h5 class="mb-4"> Verified & onboarded by our agents.Every property detail on just a click.</h5>

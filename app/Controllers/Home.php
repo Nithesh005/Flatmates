@@ -8,6 +8,7 @@ class Home extends BaseController
     {
     //     return view('tenat_dashboard');
     return view('home');
+    
 }
 public function tenant_register()
 {
