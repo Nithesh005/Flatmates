@@ -41,7 +41,7 @@
                     <a href="<?php echo base_url('./public/index.php/home') ?>" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
+                        <a href="#footer" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
                         <a href="#service" class="nav-link">Services</a>
@@ -78,8 +78,8 @@
                         <div class="container-fo0t">
                             <a class="btn btn-link" href="/">About Us</a>
                             <a class="btn btn-link" href="/">Contact Us</a>
-                            <a class="btn btn-link" href="">Privacy Policy</a>
-                            <a class="btn btn-link" href="terms&conditions.php">Terms & Conditions</a>
+                            <a class="btn btn-link" href="privacy_policy">Privacy Policy</a>
+                            <a class="btn btn-link" href="terms_conditions">Terms & Conditions</a>
                             <a class="btn btn-link" href="">Support</a>
                         </div>
                     </div>

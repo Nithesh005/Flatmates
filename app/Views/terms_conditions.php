@@ -207,10 +207,10 @@
                 <div class="container pb-5">
                     <div class="row g-5">
                         <div class="container-fo0t">
-                            <a class="btn btn-link" href="/">About Us</a>
+                            <a class="btn btn-link" href="#">About Us</a>
                             <a class="btn btn-link" href="/">Contact Us</a>
-                            <a class="btn btn-link" href="">Privacy Policy</a>
-                            <a class="btn btn-link" href="terms&conditions.php">Terms & Conditions</a>
+                            <a class="btn btn-link" href="privacy_policy">Privacy Policy</a>
+                            <a class="btn btn-link" href="terms_conditions">Terms & Conditions</a>
                             <a class="btn btn-link" href="">Support</a>
                         </div>
                     </div>
