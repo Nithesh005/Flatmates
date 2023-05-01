@@ -68,7 +68,7 @@
                             <a href="login.php" class="nav-link text-dark">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a href="login.php" class="nav-link text-dark">Sign up</a>
+                            <a href="<?php echo base_url('./public/index.php/home/tenant_register')?>" class="nav-link text-dark">Sign up</a>
                         </li>
                     </ul>
                 </div>
