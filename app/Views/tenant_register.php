@@ -259,6 +259,9 @@
                 url: "<?php echo base_url() ?>./public/index.php/dbcontrollers/reg_user_data",
                 method: "POST",
                 dataType: "json",
+                data:{
+                    sname: sname,
+                },
                 success: function(res) {
                     console.log(res)
                 },
