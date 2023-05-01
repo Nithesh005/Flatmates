@@ -6,7 +6,8 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('home');
+        // return view('home');
+        return view('tenant_register');
     }
 
 
@@ -24,7 +25,7 @@ class Home extends BaseController
             return view('tenant_dashboard');
         }
         elseif ($name=="tenant_register") {
-            return view('tenant_regiter');
+            return view('tenant_register');
         }
     }
 }
