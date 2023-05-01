@@ -30,6 +30,17 @@ class dbcontrollers extends BaseController{
         $aadhar_id = $this->request->getvar('aadhar_id');
         // $tenant_pasword = $this->request->getvar('tenant_pasword');
         $reg_data['sname'] = $this->request->getvar('tenant_mail');
+        $reg_data['email_id'] = $email_id;
+        $reg_data['mobile'] = $mobile;
+        $reg_data['password_id'] = $password_id;
+        $reg_data['occupation_id'] = $occupation_id;
+        $reg_data['address_id'] = $address_id;
+        $reg_data['city_id'] = $city_id;
+        $reg_data['state_id'] = $state_id;
+        $reg_data['profile_file_txt'] = $profile_file_txt;
+        $reg_data['resume_file_txt'] = $resume_file_txt;
+        $reg_data['bonafide_file_txt'] = $bonafide_file_txt;
+        $reg_data['aadhar_id'] = $aadhar_id;
         $res = $this->datas->reg_user_data_model($reg_data);   
         echo json_encode("res");
     }
