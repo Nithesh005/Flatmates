@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2023 at 08:24 AM
+-- Generation Time: May 01, 2023 at 04:30 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,6 +20,17 @@ SET time_zone = "+00:00";
 --
 -- Database: `flatmates`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `aadhar_card`
+--
+
+CREATE TABLE `aadhar_card` (
+  `aadhar_card_no` int(12) NOT NULL,
+  `email_address` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
