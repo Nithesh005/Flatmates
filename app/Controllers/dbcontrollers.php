@@ -13,4 +13,10 @@ class dbcontrollers extends BaseController{
         $tenant_pasword = $this->request->getvar('tenant_pasword');
         echo json_encode($tenant_mail);
     }
+    public function reg_user_data(){
+        $sname = $this->request->getvar('tenant_mail');
+        // $tenant_pasword = $this->request->getvar('tenant_pasword');
+
+        echo json_encode($sname);
+    }
 }
