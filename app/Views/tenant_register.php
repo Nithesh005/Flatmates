@@ -38,12 +38,14 @@
 </head>
 
 <body>
-
+    <!-- header -->
+    <?php require_once "header.php"; ?>
+    <!-- header -->
     <div class="container mb-4">
         <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-lg-6">
-                <form action="<?php echo base_url('public/index.php/home/owner_dashboard'); ?>" method="post"
+                <form action="" method="post"
                     enctype="multipart/form-data">
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
@@ -237,12 +239,13 @@
                                     </div>
 
                                     <div class="m-3">
-                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="domain" id="domain">
-                                        <option selected disabled>Looking House for</option>
-                                        <option value="Family">Family</option>
-                                        <option value="Bachelor">Bachelor</option>
-                                    </select>
-                                </div>
+                                        <select class="form-select form-select-lg mb-3"
+                                            aria-label=".form-select-lg example" name="domain" id="domain">
+                                            <option selected disabled>Looking House for</option>
+                                            <option value="Family">Family</option>
+                                            <option value="Bachelor">Bachelor</option>
+                                        </select>
+                                    </div>
 
 
                                     <div class="row m-3">
@@ -279,7 +282,20 @@
     <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
     <script>
         $('#reg_third_btn').click(function(){
-            alert("hau");
+            var sname = $('#sname').val();
+            var sname = $('#sname').val();
+            var sname = $('#sname').val();
+            var sname = $('#sname').val();
+            var sname = $('#sname').val();
+            var sname = $('#sname').val();
+            var sname = $('#sname').val();
+            var sname = $('#sname').val();
+            var sname = $('#sname').val();
+            var sname = $('#sname').val();
+            var sname = $('#sname').val();
+            alert(sname);
+            
+            
         })
         // next button function
         $(document).on('click', '.next_click', function (event) {
@@ -420,7 +436,6 @@
             const occupationInput = document.getElementById('occupation_id');
             const occupation = occupationInput.value;
             const regex = /^[a-zA-Z]+$/; // regular expression to match department pattern
-            // alert("hai");
             if (!regex.test(occupation)) {
                 $('#occupation_err').text("Enter a valid occupation");
                 $("#occupation_err").css({
