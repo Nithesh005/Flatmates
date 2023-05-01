@@ -244,16 +244,18 @@
     <script>
         $('#reg_third_btn').click(function() {
             var sname = $('#sname').val();
-            var sname = $('#sname').val();
-            var sname = $('#sname').val();
-            var sname = $('#sname').val();
-            var sname = $('#sname').val();
-            var sname = $('#sname').val();
-            var sname = $('#sname').val();
-            var sname = $('#sname').val();
-            var sname = $('#sname').val();
-            var sname = $('#sname').val();
-            var sname = $('#sname').val();
+            var email_id = $('#email_id').val();
+            var mobile = $('#mobile').val();
+            var password_id = $('#password_id').val();
+            var occupation_id = $('#occupation_id').val();
+            var address_id = $('#address_id').val();
+            var city_id = $('#city_id').val();
+            var state_id = $('#state_id').val();
+            var profile_file_txt = $('#profile_file_txt').val();
+            var resume_file_txt = $('#resume_file_txt').val();
+            var bonafide_file_txt = $('#bonafide_file_txt').val();
+            var aadhar_id = $('#aadhar_id').val();
+
             console.log(sname);
             $.ajax({
                 url: "<?php echo base_url() ?>./public/index.php/dbcontrollers/reg_user_data",
@@ -261,6 +263,17 @@
                 dataType: "json",
                 data:{
                     sname: sname,
+                    email_id: email_id,
+                    mobile: mobile,
+                    password_id: password_id,
+                    occupation_id: occupation_id,
+                    address_id: address_id,
+                    city_id: city_id,
+                    state_id: state_id,
+                    profile_file_txt: profile_file_txt,
+                    resume_file_txt: resume_file_txt,
+                    bonafide_file_txt: bonafide_file_txt,
+                    aadhar_id: aadhar_id,
                 },
                 success: function(res) {
                     console.log(res)
@@ -271,7 +284,6 @@
                 }
             })
 
-        })
 
         // next button function
         $(document).on('click', '.next_click', function(event) {
