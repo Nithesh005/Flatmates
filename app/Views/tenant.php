@@ -43,7 +43,7 @@
         <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-lg-6">
-                <form action="<?php echo base_url('public/index.php/Intern_controller/demo_reg'); ?>" method="post"
+                <form action="<?php echo base_url('public/index.php/home/owner_dashboard'); ?>" method="post"
                     enctype="multipart/form-data">
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
@@ -278,6 +278,9 @@
     <script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
     <script>
+        $('#reg_third_btn').click(function(){
+            alert("hau");
+        })
         // next button function
         $(document).on('click', '.next_click', function (event) {
             event.preventDefault();

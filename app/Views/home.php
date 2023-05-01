@@ -21,8 +21,12 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- bootsrap -->
-    <link rel="stylesheet" href="./assests/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assests/css/styles.css">
+    <!-- <link rel="stylesheet" href="./assests/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="./assests/css/styles.css"> -->
+    <!-- <link rel="stylesheet" href="<?php echo base_url(); ?>./assets/css/style.css?version=<?php echo rand(); ?>"> -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/styles.css">
+
+
 
     <link rel="shortcut icon" type="image/png" href="./assests/logo.png"/>
 
