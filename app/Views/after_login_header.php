@@ -36,10 +36,10 @@
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a href="<?php echo base_url('./public/index.php/home') ?>" class="nav-link">Home</a>
+                    <a href="<?php echo base_url('./public/index.php/Home/load_option/homepage') ?>"class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
+                    <a href="#service" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
                         <a href="#service" class="nav-link">Services</a>
@@ -48,8 +48,9 @@
                         <a href="#footer" class="nav-link">contact</a>
                     </li>
                     <li class="nav-item">
-                    <a href="<?php echo base_url('./public/index.php/home/owner_register') ?>" class="nav-link text-dark">Sign in</a>
+                    <a href="<?php echo base_url('/public/index.php/Home/load_option/login') ?>" class="nav-link text-dark">Sign in</a>
                     </li>
+
                 </ul>
                 <!-- Left links -->
             </div>
