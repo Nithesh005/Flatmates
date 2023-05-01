@@ -38,7 +38,9 @@
 </head>
 
 <body>
-
+    <!-- header -->
+    <?php require_once "header.php"; ?>
+    <!-- header -->
     <div class="container mb-4">
         <div class="row">
             <div class="col-lg-3"></div>
@@ -237,12 +239,13 @@
                                     </div>
 
                                     <div class="m-3">
-                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="domain" id="domain">
-                                        <option selected disabled>Looking House for</option>
-                                        <option value="Family">Family</option>
-                                        <option value="Bachelor">Bachelor</option>
-                                    </select>
-                                </div>
+                                        <select class="form-select form-select-lg mb-3"
+                                            aria-label=".form-select-lg example" name="domain" id="domain">
+                                            <option selected disabled>Looking House for</option>
+                                            <option value="Family">Family</option>
+                                            <option value="Bachelor">Bachelor</option>
+                                        </select>
+                                    </div>
 
 
                                     <div class="row m-3">

@@ -6,22 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <!-- Font aswesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Document</title>
 </head>
 <style>
 
-</style>   
+</style>
 
 <body>
 
-    <?php require_once "header.php"; ?>
+    <?php require_once "after_login_header.php"; ?>
     <br>
     <div class="container d-flex justify-content-end">
-        <button type="button" class="btn btn-outline-primary mt-100" data-bs-toggle="modal" data-bs-target="#popup" data-bs-whatever="@fat"><i class="fa-solid fa-plus"></i> New House</button>
+        <button type="button" class="btn btn-outline-primary mt-100" data-bs-toggle="modal" data-bs-target="#popup"
+            data-bs-whatever="@fat"><i class="fa-solid fa-plus"></i> New House</button>
     </div>
 
 
@@ -46,7 +50,8 @@
                     </div>
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">About your house</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, or floor">
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">City</label>
@@ -82,12 +87,14 @@
                 <div class="card mb-3" style="max-width: 500px;">
                     <div class="row g-0">
                         <div class="col-12">
-                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start" alt="...">
+                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start"
+                                alt="...">
                         </div>
                         <div class="col-12">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
@@ -99,12 +106,14 @@
                 <div class="card mb-3" style="max-width: 500px;">
                     <div class="row g-0">
                         <div class="col-12">
-                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start" alt="...">
+                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start"
+                                alt="...">
                         </div>
                         <div class="col-12">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
@@ -116,12 +125,14 @@
                 <div class="card mb-3" style="max-width: 500px;">
                     <div class="row g-0">
                         <div class="col-12">
-                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start" alt="...">
+                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start"
+                                alt="...">
                         </div>
                         <div class="col-12">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
