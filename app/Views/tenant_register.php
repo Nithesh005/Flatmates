@@ -143,7 +143,7 @@
                                         <input type="file" accept="image/jpeg" name="profile_file" id="profile_file" class="hidden form-control form-control-md" onblur="checkFileSize()">
                                         <span class="label_txt">Photo Lesser then 20KB and its only jpg,
                                             jpeg
-                                            aceept</span>
+                                            accept</span>
                                     </div>
                                     <br>
                                 </div>
@@ -158,7 +158,7 @@
                                         <input type="file" name="resume_file" id="resume_file" class="hidden form-control form-control-md">
                                         <span class="label_txt">Smart Card Lesser then 20KB and its only pdf ,
                                             jpg, jpeg
-                                            aceept</span>
+                                            accept</span>
                                     </div>
                                     <br>
 
@@ -173,7 +173,7 @@
                                         <input type="file" name="bonafide_check_file" id="bonafide_check_file" class="hidden form-control form-control-md">
                                         <span class="label_txt">Aadhar card Lesser then 20KB and its only pdf , jpg,
                                             jpeg
-                                            aceept</span>
+                                            accept</span>
                                     </div>
                                     <br>
                                 </div>
