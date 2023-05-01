@@ -8,7 +8,7 @@ class Home extends BaseController
     {
         // return view('tenat_dashboard');
         // return view('owner_dashbord');
-    return view('terms&conditions');
+    return view('privacy_policy');
     
 }
 public function tenant_register()
