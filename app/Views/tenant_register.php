@@ -294,10 +294,10 @@
             var aadhar_id = $('#aadhar_id').val();
             console.log(sname);
             $.ajax({
-                url: "<?php echo base_url() ?>public/index.php/dbcontrollers/reg_user_data",
-                method: "POST", 
+                url: "<?php echo base_url() ?>./public/index.php/dbcontrollers/reg_user_data",
+                method: "POST",
                 dataType: "json",
-                data: {
+                data:{
                     sname: sname,
                     email_id: email_id,
                     mobile: mobile,
