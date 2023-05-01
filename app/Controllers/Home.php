@@ -8,11 +8,11 @@ class Home extends BaseController
     {
     //     return view('tenat_dashboard');
     return view('home');
-    }
-    public function owner_dashboard()
-    {
-    //     return view('tenat_dashboard');
-    return view('home');
+}
+public function owner_dashboard()
+{
+//     return view('tenat_dashboard');
+return view('home');
 
     }
     // public function index()
