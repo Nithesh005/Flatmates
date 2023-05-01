@@ -29,7 +29,8 @@ class dbcontrollers extends BaseController{
         $bonafide_file_txt = $this->request->getvar('bonafide_file_txt');
         $aadhar_id = $this->request->getvar('aadhar_id');
         // $tenant_pasword = $this->request->getvar('tenant_pasword');
-        $res = $this->datas->reg_user_data_model();   
+        $reg_data['sname'] = $this->request->getvar('tenant_mail');
+        $res = $this->datas->reg_user_data_model($reg_data);   
         echo json_encode("res");
     }
 }
