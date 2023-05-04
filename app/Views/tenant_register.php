@@ -256,17 +256,19 @@
             var sname = $('#sname').val();
             // console.log(sname);
             $.ajax({
-                url: "<?php echo base_url() ?>./public/index.php/dbcontrollers/reg_user_data",
+                // url: "<?php echo base_url() ?>/public/index.php/Controllers/dbcontrollers/reg_user_data",
+                url: "<?php echo base_url('public/index.php/Dbcontrollers/reg_user_data'); ?>",
                 method: "POST",
-                // dataType: "json",
+                dataType: "json",
                 data:{
                     sname: sname,
                 },
                 success: function(res) {
-                    console.log(res)
+                    console.log(res);
+                    console.log("susscess");
                 },
                 error: function(er) {
-                    console.error(er);
+                    // console.error(er);
                     console.log("error")
                 }
             })

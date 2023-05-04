@@ -5,19 +5,24 @@ namespace App\Models;
 use CodeIgniter\CLI\Console;
 use CodeIgniter\Model;
 
-class Intern_Model extends Model{
-    public function reg_user_data_model($reg_data){
+class Dbmodels extends Model
+{
+    protected $session;
+    public function __construct()
+    {
+        $this->session = \Config\Services::session();
+        $this->session->start();
+    }
+    public function reg_user_data_model($reg_data)
+    {
         $db = \Config\Database::connect();
 
         $my_demo_data = [
-            "db_name" => $reg_data['intern_id'],
-            
+            "name" => $reg_data['sname'],
         ];
 
-        $query = $db->table('tablename');
+        $query = $db->table('tenant_reg');
         $res = $query->insert($my_demo_data);
         return $res;
     }
 }
-
-?>
