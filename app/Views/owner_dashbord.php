@@ -133,6 +133,7 @@
             </div>
         </div>
     </div>
+    <?php require_once "footer.php"; ?>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
