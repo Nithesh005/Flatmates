@@ -1,0 +1,6 @@
+CRITICAL - 2023-05-04 09:15:14 --> Call to a member function reg_user_data_model() on null
+in APPPATH\Controllers\dbcontrollers.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
