@@ -25,4 +25,16 @@ class Dbmodels extends Model
         $res = $query->insert($my_demo_data);
         return $res;
     }
+    public function new_house_reg_data_model($reg_data)
+    {
+        // $db = \Config\Database::connect();
+
+        // $my_demo_data = [
+        //     "name" => $reg_data['sname'],
+        // ];
+
+        // $query = $db->table('tenant_reg');
+        // $res = $query->insert($my_demo_data);
+        return "comming from model new house data";
+    }
 }

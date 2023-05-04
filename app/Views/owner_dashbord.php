@@ -6,11 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Font aswesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Document</title>
@@ -24,8 +21,7 @@
     <?php require_once "after_login_header.php"; ?>
     <br>
     <div class="container d-flex justify-content-end">
-        <button type="button" class="btn btn-outline-primary mt-100" data-bs-toggle="modal" data-bs-target="#popup"
-            data-bs-whatever="@fat"><i class="fa-solid fa-plus"></i> New House</button>
+        <button type="button" class="btn btn-outline-primary mt-100" data-bs-toggle="modal" data-bs-target="#popup" data-bs-whatever="@fat"><i class="fa-solid fa-plus"></i> New House</button>
     </div>
 
 
@@ -41,7 +37,7 @@
                 <form class="row g-3 p-4">
                     <div class="col-md-12">
                         <label for="inputEmail4" class="form-label">House number</label>
-                        <input type="text" class="form-control" id="inputEmail4">
+                        <input type="text" class="form-control" id="house_no">
                     </div>
 
                     <div class="col-12">
@@ -50,8 +46,7 @@
                     </div>
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">About your house</label>
-                        <input type="text" class="form-control" id="inputAddress2"
-                            placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">City</label>
@@ -71,7 +66,7 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-primary" id="new_house_submit">Submit</button>
                 </div>
             </div>
         </div>
@@ -87,8 +82,7 @@
                 <div class="card mb-3" style="max-width: 500px;">
                     <div class="row g-0">
                         <div class="col-12">
-                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start"
-                                alt="...">
+                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-12">
                             <div class="card-body">
@@ -106,8 +100,7 @@
                 <div class="card mb-3" style="max-width: 500px;">
                     <div class="row g-0">
                         <div class="col-12">
-                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start"
-                                alt="...">
+                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-12">
                             <div class="card-body">
@@ -125,8 +118,7 @@
                 <div class="card mb-3" style="max-width: 500px;">
                     <div class="row g-0">
                         <div class="col-12">
-                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start"
-                                alt="...">
+                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-12">
                             <div class="card-body">
@@ -138,12 +130,35 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                Column
             </div>
         </div>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
+<script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
+<script>
+    $("#new_house_submit").click(function() {
+        var house_no = $("#house_no").val()
+        // alert("clicked");
+        $.ajax({
+            url: "<?php echo base_url('public/index.php/Dbcontrollers/new_house_reg_data'); ?>",
+            method: "POST",
+            dataType: "json",
+            data: {
+                house_no: house_no,
+            },
+            success: function(res) {
+                alert(res);
+            },
+            error: function(er) {
+                // console.error(er);
+                console.log("error")
+            }
+        })
+
+    })
+</script>
+
 
 </html>

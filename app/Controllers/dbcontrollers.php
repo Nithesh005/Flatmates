@@ -14,16 +14,23 @@ class dbcontrollers extends BaseController{
     public function ownerlogin(){
         $owner_mail = $this->request->getvar('owner_mail');
         $owner_pasword = $this->request->getvar('owner_pasword');
-        echo json_encode($owner_mail);
+        // $res = validation function
+        echo json_encode("success");
     }
     public function tenantlogin(){
         $tenant_mail = $this->request->getvar('tenant_mail');
         $tenant_pasword = $this->request->getvar('tenant_pasword');
-        echo json_encode($tenant_mail);
+        // $res = validation function
+        echo json_encode("success");
     }
     public function reg_user_data(){
         $reg_data['sname'] = $this->request->getvar('sname');
         $res = $this->datas->reg_user_data_model($reg_data);   
+        echo json_encode($res);
+    }
+    public function new_house_reg_data(){
+        $reg_data['house_no'] = $this->request->getvar('house_no');
+        $res = $this->datas->new_house_reg_data_model($reg_data);   
         echo json_encode($res);
     }
 }

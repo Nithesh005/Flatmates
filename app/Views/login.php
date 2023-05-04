@@ -218,7 +218,7 @@
                     console.log(res);
                     if (res === "success") {
                         // alert("login success");
-                        location.replace("<?php echo base_url(); ?>public/index.php/Home/load_option/admin_dashboard");
+                        location.replace("<?php echo base_url(); ?>public/index.php/home/owner_dashbord");
                     } else if (res === "new") {
                         alert("Invalid Admin");
 
@@ -252,7 +252,7 @@
                     // console.log("Admin Login");
                     if (res === "success") {
                         // alert("login success");
-                        location.replace("<?php echo base_url(); ?>public/index.php/Home/load_option/admin_dashboard");
+                        location.replace("<?php echo base_url('./public/index.php/home/tenat_dashboard') ?>");
                     } else if (res === "new") {
                         alert("Invalid Admin");
 

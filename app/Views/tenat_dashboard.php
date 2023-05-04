@@ -9,26 +9,48 @@
 </head>
 
 <body>
+    <?php require_once "after_login_header.php"; ?>
 
-    <body>
-
-        <h1>My First Google Map</h1>
-
-        <div id="googleMap" style="width:100%;height:300px;"></div>
-
-        <script>
-            function myMap() {
-                var mapProp = {
-                    center: new google.maps.LatLng(51.508742, -0.120850),
-                    zoom: 5,
-                };
-                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-            }
-        </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-
-    </body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <!-- card 1 -->
+                <div class="card mb-3" style="max-width: 500px;">
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <img src="<?php echo base_url("/assets/assets_img/logo-room.png") ?>" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-12">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <!-- card 1 -->
+                <div class="card mb-3" style="max-width: 500px;">
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <img src="<?php echo base_url("/assets/assets_img/part1.png") ?>" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-12">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
