@@ -43,6 +43,15 @@ class dbcontrollers extends BaseController{
     }
     public function new_house_reg_data(){
         $reg_data['house_no'] = $this->request->getvar('house_no');
+        $reg_data['inputAddress'] = $this->request->getvar('inputAddress');
+        $reg_data['inputAddress2'] = $this->request->getvar('inputAddress2');
+        $reg_data['Description'] = $this->request->getvar('Description');
+        $reg_data['Members_allowed'] = $this->request->getvar('Members_allowed');
+        $reg_data['Rent_amount'] = $this->request->getvar('Rent_amount');
+        $reg_data['inputCity'] = $this->request->getvar('inputCity');
+        $reg_data['State'] = $this->request->getvar('State');
+        $reg_data['inputZip'] = $this->request->getvar('inputZip');
+        $reg_data['my_file'] = $this->request->getvar('my_file');
         $res = $this->datas->new_house_reg_data_model($reg_data);   
         echo json_encode($res);
     }

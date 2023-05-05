@@ -71,8 +71,8 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">State</label>
-                            <input type="text" class="form-control" id="inputPassword4" placeholder="Tamilnadu">
+                            <label for="State" class="form-label">State</label>
+                            <input type="text" class="form-control" id="State" placeholder="Tamilnadu">
                         </div>
 
                         <div class="col-md-6">
@@ -81,8 +81,8 @@
                         </div><br>
                         <form action="#">
                             <div class="input-file-container">
-                                <input class="input-file" id="my-file" type="file" multiple>
-                                <label tabindex="0" for="my-file" class="input-file-trigger">Select files...</label>
+                                <input class="input-file" id="my_file" type="file" multiple>
+                                <label tabindex="0" for="my_file" class="input-file-trigger">Select files...</label>
                             </div>
                             <p class="file-return"></p>
                         </form>
@@ -92,7 +92,7 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Post</button>
+                        <button type="button" class="btn btn-primary" id="new_house_submit">Post</button>
                     </div>
                 </div>
             </div>
@@ -243,13 +243,31 @@
 <script>
     $("#new_house_submit").click(function () {
         var house_no = $("#house_no").val()
-        // alert("clicked");
+        var inputAddress = $("#inputAddress").val()
+        var inputAddress2 = $("#inputAddress2").val()
+        var Description = $("#Description").val()
+        var Members_allowed = $("#Members_allowed").val()
+        var Rent_amount = $("#Rent_amount").val()
+        var inputCity = $("#inputCity").val()
+        var State = $("#State").val()
+        var inputZip = $("#inputZip").val()
+        var my_file = $("#my_file").val()
+        alert(house_no);
         $.ajax({
             url: "<?php echo base_url('public/index.php/Dbcontrollers/new_house_reg_data'); ?>",
             method: "POST",
             dataType: "json",
             data: {
                 house_no: house_no,
+                inputAddress: inputAddress,
+                inputAddress2: inputAddress2,
+                Description: Description,
+                Members_allowed: Members_allowed,
+                Rent_amount: Rent_amount,
+                inputCity: inputCity,
+                State: State,
+                inputZip: inputZip,
+                my_file: my_file,
             },
             success: function (res) {
                 alert(res);
