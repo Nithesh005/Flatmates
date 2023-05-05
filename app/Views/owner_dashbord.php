@@ -24,7 +24,7 @@
     <br>
     <div class="container d-flex justify-content-end">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
-            NewHouse</button>
+            Add New House</button>
     </div>
 
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
@@ -99,18 +99,27 @@
         </div>
     </div>
 
-
-
-
     <div class="container">
-        <div class="row mt-4">
-            <div class="col-lg-4 col-md-6 col-sm-8">
-                <!-- card 1 -->
-                <div class="card mb-3" style="max-width: 500px;">
-                    <div class="row g-0">
-                        <div class="col-12">
-                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start"
-                                alt="...">
+
+
+        <div class="container">
+            <br>
+            <br>
+            <div class="row" id="ads">
+                <!-- Category Card -->
+                <div class="col-md-4">
+                    <div class="card rounded">
+                        <div class="card-image">
+                            <span class="card-notify-badge">Low KMS</span>
+                            <span class="card-notify-year">2018</span>
+                            <img class="img-fluid"
+                                src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
+                                alt="Alternate Text" />
+                        </div>
+                        <div class="card-image-overlay m-auto">
+                            <span class="card-detail-badge">Used</span>
+                            <span class="card-detail-badge">$28,000.00</span>
+                            <span class="card-detail-badge">13000 Kms</span>
                         </div>
                         <div class="col-12">
                             <div class="card-body">
@@ -120,123 +129,22 @@
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-8">
-                <!-- card 1 -->
-                <div class="card mb-3" style="max-width: 500px;">
-                    <div class="row g-0">
-                        <div class="col-12">
-                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start"
-                                alt="...">
-                        </div>
-                        <div class="col-12">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <div class="card-body text-center">
+                            <div class="ad-title m-auto">
+                                <h5>Honda Accord LX</h5>
                             </div>
+                            <a class="ad-btn" href="#">View</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-8">
-                <!-- card 1 -->
-                <div class="card mb-3" style="max-width: 500px;">
-                    <div class="row g-0">
-                        <div class="col-12">
-                            <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="img-fluid rounded-start"
-                                alt="...">
-                        </div>
-                        <div class="col-12">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="container">
-    <br>
-	<br>
-	<div class="row" id="ads">
-    <!-- Category Card -->
-    <div class="col-md-4">
-        <div class="card rounded">
-            <div class="card-image">
-                <span class="card-notify-badge">Low KMS</span>
-                <span class="card-notify-year">2018</span>
-                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$28,000.00</span>
-                <span class="card-detail-badge">13000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-                <div class="ad-title m-auto">
-                    <h5>Honda Accord LX</h5>
-                </div>
-                <a class="ad-btn" href="#">View</a>
-            </div>
-        </div>
+        </div>     
     </div>
-    <div class="col-md-4">
-        <div class="card rounded">
-            <div class="card-image">
-                <span class="card-notify-badge">Fully-Loaded</span>
-                <span class="card-notify-year">2017</span>
-                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$28,000.00</span>
-                <span class="card-detail-badge">13000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-                <div class="ad-title m-auto">
-                    <h5>Honda CIVIC HATCHBACK LS</h5>
-                </div>
-                <a class="ad-btn" href="#">View</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="card rounded">
-            <div class="card-image">
-                <span class="card-notify-badge">Price Reduced</span>
-                <span class="card-notify-year">2018</span>
-                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$22,000.00</span>
-                <span class="card-detail-badge">8000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-                <div class="ad-title m-auto">
-                    <h5>Honda Accord Hybrid LT</h5>
-                </div>
-                <a class="ad-btn" href="#">View</a>
-            </div>
-        </div>
-    </div>
-
-</div>
-</div>
-    </div>
-
-
-    
-    <?php require_once "footer.php"; ?>
+                
 </body>
+
+<?php require_once "footer.php"; ?>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
@@ -295,4 +203,3 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
