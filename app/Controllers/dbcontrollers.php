@@ -12,19 +12,32 @@ class dbcontrollers extends BaseController{
         $this->datas = new Dbmodels();
     }
     public function ownerlogin(){
-        $owner_mail = $this->request->getvar('owner_mail');
-        $owner_pasword = $this->request->getvar('owner_pasword');
-        // $res = validation function
-        echo json_encode("success");
+        $validate_owner['owner_mail'] = $this->request->getvar('owner_mail');
+        $validate_owner['owner_pasword'] = $this->request->getvar('owner_pasword');
+        $res = $this->datas->validate_ownerlogin_model($validate_owner);
+        echo json_encode($res);
     }
     public function tenantlogin(){
-        $tenant_mail = $this->request->getvar('tenant_mail');
-        $tenant_pasword = $this->request->getvar('tenant_pasword');
-        // $res = validation function
-        echo json_encode("success");
+        $validate_tenant['tenant_mail'] = $this->request->getvar('tenant_mail');
+        $validate_tenant['tenant_pasword'] = $this->request->getvar('tenant_pasword');
+        $res = $this->datas->validate_tenantlogin_model($validate_tenant);
+        echo json_encode($res);
     }
     public function reg_user_data(){
         $reg_data['sname'] = $this->request->getvar('sname');
+        $reg_data['email_id'] = $this->request->getvar('email_id');
+        $reg_data['mobile'] = $this->request->getvar('mobile');
+        $reg_data['password_id'] = $this->request->getvar('password_id');
+        $reg_data['occupation_id'] = $this->request->getvar('occupation_id');
+        $reg_data['address_id'] = $this->request->getvar('address_id');
+        $reg_data['city_id'] = $this->request->getvar('city_id');
+        $reg_data['state_id'] = $this->request->getvar('state_id');
+        $reg_data['profile_file_txt'] = $this->request->getvar('profile_file_txt');
+        $reg_data['resume_file_txt'] = $this->request->getvar('resume_file_txt');
+        $reg_data['bonafide_file_txt'] = $this->request->getvar('bonafide_file_txt');
+        $reg_data['aadhar_id'] = $this->request->getvar('aadhar_id');
+        $reg_data['family_type'] = $this->request->getvar('family_type');
+        // $reg_data['sname'] = $this->request->getvar('sname');
         $res = $this->datas->reg_user_data_model($reg_data);   
         echo json_encode($res);
     }

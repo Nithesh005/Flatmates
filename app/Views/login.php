@@ -18,8 +18,8 @@
 </head>
 
 <body>
- <!-- header -->
- <?php require_once "header.php"; ?>
+    <!-- header -->
+    <?php require_once "header.php"; ?>
     <!-- header -->
     <div class="container ">
         <!-- icon header -->
@@ -117,7 +117,7 @@
 
         </div>
         <br><br>
-        
+
 
     </div>
 
@@ -201,8 +201,6 @@
         $(document).on('click', '#owner_log_btn', function(event) {
             event.preventDefault();
             alert('owner');
-            // console.log($('#owner_mail').val())
-            // console.log($('#owner_pasword').val())
             var owner_mail = $('#owner_mail').val();
             var owner_pasword = $('#owner_pasword').val();
             console.log(owner_mail);
@@ -216,12 +214,12 @@
                     owner_pasword: owner_pasword,
                 },
                 success: function(res) {
-                    console.log(res);
+                    alert(res);
                     if (res === "success") {
                         // alert("login success");
                         location.replace("<?php echo base_url(); ?>public/index.php/home/owner_dashbord");
-                    } else if (res === "new") {
-                        alert("Invalid Admin");
+                    } else if (res === "fail") {
+                        alert("Invalid Owner");
 
                     }
 
@@ -249,13 +247,13 @@
                     tenant_pasword: tenant_pasword,
                 },
                 success: function(res) {
-                    console.log(res);
+                    alert(res);
                     // console.log("Admin Login");
                     if (res === "success") {
                         // alert("login success");
                         location.replace("<?php echo base_url('./public/index.php/home/tenat_dashboard') ?>");
-                    } else if (res === "new") {
-                        alert("Invalid Admin");
+                    } else if (res === "fail") {
+                        alert("Invalid tenant");
 
                     }
                     // alert(res);
