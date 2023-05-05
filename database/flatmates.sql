@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2023 at 08:24 AM
+-- Generation Time: May 05, 2023 at 03:48 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -71,6 +71,13 @@ CREATE TABLE `owner_reg` (
   `r_no` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `owner_reg`
+--
+
+INSERT INTO `owner_reg` (`name`, `email`, `password`, `occupation`, `house_no`, `address`, `city`, `state`, `photo_img`, `house_doc`, `aadhar_doc`, `aadhar_no`, `phone_no`, `r_no`) VALUES
+('nithi', 'nitheshwaran003@gmail.com', '123', '', '', '', '', '', '', '', '', 0, 0, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -86,13 +93,28 @@ CREATE TABLE `tenant_reg` (
   `city` varchar(100) NOT NULL,
   `state` varchar(100) NOT NULL,
   `photo_img` varchar(100) NOT NULL,
-  `smartcard _doc` varchar(100) NOT NULL,
+  `smartcard_doc` varchar(100) NOT NULL,
   `aadhar_doc` varchar(100) NOT NULL,
   `aadhar_no` int(12) NOT NULL,
   `phone_no` int(10) NOT NULL,
   `r_no` bigint(20) UNSIGNED NOT NULL,
   `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tenant_reg`
+--
+
+INSERT INTO `tenant_reg` (`name`, `email`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_doc`, `aadhar_no`, `phone_no`, `r_no`, `status`) VALUES
+('haiiinithin', '', '', '', '', '', '', '', '', '', 0, 0, 0, ''),
+('nithesh', '', '', '', '', '', '', '', '', '', 0, 0, 0, ''),
+('nithesh', '', '', '', '', '', '', '', '', '', 0, 0, 0, ''),
+('nithesh fffffffffffffffff', '', '', '', '', '', '', '', '', '', 0, 0, 0, ''),
+('hai nithi', 'nitheshwaran003@gmail.com', '', '', '', '', '', '', '', '', 0, 0, 0, ''),
+('nithesh', 'nitheshwaran003@gmail.com', '', '', 'Jakkasamudram', 'Dharmapuri', '', '', '', '', 0, 2147483647, 0, ''),
+('nithesh', 'nitheshwaran003@gmail.com', '', '', 'Jakkasamudram', 'Dharmapuri', '', '', '', '', 0, 2147483647, 0, ''),
+('nithesh', 'nitheshwaran003@gmail.com', 'pass', 'occc', 'Jakkasamudram', 'Dharmapuri', '', '', '', '', 0, 2147483647, 0, ''),
+('nithesh', 'nitheshwaran003@gmail.com', 'aa', 'aaa', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'DSCN0127.JPG', '', 'DSCN0218.JPG', 0, 2147483647, 0, 'Family');
 
 --
 -- Indexes for dumped tables
@@ -125,7 +147,7 @@ ALTER TABLE `owner_reg`
 -- AUTO_INCREMENT for table `owner_reg`
 --
 ALTER TABLE `owner_reg`
-  MODIFY `r_no` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `r_no` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
