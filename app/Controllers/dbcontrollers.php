@@ -19,7 +19,7 @@ class dbcontrollers extends BaseController{
     }
     public function tenantlogin(){
         $validate_tenant['tenant_mail'] = $this->request->getvar('tenant_mail');
-        $validate_tenant['tenant_pasword'] = $this->request->getvar('tenant_pasword');
+        $validate_tenant['tenant_password'] = $this->request->getvar('tenant_password');
         $res = $this->datas->validate_tenantlogin_model($validate_tenant);
         echo json_encode($res);
     }

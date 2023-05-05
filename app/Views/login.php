@@ -92,8 +92,8 @@
 
                             <div class="m-3">
                                 <div class="form-outline mb-4 input-container">
-                                    <input type="text" id="tenant_pasword" name="reg_no" class="input" placeholder=" " onblur="passwordValidate()" />
-                                    <label for="tenant_pasword" class="placeholder label">Enter Password</label>
+                                    <input type="text" id="tenant_password" name="reg_no" class="input" placeholder=" " onblur="passwordValidate()" />
+                                    <label for="tenant_password" class="placeholder label">Enter Password</label>
                                     <span id="adminPassworderrr"></span>
                                 </div>
 
@@ -235,16 +235,16 @@
             event.preventDefault();
             alert('tanent');
             var tenant_mail = $('#tenant_mail').val();
-            var tenant_pasword = $('#tenant_pasword').val();
+            var tenant_password = $('#tenant_password').val();
             console.log(tenant_mail)
-            console.log(tenant_pasword)
+            console.log(tenant_password)
             $.ajax({
                 url: "<?php echo base_url('public/index.php/dbcontrollers/tenantlogin'); ?>",
                 method: "POST",
                 dataType: "json",
                 data: {
                     tenant_mail: tenant_mail,
-                    tenant_pasword: tenant_pasword,
+                    tenant_password: tenant_password,
                 },
                 success: function(res) {
                     alert(res);

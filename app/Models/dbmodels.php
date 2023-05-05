@@ -73,7 +73,7 @@ class Dbmodels extends Model
         $query = $db->table('tenant_reg');
         $query->select('*');
         $query->where('email', $validate_tenant['tenant_mail']);
-        $query->where('password', $validate_tenant['tenant_pasword']);
+        $query->where('password', $validate_tenant['tenant_password']);
         $res = $query->get()->getResultArray();
 
         if (count($res) == 1){
