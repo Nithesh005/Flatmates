@@ -280,6 +280,7 @@
                 success: function(res) {
                     console.log(res);
                     console.log("susscess");
+                    location.replace("<?php echo base_url('./public/index.php/home/otp_verification') ?>");
                 },
                 error: function(er) {
                     // console.error(er);
