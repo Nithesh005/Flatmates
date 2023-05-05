@@ -78,7 +78,13 @@
                         <div class="col-md-6">
                             <label for="inputZip" class="form-label">Zip Code </label>
                             <input type="text" class="form-control" id="inputZip" placeholder="123456">
-                        </div><br>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="bhk" class="form-label">BHK</label>
+                            <input type="text" class="form-control" id="bhk" placeholder="2BHK">
+                        </div>
+                     
                         <form action="#">
                             <div class="input-file-container">
                                 <input class="input-file" id="my_file" type="file" multiple>
@@ -87,9 +93,7 @@
                             <p class="file-return"></p>
                         </form>
 
-
                     </form>
-
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary" id="new_house_submit">Post</button>
@@ -113,17 +117,17 @@
                             <span class="card-notify-badge">Low KMS</span>
                             <span class="card-notify-year">2018</span>
                             <img class="img-fluid"
-                                src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
+                                src="https://imageonthefly.autodat  adirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
                                 alt="Alternate Text" />
                         </div>
                         <div class="card-image-overlay m-auto">
-                            <span class="card-detail-badge">Used</span>
-                            <span class="card-detail-badge">$28,000.00</span>
-                            <span class="card-detail-badge">13000 Kms</span>
+                            <!-- <span class="card-detail-badge">Used</span> -->
+                            <span class="card-detail-badge">₹15,000</span>
+                            <span class="card-detail-badge">5BHK</span>
                         </div>
                         <div class="col-12">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">About Home</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural
                                     lead-in to additional content. This content is a little bit longer.</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
