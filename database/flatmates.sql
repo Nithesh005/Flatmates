@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2023 at 03:48 PM
+-- Generation Time: May 05, 2023 at 07:39 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -24,6 +24,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `aadhar_card`
+--
+
+CREATE TABLE `aadhar_card` (
+  `u_id` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `card_no` int(12) NOT NULL,
+  `phone_number` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `admin_log`
 --
 
@@ -39,9 +52,13 @@ CREATE TABLE `admin_log` (
 --
 
 CREATE TABLE `new_house` (
+  `u_id` int(100) NOT NULL,
   `house_no` varchar(100) NOT NULL,
   `address` varchar(100) NOT NULL,
+  `members` varchar(100) NOT NULL,
+  `rent` varchar(100) NOT NULL,
   `about` varchar(200) NOT NULL,
+  `description` varchar(300) NOT NULL,
   `city` varchar(100) NOT NULL,
   `state` varchar(100) NOT NULL,
   `zipcode` int(50) NOT NULL,
@@ -55,8 +72,11 @@ CREATE TABLE `new_house` (
 --
 
 CREATE TABLE `owner_reg` (
+  `u_id` varchar(100) NOT NULL,
+  `r_no` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(30) NOT NULL,
+  `phone_no` int(10) NOT NULL,
   `password` varchar(30) NOT NULL,
   `occupation` varchar(100) NOT NULL,
   `house_no` varchar(100) NOT NULL,
@@ -66,17 +86,15 @@ CREATE TABLE `owner_reg` (
   `photo_img` varchar(100) NOT NULL,
   `house_doc` varchar(100) NOT NULL,
   `aadhar_doc` varchar(100) NOT NULL,
-  `aadhar_no` int(12) NOT NULL,
-  `phone_no` int(10) NOT NULL,
-  `r_no` bigint(20) UNSIGNED NOT NULL
+  `aadhar_no` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `owner_reg`
 --
 
-INSERT INTO `owner_reg` (`name`, `email`, `password`, `occupation`, `house_no`, `address`, `city`, `state`, `photo_img`, `house_doc`, `aadhar_doc`, `aadhar_no`, `phone_no`, `r_no`) VALUES
-('nithi', 'nitheshwaran003@gmail.com', '123', '', '', '', '', '', '', '', '', 0, 0, 1);
+INSERT INTO `owner_reg` (`u_id`, `r_no`, `name`, `email`, `phone_no`, `password`, `occupation`, `house_no`, `address`, `city`, `state`, `photo_img`, `house_doc`, `aadhar_doc`, `aadhar_no`) VALUES
+('', 1, 'nithi', 'nitheshwaran003@gmail.com', 0, '123', '', '', '', '', '', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -85,6 +103,8 @@ INSERT INTO `owner_reg` (`name`, `email`, `password`, `occupation`, `house_no`, 
 --
 
 CREATE TABLE `tenant_reg` (
+  `u_id` varchar(100) NOT NULL,
+  `r_no` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(30) NOT NULL,
   `password` varchar(30) NOT NULL,
@@ -97,24 +117,22 @@ CREATE TABLE `tenant_reg` (
   `aadhar_doc` varchar(100) NOT NULL,
   `aadhar_no` int(12) NOT NULL,
   `phone_no` int(10) NOT NULL,
-  `r_no` bigint(20) UNSIGNED NOT NULL,
   `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `tenant_reg`
+-- Table structure for table `voter_id`
 --
 
-INSERT INTO `tenant_reg` (`name`, `email`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_doc`, `aadhar_no`, `phone_no`, `r_no`, `status`) VALUES
-('haiiinithin', '', '', '', '', '', '', '', '', '', 0, 0, 0, ''),
-('nithesh', '', '', '', '', '', '', '', '', '', 0, 0, 0, ''),
-('nithesh', '', '', '', '', '', '', '', '', '', 0, 0, 0, ''),
-('nithesh fffffffffffffffff', '', '', '', '', '', '', '', '', '', 0, 0, 0, ''),
-('hai nithi', 'nitheshwaran003@gmail.com', '', '', '', '', '', '', '', '', 0, 0, 0, ''),
-('nithesh', 'nitheshwaran003@gmail.com', '', '', 'Jakkasamudram', 'Dharmapuri', '', '', '', '', 0, 2147483647, 0, ''),
-('nithesh', 'nitheshwaran003@gmail.com', '', '', 'Jakkasamudram', 'Dharmapuri', '', '', '', '', 0, 2147483647, 0, ''),
-('nithesh', 'nitheshwaran003@gmail.com', 'pass', 'occc', 'Jakkasamudram', 'Dharmapuri', '', '', '', '', 0, 2147483647, 0, ''),
-('nithesh', 'nitheshwaran003@gmail.com', 'aa', 'aaa', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'DSCN0127.JPG', '', 'DSCN0218.JPG', 0, 2147483647, 0, 'Family');
+CREATE TABLE `voter_id` (
+  `u_id` int(100) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `card_no` varchar(20) NOT NULL,
+  `phone_number` int(10) NOT NULL,
+  `area` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -128,6 +146,12 @@ ALTER TABLE `admin_log`
   ADD UNIQUE KEY `password` (`password`);
 
 --
+-- Indexes for table `new_house`
+--
+ALTER TABLE `new_house`
+  ADD UNIQUE KEY `u_id` (`u_id`);
+
+--
 -- Indexes for table `owner_reg`
 --
 ALTER TABLE `owner_reg`
@@ -138,6 +162,12 @@ ALTER TABLE `owner_reg`
   ADD UNIQUE KEY `1` (`email`),
   ADD UNIQUE KEY `name` (`name`),
   ADD UNIQUE KEY `r_no_2` (`r_no`);
+
+--
+-- Indexes for table `voter_id`
+--
+ALTER TABLE `voter_id`
+  ADD UNIQUE KEY `u_id` (`u_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
