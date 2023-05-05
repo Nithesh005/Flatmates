@@ -117,7 +117,9 @@
                             <span class="card-notify-badge">Low KMS</span>
                             <span class="card-notify-year">2018</span>
                             <img class="img-fluid"
-                                src="https://imageonthefly.autodat  adirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
+
+                                src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
+                            
                                 alt="Alternate Text" />
                         </div>
                         <div class="card-image-overlay m-auto">
