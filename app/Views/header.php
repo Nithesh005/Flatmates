@@ -27,14 +27,13 @@
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-
-                        <a href="<?php echo base_url('./public/index.php/home/index') ?>" class="nav-link">Home</a>
+                    <a href="<?php echo base_url('./public/index.php/home/index') ?>" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>" class="nav-link">Services</a>
+                        <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>" class="nav-link">contact</a>
