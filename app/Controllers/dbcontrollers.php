@@ -56,23 +56,23 @@ class dbcontrollers extends BaseController
     }
 
     // post new house
-    public function new_house_data()
-    {
-        $new_data['house_no'] = $this->request->getvar('house_no');
-        $new_data['inputAddress'] = $this->request->getvar('inputAddress');
-        $new_data['inputAddress2'] = $this->request->getvar('inputAddress2');
-        $new_data['Description'] = $this->request->getvar('Description');
-        $new_data['Members_allowed'] = $this->request->getvar('Members_allowed');
-        $new_data['Rent_amount'] = $this->request->getvar('Rent_amount');
-        $new_data['inputCity'] = $this->request->getvar('inputCity');
-        $new_data['inputstate'] = $this->request->getvar('inputstate');
-        $new_data['inputZip'] = $this->request->getvar('inputZip');
-        $new_data['bhk'] = $this->request->getvar('bhk');
-        $new_data['my_file'] = $this->request->getvar('my_file');
+    // public function new_house_data()
+    // {
+    //     $new_data['house_no'] = $this->request->getvar('house_no');
+    //     $new_data['inputAddress'] = $this->request->getvar('inputAddress');
+    //     $new_data['inputAddress2'] = $this->request->getvar('inputAddress2');
+    //     $new_data['Description'] = $this->request->getvar('Description');
+    //     $new_data['Members_allowed'] = $this->request->getvar('Members_allowed');
+    //     $new_data['Rent_amount'] = $this->request->getvar('Rent_amount');
+    //     $new_data['inputCity'] = $this->request->getvar('inputCity');
+    //     $new_data['inputstate'] = $this->request->getvar('inputstate');
+    //     $new_data['inputZip'] = $this->request->getvar('inputZip');
+    //     $new_data['bhk'] = $this->request->getvar('bhk');
+    //     $new_data['my_file'] = $this->request->getvar('my_file');
 
-        $res = $this->datas->new_house_data_model($new_data);
-        echo json_encode($res);
-    }
+    //     $res = $this->datas->new_house_data_model($new_data);
+    //     echo json_encode($res);
+    // }
 
     public function unique_id()
     {
