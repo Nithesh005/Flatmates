@@ -37,27 +37,27 @@ class Dbmodels extends Model
         $res = $query->insert($my_demo_data);
         return $res;
     }
-    public function new_house_reg_data_model($reg_data)
-    {
-        $db = \Config\Database::connect();
+    // public function new_house_reg_data_model($reg_data)
+    // {
+    //     $db = \Config\Database::connect();
 
-        $my_demo_data = [
-            "house_no" => $reg_data['house_no'],
-            "name" => $reg_data['inputAddress'],
-            "name" => $reg_data['inputAddress2'],
-            "name" => $reg_data['Description'],
-            "name" => $reg_data['Members_allowed'],
-            "name" => $reg_data['Rent_amount'],
-            "name" => $reg_data['inputCity'],
-            "name" => $reg_data['State'],
-            "name" => $reg_data['inputZip'],
-            "name" => $reg_data['my_file'],
-        ];
+    //     $my_demo_data = [
+    //         "house_no" => $reg_data['house_no'],
+    //         "name" => $reg_data['inputAddress'],
+    //         "name" => $reg_data['inputAddress2'],
+    //         "name" => $reg_data['Description'],
+    //         "name" => $reg_data['Members_allowed'],
+    //         "name" => $reg_data['Rent_amount'],
+    //         "name" => $reg_data['inputCity'],
+    //         "name" => $reg_data['State'],
+    //         "name" => $reg_data['inputZip'],
+    //         "name" => $reg_data['my_file'],
+    //     ];
 
-        $query = $db->table('tenant_reg');
-        $res = $query->insert($my_demo_data);
-        return "comming from model new house data";
-    }
+    //     $query = $db->table('tenant_reg');
+    //     $res = $query->insert($my_demo_data);
+    //     return "comming from model new house data";
+    // }
     public function validate_ownerlogin_model($validate_owner)
     {
         $db = \Config\Database::connect();
