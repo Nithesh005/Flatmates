@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2023 at 07:39 PM
+-- Generation Time: May 06, 2023 at 01:09 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -30,9 +30,25 @@ SET time_zone = "+00:00";
 CREATE TABLE `aadhar_card` (
   `u_id` varchar(100) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `card_no` int(12) NOT NULL,
-  `phone_number` int(10) NOT NULL
+  `card_no` bigint(100) NOT NULL,
+  `phone_number` bigint(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `aadhar_card`
+--
+
+INSERT INTO `aadhar_card` (`u_id`, `name`, `card_no`, `phone_number`) VALUES
+('FM_1001', 'mathan', 111111111111, 8870469532),
+('FM_1002', 'nithi', 222222222222, 9976203099),
+('FM_1003', 'abi', 333333333333, 7902871839),
+('FM_1004', 'kavi', 444444444444, 9626457971),
+('FM_1005', 'arun', 555555555555, 6383504650),
+('FM_1006', 'sri', 666666666666, 6382436280),
+('FM_1007', 'ritch', 777777777777, 9360800689),
+('FM_1008', 'sanjay', 888888888888, 9994922037),
+('FM_1009', 'ram', 999999999999, 9698897920),
+('FM_1010', 'gowtham', 1, 7871218265);
 
 -- --------------------------------------------------------
 
@@ -52,7 +68,7 @@ CREATE TABLE `admin_log` (
 --
 
 CREATE TABLE `new_house` (
-  `u_id` int(100) NOT NULL,
+  `u_id` varchar(200) NOT NULL,
   `house_no` varchar(100) NOT NULL,
   `address` varchar(100) NOT NULL,
   `members` varchar(100) NOT NULL,
@@ -61,9 +77,19 @@ CREATE TABLE `new_house` (
   `description` varchar(300) NOT NULL,
   `city` varchar(100) NOT NULL,
   `state` varchar(100) NOT NULL,
-  `zipcode` int(50) NOT NULL,
-  `image` varchar(100) NOT NULL
+  `zipcode` bigint(100) NOT NULL,
+  `BHK` varchar(100) NOT NULL,
+  `image` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `new_house`
+--
+
+INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `members`, `rent`, `about`, `description`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES
+('FM_1001', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png'),
+('FM_1002', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png'),
+('FM_1003', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png');
 
 -- --------------------------------------------------------
 
@@ -127,12 +153,28 @@ CREATE TABLE `tenant_reg` (
 --
 
 CREATE TABLE `voter_id` (
-  `u_id` int(100) NOT NULL,
+  `u_id` varchar(100) NOT NULL,
   `name` varchar(200) NOT NULL,
   `card_no` varchar(20) NOT NULL,
-  `phone_number` int(10) NOT NULL,
+  `phone_number` bigint(10) NOT NULL,
   `area` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `voter_id`
+--
+
+INSERT INTO `voter_id` (`u_id`, `name`, `card_no`, `phone_number`, `area`) VALUES
+('FM_1001', 'mathan', '111111111111', 8870469532, 'kanyakumari'),
+('FM_1002', 'nithi', '222222222222', 9976203099, 'dharmaburi'),
+('FM_1003', 'abi', '333333333333', 7902871839, 'kanyakumari'),
+('FM_1004', 'kavi', '444444444444', 9626457971, 'trichy'),
+('FM_1005', 'arun', '555555555555', 6383504650, 'ramnadu'),
+('FM_1006\r\n', 'sri', '666666666666', 6382436280, 'Perambalur'),
+('FM_1007', 'ritch', '777777777777', 9360800689, 'trichy'),
+('FM_1008', 'sanjay', '888888888888', 9994922037, 'Bangalore'),
+('FM_1009', 'ram', '999999999999', 9698897920, 'madurai'),
+('FM_1010', 'gowtham', '111122223333', 7871218265, 'madurai');
 
 --
 -- Indexes for dumped tables
