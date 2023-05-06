@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- css -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/filechoose.css?version=<?php echo rand(); ?>">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Document</title>
 </head>
 
@@ -71,20 +72,20 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="State" class="form-label">State</label>
-                            <input type="text" class="form-control" id="State" placeholder="Tamilnadu">
+                            <label for="inputPassword4" class="form-label">State</label>
+                            <input type="text" class="form-control" id="inputstate" placeholder="Tamilnadu">
                         </div>
 
                         <div class="col-md-6">
                             <label for="inputZip" class="form-label">Zip Code </label>
                             <input type="text" class="form-control" id="inputZip" placeholder="123456">
                         </div>
-                        
+
                         <div class="col-md-6">
                             <label for="bhk" class="form-label">BHK</label>
                             <input type="text" class="form-control" id="bhk" placeholder="2BHK">
                         </div>
-                     
+
                         <form action="#">
                             <div class="input-file-container">
                                 <input class="input-file" id="my_file" type="file" multiple>
@@ -96,7 +97,7 @@
                     </form>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="new_house_submit">Post</button>
+                        <button type="button" class="btn btn-primary" id="post_btn">Post</button>
                     </div>
                 </div>
             </div>
@@ -117,7 +118,7 @@
                             <span class="card-notify-badge">Low KMS</span>
                             <span class="card-notify-year">2018</span>
                             <img class="img-fluid"
-                                src="https://imageonthefly.autodat  adirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
+                                src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
                                 alt="Alternate Text" />
                         </div>
                         <div class="card-image-overlay m-auto">
@@ -142,9 +143,9 @@
                     </div>
                 </div>
             </div>
-        </div>     
+        </div>
     </div>
-                
+
 </body>
 
 <?php require_once "footer.php"; ?>
@@ -221,7 +222,51 @@
 
 
 </html>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
+<script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
+<script>
+
+    $('#post_btn').click(function () {
+        var house_no = $('#house_no').val();
+        var inputAddress = $('#inputAddress').val();
+        var inputAddress2 = $('#inputAddress2').val();
+        var Description = $('#Description').val();
+        var Members_allowed = $('#Members_allowed').val();
+        var Rent_amount = $('#Rent_amount').val();
+        var inputCity = $('#inputCity').val();
+        var inputstate = $('#inputstate').val();
+        var inputZip = $('#inputZip').val();
+        var bhk = $('#bhk').val();
+        var my_file = $('#my_file').val();
+        // alert(house_no);
+        $.ajax({
+            url: "<?php echo base_url('public/index.php/Dbcontrollers/new_house_data'); ?>",
+            method: "POST",
+            dataType: "json",
+            data: {
+                house_no: house_no,
+                inputAddress: inputAddress,
+                inputAddress2: inputAddress2,
+                Description: Description,
+                Members_allowed: Members_allowed,
+                Rent_amount: Rent_amount,
+                inputCity: inputCity,
+                inputstate: inputstate,
+                inputZip: inputZip,
+                bhk: bhk,
+                my_file: my_file,
+            },
+            success: function (res) {
+                alert(res);
+                console.log("susscess");
+            },
+            error: function (er) {
+                // console.error(er);
+                console.log("error")
+            }
+        })
+    })
+</script>
