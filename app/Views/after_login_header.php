@@ -50,6 +50,9 @@
                     <li class="nav-item">
                     <a href="<?php echo base_url('./public/index.php/home/owner_register') ?>" class="nav-link text-dark">Sign in</a>
                     </li>
+                    <li class="nav-item">
+                    <a href="<?php echo base_url('./public/index.php/home/logout') ?>" class="nav-link text-dark">Log Out</a>
+                    </li>
                 </ul>
                 <!-- Left links -->
             </div>
