@@ -83,4 +83,29 @@ class Dbmodels extends Model
             return "fail";
         }
     }
+    // new_house_data_model- add new house
+
+    public function new_house_data_model($new_data)
+    {
+        $db = \Config\Database::connect();
+
+        $new_house_data = [
+            "house_no" => $new_data['house_no'],
+            "address" => $new_data['inputAddress'],
+            "about" => $new_data['inputAddress2'],
+            "description" => $new_data['Description'],
+            "members" => $new_data['Members_allowed'],
+            "rent" => $new_data['Rent_amount'],
+            "city" => $new_data['inputCity'],
+            "state" => $new_data['inputstate'],
+            "zipcode" => $new_data['inputZip'],
+            "BHK" => $new_data['bhk'],
+            "image" => $new_data['my_file'],
+            
+        ];
+
+        $query = $db->table('new_house');
+        $res = $query->insert($new_house_data);
+        return $res;
+    }
 }

@@ -1,0 +1,330 @@
+ERROR - 2023-05-06 02:50:18 --> mysqli_sql_exception: Column 'name' cannot be null in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(37): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(41): App\Models\Dbmodels->reg_user_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 02:50:18 --> Column 'name' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tenant_reg` (`name`, `email`, `phone_no`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_doc`, `aadhar_no`, `status`) VALUES (:name:, :email:, :phone_no:, :password:, :occupation:, :address:, :city:, :state:, :photo_img:, :smartcard_doc:, :aadhar_doc:, :aadhar_no:, :status:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(37): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(41): App\Models\Dbmodels->reg_user_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:04:57 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:04:57 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:05:58 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:05:58 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:06:15 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:06:15 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:06:39 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:06:39 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:07:38 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:07:38 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:10:54 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:10:54 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:11:03 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:11:03 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:11:46 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:11:46 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:11:56 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:11:56 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:17:50 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:17:50 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:23:13 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:23:13 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:29:19 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:29:19 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:32:56 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:32:56 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`) VALUES (:house_no:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-06 03:38:01 --> mysqli_sql_exception: Duplicate entry '' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-06 03:38:01 --> Duplicate entry '' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(108): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(64): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->new_house_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
