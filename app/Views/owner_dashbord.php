@@ -157,44 +157,6 @@
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
-    // $("#new_house_submit").click(function () {
-    //     var house_no = $("#house_no").val()
-    //     var inputAddress = $("#inputAddress").val()
-    //     var inputAddress2 = $("#inputAddress2").val()
-    //     var Description = $("#Description").val()
-    //     var Members_allowed = $("#Members_allowed").val()
-    //     var Rent_amount = $("#Rent_amount").val()
-    //     var inputCity = $("#inputCity").val()
-    //     var State = $("#State").val()
-    //     var inputZip = $("#inputZip").val()
-    //     var my_file = $("#my_file").val()
-    //     alert(house_no);
-    //     $.ajax({
-    //         url: "<?php echo base_url('public/index.php/Dbcontrollers/new_house_reg_data'); ?>",
-    //         method: "POST",
-    //         dataType: "json",
-    //         data: {
-    //             house_no: house_no,
-    //             inputAddress: inputAddress,
-    //             inputAddress2: inputAddress2,
-    //             Description: Description,
-    //             Members_allowed: Members_allowed,
-    //             Rent_amount: Rent_amount,
-    //             inputCity: inputCity,
-    //             State: State,
-    //             inputZip: inputZip,
-    //             my_file: my_file,
-    //         },
-    //         success: function (res) {
-    //             alert(res);
-    //         },
-    //         error: function (er) {
-    //             // console.error(er);
-    //             console.log("error")
-    //         }
-    //     })
-
-    // })
 
     document.querySelector("html").classList.add('js');
 
