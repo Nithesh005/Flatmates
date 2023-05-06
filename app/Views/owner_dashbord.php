@@ -39,66 +39,68 @@
 
 
                 <div class="modal-body">
-                    <form class="row g-3 p-4">
+                    <form class="row g-3 p-4" action="<?php echo base_url('public/index.php/dbcontrollers/demo_reg'); ?>" method="post" enctype="multipart/form-data">
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">House number</label>
-                            <input type="text" class="form-control" id="house_no" placeholder="20/93">
+                            <input type="text" class="form-control" id="house_no" placeholder="20/93" name="house_no">
                         </div>
 
                         <div class="col-6">
                             <label for="inputAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            <input type="text" class="form-control" id="inputAddress" name="inputAddress" placeholder="1234 Main St">
                         </div>
                         <div class="col-12">
                             <label for="inputAddress2" class="form-label">About your house</label>
-                            <input type="text" class="form-control" id="inputAddress2"
+                            <input type="text" class="form-control" id="inputAddress2" name="inputAddress2"
                                 placeholder="Apartment, studio, or floor">
                         </div>
                         <div class="col-12">
                             <label for="Description" class="form-label">Description</label>
-                            <textarea class="form-control" id="Description" placeholder="Nearby facilities"></textarea>
+                            <textarea class="form-control" id="Description" name="Description" placeholder="Nearby facilities"></textarea>
                         </div>
                         <div class="col-md-6">
                             <label for="Members_allowed" class="form-label">Members allowed</label>
-                            <input type="text" class="form-control" id="Members_allowed" placeholder="5 members">
+                            <input type="text" class="form-control" id="Members_allowed" name="Members_allowed" placeholder="5 members">
                         </div>
                         <div class="col-md-6">
                             <label for="Rent_amount" class="form-label">Rent Amount</label>
-                            <input type="text" class="form-control" id="Rent_amount" placeholder="₹15000-/Per Month">
+                            <input type="text" class="form-control" id="Rent_amount" name="Rent_amount" placeholder="₹15000-/Per Month">
                         </div>
                         <div class="col-md-6">
                             <label for="inputCity" class="form-label">City</label>
-                            <input type="text" class="form-control" id="inputCity" placeholder="Madurai">
+                            <input type="text" class="form-control" id="inputCity" name="inputCity" placeholder="Madurai">
                         </div>
 
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">State</label>
-                            <input type="text" class="form-control" id="inputstate" placeholder="Tamilnadu">
+                            <input type="text" class="form-control" id="inputstate" name="inputstate" placeholder="Tamilnadu">
                         </div>
 
                         <div class="col-md-6">
                             <label for="inputZip" class="form-label">Zip Code </label>
-                            <input type="text" class="form-control" id="inputZip" placeholder="123456">
+                            <input type="text" class="form-control" id="inputZip" name="inputZip" placeholder="123456">
                         </div>
 
                         <div class="col-md-6">
                             <label for="bhk" class="form-label">BHK</label>
-                            <input type="text" class="form-control" id="bhk" placeholder="2BHK">
+                            <input type="text" class="form-control" id="bhk" name="bhk" placeholder="2BHK">
                         </div>
 
-                        <form action="#">
-                            <div class="input-file-container">
-                                <input class="input-file" id="my_file" type="file" multiple>
-                                <label tabindex="0" for="my_file" class="input-file-trigger">Select files...</label>
-                            </div>
-                            <p class="file-return"></p>
-                        </form>
+
+                        <div class="input-file-container">
+                            <input class="input-file" id="my_file" name="my_file" type="file" multiple>
+                            <label tabindex="0" for="my-file" class="input-file-trigger">Select files...</label>
+                        </div>
+                        <p class="file-return"></p>
+
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" id="post_btnn" value="Post">
+                    </div>
+
 
                     </form>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="post_btn">Post</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -153,6 +155,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
     $("#new_house_submit").click(function () {
         var house_no = $("#house_no").val()
@@ -223,50 +226,4 @@
 
 </html>
 
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
-<script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
-<script>
 
-    $('#post_btn').click(function () {
-        var house_no = $('#house_no').val();
-        var inputAddress = $('#inputAddress').val();
-        var inputAddress2 = $('#inputAddress2').val();
-        var Description = $('#Description').val();
-        var Members_allowed = $('#Members_allowed').val();
-        var Rent_amount = $('#Rent_amount').val();
-        var inputCity = $('#inputCity').val();
-        var inputstate = $('#inputstate').val();
-        var inputZip = $('#inputZip').val();
-        var bhk = $('#bhk').val();
-        var my_file = $('#my_file').val();
-        // alert(house_no);
-        $.ajax({
-            url: "<?php echo base_url('public/index.php/Dbcontrollers/new_house_data'); ?>",
-            method: "POST",
-            dataType: "json",
-            data: {
-                house_no: house_no,
-                inputAddress: inputAddress,
-                inputAddress2: inputAddress2,
-                Description: Description,
-                Members_allowed: Members_allowed,
-                Rent_amount: Rent_amount,
-                inputCity: inputCity,
-                inputstate: inputstate,
-                inputZip: inputZip,
-                bhk: bhk,
-                my_file: my_file,
-            },
-            success: function (res) {
-                alert(res);
-                console.log("susscess");
-            },
-            error: function (er) {
-                // console.error(er);
-                console.log("error")
-            }
-        })
-    })
-</script>

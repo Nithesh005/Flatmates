@@ -68,10 +68,9 @@ class Dbmodels extends Model
         $query->where('password', $validate_owner['owner_pasword']);
         $res = $query->get()->getResultArray();
 
-        if (count($res) == 1){
+        if (count($res) == 1) {
             return "success";
-        }
-        else{
+        } else {
             return "fail";
         }
     }
@@ -85,36 +84,60 @@ class Dbmodels extends Model
         $query->where('password', $validate_tenant['tenant_password']);
         $res = $query->get()->getResultArray();
 
-        if (count($res) == 1){
+        if (count($res) == 1) {
             return "success";
-        }
-        else{
+        } else {
             return "fail";
         }
-    }
-    // new_house_data_model- add new house
 
-    public function new_house_data_model($new_data)
+    }
+
+
+        // new_house_data_model- add new house
+
+        public function get_unique_id()
+        {
+            $db = \Config\Database::connect();
+            $query = $db->table('new_house');
+            $query->select('*');
+            $res = $query->get()->getResultArray();
+    
+            if (count($res) > 0) {
+                $intern_id = 1001 + count($res);
+            } else {
+                $intern_id = 1001;
+            }
+    
+            return $intern_id;
+        }
+    
+
+    public function new_house_data_model($tmp)
     {
         $db = \Config\Database::connect();
-
         $new_house_data = [
-            "house_no" => $new_data['house_no'],
-            "address" => $new_data['inputAddress'],
-            "about" => $new_data['inputAddress2'],
-            "description" => $new_data['Description'],
-            "members" => $new_data['Members_allowed'],
-            "rent" => $new_data['Rent_amount'],
-            "city" => $new_data['inputCity'],
-            "state" => $new_data['inputstate'],
-            "zipcode" => $new_data['inputZip'],
-            "BHK" => $new_data['bhk'],
-            "image" => $new_data['my_file'],
-            
+            "u_id" =>  $tmp['u_id'],
+            "house_no" => $tmp['house_no'],
+            "address" => $tmp['inputAddress'],
+            "about" => $tmp['inputAddress2'],
+            "description" => $tmp['Description'],
+            "members" => $tmp['Members_allowed'],
+            "rent" => $tmp['Rent_amount'],
+            "city" => $tmp['inputCity'],
+            "state" => $tmp['inputstate'],
+            "zipcode" => $tmp['inputZip'],
+            "BHK" => $tmp['bhk'],
+            "image" => $tmp['my_file_name'],
+
         ];
 
         $query = $db->table('new_house');
         $res = $query->insert($new_house_data);
-        return $res;
+        if ($res == true) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }
