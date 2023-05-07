@@ -42,6 +42,10 @@ class Home extends BaseController
     {
         return view('otp_verification');
     }
+    public function tenant_filter()
+    {
+        return view('tenant_filter');
+    }
     public function logout()
     {
         $session = Services::session();
@@ -50,19 +54,20 @@ class Home extends BaseController
     }
     public function sendEmail()
     {
+        $otp = mt_rand(100000, 999999);
         
-        $email = new Email();
+        $email = Services::email();
 
+        $email->setFrom('flatmates09@gmail.com', 'Flatmates');
         $email->setTo('mazzmathan2001@gmail.com');
-        $email->setFrom('flatmates09@gmail.com');
-        $email->setSubject('Email Subject');
-        $email->setMessage('hello bro');
+        // $email->setTo('nitheshwaran003@gmail.com');
+        // $email->setCC('another@another-example.com');
+        // $email->setBCC('them@their-example.com');
 
-        if ($email->send()) {
-            echo 'Email sent successfully.';
-            return view('login');
-        } else {
-            echo $email->printDebugger(['headers']);
-        }
+        $email->setSubject('OTP Verification');
+        $email->setMessage('Your OTP: ' . $otp);
+
+        $email->send();
+        return view('otp_verification');
     }
 }
