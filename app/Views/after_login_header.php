@@ -50,14 +50,17 @@
                     <li class="nav-item">
                         <a href="<?php echo base_url('http://localhost/chatapp/index.php') ?>" class="nav-link" target="_blank">Chat</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                     <a href="<?php echo base_url('./public/index.php/home/owner_register') ?>" class="nav-link text-dark">Sign in</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                     <a href="<?php echo base_url('./public/index.php/home/logout') ?>" class="nav-link text-dark">Log Out</a>
                     </li>
                     <li class="nav-item">
                     <a href="<?php echo base_url('./public/index.php/home/tenant_filter') ?>" class="nav-link text-dark">tenant_filter</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="<?php echo base_url('./public/index.php/home/otp_verification') ?>" class="nav-link text-dark">Otp verification</a>
                     </li>
 
                 </ul>

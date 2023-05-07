@@ -31,22 +31,71 @@ class dbcontrollers extends BaseController
     }
     public function reg_user_data()
     {
-        $reg_data['sname'] = $this->request->getvar('sname');
-        $reg_data['email_id'] = $this->request->getvar('email_id');
-        $reg_data['mobile'] = $this->request->getvar('mobile');
-        $reg_data['password_id'] = $this->request->getvar('password_id');
-        $reg_data['occupation_id'] = $this->request->getvar('occupation_id');
-        $reg_data['address_id'] = $this->request->getvar('address_id');
-        $reg_data['city_id'] = $this->request->getvar('city_id');
-        $reg_data['state_id'] = $this->request->getvar('state_id');
-        $reg_data['profile_file_txt'] = $this->request->getvar('profile_file_txt');
-        $reg_data['resume_file_txt'] = $this->request->getvar('resume_file_txt');
-        $reg_data['bonafide_file_txt'] = $this->request->getvar('bonafide_file_txt');
-        $reg_data['aadhar_id'] = $this->request->getvar('aadhar_id');
-        $reg_data['family_type'] = $this->request->getvar('family_type');
+        helper(['filesystem']);
+        // data
+        $sname = $this->request->getvar('sname');
+        $email_id = $this->request->getvar('email_id');
+        $mobile = $this->request->getvar('mobile');
+        $password_id = $this->request->getvar('password_id');
+        $occupation_id = $this->request->getvar('occupation_id');
+        $address_id = $this->request->getvar('address_id');
+        $city_id = $this->request->getvar('city_id');
+        $state_id = $this->request->getvar('state_id');
+
+        $aadhar_id = $this->request->getvar('aadhar_id');
+        $family_type = $this->request->getvar('family_type');
+
+        // files
+        $profile_image = $this->request->getFile('profile_file');
+        $smart_card = $this->request->getFile('smart_card');
+        
+        $aadhar_card = $this->request->getFile('aadhar_card');
+
         // $reg_data['sname'] = $this->request->getvar('sname');
-        $res = $this->datas->reg_user_data_model($reg_data);
-        echo json_encode($res);
+        if (($profile_image->getSize() > 0)) {
+            $unique_id = $this->unique_id();
+            $directory = "./public/uploads/" . $unique_id;
+            if (!is_dir($directory)) {
+                mkdir($directory, 0777, TRUE);
+            }
+
+            if ($profile_image->isValid()) {
+                $profile_image->move($directory);
+                if ($smart_card->isValid()) {
+                    $smart_card->move($directory);
+                    if ($aadhar_card->isValid()) {
+                        $aadhar_card->move($directory);
+                    }
+                }
+            }
+
+
+
+            $profile_image_name = $profile_image->getName();
+            $smart_card_name = $smart_card->getName();
+            $aadhar_card_name = $aadhar_card->getName();
+
+
+            $tmp['sname'] = $sname;
+            $tmp['email_id'] = $email_id;
+            $tmp['mobile'] = $mobile;
+            $tmp['password_id'] = $password_id;
+            $tmp['occupation_id'] = $occupation_id;
+            $tmp['address_id'] = $address_id;
+            $tmp['city_id'] = $city_id;
+            $tmp['state_id'] = $state_id;
+            $tmp['profile_image_name'] = $profile_image_name;
+            $tmp['smart_card_name'] = $smart_card_name;
+            $tmp['aadhar_card_name'] = $aadhar_card_name;
+            $tmp['aadhar_id'] = $aadhar_id;
+            $tmp['family_type'] = $family_type;
+            //     }
+            // }
+        }
+        $res = $this->datas->reg_user_data_model($tmp);
+        if ($res == true) {
+            return view('otp_verification');
+        }
     }
 
 
@@ -88,7 +137,6 @@ class dbcontrollers extends BaseController
             $directory = "./public/uploads/" . $unique_id;
             if (!is_dir($directory)) {
                 mkdir($directory, 0777, TRUE);
-
             }
 
             $my_file_name = $my_file->getName();
@@ -115,7 +163,5 @@ class dbcontrollers extends BaseController
         if ($res == true) {
             return view('login');
         }
-
     }
-
 }
