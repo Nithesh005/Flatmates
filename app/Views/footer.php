@@ -80,7 +80,7 @@
         </div>
         <!-- Copyright -->
         <div class="text-center p-3">
-            © Copyright 2023 Sri Mookambika Infosolutions Private Ltd.
+            © Copyright 2023 Tenant.in
             <a href="T_C.php" style="text-decoration:none;">&nbsp Terms of Use </a> &nbsp&nbsp
             <a href="policy.php" style="text-decoration:none;">Privacy Policy</a>
             <!-- <a class="text-dark">MDBootstrap.com</a> -->

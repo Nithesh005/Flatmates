@@ -39,6 +39,10 @@ class Home extends BaseController
     {
         return view('tenat_dashboard');
     }
+    public function about_us()
+    {
+        return view('about_us');
+    }
     public function otp_verification()
     {
         return view('otp_verification');

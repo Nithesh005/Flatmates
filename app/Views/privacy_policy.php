@@ -36,16 +36,16 @@
                         <a href="<?php echo base_url('./public/index.php/home') ?>" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#footer" class="nav-link">About</a>
+                        <a href="<?php echo base_url('./public/index.php/home/about_us') ?>" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#service" class="nav-link">Services</a>
+                        <a href="#footer" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#footer" class="nav-link">contact</a>
+                        <a href="<?php echo base_url('./public/index.php/home/#footer') ?>" class="nav-link">contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="login.php" class="nav-link text-dark">Sign in</a>
+                        <a href="<?php echo base_url('./public/index.php/home/login') ?>" class="nav-link text-dark">Sign in</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>" class="nav-link text-dark">Sign up</a>
@@ -57,7 +57,7 @@
         <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
-    <div class="privacycontainer>
+    <div class="privacycontainer">
 
     <div class=" Container mt-20 lg:mt-28 mb-10">
         <h2 class="text-xl md:text-3xl text-gray-600 font-medium mt-10 mb-5">Privacy Policy</h2>

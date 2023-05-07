@@ -50,7 +50,7 @@
                         <a href="#footer" class="nav-link">contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="login.php" class="nav-link text-dark">Sign in</a>
+                        <a href="<?php echo base_url('./public/index.php/home/login') ?>" class="nav-link text-dark">Sign in</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>"
@@ -234,7 +234,7 @@
 
     <!-- Back to Top -->
         <a id="gototop" href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
-            <iclass="bi bi-arrow-up"></i>
+            <i class="bi bi-arrow-up"></i>
         </a>
                                 
 
