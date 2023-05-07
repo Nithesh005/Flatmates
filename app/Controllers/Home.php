@@ -56,15 +56,16 @@ class Home extends BaseController
     }
     public function sendEmail()
     {
-        
+        $email_id = session('email_id');
         $otp = mt_rand(100000, 999999);
         $u_id = session('u_id');
         
         $email = Services::email();
 
         $email->setFrom('flatmates09@gmail.com', 'Flatmates');
-        // $email->setTo('mazzmathan2001@gmail.com');
-        $email->setTo('nitheshwaran003@gmail.com');
+        $email->setTo($email_id);
+        // $email->setTo('nitheshwaran003@gmail.com');
+        // $email->setTo('nitheshwaran003@gmail.com');
         // $email->setCC('another@another-example.com');
         // $email->setBCC('them@their-example.com');
 
@@ -73,8 +74,12 @@ class Home extends BaseController
 
         if ($email->send()) {
             echo 'OTP email sent successfully.';
+            $session = Services::session();
+            $session->destroy();
         } else {
             echo 'Error sending OTP email: ' . $email->printDebugger();
+            $session = Services::session();
+            $session->destroy();
         }
         return view('otp_verification');
     }

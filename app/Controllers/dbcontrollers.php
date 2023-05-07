@@ -51,6 +51,7 @@ class dbcontrollers extends BaseController
         
         $aadhar_card = $this->request->getFile('aadhar_card');
 
+        
         // $reg_data['sname'] = $this->request->getvar('sname');
         if (($profile_image->getSize() > 0)) {
             $unique_id = $this->unique_id();
@@ -78,6 +79,7 @@ class dbcontrollers extends BaseController
 
             $tmp['sname'] = $sname;
             $tmp['email_id'] = $email_id;
+            $this->session->set('email_id', $tmp['email_id']);
             $tmp['mobile'] = $mobile;
             $tmp['password_id'] = $password_id;
             $tmp['occupation_id'] = $occupation_id;
@@ -96,6 +98,7 @@ class dbcontrollers extends BaseController
         if ($res == true) {
             return view('otp_verification');
         }
+        // redirect('Home/sendEmail/'.$email_id);
     }
 
 
