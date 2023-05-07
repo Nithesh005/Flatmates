@@ -36,6 +36,7 @@
         <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-lg-6">
+                <form action="<?php echo base_url('public/index.php/Dbcontrollers/reg_user_data'); ?>" method="post" enctype="multipart/form-data">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -155,7 +156,7 @@
                                         <input type="text" name="resume_file_txt" id="resume_file_txt" class="input" placeholder=" " readonly>
                                         <label for="form2Example11" class="placeholder label">Smart Card</label>
                                         <div class="pin" id="pin_resume"><i class="fa-solid fa-paperclip pin-icon"></i></div>
-                                        <input type="file" name="resume_file" id="resume_file" class="hidden form-control form-control-md">
+                                        <input type="file" accept="image/jpeg" id="smart_card" name="smart_card" class="hidden form-control form-control-md">
                                         <span class="label_txt">Smart Card Lesser then 20KB and its only pdf ,
                                             jpg, jpeg
                                             accept</span>
@@ -167,10 +168,10 @@
                                 <div class="m-3">
 
                                     <div class="form-outline mb-4 input-container">
-                                        <input type="text" name="bonafide_file_txt" id="bonafide_file_txt" class="input" placeholder=" " readonly>
+                                        <input type="text" name="aadhar_card" id="aadhar_card" class="input" placeholder=" " readonly>
                                         <label for="form2Example11" class="placeholder label">Aadhar card </label>
                                         <div class="pin" id="pin_bonafide"><i class="fa-solid fa-paperclip pin-icon"></i></div>
-                                        <input type="file" name="bonafide_check_file" id="bonafide_check_file" class="hidden form-control form-control-md">
+                                        <input type="file" accept="image/jpeg" id="bonafide_check_file" name="aadhar_card" class="hidden form-control form-control-md">
                                         <span class="label_txt">Aadhar card Lesser then 20KB and its only pdf , jpg,
                                             jpeg
                                             accept</span>
@@ -229,8 +230,8 @@
                         </div>
 
                     </div>
-
                 </div>
+                </form>
 
 
             </div>
@@ -242,7 +243,7 @@
     <script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
     <script>
-        $('#reg_third_btn').click(function() {
+        $('#reg_third_bt').click(function() {
             var sname = $('#sname').val();
             var email_id = $('#email_id').val();
             var mobile = $('#mobile').val();
@@ -251,9 +252,9 @@
             var address_id = $('#address_id').val();
             var city_id = $('#city_id').val();
             var state_id = $('#state_id').val();
-            var profile_file_txt = $('#profile_file_txt').val();
-            var resume_file_txt = $('#resume_file_txt').val();
-            var bonafide_file_txt = $('#bonafide_file_txt').val();
+            var profile_file = $('#profile_file').val();
+            var smart_card = $('#smart_card').val();
+            var aadhar_card = $('#aadhar_card').val();
             var aadhar_id = $('#aadhar_id').val();
             var family_type = $('#family_type').val();
             // console.log(sname);
@@ -262,23 +263,23 @@
                 url: "<?php echo base_url('public/index.php/Dbcontrollers/reg_user_data'); ?>",
                 method: "POST",
                 dataType: "json",
-                data:{
+                data: {
                     sname: sname,
-                    email_id:email_id,
-                    mobile:mobile,
-                    password_id:password_id,
-                    occupation_id:occupation_id,
-                    address_id:address_id,
-                    city_id:city_id,
-                    state_id:state_id,
-                    profile_file_txt:profile_file_txt,
-                    resume_file_txt:resume_file_txt,
-                    bonafide_file_txt:bonafide_file_txt,
-                    aadhar_id:aadhar_id,
-                    family_type:family_type,
+                    email_id: email_id,
+                    mobile: mobile,
+                    password_id: password_id,
+                    occupation_id: occupation_id,
+                    address_id: address_id,
+                    city_id: city_id,
+                    state_id: state_id,
+                    profile_file: profile_file,
+                    smart_card: smart_card,
+                    aadhar_card: aadhar_card,
+                    aadhar_id: aadhar_id,
+                    family_type: family_type,
                 },
                 success: function(res) {
-                    console.log(res);
+                    alert(res);
                     console.log("susscess");
                     location.replace("<?php echo base_url('./public/index.php/home/otp_verification') ?>");
                 },
@@ -316,10 +317,10 @@
 
             // resume upload
             $("#pin_resume").click(function() {
-                $("#resume_file").trigger("click");
+                $("#smart_card").trigger("click");
             });
             $("#resume_file").change(function() {
-                $("#resume_file_txt").val($("#resume_file")[0].files[0].name);
+                $("#resume_file_txt").val($("#smart_card")[0].files[0].name);
 
             });
 
@@ -328,7 +329,7 @@
                 $("#bonafide_check_file").trigger("click");
             });
             $("#bonafide_check_file").change(function() {
-                $("#bonafide_file_txt").val($("#bonafide_check_file")[0].files[0].name);
+                $("#aadhar_card").val($("#bonafide_check_file")[0].files[0].name);
             });
 
             // id card upload
@@ -553,20 +554,20 @@
                 })
             }
         });
-        $('#reg_sec_btn').on('click', function() {
-            if (Alphanumeric() && validateUsername()) {
-                alert("Success");
-            } else {
-                alert("Fail");
-            }
-        });
-        $('#reg_third_btn').on('click', function() {
-            if (Alphanumeric() && validateDate()) {
-                alert("Success");
-            } else {
-                alert("Fail");
-            }
-        });
+        // $('#reg_sec_btn').on('click', function() {
+        //     if (Alphanumeric() && validateUsername()) {
+        //         alert("Success");
+        //     } else {
+        //         alert("Fail");
+        //     }
+        // });
+        // $('#reg_third_btn').on('click', function() {
+        //     if (Alphanumeric() && validateDate()) {
+        //         alert("Success");
+        //     } else {
+        //         alert("Fail");
+        //     }
+        // });
     </script>
     <br><br><br>
 </body>

@@ -13,29 +13,33 @@ class Dbmodels extends Model
         $this->session = \Config\Services::session();
         $this->session->start();
     }
-    public function reg_user_data_model($reg_data)
+    public function reg_user_data_model($tmp)
     {
         $db = \Config\Database::connect();
 
         $my_demo_data = [
-            "name" => $reg_data['sname'],
-            "email" => $reg_data['email_id'],
-            "phone_no" => $reg_data['mobile'],
-            "password" => $reg_data['password_id'],
-            "occupation" => $reg_data['occupation_id'],
-            "address" => $reg_data['address_id'],
-            "city" => $reg_data['city_id'],
-            "state" => $reg_data['state_id'],
-            "photo_img" => $reg_data['profile_file_txt'],
-            "smartcard_doc" => $reg_data['resume_file_txt'],
-            "aadhar_doc" => $reg_data['bonafide_file_txt'],
-            "aadhar_no" => $reg_data['aadhar_id'],
-            "status" => $reg_data['family_type'],
+            "name" => $tmp['sname'],
+            "email" => $tmp['email_id'],
+            "phone_no" => $tmp['mobile'],
+            "password" => $tmp['password_id'],
+            "occupation" => $tmp['occupation_id'],
+            "address" => $tmp['address_id'],
+            "city" => $tmp['city_id'],
+            "state" => $tmp['state_id'],
+            "photo_img" => $tmp['profile_image_name'],
+            "smartcard_doc" => $tmp['smart_card_name'],
+            "aadhar_doc" => $tmp['aadhar_card_name'],
+            "aadhar_no" => $tmp['aadhar_id'],
+            "status" => $tmp['family_type'],
         ];
 
         $query = $db->table('tenant_reg');
         $res = $query->insert($my_demo_data);
-        return $res;
+        if ($res == true) {
+            return true;
+        } else {
+            return false;
+        }
     }
     // public function new_house_reg_data_model($reg_data)
     // {
@@ -98,7 +102,7 @@ class Dbmodels extends Model
     public function get_unique_id()
     {
         $db = \Config\Database::connect();
-        $query = $db->table('new_house');
+        $query = $db->table('tenant_reg');
         $query->select('*');
         $res = $query->get()->getResultArray();
 
