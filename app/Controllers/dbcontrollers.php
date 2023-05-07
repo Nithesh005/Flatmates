@@ -58,6 +58,14 @@ class dbcontrollers extends BaseController
         return $ex_id;
     }
 
+    public function owner_card()
+    {
+        $res = $this->datas->owner_card_model();
+
+        echo json_encode($res);
+    }
+
+
 
     public function demo_reg()
     {
