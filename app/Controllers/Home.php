@@ -22,6 +22,10 @@ class Home extends BaseController
     {
         return view('tenant_register');
     }
+    public function contact_us()
+    {
+        return view('contact_us');
+    }
     public function terms_conditions()
     {
         return view('terms_conditions');

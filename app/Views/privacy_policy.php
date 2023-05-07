@@ -13,7 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- stylesheet-->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/styles.css?version=<?php echo rand(); ?>">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/terms.css?version=<?php echo rand(); ?>">
     <title>Document</title>
 </head>
 
@@ -57,9 +57,9 @@
         <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
-    <div class="privacycontainer>
+    <div class="privacycontainer">
 
-    <div class=" Container mt-20 lg:mt-28 mb-10">
+    <div class= "Container mt-20 lg:mt-28 mb-10">
         <h2 class="text-xl md:text-3xl text-gray-600 font-medium mt-10 mb-5">Privacy Policy</h2>
         <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">FlatMate.in Limited (“FlatMate.in,” “we,” and “us”) respects the privacy of its users (“you”) and has developed this Privacy Policy to demonstrate its commitment to safeguarding your privacy. This Privacy Policy describes the information we collect and process through our mobile apps and website (“our Sites”), how that information may be used, with whom it may be shared, and your choices about such uses and disclosures.</p>
         <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">We encourage you to read this Privacy Policy carefully when using our Sites or property search or other services (“Services”) or when transacting business with us. By using our Sites or Services you are accepting the practices described in this Privacy Policy.</p>
@@ -298,18 +298,22 @@
         </div>
     </div>
     </div>
+    <a id="gototop" href="#" class="moving btn btn-lg btn-primary btn-lg-square back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
 
     <!-- Footer Start -->
+    <div class="foot">
     <?php require_once "footer.php"; ?>
+    </div>
+    
     <!-- Footer End -->
 
 
 
 
     <!-- Back to Top -->
-    <a id="gototop" href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
-        <i class="bi bi-arrow-up"></i>
-    </a>
+
 
 
     <!--bootstrap  -->
