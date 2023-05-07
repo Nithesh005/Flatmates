@@ -219,7 +219,7 @@
                                     <div class="col-lg-3 col-md-3 col-sm-1"></div>
                                     <div class="col-lg-6 col-md-6 col-sm-10 button-next-back d-flex ">
                                         <button class="btn btn-lg border border-2 border-primary rounded text-primary back_btn">Back</button>
-                                        <input type="submit" value="SUBMIT" class="btn btn-lg border border-2 border-info rounded text-info inter_register_btn" id="reg_third_btn">
+                                        <input type="submit" value="SUBMIT" class="btn btn-lg border border-2 border-info rounded text-info inter_register_btn" onclick="otp_verify()" id="reg_third_btn">
                                     </div>
                                     <div class="col-lg-3 col-md-3 col-sm-1"></div>
                                 </div>
@@ -243,6 +243,10 @@
     <script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
     <script>
+
+
+
+
         $('#reg_third_bt').click(function() {
             var sname = $('#sname').val();
             var email_id = $('#email_id').val();

@@ -43,6 +43,10 @@ class Home extends BaseController
     {
         return view('tenat_dashboard');
     }
+    public function about()
+    {
+        return view('about');
+    }
     public function otp_verification()
     {
         return view('otp_verification');
@@ -60,6 +64,7 @@ class Home extends BaseController
     }
     public function sendEmail()
     {
+        $email_id = $this->request->getvar('email_id');
         
         $otp = mt_rand(100000, 999999);
         $u_id = session('u_id');
@@ -67,7 +72,7 @@ class Home extends BaseController
         $email = Services::email();
 
         $email->setFrom('flatmates09@gmail.com', 'Flatmates');
-        // $email->setTo('mazzmathan2001@gmail.com');
+        // $email->setTo($email_id);
         $email->setTo('nitheshwaran003@gmail.com');
         // $email->setCC('another@another-example.com');
         // $email->setBCC('them@their-example.com');

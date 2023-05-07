@@ -606,3 +606,378 @@ in APPPATH\Controllers\dbcontrollers.php on line 66.
  2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-07 16:16:08 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'flatmates' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'flatmates', 3306, '', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'flatmates' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#5 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-07 16:16:08 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'flatmates'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `owner_reg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-07 16:16:13 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'flatmates' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'flatmates', 3306, '', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'flatmates' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#5 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-07 16:16:13 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'flatmates'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `owner_reg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-07 16:17:09 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'flatmates' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'flatmates', 3306, '', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'flatmates' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#5 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-07 16:17:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'flatmates'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `owner_reg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-07 16:17:30 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'flatmates' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'flatmates', 3306, '', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'flatmates' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#5 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-07 16:17:30 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'flatmates'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `owner_reg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-07 16:17:45 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'flatmates' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'flatmates', 3306, '', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'flatmates' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#5 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-07 16:17:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'flatmates'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `owner_reg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\dbmodels.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-07 16:19:29 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.gmail.com failed: No such host is known.  in C:\xampp\htdocs\Flatmates\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\xampp\\htdocs...', 1863)
+#1 C:\xampp\htdocs\Flatmates\system\Email\Email.php(1863): fsockopen('smtp.gmail.com', 587, NULL, NULL, 5)
+#2 C:\xampp\htdocs\Flatmates\system\Email\Email.php(1782): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\Flatmates\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\Flatmates\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\Home.php(78): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\Home->sendEmail()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-07 16:19:29 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-07 16:19:29 --> 
+CRITICAL - 2023-05-07 16:29:25 --> Undefined variable $tmp
+in APPPATH\Controllers\dbcontrollers.php on line 95.
+ 1 APPPATH\Controllers\dbcontrollers.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tmp', 'APPPATH\\Controllers\\dbcontrollers.php', 95)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-07 16:37:09 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-07 16:37:09 --> 220 smtp.gmail.com ESMTP 6-20020a170902c14600b001a9581ed7casm5372188plj.141 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:2d1a:6cfc:f738:9462]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:2d1a:6cfc:f738:9462]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK 6-20020a170902c14600b001a9581ed7casm5372188plj.141 - gsmtp
+
+to: 555 5.5.2 Syntax error. 6-20020a170902c14600b001a9581ed7casm5372188plj.141 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. 6-20020a170902c14600b001a9581ed7casm5372188plj.141 - gsmtp
+
+quit: 221 2.0.0 closing connection 6-20020a170902c14600b001a9581ed7casm5372188plj.141 - gsmtp
+
+ERROR - 2023-05-07 16:38:16 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-07 16:38:16 --> 220 smtp.gmail.com ESMTP y3-20020a17090322c300b001a1fe40a8dasm5323726plg.262 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:2d1a:6cfc:f738:9462]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:2d1a:6cfc:f738:9462]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK y3-20020a17090322c300b001a1fe40a8dasm5323726plg.262 - gsmtp
+
+to: 555 5.5.2 Syntax error. y3-20020a17090322c300b001a1fe40a8dasm5323726plg.262 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. y3-20020a17090322c300b001a1fe40a8dasm5323726plg.262 - gsmtp
+
+quit: 221 2.0.0 closing connection y3-20020a17090322c300b001a1fe40a8dasm5323726plg.262 - gsmtp
+
+CRITICAL - 2023-05-07 16:38:59 --> Undefined variable $tmp
+in APPPATH\Controllers\dbcontrollers.php on line 95.
+ 1 APPPATH\Controllers\dbcontrollers.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tmp', 'APPPATH\\Controllers\\dbcontrollers.php', 95)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-07 16:39:22 --> mysqli_sql_exception: Column 'status' cannot be null in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(37): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(95): App\Models\Dbmodels->reg_user_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-07 16:39:22 --> Column 'status' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tenant_reg` (`name`, `email`, `phone_no`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_doc`, `aadhar_no`, `status`) VALUES (:name:, :email:, :phone_no:, :password:, :occupation:, :address:, :city:, :state:, :photo_img:, :smartcard_doc:, :aadhar_doc:, :aadhar_no:, :status:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(37): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(95): App\Models\Dbmodels->reg_user_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-07 16:39:57 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-07 16:39:57 --> 220 smtp.gmail.com ESMTP y23-20020a634b17000000b00502ecb91940sm4727272pga.55 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:2d1a:6cfc:f738:9462]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:2d1a:6cfc:f738:9462]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK y23-20020a634b17000000b00502ecb91940sm4727272pga.55 - gsmtp
+
+to: 555 5.5.2 Syntax error. y23-20020a634b17000000b00502ecb91940sm4727272pga.55 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. y23-20020a634b17000000b00502ecb91940sm4727272pga.55 - gsmtp
+
+quit: 221 2.0.0 closing connection y23-20020a634b17000000b00502ecb91940sm4727272pga.55 - gsmtp
+
+ERROR - 2023-05-07 16:40:33 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-07 16:40:33 --> 220 smtp.gmail.com ESMTP h11-20020aa786cb000000b00643910fe7d5sm4320029pfo.76 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:2d1a:6cfc:f738:9462]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:2d1a:6cfc:f738:9462]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK h11-20020aa786cb000000b00643910fe7d5sm4320029pfo.76 - gsmtp
+
+to: 555 5.5.2 Syntax error. h11-20020aa786cb000000b00643910fe7d5sm4320029pfo.76 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. h11-20020aa786cb000000b00643910fe7d5sm4320029pfo.76 - gsmtp
+
+quit: 221 2.0.0 closing connection h11-20020aa786cb000000b00643910fe7d5sm4320029pfo.76 - gsmtp
+
