@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Controllers;
+use CodeIgniter\Debug\Toolbar\Collectors\BaseCollector;
+use CodeIgniter\Email\Email;
+use Config\Services;
 
 class Home extends BaseController
 {
@@ -12,6 +15,7 @@ class Home extends BaseController
     }
     public function login()
     {
+        
         return view('login');
     }
     public function tenant_register()
@@ -37,5 +41,28 @@ class Home extends BaseController
     public function otp_verification()
     {
         return view('otp_verification');
+    }
+    public function logout()
+    {
+        $session = Services::session();
+        $session->destroy();
+        return view('otp_verification');
+    }
+    public function sendEmail()
+    {
+        
+        $email = new Email();
+
+        $email->setTo('mazzmathan2001@gmail.com');
+        $email->setFrom('flatmates09@gmail.com');
+        $email->setSubject('Email Subject');
+        $email->setMessage('hello bro');
+
+        if ($email->send()) {
+            echo 'Email sent successfully.';
+            return view('login');
+        } else {
+            echo $email->printDebugger(['headers']);
+        }
     }
 }

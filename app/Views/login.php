@@ -1,3 +1,6 @@
+<?php
+$session = \Config\Services::session();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -117,7 +120,7 @@
 
         </div>
         <br><br>
-
+        <!-- <h1>user id<?php //echo session('u_id'); ?></h1> -->
 
     </div>
 
@@ -197,6 +200,9 @@
                 return true;
             }
         }
+
+
+
 
         $(document).on('click', '#owner_log_btn', function(event) {
             event.preventDefault();

@@ -69,6 +69,7 @@ class Dbmodels extends Model
         $res = $query->get()->getResultArray();
 
         if (count($res) == 1) {
+            $this->session->set('u_id', $res[0]['u_id']);
             return "success";
         } else {
             return "fail";
@@ -89,28 +90,27 @@ class Dbmodels extends Model
         } else {
             return "fail";
         }
-
     }
 
 
-        // new_house_data_model- add new house
+    // new_house_data_model- add new house
 
-        public function get_unique_id()
-        {
-            $db = \Config\Database::connect();
-            $query = $db->table('new_house');
-            $query->select('*');
-            $res = $query->get()->getResultArray();
-    
-            if (count($res) > 0) {
-                $intern_id = 1001 + count($res);
-            } else {
-                $intern_id = 1001;
-            }
-    
-            return $intern_id;
+    public function get_unique_id()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('new_house');
+        $query->select('*');
+        $res = $query->get()->getResultArray();
+
+        if (count($res) > 0) {
+            $intern_id = 1001 + count($res);
+        } else {
+            $intern_id = 1001;
         }
-    
+
+        return $intern_id;
+    }
+
 
     public function new_house_data_model($tmp)
     {
@@ -138,6 +138,5 @@ class Dbmodels extends Model
         } else {
             return false;
         }
-
     }
 }

@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                 </div>
 
                                 <div class="row m-3">
-                                        <div class="col-12" style="display:flex;flex-direction:row-reverse;"><a href="<?php echo base_url('./public/index.php/function/hai') ?>">Send OTP</a></div>
+                                        <div class="col-12" style="display:flex;flex-direction:row-reverse;"><a href="<?php echo base_url('./public/index.php/home/sendEmail') ?>">Send OTP</a></div>
                                 </div>
 
                                 <div class="m-3 otp_submit">
