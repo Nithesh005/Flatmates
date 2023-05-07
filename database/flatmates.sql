@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2023 at 01:09 PM
+-- Generation Time: May 07, 2023 at 04:59 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -64,6 +64,30 @@ CREATE TABLE `admin_log` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `msg_id` int(11) NOT NULL,
+  `incoming_msg_id` int(255) NOT NULL,
+  `outgoing_msg_id` int(255) NOT NULL,
+  `msg` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES
+(1, 441726217, 714641441, 'hai abi'),
+(2, 714641441, 441726217, 'soldra'),
+(3, 714641441, 441726217, 'haiiii ... ithu ipo msg pannathu'),
+(4, 441726217, 714641441, 'inga irukuuu '),
+(5, 714641441, 441726217, 'vanthucha');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `new_house`
 --
 
@@ -89,7 +113,10 @@ CREATE TABLE `new_house` (
 INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `members`, `rent`, `about`, `description`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES
 ('FM_1001', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png'),
 ('FM_1002', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png'),
-('FM_1003', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png');
+('FM_1003', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png'),
+('FM_1004', '23', 'Jakkasamudram', '', '', '', '', 'Dharmapuri', 'Tamil Nadu', 636805, '', '1669833857260.jpg'),
+('FM_1005', '23', 'Jakkasamudram', '', '', '', '', 'Dharmapuri', 'Tamil Nadu', 636805, '', '1669833857260.jpg'),
+('FM_1006', 'sanja', 'Jakkasamudram', '', '', '', '', 'Dharmapuri', 'Tamil Nadu', 636805, '', 'cse.jpg');
 
 -- --------------------------------------------------------
 
@@ -120,7 +147,30 @@ CREATE TABLE `owner_reg` (
 --
 
 INSERT INTO `owner_reg` (`u_id`, `r_no`, `name`, `email`, `phone_no`, `password`, `occupation`, `house_no`, `address`, `city`, `state`, `photo_img`, `house_doc`, `aadhar_doc`, `aadhar_no`) VALUES
-('', 1, 'nithi', 'nitheshwaran003@gmail.com', 0, '123', '', '', '', '', '', '', '', '', 0);
+('121', 9100, 'nithi', 'nithi@gmail.com', 11, '123', '', '', '', '', '', '', '', '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `district` varchar(100) NOT NULL,
+  `price` int(11) NOT NULL,
+  `street` varchar(100) NOT NULL,
+  `room_avail` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `district`, `price`, `street`, `room_avail`) VALUES
+(1, 'madurai', 5000, '', ''),
+(2, 'dharmapuri', 6000, '', ''),
+(3, 'madurai', 4000, 'dhanihnko nagar', '10');
 
 -- --------------------------------------------------------
 
@@ -145,6 +195,38 @@ CREATE TABLE `tenant_reg` (
   `phone_no` int(10) NOT NULL,
   `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tenant_reg`
+--
+
+INSERT INTO `tenant_reg` (`u_id`, `r_no`, `name`, `email`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_doc`, `aadhar_no`, `phone_no`, `status`) VALUES
+('121', 11, '', 'nithi@gmail.com', '1', '', '', '', '', '', '', '', 123456789, 1234567890, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
+  `unique_id` int(255) NOT NULL,
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `unique_id`, `fname`, `lname`, `email`, `password`, `img`, `status`) VALUES
+(1, 714641441, 'nithi', 'Nitheshwaran', 'nithi@gmail.com', '202cb962ac59075b964b07152d234b70', '1683393420ai_chip.jpg', 'Active now'),
+(2, 441726217, 'abi', 'abi', 'abi@gmail.com', '202cb962ac59075b964b07152d234b70', '1683393614AI.jpg', 'Active now');
 
 -- --------------------------------------------------------
 
@@ -188,6 +270,12 @@ ALTER TABLE `admin_log`
   ADD UNIQUE KEY `password` (`password`);
 
 --
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`msg_id`);
+
+--
 -- Indexes for table `new_house`
 --
 ALTER TABLE `new_house`
@@ -206,6 +294,18 @@ ALTER TABLE `owner_reg`
   ADD UNIQUE KEY `r_no_2` (`r_no`);
 
 --
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- Indexes for table `voter_id`
 --
 ALTER TABLE `voter_id`
@@ -216,10 +316,28 @@ ALTER TABLE `voter_id`
 --
 
 --
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `owner_reg`
 --
 ALTER TABLE `owner_reg`
-  MODIFY `r_no` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `r_no` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9101;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
