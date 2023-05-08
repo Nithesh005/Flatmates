@@ -157,27 +157,6 @@
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
-    function retive_data_owner() {
-        // alert("hi")
-        $.ajax({
-            url: "<?php echo base_url('public/index.php/dbcontrollers/retive_data_owner_controller'); ?>",
-            method: "POST",
-            dataType: "json",
-            data: {
-                sname: "sname",
-
-            },
-            success: function(res) {
-                alert(res);
-
-            },
-            error: function(er) {
-                // console.error(er);
-                console.log("error")
-            }
-
-        })
-    }
 
     document.querySelector("html").classList.add('js');
 

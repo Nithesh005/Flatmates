@@ -76,7 +76,9 @@ class dbcontrollers extends BaseController
             $smart_card_name = $smart_card->getName();
             $aadhar_card_name = $aadhar_card->getName();
 
+            $u_id = $this->unique_id();
 
+            $tmp['u_id'] = $u_id;
             $tmp['sname'] = $sname;
             $tmp['email_id'] = $email_id;
             $this->session->set('email_id', $tmp['email_id']);
@@ -109,12 +111,7 @@ class dbcontrollers extends BaseController
         $ex_id = 'FM_' . $ex_id;
         return $ex_id;
     }
-    public function retive_data_owner_controller()
-    {
-        // $res =$this->datas->new_house_data_model($tmp);
-        $res ="mmm";
-        echo json_encode($res);
-    }
+    
     
 
     public function owner_card()
