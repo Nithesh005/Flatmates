@@ -83,7 +83,7 @@
                             <div class="row g-3">
                                 <div class="col-6 text-end">
                                     <img class="img-fluid rounded w-70 wow zoomIn" data-wow-delay="0.1s"
-                                        src="<?php echo base_url(); ?>/assets/assets_img/room6.webp"" style=" margin-top: 25%;">
+                                        src="<?php echo base_url(); ?>/assets/assets_img/room6.webp" style=" margin-top: 25%;">
                                 </div>
                                 <div class="col-6 text-start">
                                     <img class="img-fluid rounded w-90 wow zoomIn" data-wow-delay="0.3s"

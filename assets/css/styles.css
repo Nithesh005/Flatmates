@@ -16,7 +16,15 @@
 }
 .nav-item{
 padding: 13px;
-font-weight: 700;
+font-weight: 250;
+}
+
+#navbarSupportedContent {
+    margin-top: -18px;
+    margin-bottom: -11px;
+}
+.nav-link:hover{
+    background: #c0bebe;
 }
 
 
@@ -91,80 +99,6 @@ font-weight: 700;
     position: relative;
     z-index: 1;
 }
-
-/* #footer{
-    margin-top: 10%;
-}
-.footer {
-    position: relative;
-    padding-top: 45px;
-    max-width: 1145px;
-}
-
-.footer .btn.btn-social {
-    margin-right: 5px;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--light);
-    border: 1px solid #FFFFFF;
-    border-radius: 35px;
-    transition: .3s;
-}
-
-.footer .btn.btn-social:hover {
-    color: var(--primary);
-}
-
-.footer .btn.btn-link {
-    
-    margin-bottom: 5px;
-    padding: 20px;
-    color: #FFFFFF;
-    font-size: 20px;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-}
-
-.footer .btn.btn-link::before {
-    position: relative;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
-}
-
-.footer .btn.btn-link:hover {
-    letter-spacing: 1px;
-    box-shadow: none;
-}
-
-.footer .copyright {
-    padding: 25px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-     text-align: left;
-     margin-right: 52%;
-}
-
-
-.footer .copyright a {
-    color: var(--light);
-}
-
-.footer .footer-menu a {
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .3);
-}
-
-.footer .footer-menu a:last-child {
-    margin-right: 0;
-    padding-right: 0;
-    border-right: none;
-} */
 
 
 
@@ -245,7 +179,6 @@ td{
 
 
 
-
 /* exploremore start*/
 #post-1372
 {
@@ -266,6 +199,7 @@ td{
 
 #center{
     transition: .3s;
+
 }
 
 #center:hover {

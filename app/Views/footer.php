@@ -21,27 +21,6 @@
     .pad {
         padding: 2rem;
     }
-
-    .social-link {
-        width: 30px;
-        height: 30px;
-        border: 1px solid #ddd;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #666;
-        border-radius: 50%;
-        transition: all 0.3s;
-        font-size: 0.9rem;
-        text-decoration: none;
-    }
-
-    .social-link:hover,
-    .social-link:focus {
-        background: #ddd;
-        text-decoration: none;
-        color: #555;
-    }
     #center{
         margin-top:20px;
     }
@@ -53,17 +32,17 @@
         <div class="" style="background-color: skyblue;">
             <div class="row pad">
                 <div class="col text-center">
-                    <img src="assets/logo.png" style="height:50px; width:100px;">
-                    <h4>About Us</h4>
+                    <img src="<?php echo base_url(); ?>/assets/assets_img/logo.png" style="height:50px; width:100px;">
+                    <h4 id="center">About Us</h4>
                     <P>“
                         We are a leading online platform for booking hotels and resorts. We offer a wide range of accommodations at competitive prices, with easy booking and payment options.”</P>
                 </div>
                 <div class="col text-center" id="center">
-                   <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>"> <h4>Contact Us</h4></a>
+                   <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>"style="text-decoration:none;"> <h4  style="color:black;">Contact Us</h4></a>
                     
                 </div>
-                <div class="col text-center">
-                    <h4>Services</h4>
+                <div class="col text-center" >
+                    <h4 id="center">Services</h4>
                     Search for and book hotels and resorts
                     View hotel details and amenities
                     Read and write reviews of hotels
