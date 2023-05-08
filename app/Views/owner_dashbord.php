@@ -112,7 +112,7 @@ $session = \Config\Services::session();
             <br>
             <div class="row" id="ads">
                 <!-- Category Card -->
-                <div class="col-md-4">
+                <div>
                     <div class="card rounded owner_card">
                     </div>
                 </div>

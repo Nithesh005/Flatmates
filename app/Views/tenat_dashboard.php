@@ -46,6 +46,11 @@ $session = \Config\Services::session();
         width: 50px;
         background-color: #007bff;
     }
+    ul li {
+        list-style-type: none;
+        float: left;
+    }
+
 </style>
 
 <body onload="getcardtenant()">
@@ -62,8 +67,9 @@ $session = \Config\Services::session();
         <div class="row" id="ads">
             <!-- Category Card -->
             <div class="col-md-4">
-                <div class="card rounded tenant_card">
-                </div>
+                <ul class="card rounded tenant_card">
+
+                </ul>
             </div>
         </div>
     </div>
@@ -78,7 +84,6 @@ $session = \Config\Services::session();
 <script>
     // card design
     function getcardtenant() {
-        alert("hello")
         $.ajax({
             // url: "<?php echo base_url() ?>/public/index.php/Controllers/dbcontrollers/reg_user_data",
             url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_card_controller'); ?>",
@@ -92,6 +97,7 @@ $session = \Config\Services::session();
                     function (items) {
                         var element = $();
                         element = element.add(
+                            '<li>' +
                             '<div class="card-image">' +
                             '<span class="card-notify-badge">Low KMS</span>' +
                             '<span class="card-notify-year">2018</span>' +
@@ -112,15 +118,32 @@ $session = \Config\Services::session();
                             // '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
                             '</div>' +
                             '</div>' +
+                            '<a href="#" class="button button--piyo">' +
+                            '<div class="button__wrapper">' +
+                            '<span class="button__text">DELETE</span>' +
+                            '</div>' +
+                            '<div class="characterBox">' +
+                            '<div class="character wakeup">' +
+                            '<div class="character__face"></div>' +
+                            '</div>' +
+                            '<div class="character wakeup">' +
+                            '<div class="character__face"></div>' +
+                            '</div>' +
+                            '<div class="character">' +
+                            '<div class="character__face"></div>' +
+                            '</div>' +
+                            '</div>' +
+                            '</a>' +
                             '<div class="card-body text-center">' +
                             '<div class="ad-title m-auto">' +
                             '<h5>Honda Accord LX</h5>' +
                             '</div>' +
                             '<a class="ad-btn" href="#">View</a>' +
-                            '</div>'
+                            '</div>' +
+                            '</li>'
 
                         );
-                        $('.owner_card').append(element);
+                        $('.tenant_card').append(element);
 
                     }
                 );
