@@ -27,13 +27,13 @@
                 <!-- Left links -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <a href="<?php echo base_url('./public/index.php/home/index') ?>" class="nav-link">Home</a>
+                    <a href="<?php echo base_url('./public/index.php/home/index') ?>" class="nav-link" style="font-weight:700;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/login') ?>" class="nav-link text-dark">Sign in</a>
+                        <a href="<?php echo base_url('./public/index.php/home/login') ?>" class="nav-link " style="font-weight:700;">Sign in</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>" class="nav-link text-dark">Sign up</a>
+                        <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>" class="nav-link " style="font-weight:700;">Sign up</a>
                     </li>
                 </ul>
                 <!-- Left links -->
