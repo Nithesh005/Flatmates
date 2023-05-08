@@ -16,7 +16,7 @@
     <title>Document</title>
 </head>
 
-<body onload="retive_data_owner()">
+<body onload="getcard()">
 
     <?php require_once "after_login_header.php"; ?>
     <br>
@@ -35,7 +35,9 @@
 
 
                 <div class="modal-body">
-                    <form class="row g-3 p-4" action="<?php echo base_url('public/index.php/dbcontrollers/demo_reg'); ?>" method="post" enctype="multipart/form-data">
+                    <form class="row g-3 p-4"
+                        action="<?php echo base_url('public/index.php/dbcontrollers/demo_reg'); ?>" method="post"
+                        enctype="multipart/form-data">
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">House number</label>
                             <input type="text" class="form-control" id="house_no" placeholder="20/93" name="house_no">
@@ -43,7 +45,8 @@
 
                         <div class="col-6">
                             <label for="inputAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" name="inputAddress" placeholder="1234 Main St">
+                            <input type="text" class="form-control" id="inputAddress" name="inputAddress"
+                                placeholder="1234 Main St">
                         </div>
                         <div class="col-12">
                             <label for="inputAddress2" class="form-label">About your house</label>
@@ -51,24 +54,29 @@
                         </div>
                         <div class="col-12">
                             <label for="Description" class="form-label">Description</label>
-                            <textarea class="form-control" id="Description" name="Description" placeholder="Nearby facilities"></textarea>
+                            <textarea class="form-control" id="Description" name="Description"
+                                placeholder="Nearby facilities"></textarea>
                         </div>
                         <div class="col-md-6">
                             <label for="Members_allowed" class="form-label">Members allowed</label>
-                            <input type="text" class="form-control" id="Members_allowed" name="Members_allowed" placeholder="5 members">
+                            <input type="text" class="form-control" id="Members_allowed" name="Members_allowed"
+                                placeholder="5 members">
                         </div>
                         <div class="col-md-6">
                             <label for="Rent_amount" class="form-label">Rent Amount</label>
-                            <input type="text" class="form-control" id="Rent_amount" name="Rent_amount" placeholder="₹15000-/Per Month">
+                            <input type="text" class="form-control" id="Rent_amount" name="Rent_amount"
+                                placeholder="₹15000-/Per Month">
                         </div>
                         <div class="col-md-6">
                             <label for="inputCity" class="form-label">City</label>
-                            <input type="text" class="form-control" id="inputCity" name="inputCity" placeholder="Madurai">
+                            <input type="text" class="form-control" id="inputCity" name="inputCity"
+                                placeholder="Madurai">
                         </div>
 
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">State</label>
-                            <input type="text" class="form-control" id="inputstate" name="inputstate" placeholder="Tamilnadu">
+                            <input type="text" class="form-control" id="inputstate" name="inputstate"
+                                placeholder="Tamilnadu">
                         </div>
 
                         <div class="col-md-6">
@@ -95,7 +103,6 @@
 
 
                     </form>
-
                 </div>
             </div>
         </div>
@@ -195,6 +202,34 @@
         }
         the_return.innerHTML = filenames;
     });
+
+
+    // card design
+    function getcard() {
+        $.ajax({
+            // url: "<?php echo base_url() ?>/public/index.php/Controllers/dbcontrollers/reg_user_data",
+            url: "<?php echo base_url('public/index.php/Dbcontrollers/owner_card'); ?>",
+            method: "POST",
+            dataType: "json",
+            // data: {
+            //     sname: sname,
+            // },
+            success: function (res) {
+                console.log(res);
+                
+                // console.log("susscess");
+                // location.replace("<?php //echo base_url('./public/index.php/home/otp_verification') ?>");
+            },
+            error: function (er) {
+                // console.error(er);
+                console.log("error")
+            }
+        })
+
+    }
+
+
+
 </script>
 
 

@@ -35,6 +35,10 @@ class Home extends BaseController
     {
         return view('tenant_register');
     }
+    public function contact_us()
+    {
+        return view('contact_us');
+    }
     public function terms_conditions()
     {
         return view('terms_conditions');
@@ -50,6 +54,10 @@ class Home extends BaseController
     public function tenat_dashboard()
     {
         return view('tenat_dashboard');
+    }
+    public function about()
+    {
+        return view('about');
     }
     public function otp_verification()
     {
