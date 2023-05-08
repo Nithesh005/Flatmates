@@ -28,60 +28,87 @@
             </section>
         </main>
     </div> -->
-    
+
     <div class="container">
-        <div class="heading">
-            <h1>ABOUT US</h1>
-        </div>
-        <div>
-            <h2>Who We Are</h2>
-            <h3>We are a group of flatmates who decided to live together to save on rent and have a good time. We
-                come
-                from different backgrounds and have different interests, but we get along well and enjoy each
-                other's
-                company.
-            </h3>
-        </div>
+        <div class="first">
+            <div class="heading">
+                <h1>ABOUT US</h1>
+            </div>
+            <br>
         <br>
         <br>
-        <br>
+            <div>
 
-        <div class="scene">
+                <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to our website! We are a team of passionate individuals who believe in providing our
+                    customers
+                    with a seamless and hassle-free booking experience. Our goal is to make it easier for you to find
+                    and
+                    reserve your perfect room, whether you're looking for a short-term stay or a long-term rental.
+                    <br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our dedicated customer support team is available around the clock to answer any questions or concerns
+                    you
+                    may have, and to help you make the most of your booking experience.
+                    Thank you for choosing our website, and we look forward to serving you
+                </h5>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="second">
+            <div class="heading">
+                <h1>OUR TEAM MATES</h1>
+            </div>
+            <br>
+            <br>
 
-            <div class="card">
-                <div class="card__face card__face--front">
-                    <img src="https://i.loli.net/2019/11/23/cnKl1Ykd5rZCVwm.jpg" />
+            <div class="scene">
+
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <img src="<?php echo base_url(); ?>about_asset/abi-anim.jpeg" alt="">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <img src="<?php echo base_url(); ?>about_asset/abi-normal.jpg" alt="">
+                    </div>
                 </div>
-                <div class="card__face card__face--back">
-                    <img src="https://i.loli.net/2019/11/16/cqyJiYlRwnTeHmj.jpg" />
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <img src="<?php echo base_url(); ?>about_asset/rose-anim.jpeg" alt="">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <img src="<?php echo base_url(); ?>about_asset/rose-normal.jpeg" alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card__face card__face--front">
-                    <img src="https://i.loli.net/2019/11/16/FLnzi5Kq4tkRZSm.jpg" />
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <img src="<?php echo base_url(); ?>about_asset/mathan-anim.jpeg" alt="">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <img src="<?php echo base_url(); ?>about_asset/mathan-normal.jpg" alt="">
+                    </div>
                 </div>
-                <div class="card__face card__face--back">
-                    <img src="https://i.loli.net/2019/10/18/buDT4YS6zUMfHst.jpg" />
-                </div>
-            </div>
-            <div class="card">
-                <div class="card__face card__face--front">
-                    <img src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg" />
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="https://i.loli.net/2019/11/03/RtVq2wxQYySDb8L.jpg" />
-                </div>
-            </div>
-            <div class="card">
-                <div class="card__face card__face--front">
-                    <img src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg" />
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="https://i.loli.net/2019/11/03/RtVq2wxQYySDb8L.jpg" />
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <img src="<?php echo base_url(); ?>about_asset/nithi-anim.jpeg" alt="">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <img src="<?php echo base_url(); ?>about_asset/nithi-normal.jpeg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
+<br>
+        <br>
+        <br><br>
+        <br>
+        <br><br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+<?php require_once "footer.php"; ?>
 </html>
