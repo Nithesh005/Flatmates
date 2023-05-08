@@ -136,7 +136,7 @@
                                             our co-living</h1>
                                         <h5 class="mb-4"> Verified & onboarded by our agents.Every property detail on
                                             just a click.</h5>
-                                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                                        <a class="btn btn-primary py-3 px-5 mt-2" href="<?php echo base_url('./public/index.php/home/exploremore') ?>">Explore More</a>
                                     </div>
                                 </div>
                             </div>

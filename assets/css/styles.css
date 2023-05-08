@@ -246,22 +246,11 @@ td{
 /* privacy_policy End*/
 
 
-/* About us start */
-
-.content_about{
-    padding: 60px;
-    font-size: 20px;
+/* exploremore start*/
+#post-1372
+{
+    padding: 80px;
 }
-#img_about{
- 
-        float: right;
-        border: 1px dotted black;
-        margin: 0px 0px 15px 20px;
-      height: 60%;
-      width:332px;
-}
-
-/* Aboutus end */
 
 
 

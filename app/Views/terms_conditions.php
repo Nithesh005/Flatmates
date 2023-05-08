@@ -47,7 +47,7 @@
                         <a href="#service" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#footer" class="nav-link">contact</a>
+                        <a href="mailto:flatmates09@gmail.com" class="nav-link">contact</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo base_url('./public/index.php/home/login') ?>" class="nav-link text-dark">Sign in</a>

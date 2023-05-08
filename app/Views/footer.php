@@ -42,6 +42,9 @@
         text-decoration: none;
         color: #555;
     }
+    #center{
+        margin-top:20px;
+    }
 </style>
 
 <body>
@@ -55,16 +58,12 @@
                     <P>“
                         We are a leading online platform for booking hotels and resorts. We offer a wide range of accommodations at competitive prices, with easy booking and payment options.”</P>
                 </div>
-                <div class="col text-center">
+                <div class="col text-center" id="center">
                     <h4>Contact Us</h4>
-
-                    <ul class="social mb-0 list-inline mt-3">
-                        <li class="list-inline-item"><a href="https://youtube.com/@SriMookambikaInfosolutions" class="social-link"><i class="fa fa-youtube"></i></a></li>
-                        <li class="list-inline-item"><a href="https://twitter.com/SriMookambikaI2" class="social-link"><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="https://instagram.com/srimookambikainfosolutions?igshid=YmMyMTA2M2Y=" class="social-link"><i class="fa fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.linkedin.com/company/sri-mookambika-infosolutions/" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-
+                    <br>
+                    <h4>Privacy policy</h4>
+                    <br>
+                    <h4>Terms & conditions</h4>
                 </div>
                 <div class="col text-center">
                     <h4>Services</h4>

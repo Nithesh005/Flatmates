@@ -19,6 +19,11 @@ class Home extends BaseController
         
         return view('login');
     }
+    public function exploremore()
+    {
+        
+        return view('exploremore');
+    }
     public function tenant_register()
     {
         return view('tenant_register');
