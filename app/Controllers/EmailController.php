@@ -22,4 +22,6 @@ class EmailController extends BaseCollector
         }
         return view('login');
     }
+
+    
 }

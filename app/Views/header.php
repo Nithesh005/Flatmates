@@ -30,7 +30,7 @@
                     <a href="<?php echo base_url('./public/index.php/home/index') ?>" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/about_us') ?>" class="nav-link">About</a>
+                        <a href="<?php echo base_url('./public/index.php/home/about') ?>" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" class="nav-link">Services</a>

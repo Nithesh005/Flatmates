@@ -79,9 +79,9 @@
         </div>
         <!-- Copyright -->
         <div class="text-center p-3">
-            © Copyright 2023 Tenant.in
-            <a href="T_C.php" style="text-decoration:none;">&nbsp Terms of Use </a> &nbsp&nbsp
-            <a href="policy.php" style="text-decoration:none;">Privacy Policy</a>
+            © Copyright 2023 AURCM students
+            <a href="<?php echo base_url('./public/index.php/home/terms_conditions') ?>" style="text-decoration:none;" >Terms of Use</a>&nbsp
+            <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" style="text-decoration:none;">& &nbsp Privacy Policy</a>
             <!-- <a class="text-dark">MDBootstrap.com</a> -->
         </div>
 

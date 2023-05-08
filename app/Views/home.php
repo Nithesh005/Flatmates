@@ -205,7 +205,8 @@
                                                 <div class="row g-5">
                                                     <div class="container-fo0t">
                                                         <a class="btn btn-link" href="/">About Us</a>
-                                                        <a class="btn btn-link" href="/">Contact Us</a>
+                                                        <!-- <a class="btn btn-link" href="/">Contact Us</a> -->
+                                                        <a class="btn btn-link" href="<?php echo base_url('./public/index.php/home/contact_us') ?>">Contact Us</a>
                                                         <a class="btn btn-link" href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>">Privacy Policy</a>
                                                         <a class="btn btn-link" href="<?php echo base_url('./public/index.php/home/terms_conditions') ?>">Terms & Conditions</a>
                                                         <a class="btn btn-link" href="">Support</a>

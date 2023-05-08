@@ -28,6 +28,10 @@ class Home extends BaseController
     {
         return view('tenant_register');
     }
+    public function contact_us()
+    {
+        return view('contact_us');
+    }
     public function terms_conditions()
     {
         return view('terms_conditions');
@@ -44,9 +48,9 @@ class Home extends BaseController
     {
         return view('tenat_dashboard');
     }
-    public function about_us()
+    public function about()
     {
-        return view('about_us');
+        return view('about');
     }
     public function otp_verification()
     {
@@ -65,6 +69,7 @@ class Home extends BaseController
     }
     public function sendEmail()
     {
+        $email_id = $this->request->getvar('email_id');
         
         $otp = mt_rand(100000, 999999);
         $u_id = session('u_id');
@@ -72,7 +77,7 @@ class Home extends BaseController
         $email = Services::email();
 
         $email->setFrom('flatmates09@gmail.com', 'Flatmates');
-        // $email->setTo('mazzmathan2001@gmail.com');
+        // $email->setTo($email_id);
         $email->setTo('nitheshwaran003@gmail.com');
         // $email->setCC('another@another-example.com');
         // $email->setBCC('them@their-example.com');
