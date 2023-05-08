@@ -12,38 +12,6 @@
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html>
-
-    <head>
-        <title>About Us</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    
-
-    <body>
-        <!-- header -->
-         <?php require_once "commonheader.php"; ?>
-        <!-- header -->
-        
-        <header>
-            <h1>About Us</h1>
-        </header>
-        <main>
-            <header>
-                
-            </header>
-
-            <section>
-                <h2>Who We Are</h2>
-                <p>We are a group of flatmates who decided to live together to save on rent and have a good time. We
-                    come
-                    from different backgrounds and have different interests, but we get along well and enjoy each
-                    other's
-                    company.</p>
-            </section>
-        </main>
-    </div> -->
 
     <div class="container">
         <div class="first">
@@ -113,21 +81,9 @@
                         <img src="<?php echo base_url(); ?>about_asset/nithi-normal.jpeg" alt="">
                     </div>
                 </div>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2023 Company Name. All rights reserved.</p>
-        </footer>
-        
-        <!-- Footer Start -->    
-        <div class="foot">
-            <?php require_once "footer.php"; ?>
-        </div>   
-        <!-- Footer End -->
-    </body>
-
-    </html>
-
+            </div>
+        </div>
+    </div>
 </body>
 <br>
         <br>
