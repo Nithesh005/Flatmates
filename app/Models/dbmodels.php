@@ -98,7 +98,7 @@ class Dbmodels extends Model
     {
         $db = \Config\Database::connect();
 
-        $query = $db->table('owner_reg');
+        $query = $db->table('ownerreg');
         $query->select('*');
         $query->where('email', $validate_owner['owner_mail']);
         $query->where('password', $validate_owner['owner_pasword']);
@@ -149,9 +149,24 @@ class Dbmodels extends Model
 
         return $intern_id;
     }
+    public function get_unique_id_owner()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('ownerreg');
+        $query->select('*');
+        $res = $query->get()->getResultArray();
+
+        if (count($res) > 0) {
+            $intern_id = 1001 + count($res);
+        } else {
+            $intern_id = 1001;
+        }
+
+        return $intern_id;
+    }
     public function owner_card_model()
     {
-        $unique_id = session('u_id');
+        // $unique_id = session('u_id');
         $db = \Config\Database::connect();
         $query = $db->table('new_house');
         $query->select('*');

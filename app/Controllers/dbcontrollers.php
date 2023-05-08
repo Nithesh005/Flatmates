@@ -148,7 +148,7 @@ class dbcontrollers extends BaseController
             $smart_card_name = $smart_card->getName();
             $aadhar_card_name = $aadhar_card->getName();
 
-            $u_id = $this->unique_id();
+            $u_id = $this->unique_id_owner();
 
             $tmp['u_id'] = $u_id;
             $tmp['sname'] = $sname;
@@ -179,7 +179,14 @@ class dbcontrollers extends BaseController
     {
         // $data = new Intern_Model();
         $ex_id = $this->datas->get_unique_id();
-        $ex_id = 'FM_' . $ex_id;
+        $ex_id = 'FMTN_' . $ex_id;
+        return $ex_id;
+    }
+    public function unique_id_owner()
+    {
+        // $data = new Intern_Model();
+        $ex_id = $this->datas->get_unique_id_owner();
+        $ex_id = 'FMOW_' . $ex_id;
         return $ex_id;
     }
     

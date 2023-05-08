@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2023 at 04:59 PM
+-- Generation Time: May 08, 2023 at 11:56 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -111,6 +111,7 @@ CREATE TABLE `new_house` (
 --
 
 INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `members`, `rent`, `about`, `description`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES
+('121', '23', 'Jakkasamudram', 'a', 'a', '', 'aa', 'Dharmapuri', 'Tamil Nadu', 636805, '', 'Ai.avif'),
 ('FM_1001', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png'),
 ('FM_1002', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png'),
 ('FM_1003', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png'),
@@ -121,10 +122,10 @@ INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `members`, `rent`, `abou
 -- --------------------------------------------------------
 
 --
--- Table structure for table `owner_reg`
+-- Table structure for table `ownerreg`
 --
 
-CREATE TABLE `owner_reg` (
+CREATE TABLE `ownerreg` (
   `u_id` varchar(100) NOT NULL,
   `r_no` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -143,11 +144,12 @@ CREATE TABLE `owner_reg` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `owner_reg`
+-- Dumping data for table `ownerreg`
 --
 
-INSERT INTO `owner_reg` (`u_id`, `r_no`, `name`, `email`, `phone_no`, `password`, `occupation`, `house_no`, `address`, `city`, `state`, `photo_img`, `house_doc`, `aadhar_doc`, `aadhar_no`) VALUES
-('121', 9100, 'nithi', 'nithi@gmail.com', 11, '123', '', '', '', '', '', '', '', '', 0);
+INSERT INTO `ownerreg` (`u_id`, `r_no`, `name`, `email`, `phone_no`, `password`, `occupation`, `house_no`, `address`, `city`, `state`, `photo_img`, `house_doc`, `aadhar_doc`, `aadhar_no`) VALUES
+('FM_1005', 0, 'nithesh', 'nitheshwaran003@gmail.com', 0, '123', 'developer', '', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'be nice.jpg', 'be nice_1.jpg', 'be nice_2.jpg', 1111111),
+('FMOW_1002', 0, 'nithesh', 'nitheshwaran003@gmail.com', 0, '123', 'developer', '', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'ai_chip.jpg', 'ai_chip_1.jpg', 'ai_chip_2.jpg', 1111111);
 
 -- --------------------------------------------------------
 
@@ -201,7 +203,11 @@ CREATE TABLE `tenant_reg` (
 --
 
 INSERT INTO `tenant_reg` (`u_id`, `r_no`, `name`, `email`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_doc`, `aadhar_no`, `phone_no`, `status`) VALUES
-('121', 11, '', 'nithi@gmail.com', '1', '', '', '', '', '', '', '', 123456789, 1234567890, '');
+('121', 11, '', 'nithi@gmail.com', '1', '', '', '', '', '', '', '', 123456789, 1234567890, ''),
+('FM_1002', 0, 'nithesh', 'nitheshwaran003@gmail.com', '123', 'developer', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'AI.jpg', 'AI_1.jpg', 'AI_2.jpg', 1111111, 0, 'Family'),
+('FM_1003', 0, 'nithesh', 'nitheshwaran003@gmail.com', '123', 'developer', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'AI_1.jpg', 'AI_2.jpg', 'AI_3.jpg', 1111111, 0, ''),
+('', 0, 'mmm', 'mailing', '', '', '', '', '', '', '', '', 0, 0, ''),
+('FM_1005', 0, 'nithesh', 'nitheshwaran003@gmail.com', '123', 'developer', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'AI.jpg', 'AI_1.jpg', 'AI_2.jpg', 1111111, 0, 'Family');
 
 -- --------------------------------------------------------
 
@@ -282,18 +288,6 @@ ALTER TABLE `new_house`
   ADD UNIQUE KEY `u_id` (`u_id`);
 
 --
--- Indexes for table `owner_reg`
---
-ALTER TABLE `owner_reg`
-  ADD PRIMARY KEY (`name`),
-  ADD UNIQUE KEY `r_no` (`r_no`),
-  ADD UNIQUE KEY `3` (`phone_no`),
-  ADD UNIQUE KEY `2` (`aadhar_no`),
-  ADD UNIQUE KEY `1` (`email`),
-  ADD UNIQUE KEY `name` (`name`),
-  ADD UNIQUE KEY `r_no_2` (`r_no`);
-
---
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -320,12 +314,6 @@ ALTER TABLE `voter_id`
 --
 ALTER TABLE `messages`
   MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `owner_reg`
---
-ALTER TABLE `owner_reg`
-  MODIFY `r_no` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9101;
 
 --
 -- AUTO_INCREMENT for table `products`
