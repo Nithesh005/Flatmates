@@ -1,385 +1,80 @@
-CRITICAL - 2023-05-08 04:58:18 --> Undefined variable $places
-in APPPATH\Views\places_view.php on line 9.
- 1 APPPATH\Views\places_view.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $places', 'APPPATH\\Views\\places_view.php', 9)
- 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\places_view.php')
- 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('places_view', [], true)
- 5 APPPATH\Controllers\Home.php(69): view('places_view')
- 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->place_con()
- 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
- 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2023-05-08 05:45:01 --> You must set the database table to be used with your query.
-in SYSTEMPATH\Database\BaseConnection.php on line 882.
- 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
- 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
- 3 APPPATH\Models\dbmodels.php(21): CodeIgniter\Model->__call('unique_id', [])
- 4 APPPATH\Controllers\dbcontrollers.php(97): App\Models\Dbmodels->reg_user_data_model([...])
- 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
- 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2023-05-08 05:45:19 --> You must set the database table to be used with your query.
-in SYSTEMPATH\Database\BaseConnection.php on line 882.
- 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
- 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
- 3 APPPATH\Models\dbmodels.php(21): CodeIgniter\Model->__call('unique_id', [])
- 4 APPPATH\Controllers\dbcontrollers.php(97): App\Models\Dbmodels->reg_user_data_model([...])
- 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
- 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2023-05-08 05:46:07 --> You must set the database table to be used with your query.
-in SYSTEMPATH\Database\BaseConnection.php on line 882.
- 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
- 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
- 3 APPPATH\Models\dbmodels.php(21): CodeIgniter\Model->__call('unique_id', [])
- 4 APPPATH\Controllers\dbcontrollers.php(97): App\Models\Dbmodels->reg_user_data_model([...])
- 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
- 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2023-05-08 06:42:46 --> Call to a member function isValid() on null
-in APPPATH\Controllers\dbcontrollers.php on line 138.
- 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:06:46 --> mysqli_sql_exception: Unknown column 'smartcard_doc' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+CRITICAL - 2023-05-08 05:45:27 --> Undefined variable $tmp
+in APPPATH\Controllers\dbcontrollers.php on line 161.
+ 1 APPPATH\Controllers\dbcontrollers.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tmp', 'APPPATH\\Controllers\\dbcontrollers.php', 161)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 05:46:59 --> Undefined variable $tmp
+in APPPATH\Controllers\dbcontrollers.php on line 161.
+ 1 APPPATH\Controllers\dbcontrollers.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tmp', 'APPPATH\\Controllers\\dbcontrollers.php', 161)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 05:47:51 --> mysqli_sql_exception: Duplicate entry 'FM_1007' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
 Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(172): App\Models\Dbmodels->reg_user_data_owner_model(Array)
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(149): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(161): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
 #7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
 #8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
 #10 {main}
-CRITICAL - 2023-05-08 07:06:46 --> Unknown column 'smartcard_doc' in 'field list'
+CRITICAL - 2023-05-08 05:47:51 --> Duplicate entry 'FM_1007' for key 'u_id'
 in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `owner_reg` (`u_id`, `name`, `email`, `phone_no`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_doc`, `aadhar_no`) VALUES (:u_id:, :name:, :email:, :phone_no:, :password:, :occupation:, :address:, :city:, :state:, :photo_img:, :smartcard_doc:, :aadhar_doc:, :aadhar_no:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(172): App\Models\Dbmodels->reg_user_data_owner_model([...])
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:u_id:, :house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(149): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(161): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:19:32 --> mysqli_sql_exception: Duplicate entry '0' for key '2' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+ERROR - 2023-05-08 05:48:00 --> mysqli_sql_exception: Duplicate entry 'FM_1007' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
 Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model(Array)
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(149): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(161): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
 #7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
 #8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
 #10 {main}
-CRITICAL - 2023-05-08 07:19:32 --> Duplicate entry '0' for key '2'
+CRITICAL - 2023-05-08 05:48:00 --> Duplicate entry 'FM_1007' for key 'u_id'
 in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `owner_reg` (`name`) VALUES (:name:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model([...])
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:u_id:, :house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(149): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(161): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:21:54 --> mysqli_sql_exception: Duplicate entry '0' for key '2' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+ERROR - 2023-05-08 06:59:57 --> mysqli_sql_exception: Duplicate entry 'FM_1007' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
 Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model(Array)
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(153): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(168): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
 #7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
 #8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
 #10 {main}
-CRITICAL - 2023-05-08 07:21:54 --> Duplicate entry '0' for key '2'
+CRITICAL - 2023-05-08 06:59:57 --> Duplicate entry 'FM_1007' for key 'u_id'
 in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `owner_reg` (`name`) VALUES (:name:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model([...])
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:22:59 --> mysqli_sql_exception: Duplicate entry '0' for key '2' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 07:22:59 --> Duplicate entry '0' for key '2'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `owner_reg` (`name`) VALUES (:name:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:25:17 --> mysqli_sql_exception: Duplicate entry '0' for key '2' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 07:25:17 --> Duplicate entry '0' for key '2'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `owner_reg` (`name`) VALUES (:name:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:27:07 --> mysqli_sql_exception: Duplicate entry '0' for key '2' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 07:27:07 --> Duplicate entry '0' for key '2'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `owner_reg` (`name`) VALUES (:name:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:27:22 --> mysqli_sql_exception: Duplicate entry '0' for key '2' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 07:27:22 --> Duplicate entry '0' for key '2'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `owner_reg` (`name`) VALUES (:name:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:28:33 --> mysqli_sql_exception: Duplicate entry '0' for key '2' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 07:28:33 --> Duplicate entry '0' for key '2'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `owner_reg` (`name`) VALUES (:name:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:29:19 --> mysqli_sql_exception: Duplicate entry '0' for key '2' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 07:29:19 --> Duplicate entry '0' for key '2'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `owner_reg` (`name`, `email`) VALUES (:name:, :email:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:31:34 --> mysqli_sql_exception: Duplicate entry '0' for key '2' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 07:31:34 --> Duplicate entry '0' for key '2'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `owner_reg` (`name`, `email`) VALUES (:name:, :email:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:33:57 --> mysqli_sql_exception: Duplicate entry '0' for key '2' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 07:33:57 --> Duplicate entry '0' for key '2'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `owner_reg` (`name`, `email`) VALUES (:name:, :email:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model()
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:45:45 --> mysqli_sql_exception: Unknown column 'smartcard_doc' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model(Array)
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 07:45:45 --> Unknown column 'smartcard_doc' in 'field list'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ownerreg` (`name`, `email`, `phone_no`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_doc`, `aadhar_no`) VALUES (:name:, :email:, :phone_no:, :password:, :occupation:, :address:, :city:, :state:, :photo_img:, :smartcard_doc:, :aadhar_doc:, :aadhar_no:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(171): App\Models\Dbmodels->reg_user_data_owner_model([...])
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2023-05-08 07:47:39 --> Undefined array key "profile_image_name"
-in APPPATH\Models\dbmodels.php on line 59.
- 1 APPPATH\Models\dbmodels.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profile_image_name"', 'APPPATH\\Models\\dbmodels.php', 59)
- 2 APPPATH\Controllers\dbcontrollers.php(170): App\Models\Dbmodels->reg_user_data_owner_model([...])
- 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:55:53 --> mysqli_sql_exception: Unknown column 'smartcard_doc' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(170): App\Models\Dbmodels->reg_user_data_owner_model(Array)
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 07:55:53 --> Unknown column 'smartcard_doc' in 'field list'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ownerreg` (`u_id`, `name`, `email`, `phone_no`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_doc`, `aadhar_no`) VALUES (:u_id:, :name:, :email:, :phone_no:, :password:, :occupation:, :address:, :city:, :state:, :photo_img:, :smartcard_doc:, :aadhar_doc:, :aadhar_no:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(170): App\Models\Dbmodels->reg_user_data_owner_model([...])
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 07:59:33 --> mysqli_sql_exception: Unknown column 'smartcard_doc' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(170): App\Models\Dbmodels->reg_user_data_owner_model(Array)
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 07:59:33 --> Unknown column 'smartcard_doc' in 'field list'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ownerreg` (`u_id`, `name`, `email`, `phone_no`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_no`) VALUES (:u_id:, :name:, :email:, :phone_no:, :password:, :occupation:, :address:, :city:, :state:, :photo_img:, :smartcard_doc:, :aadhar_no:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(170): App\Models\Dbmodels->reg_user_data_owner_model([...])
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-05-08 08:00:29 --> mysqli_sql_exception: Unknown column 'smartcard_doc' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ow...', 0)
-#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ow...')
-#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ow...')
-#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ow...', Array, false)
-#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert(Array)
-#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(170): App\Models\Dbmodels->reg_user_data_owner_model(Array)
-#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
-#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
-#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2023-05-08 08:00:29 --> Unknown column 'smartcard_doc' in 'field list'
-in SYSTEMPATH\Database\BaseConnection.php on line 645.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ownerreg` (`u_id`, `name`, `email`, `phone_no`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_no`) VALUES (:u_id:, :name:, :email:, :phone_no:, :password:, :occupation:, :address:, :city:, :state:, :photo_img:, :smartcard_doc:, :aadhar_no:)', [...], false)
- 2 APPPATH\Models\dbmodels.php(67): CodeIgniter\Database\BaseBuilder->insert([...])
- 3 APPPATH\Controllers\dbcontrollers.php(170): App\Models\Dbmodels->reg_user_data_owner_model([...])
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:u_id:, :house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(153): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(168): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

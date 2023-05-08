@@ -155,7 +155,7 @@ class Dbmodels extends Model
         $db = \Config\Database::connect();
         $query = $db->table('new_house');
         $query->select('*');
-        $query->where('u_id', "$unique_id");
+        $query->where('u_id', "FM_1001");
         $res = $query->get()->getResultArray();
         // $res = "final answer";
 

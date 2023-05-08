@@ -3,58 +3,112 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/about.css?version=<?php echo rand(); ?>">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html>
-
-    <head>
-        <title>About Us</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-
-    <body>
-        <header>
-            <h1>About Us</h1>
-        </header>
+    <!-- <div class="tit">
         <main>
-            <section id="hero">
-                <h2>Welcome to our company</h2>
-                <p>We are a leading provider of innovative solutions.</p>
-            </section>
-            <section id="about">
-                <h2>About Our Company</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam ligula vel sem tincidunt
-                    posuere. Quisque in pharetra mauris, at maximus tortor. Mauris eu mauris non sem placerat lobortis
-                    vitae non massa. Suspendisse a congue justo. Donec id nulla sed sapien lobortis finibus. Duis et
-                    cursus ante, vitae placerat mi. </p>
-            </section>
-            <section id="team">
-                <h2>Our Team</h2>
-                <div class="team-member">
-                    <img src="team-member1.jpg" alt="Team Member 1">
-                    <h3>John Doe</h3>
-                    <p>CEO</p>
-                </div>
-                <div class="team-member">
-                    <img src="team-member2.jpg" alt="Team Member 2">
-                    <h3>Jane Smith</h3>
-                    <p>CTO</p>
-                </div>
+            <header>
+                
+            </header>
+
+            <section>
+                <h2>Who We Are</h2>
+                <p>We are a group of flatmates who decided to live together to save on rent and have a good time. We
+                    come
+                    from different backgrounds and have different interests, but we get along well and enjoy each
+                    other's
+                    company.</p>
             </section>
         </main>
-        <footer>
-            <p>&copy; 2023 Company Name. All rights reserved.</p>
-        </footer>
-    </body>
+    </div> -->
 
-    </html>
+    <div class="container">
+        <div class="first">
+            <div class="heading">
+                <h1>ABOUT US</h1>
+            </div>
+            <br>
+        <br>
+        <br>
+            <div>
 
+                <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to our website! We are a team of passionate individuals who believe in providing our
+                    customers
+                    with a seamless and hassle-free booking experience. Our goal is to make it easier for you to find
+                    and
+                    reserve your perfect room, whether you're looking for a short-term stay or a long-term rental.
+                    <br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our dedicated customer support team is available around the clock to answer any questions or concerns
+                    you
+                    may have, and to help you make the most of your booking experience.
+                    Thank you for choosing our website, and we look forward to serving you
+                </h5>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="second">
+            <div class="heading">
+                <h1>OUR TEAM MATES</h1>
+            </div>
+            <br>
+            <br>
+
+            <div class="scene">
+
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <img src="<?php echo base_url(); ?>about_asset/abi-anim.jpeg" alt="">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <img src="<?php echo base_url(); ?>about_asset/abi-normal.jpg" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <img src="<?php echo base_url(); ?>about_asset/rose-anim.jpeg" alt="">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <img src="<?php echo base_url(); ?>about_asset/rose-normal.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <img src="<?php echo base_url(); ?>about_asset/mathan-anim.jpeg" alt="">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <img src="<?php echo base_url(); ?>about_asset/mathan-normal.jpg" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <img src="<?php echo base_url(); ?>about_asset/nithi-anim.jpeg" alt="">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <img src="<?php echo base_url(); ?>about_asset/nithi-normal.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
+<br>
+        <br>
+        <br><br>
+        <br>
+        <br><br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+<?php require_once "footer.php"; ?>
 </html>

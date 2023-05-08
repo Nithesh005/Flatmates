@@ -1,58 +1,86 @@
-body {
-    font-family: Arial, sans-serif;
+/* * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #333;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  header {
+    background-color: #000000;
     color: #fff;
     padding: 20px;
     text-align: center;
-}
+  }
+  
+  header h1 {
+    font-size: 36px;
+  } */
 
-h1 {
-    margin: 0;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-#hero {
-    background-color: #f1f1f1;
-    padding: 40px;
+.heading {
     text-align: center;
+
+}
+.container{
+    margin-top: 10vh;
 }
 
-#about {
-    background-color: #fff;
-    padding: 40px;
+body {
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-#team {
-    background-color: #f1f1f1;
-    padding: 40px;
+.scene {
+    width: 100%;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    justify-content: space-between;
+    perspective: 800px;
+
 }
 
-.team-member {
-    display: inline-block;
-    text-align: center;
-    margin-right: 20px;
+.scene .card {
+    position: relative;
+    width: 240px;
+    height: 300px;
+    color: white;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    transform-style: preserve-3d;
 }
 
-.team-member img {
-    width: 150px;
-    border-radius: 50%;
+.scene .card:hover {
+    transform: rotateY(0.5turn);
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+.scene .card .card__face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: 1s ease-in-out;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+}
+
+.scene .card .card__face img {
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.scene .card .card__face--back {
+    transform: rotateY(0.5turn);
 }
