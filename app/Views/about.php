@@ -23,7 +23,7 @@
 
     <body>
         <!-- header -->
-         <?php require_once "commonheader.php"; ?>
+         <?php //require_once "commonheader.php"; ?>
         <!-- header -->
         
         <header>
@@ -43,7 +43,7 @@
                     company.</p>
             </section>
         </main>
-    </div> -->
+    </div>
 
     <div class="container">
         <div class="first">
