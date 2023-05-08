@@ -51,6 +51,7 @@ class dbcontrollers extends BaseController
         
         $aadhar_card = $this->request->getFile('aadhar_card');
 
+        
         // $reg_data['sname'] = $this->request->getvar('sname');
         if (($profile_image->getSize() > 0)) {
             $unique_id = $this->unique_id();
@@ -75,9 +76,12 @@ class dbcontrollers extends BaseController
             $smart_card_name = $smart_card->getName();
             $aadhar_card_name = $aadhar_card->getName();
 
+            $u_id = $this->unique_id();
 
+            $tmp['u_id'] = $u_id;
             $tmp['sname'] = $sname;
             $tmp['email_id'] = $email_id;
+            $this->session->set('email_id', $tmp['email_id']);
             $tmp['mobile'] = $mobile;
             $tmp['password_id'] = $password_id;
             $tmp['occupation_id'] = $occupation_id;
@@ -96,6 +100,7 @@ class dbcontrollers extends BaseController
         if ($res == true) {
             return view('otp_verification');
         }
+        // redirect('Home/sendEmail/'.$email_id);
     }
 
 
@@ -106,6 +111,8 @@ class dbcontrollers extends BaseController
         $ex_id = 'FM_' . $ex_id;
         return $ex_id;
     }
+    
+    
 
     public function owner_card()
     {
@@ -113,6 +120,14 @@ class dbcontrollers extends BaseController
 
         echo json_encode($res);
     }
+    public function  tenant_card_controller()
+    {
+        $res = $this->datas->tenant_card_model();
+
+        echo json_encode($res);
+    }
+
+   
 
 
 

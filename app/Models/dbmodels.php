@@ -18,6 +18,7 @@ class Dbmodels extends Model
         $db = \Config\Database::connect();
 
         $my_demo_data = [
+            "u_id" => $tmp['u_id'],
             "name" => $tmp['sname'],
             "email" => $tmp['email_id'],
             "phone_no" => $tmp['mobile'],
@@ -90,6 +91,7 @@ class Dbmodels extends Model
         $res = $query->get()->getResultArray();
 
         if (count($res) == 1) {
+            $this->session->set('u_id', $res[0]['u_id']);
             return "success";
         } else {
             return "fail";
@@ -116,14 +118,28 @@ class Dbmodels extends Model
     }
     public function owner_card_model()
     {
+        $unique_id = session('u_id');
         $db = \Config\Database::connect();
         $query = $db->table('new_house');
         $query->select('*');
+        $query->where('u_id', "FM_1001");
         $res = $query->get()->getResultArray();
         // $res = "final answer";
 
         return $res;
     }
+
+    public function tenant_card_model()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('new_house');
+        $query->select('*');
+        $res = $query->get()->getResultArray();
+        // $res = "final answer";
+        return $res;
+    }
+
+    
 
 
     public function new_house_data_model($tmp)

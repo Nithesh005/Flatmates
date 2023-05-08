@@ -91,7 +91,7 @@
 
                         <div class="col-md-6">
                             <label for="bhk" class="form-label">BHK</label>
-                            <input type="text" class="form-control" id="bhk" name="bhk" placeholder="2BHK">
+                            <input type="text" class="form-control" id="bhk" name="bhk" placeholder="2.3.4..etc">
                         </div>
 
 
@@ -122,37 +122,12 @@
             <div class="row" id="ads">
                 <!-- Category Card -->
                 <div class="col-md-4">
-                    <div class="card rounded">
-                        <div class="card-image">
-                            <span class="card-notify-badge">Low KMS</span>
-                            <span class="card-notify-year">2018</span>
-                            <img class="img-fluid"
-                                src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
-                                alt="Alternate Text" />
-                        </div>
-                        <div class="card-image-overlay m-auto">
-                            <!-- <span class="card-detail-badge">Used</span> -->
-                            <span class="card-detail-badge">₹15,000</span>
-                            <span class="card-detail-badge">5BHK</span>
-                        </div>
-                        <div class="col-12">
-                            <div class="card-body">
-                                <h5 class="card-title">About Home</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                        <div class="card-body text-center">
-                            <div class="ad-title m-auto">
-                                <h5>Honda Accord LX</h5>
-                            </div>
-                            <a class="ad-btn" href="#">View</a>
-                        </div>
+                    <div class="card rounded owner_card">
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
 
 </body>
@@ -200,6 +175,43 @@
             success: function (res) {
                 console.log(res);
                 console.log("ajax woking");
+                $('.owner_card').empty();
+                res.forEach(
+                    function (items) {
+                        var element = $();
+                        element = element.add(
+                            '<div class="card-image">'+
+                            '<span class="card-notify-badge">Low KMS</span>'+
+                            '<span class="card-notify-year">2018</span>'+
+                            '<img class="img-fluid" '+
+                                'src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" '+
+                                'alt="Alternate Text" />'+
+                        '</div>'+
+                        '<div class="card-image-overlay m-auto">'+
+                            '<span class="card-detail-badge">'+'₹'+ + items.rent +'</span>'+
+                           '<span class="card-detail-badge">'+ items.BHK + '/' + 'BHK'+'</span>'+
+                        '</div>'+
+                        '<div class="col-12">'+
+                            '<div class="card-body">'+
+                                '<h5 class="card-title">About Home</h5>'+
+                                '<p class="card-text">'+ items.description +'</p>'+
+                                '<p class="card-text">'+'City' + ':' + items.city +'</p>'+
+                                '<p class="card-text">'+'Zipcode' + ':'+ items.zipcode +'</p>'+
+                                // '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
+                            '</div>'+
+                        '</div>'+
+                        '<div class="card-body text-center">'+
+                            '<div class="ad-title m-auto">'+
+                                '<h5>Honda Accord LX</h5>'+
+                            '</div>'+
+                            '<a class="ad-btn" href="#">View</a>'+
+                        '</div>'
+
+                        );
+                        $('.owner_card').append(element);
+
+                    }
+                );
 
             },
             error: function (er) {
