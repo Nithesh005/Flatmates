@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 ?></h1>
 
     <div class="otp_form">
-        <form action="" method="post">
+        <form action="<?php echo base_url('public/index.php/home/verifyOTP'); ?>" method="post">
             <div class="row mb-4">
                 <div class="col-lg-3 col-md-2"></div>
                 <div class="col-lg-6 col-md-8">
