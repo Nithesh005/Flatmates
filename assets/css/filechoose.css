@@ -47,7 +47,7 @@
 
   /* card */
 
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
@@ -57,7 +57,10 @@ body {
 
 /* Category Ads */
 
-#ads {
+
+
+
+ #ads {
     margin: 30px 0 30px 0;
    
 }
@@ -150,4 +153,339 @@ body {
         text-transform: uppercase;
         font-size: 18px;
     }
+
+/* button_icon */
+
+    .button--piyo{
+      --main_color : #f4cf47 ;
+      --sub_color1 : #f4e19c ;
+      --sub_color2 : #ff8108 ;
+      --base_color : #000 ;
+      --border_radius1 : 60px 60px 40px 40px / 48px 48px 30px 30px ;
+      --border_radius2 : 70px 70px 40px 40px / 48px 48px 30px 30px ;
+      --border_radius3 : 40px 40px 40px 40px / 48px 48px 30px 30px ;
+  }
+  .button{
+      position : relative ;
+      display : flex ;
+      justify-content : center ;
+      align-items : center ;
+      margin-left: 30%;
+      margin-top: 10%;
+      width : 125px ;
+      height : 30px ;
+      box-sizing : border-box ;
+      text-decoration : none ;
+      border : solid 3px #000 ;
+      border-radius : 40px ;
+      background : var(--main_color) ;
+      font-family: 'Fredoka One', cursive;
+     align-items: center;
+  }
+  .button::before{
+      position : absolute ;
+      z-index : 2 ;
+      right : 20px ;
+      width : 24px ;
+      height : 24px ;
+      
+      background : var(--base_color) ; 
+      transition : all ease .2s ;
+  }
+  .button__wrapper{
+      display : flex ;
+      justify-content : center ;
+      align-items : center ;
+      position : relative ;
+      z-index : 1 ; 
+      width : 100% ;
+      height : 100% ;
+      border-radius : 40px ;
+      overflow : hidden ;
+  }
+  .button__wrapper::before,
+  .button__wrapper::after{
+      transition : all .5s ease ;
+  }
+  .characterBox{
+      position : absolute ;
+      top : -54px ;
+      left : 0 ;
+      right : 0 ;
+      margin : 0 auto ;
+      display : flex ;
+      justify-content : space-between ;
+      align-items : flex-end ;
+      width : 95px ;
+      height : 56px ;
+  }
+  .button__text{
+      position : relative ;
+      z-index : 3 ;
+      font-size : 13px ;
+      letter-spacing : 4px ;
+      color : var(--base_color) ;
+      transition : all .3s ease ;
+  }
+  .character{
+      position : relative ;
+      width : 29px ;
+      height : 36px ;
+      box-sizing : border-box ;
+      border : solid 3px #000 ;
+      background : var(--main_color) ;
+      border-radius : var(--border_radius1) ;
+      animation : sleep 1s ease infinite alternate ;
+  }
+  .character::before{
+      content : '' ;
+      position : absolute ;
+      top : -12px ;
+      left : 22px ;
+      width : 1px ;
+      height : 1px ;
+  }
+  .character__face{
+      position : absolute ;
+      z-index : 2 ;
+      top : 15px ;
+      left : 0 ;
+      right : 0 ;
+      margin : 0 auto ;
+      width : 12px ;
+      height : 6px ;
+      background : var(--sub_color2) ;
+      border-radius : 50% 50% 50% 50% / 78% 78% 22% 22% ;
+      transition : .2s ;
+  }
+  .character__face::before,
+  .character__face::after{
+      content : '' ;
+      position : absolute ;
+      top : -4px ;
+      width : 8px ;
+      height : 2px ;
+      border-radius : 4px ;
+      background : #000 ;
+  }
+  .character__face::before{
+      left : -5px ;
+  }
+  .character__face::after{
+      right : -5px ;
+  }
+  .button--hoo .character__face::before,
+  .button--hoo .character__face::after{
+      background : #fff ;
+  }
+
+
   
+
+  .button--piyo .button__wrapper::before{
+      left : 0 ;
+  }
+  .button--piyo .button__wrapper::after{
+      right : 0 ;
+      transform : rotateY(180deg) ;
+  }
+
+
+  .button:hover .button__wrapper::before{
+      transform : translateX(-12px) ;
+  }
+  .button:hover .button__wrapper::after{
+      transform : rotateY(180deg) translateX(-12px) ;
+  }
+  .button:hover .button__text{
+      letter-spacing : 6px ;
+  }
+  .button:hover::before{
+      right : 14px ;
+  }
+
+
+  .button:hover .wakeup {
+    animation: wakeup .2s ease;
+    animation-fill-mode: forwards;
+  }
+  
+  .button:hover .wakeup {
+    max-height: 40px; /* Adjust the desired height */
+  }
+  
+  
+  .button:hover .wakeup .character__face{
+      top : 20px ;
+  }
+  .button:hover .wakeup .character__face::before,
+  .button:hover .wakeup .character__face::after{
+      animation : eye 5s linear infinite ;
+  }
+  .button:hover .wakeup:nth-child(2) .character__face::before,
+  .button:hover .wakeup:nth-child(2) .character__face::after{
+      animation : eye_2 5s linear infinite ;
+  }
+
+  @keyframes sleep{
+      0%  {
+          height : 36px ;
+          border-radius : var(--border_radius1) ;
+      }
+      100%{
+          height : 32px ;
+          border-radius : var(--border_radius2) ;
+      }
+  }
+  @keyframes wakeup{
+      0%  {
+          height : 32px ;
+          border-radius : var(--border_radius2) ;
+      }
+      100%{
+          height : 56px ;
+          border-radius : var(--border_radius3) ;
+      }
+  }
+  @keyframes eye {
+      0%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+      30%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+      32%{
+          top : -4px ;
+          width : 8px ;
+          height : 2px ;
+      }
+      34%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+      70%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+      72%{
+          top : -4px ;
+          width : 8px ;
+          height : 2px ;
+      }
+      74%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+      76%{
+          top : -4px ;
+          width : 8px ;
+          height : 2px ;
+      }
+      78%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+      100%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+  }
+  @keyframes eye_2 {
+      0%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+      10%{
+          transform : translateX(0);
+      }
+      12%{
+          transform : translateX(3px);
+      }
+      20%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+      22%{
+          top : -4px ;
+          width : 8px ;
+          height : 2px ;
+      }
+      24%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+      25%{
+          transform : translateX(3px);
+      }
+      27%{
+          transform : translateX(0);
+      }
+      74%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+          transform : translateX(0);
+      }
+      76%{
+          top : -4px ;
+          width : 8px ;
+          height : 2px ;
+          transform : translateX(3px);
+      }
+      78%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+      80%{
+          top : -4px ;
+          width : 8px ;
+          height : 2px ;
+      }
+      82%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+      }
+      85%{
+          transform : translateX(3px);
+      }
+      87%{
+          transform : translateX(0);
+      }
+      100%{
+          top : -6px ;
+          width : 6px ;
+          height : 6px ;
+          transform : translateX(0);
+      }
+  }
+
+  /* .container{
+      width : 100% ;
+      height : 600px ;
+      display : flex ;
+      flex-direction : column ;
+      justify-content : center ;
+      align-items : center ;
+      background : #FFF ;
+  } */
+  .button:not(:last-child){
+      margin-bottom : 80px ;
+  }
+  
+
+
+   
