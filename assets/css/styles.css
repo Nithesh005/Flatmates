@@ -91,7 +91,7 @@ font-weight: 700;
     z-index: 1;
 }
 
-#footer{
+/* #footer{
     margin-top: 10%;
 }
 .footer {
@@ -163,7 +163,7 @@ font-weight: 700;
     margin-right: 0;
     padding-right: 0;
     border-right: none;
-}
+} */
 
 
 
@@ -187,11 +187,10 @@ font-weight: 700;
     height: 50px;
     bottom: 40px;
     right: 50px;
-    
-
 }
 
-/* main */
+
+/* main start */
 
 .banner-card{
     position: relative;
@@ -217,7 +216,7 @@ h1{
 }
 }
  
-/* main-end */
+
 
 
 /* Terms & conditions start */
@@ -229,7 +228,8 @@ h1{
     max-width: 1100px;
     height: 100%;
 }
-/* Terms & conditions End */
+
+
 
 /* privacy_policy start*/
 
@@ -243,7 +243,6 @@ td{
 }
 
 
-/* privacy_policy End*/
 
 
 /* exploremore start*/
@@ -251,6 +250,30 @@ td{
 {
     padding: 80px;
 }
+
+
+
+/* login page start */
+
+#logincontainer{
+    margin-top:50px;
+}
+
+
+
+/* footer start */
+
+#center{
+    transition: .3s;
+}
+
+#center:hover {
+    letter-spacing: .5px;
+    box-shadow: none;
+}
+
+
+
 
 
 

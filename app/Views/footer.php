@@ -59,11 +59,8 @@
                         We are a leading online platform for booking hotels and resorts. We offer a wide range of accommodations at competitive prices, with easy booking and payment options.”</P>
                 </div>
                 <div class="col text-center" id="center">
-                    <h4>Contact Us</h4>
-                    <br>
-                    <h4>Privacy policy</h4>
-                    <br>
-                    <h4>Terms & conditions</h4>
+                   <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>"> <h4>Contact Us</h4></a>
+                    
                 </div>
                 <div class="col text-center">
                     <h4>Services</h4>
@@ -78,10 +75,10 @@
             </div>
         </div>
         <!-- Copyright -->
-        <div class="text-center p-3">
+        <div class="text-center p-3" >
             © Copyright 2023 AURCM students
-            <a href="<?php echo base_url('./public/index.php/home/terms_conditions') ?>" style="text-decoration:none;" >Terms of Use</a>&nbsp
-            <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" style="text-decoration:none;">& &nbsp Privacy Policy</a>
+            <a href="<?php echo base_url('./public/index.php/home/terms_conditions') ?>" style="text-decoration:none;">Terms of Use</a>&nbsp&nbsp&
+            <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" style="text-decoration:none;"> &nbsp Privacy Policy</a>
             <!-- <a class="text-dark">MDBootstrap.com</a> -->
         </div>
 

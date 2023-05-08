@@ -18,45 +18,9 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-            <!-- Toggle button -->
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- Collapsible wrapper -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Navbar brand -->
-                <!-- Left links -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home') ?>" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/about_us') ?>" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#footer" class="nav-link">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/#footer') ?>" class="nav-link">contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/login') ?>" class="nav-link text-dark">Sign in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>" class="nav-link text-dark">Sign up</a>
-                    </li>
-                </ul>
-                <!-- Left links -->
-            </div>
-        </div>
-        <!-- Container wrapper -->
-    </nav>
-    <!-- Navbar -->
+    <!-- header -->
+        <?php require_once "commonheader.php"; ?>
+    <!-- header -->
     <div class="privacycontainer">
 
     <div class= "Container mt-20 lg:mt-28 mb-10">

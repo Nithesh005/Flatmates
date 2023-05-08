@@ -21,48 +21,9 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-            <!-- Toggle button -->
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-                data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- Collapsible wrapper -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Navbar brand -->
-                <!-- Left links -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home') ?>" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#service" class="nav-link">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="mailto:flatmates09@gmail.com" class="nav-link">contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/login') ?>" class="nav-link text-dark">Sign in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>"
-                            class="nav-link text-dark">Sign up</a>
-                    </li>
-                </ul>
-                <!-- Left links -->
-            </div>
-        </div>
-        <!-- Container wrapper -->
-    </nav>
-    <!-- Navbar -->
+    <!-- header -->
+    <?php require_once "commonheader.php"; ?>
+    <!-- header -->
 
     <div class="termscontainer">
         <div class="Container mt-20 lg:mt-28 mb-10">
@@ -250,35 +211,13 @@
             </p>
         </div>
     </div>
+   
     <!-- Footer Start -->
-    <div class="container" id="footer">
-        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container pb-5">
-                <div class="row g-5">
-                    <div class="container-fo0t">
-                        <a class="btn btn-link" href="#">About Us</a>
-                        <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>"
-                            style="text-decoration:none;">Contact Us</a>&nbsp
-                        <a href="<?php echo base_url('./public/index.php/home/terms_conditions') ?>"
-                            style="text-decoration:none;">Terms of Use</a>&nbsp
-                        <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>"
-                            style="text-decoration:none;"> &nbsp Privacy Policy</a>
-                        <a class="btn btn-link" href="">Support</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">TENANT</a>, All
-                            Right Reserved.
-                        </div>
-                    </div>
-                </div>
-            </div>
+    
+        <div class="foot">
+            <?php require_once "footer.php"; ?>
         </div>
-    </div>
+    
     <!-- Footer End -->
 
 

@@ -17,8 +17,13 @@
         <title>About Us</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
+    
 
     <body>
+        <!-- header -->
+         <?php require_once "commonheader.php"; ?>
+        <!-- header -->
+        
         <header>
             <h1>About Us</h1>
         </header>
@@ -51,6 +56,12 @@
         <footer>
             <p>&copy; 2023 Company Name. All rights reserved.</p>
         </footer>
+        
+        <!-- Footer Start -->    
+        <div class="foot">
+            <?php require_once "footer.php"; ?>
+        </div>   
+        <!-- Footer End -->
     </body>
 
     </html>
