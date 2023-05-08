@@ -719,3 +719,189 @@ in APPPATH\Controllers\Home.php on line 57.
  2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-07 17:13:30 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-07 17:13:30 --> 220 smtp.gmail.com ESMTP k11-20020a63ff0b000000b00528af015a8dsm4685703pgi.14 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:1010:71e2:6a52:c9ed]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:1010:71e2:6a52:c9ed]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK k11-20020a63ff0b000000b00528af015a8dsm4685703pgi.14 - gsmtp
+
+to: 555 5.5.2 Syntax error. k11-20020a63ff0b000000b00528af015a8dsm4685703pgi.14 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. k11-20020a63ff0b000000b00528af015a8dsm4685703pgi.14 - gsmtp
+
+quit: 221 2.0.0 closing connection k11-20020a63ff0b000000b00528af015a8dsm4685703pgi.14 - gsmtp
+
+ERROR - 2023-05-07 17:13:39 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-07 17:13:39 --> 220 smtp.gmail.com ESMTP jo10-20020a170903054a00b001a6f7744a27sm5408768plb.87 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:1010:71e2:6a52:c9ed]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:1010:71e2:6a52:c9ed]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK jo10-20020a170903054a00b001a6f7744a27sm5408768plb.87 - gsmtp
+
+to: 555 5.5.2 Syntax error. jo10-20020a170903054a00b001a6f7744a27sm5408768plb.87 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. jo10-20020a170903054a00b001a6f7744a27sm5408768plb.87 - gsmtp
+
+quit: 221 2.0.0 closing connection jo10-20020a170903054a00b001a6f7744a27sm5408768plb.87 - gsmtp
+
+ERROR - 2023-05-07 17:25:23 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-07 17:25:23 --> 220 smtp.gmail.com ESMTP q20-20020a62ae14000000b0063f0068cf6csm609667pff.198 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:1010:71e2:6a52:c9ed]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4a99:fcb1:1010:71e2:6a52:c9ed]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK q20-20020a62ae14000000b0063f0068cf6csm609667pff.198 - gsmtp
+
+to: 555 5.5.2 Syntax error. q20-20020a62ae14000000b0063f0068cf6csm609667pff.198 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. q20-20020a62ae14000000b0063f0068cf6csm609667pff.198 - gsmtp
+
+quit: 221 2.0.0 closing connection q20-20020a62ae14000000b0063f0068cf6csm609667pff.198 - gsmtp
+
+CRITICAL - 2023-05-07 21:15:57 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 882.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Home.php(71): CodeIgniter\Model->__call('insert_otp', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->sendEmail()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 21:20:10 --> Call to a member function getSize() on null
+in APPPATH\Controllers\dbcontrollers.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 21:22:53 --> Call to a member function getSize() on null
+in APPPATH\Controllers\dbcontrollers.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 21:24:08 --> Call to a member function getSize() on null
+in APPPATH\Controllers\dbcontrollers.php on line 130.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 21:31:30 --> Undefined variable $places
+in APPPATH\Views\places_view.php on line 9.
+ 1 APPPATH\Views\places_view.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $places', 'APPPATH\\Views\\places_view.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\places_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('places_view', [], true)
+ 5 APPPATH\Controllers\dbcontrollers.php(120): view('places_view')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->place_con()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 21:33:05 --> Undefined variable $places
+in APPPATH\Views\places_view.php on line 9.
+ 1 APPPATH\Views\places_view.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $places', 'APPPATH\\Views\\places_view.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\places_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('places_view', [], true)
+ 5 APPPATH\Controllers\Home.php(120): view('places_view')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->place_con()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 21:34:04 --> Undefined variable $places
+in APPPATH\Views\places_view.php on line 9.
+ 1 APPPATH\Views\places_view.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $places', 'APPPATH\\Views\\places_view.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\places_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('places_view', [], true)
+ 5 APPPATH\Controllers\Home.php(69): view('places_view')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->place_con()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 21:37:57 --> Undefined variable $places
+in APPPATH\Views\places_view.php on line 9.
+ 1 APPPATH\Views\places_view.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $places', 'APPPATH\\Views\\places_view.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\places_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('places_view', [], true)
+ 5 APPPATH\Controllers\Home.php(69): view('places_view')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->place_con()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 21:39:32 --> Undefined variable $results
+in APPPATH\Views\places_view.php on line 28.
+ 1 APPPATH\Views\places_view.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results', 'APPPATH\\Views\\places_view.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\places_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('places_view', [], true)
+ 5 APPPATH\Controllers\Home.php(69): view('places_view')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->place_con()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 21:40:31 --> Undefined variable $places
+in APPPATH\Views\places_view.php on line 9.
+ 1 APPPATH\Views\places_view.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $places', 'APPPATH\\Views\\places_view.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\places_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('places_view', [], true)
+ 5 APPPATH\Controllers\Home.php(69): view('places_view')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->place_con()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

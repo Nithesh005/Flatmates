@@ -1,13 +1,25 @@
 <?php
 
 namespace App\Controllers;
+
+use App\Models\Dbmodels;
+use App\Models\PlaceModel;
+
 use CodeIgniter\Debug\Toolbar\Collectors\BaseCollector;
 use CodeIgniter\Email\Email;
 use Config\Services;
+
 $session = Services::session();
 
 class Home extends BaseController
 {
+    protected $datas;
+    protected $session;
+    public function __construct()
+    {
+        $this->session = Services::session();
+        $this->datas = new Dbmodels();
+    }
     public function index()
     {
         // return view('tenat_dashboard');
@@ -16,7 +28,7 @@ class Home extends BaseController
     }
     public function login()
     {
-        
+
         return view('login');
     }
     public function tenant_register()
@@ -47,7 +59,16 @@ class Home extends BaseController
     {
         return view('tenant_filter');
     }
-    
+    public function place_con()
+    {
+        // $data['places'] = $this->request->getPost('places', []);
+
+        // $placeModel = new PlaceModel();
+        // $data['results'] = $placeModel->getPlaces($data['places']);
+
+        return view('places_view'); //, $data
+    }
+
     public function logout()
     {
         $session = Services::session();
@@ -58,8 +79,9 @@ class Home extends BaseController
     {
         $email_id = session('email_id');
         $otp = mt_rand(100000, 999999);
-        $u_id = session('u_id');
-        
+        $res = $this->datas->insert_otp($otp);
+        // $u_id = session('u_id');
+
         $email = Services::email();
 
         $email->setFrom('flatmates09@gmail.com', 'Flatmates');
@@ -70,7 +92,7 @@ class Home extends BaseController
         // $email->setBCC('them@their-example.com');
 
         $email->setSubject('OTP Verification');
-        $email->setMessage('Your OTP: ' . $otp.' from flatmates '.$u_id .' is your userID');
+        $email->setMessage('Your OTP: ' . $otp . ' from flatmates ');
 
         if ($email->send()) {
             echo 'OTP email sent successfully.';
@@ -82,5 +104,19 @@ class Home extends BaseController
             $session->destroy();
         }
         return view('otp_verification');
+    }
+    public function verifyOTP()
+    {
+        $enteredOTP = $this->request->getVar('entered_otp');
+        // $storedOTP = $this->session->userdata('otp');
+        $storedOTP = 510;
+
+        if ($enteredOTP == $storedOTP) {
+            // OTP is correct, proceed with further actions
+            echo 'OTP verification successful.';
+        } else {
+            // OTP is incorrect
+            echo 'OTP verification failed.';
+        }
     }
 }

@@ -109,6 +109,13 @@ class dbcontrollers extends BaseController
         $ex_id = 'FM_' . $ex_id;
         return $ex_id;
     }
+    public function retive_data_owner_controller()
+    {
+        // $res =$this->datas->new_house_data_model($tmp);
+        $res ="mmm";
+        echo json_encode($res);
+    }
+    
 
 
     public function demo_reg()

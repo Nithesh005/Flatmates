@@ -1,0 +1,11 @@
+CRITICAL - 2023-05-08 04:58:18 --> Undefined variable $places
+in APPPATH\Views\places_view.php on line 9.
+ 1 APPPATH\Views\places_view.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $places', 'APPPATH\\Views\\places_view.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\places_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('places_view', [], true)
+ 5 APPPATH\Controllers\Home.php(69): view('places_view')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->place_con()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
