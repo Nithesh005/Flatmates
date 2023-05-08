@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/about.css?version=<?php echo rand(); ?>">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -28,28 +30,70 @@
             <h1>About Us</h1>
         </header>
         <main>
-            <section id="hero">
-                <h2>Welcome to our company</h2>
-                <p>We are a leading provider of innovative solutions.</p>
+            <header>
+                
+            </header>
+
+            <section>
+                <h2>Who We Are</h2>
+                <p>We are a group of flatmates who decided to live together to save on rent and have a good time. We
+                    come
+                    from different backgrounds and have different interests, but we get along well and enjoy each
+                    other's
+                    company.</p>
             </section>
-            <section id="about">
-                <h2>About Our Company</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam ligula vel sem tincidunt
-                    posuere. Quisque in pharetra mauris, at maximus tortor. Mauris eu mauris non sem placerat lobortis
-                    vitae non massa. Suspendisse a congue justo. Donec id nulla sed sapien lobortis finibus. Duis et
-                    cursus ante, vitae placerat mi. </p>
-            </section>
-            <section id="team">
-                <h2>Our Team</h2>
-                <div class="team-member">
-                    <img src="team-member1.jpg" alt="Team Member 1">
-                    <h3>John Doe</h3>
-                    <p>CEO</p>
+        </main>
+    </div> -->
+    
+    <div class="container">
+        <div class="heading">
+            <h1>ABOUT US</h1>
+        </div>
+        <div>
+            <h2>Who We Are</h2>
+            <h3>We are a group of flatmates who decided to live together to save on rent and have a good time. We
+                come
+                from different backgrounds and have different interests, but we get along well and enjoy each
+                other's
+                company.
+            </h3>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="scene">
+
+            <div class="card">
+                <div class="card__face card__face--front">
+                    <img src="https://i.loli.net/2019/11/23/cnKl1Ykd5rZCVwm.jpg" />
                 </div>
-                <div class="team-member">
-                    <img src="team-member2.jpg" alt="Team Member 2">
-                    <h3>Jane Smith</h3>
-                    <p>CTO</p>
+                <div class="card__face card__face--back">
+                    <img src="https://i.loli.net/2019/11/16/cqyJiYlRwnTeHmj.jpg" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__face card__face--front">
+                    <img src="https://i.loli.net/2019/11/16/FLnzi5Kq4tkRZSm.jpg" />
+                </div>
+                <div class="card__face card__face--back">
+                    <img src="https://i.loli.net/2019/10/18/buDT4YS6zUMfHst.jpg" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__face card__face--front">
+                    <img src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg" />
+                </div>
+                <div class="card__face card__face--back">
+                    <img src="https://i.loli.net/2019/11/03/RtVq2wxQYySDb8L.jpg" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__face card__face--front">
+                    <img src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg" />
+                </div>
+                <div class="card__face card__face--back">
+                    <img src="https://i.loli.net/2019/11/03/RtVq2wxQYySDb8L.jpg" />
                 </div>
             </section>
         </main>

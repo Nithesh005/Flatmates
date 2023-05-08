@@ -197,14 +197,10 @@
             url: "<?php echo base_url('public/index.php/Dbcontrollers/owner_card'); ?>",
             method: "POST",
             dataType: "json",
-            // data: {
-            //     sname: sname,
-            // },
             success: function (res) {
                 console.log(res);
-                
-                // console.log("susscess");
-                // location.replace("<?php //echo base_url('./public/index.php/home/otp_verification') ?>");
+                console.log("ajax woking");
+
             },
             error: function (er) {
                 // console.error(er);
@@ -213,7 +209,6 @@
         })
 
     }
-
 
 
 </script>
