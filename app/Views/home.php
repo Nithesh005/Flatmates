@@ -43,8 +43,6 @@
 
         <!-- <img class="ui large left floated image" src="<?php echo base_url(); ?>./assests/logo.png"> -->
         <!-- <link rel="shortcut icon" type="image/png" href="./assests/logo.png"/> -->
-
-
     </head>
 
 
@@ -87,16 +85,16 @@
                                 </div>
                                 <div class="col-6 text-start">
                                     <img class="img-fluid rounded w-90 wow zoomIn" data-wow-delay="0.3s"
-                                        src="<?php echo base_url(); ?>/assets/assets_img/rooms6.webp"" style=" margin-top:15%">
+                                        src="<?php echo base_url(); ?>/assets/assets_img/rooms6.webp" style=" margin-top:15%">
                                 </div>
                                 <div class="col-6 text-end">
                                     <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s"
-                                        src="<?php echo base_url(); ?>/assets/assets_img/room4.webp"" style="
+                                        src="<?php echo base_url(); ?>/assets/assets_img/room4.webp" style="
                                         margin-left:130px;margin-top:20px">
                                 </div>
                                 <div class="col-6 text-start">
                                     <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s"
-                                        src="<?php echo base_url(); ?>/assets/assets_img/room5.webp"">
+                                        src="<?php echo base_url(); ?>/assets/assets_img/room5.webp">
                                 </div>
                             </div>
                         </div>

@@ -143,6 +143,7 @@ class Home extends BaseController
         } else {
             // OTP is incorrect
             echo 'OTP verification failed.';
+            return view('otp_verification_owner');
         }
     }
     public function sendEmail_tenant()
@@ -193,6 +194,7 @@ class Home extends BaseController
         } else {
             // OTP is incorrect
             echo 'OTP verification failed.';
+            return view('otp_verification_tenant');
         }
     }
 }
