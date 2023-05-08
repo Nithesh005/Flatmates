@@ -98,7 +98,7 @@ class dbcontrollers extends BaseController
         }
         $res = $this->datas->reg_user_data_model($tmp);
         if ($res == true) {
-            return view('otp_verification');
+            return view('otp_verification_tenant');
         }
         // redirect('Home/sendEmail/'.$email_id);
     }
@@ -169,7 +169,7 @@ class dbcontrollers extends BaseController
         }
         $res = $this->datas->reg_user_data_owner_model($tmp);
         if ($res == true) {
-            return view('otp_verification');
+            return view('otp_verification_owner');
         }
         // redirect('Home/sendEmail/'.$email_id);
     }

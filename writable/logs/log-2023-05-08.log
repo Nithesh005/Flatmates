@@ -278,3 +278,305 @@ AND `password` = :password:', [...], false)
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 10:53:40 --> mysqli_sql_exception: Duplicate entry 'FMOW_1002' for key 'u_id' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(213): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(254): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 10:53:40 --> Duplicate entry 'FMOW_1002' for key 'u_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:u_id:, :house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(213): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(254): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 11:39:21 --> Undefined variable $tmp
+in APPPATH\Controllers\dbcontrollers.php on line 170.
+ 1 APPPATH\Controllers\dbcontrollers.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tmp', 'APPPATH\\Controllers\\dbcontrollers.php', 170)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 11:48:52 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-08 11:48:52 --> 220 smtp.gmail.com ESMTP fy17-20020a17090b021100b0024e208a6464sm9747626pjb.15 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK fy17-20020a17090b021100b0024e208a6464sm9747626pjb.15 - gsmtp
+
+to: 555 5.5.2 Syntax error. fy17-20020a17090b021100b0024e208a6464sm9747626pjb.15 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. fy17-20020a17090b021100b0024e208a6464sm9747626pjb.15 - gsmtp
+
+quit: 221 2.0.0 closing connection fy17-20020a17090b021100b0024e208a6464sm9747626pjb.15 - gsmtp
+
+ERROR - 2023-05-08 11:53:17 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-08 11:53:17 --> 220 smtp.gmail.com ESMTP c25-20020aa78e19000000b0063b6bd2216dsm6005651pfr.187 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK c25-20020aa78e19000000b0063b6bd2216dsm6005651pfr.187 - gsmtp
+
+to: 555 5.5.2 Syntax error. c25-20020aa78e19000000b0063b6bd2216dsm6005651pfr.187 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. c25-20020aa78e19000000b0063b6bd2216dsm6005651pfr.187 - gsmtp
+
+quit: 221 2.0.0 closing connection c25-20020aa78e19000000b0063b6bd2216dsm6005651pfr.187 - gsmtp
+
+ERROR - 2023-05-08 11:54:22 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-08 11:54:22 --> 220 smtp.gmail.com ESMTP j19-20020a62b613000000b0063f33e216dasm6098342pff.96 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK j19-20020a62b613000000b0063f33e216dasm6098342pff.96 - gsmtp
+
+to: 555 5.5.2 Syntax error. j19-20020a62b613000000b0063f33e216dasm6098342pff.96 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. j19-20020a62b613000000b0063f33e216dasm6098342pff.96 - gsmtp
+
+quit: 221 2.0.0 closing connection j19-20020a62b613000000b0063f33e216dasm6098342pff.96 - gsmtp
+
+CRITICAL - 2023-05-08 11:54:34 --> Undefined variable $tmp
+in APPPATH\Controllers\dbcontrollers.php on line 170.
+ 1 APPPATH\Controllers\dbcontrollers.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tmp', 'APPPATH\\Controllers\\dbcontrollers.php', 170)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 11:55:23 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-08 11:55:23 --> 220 smtp.gmail.com ESMTP 10-20020aa7914a000000b0062e12f945adsm5966244pfi.135 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK 10-20020aa7914a000000b0062e12f945adsm5966244pfi.135 - gsmtp
+
+to: 555 5.5.2 Syntax error. 10-20020aa7914a000000b0062e12f945adsm5966244pfi.135 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. 10-20020aa7914a000000b0062e12f945adsm5966244pfi.135 - gsmtp
+
+quit: 221 2.0.0 closing connection 10-20020aa7914a000000b0062e12f945adsm5966244pfi.135 - gsmtp
+
+ERROR - 2023-05-08 12:04:53 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-08 12:04:53 --> 220 smtp.gmail.com ESMTP p16-20020a1709028a9000b001ac7c6fd12asm1815602plo.104 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK p16-20020a1709028a9000b001ac7c6fd12asm1815602plo.104 - gsmtp
+
+to: 555 5.5.2 Syntax error. p16-20020a1709028a9000b001ac7c6fd12asm1815602plo.104 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. p16-20020a1709028a9000b001ac7c6fd12asm1815602plo.104 - gsmtp
+
+quit: 221 2.0.0 closing connection p16-20020a1709028a9000b001ac7c6fd12asm1815602plo.104 - gsmtp
+
+ERROR - 2023-05-08 12:14:27 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-08 12:14:27 --> 220 smtp.gmail.com ESMTP w4-20020a170902904400b001aaed82b824sm7071010plz.144 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK w4-20020a170902904400b001aaed82b824sm7071010plz.144 - gsmtp
+
+to: 555 5.5.2 Syntax error. w4-20020a170902904400b001aaed82b824sm7071010plz.144 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. w4-20020a170902904400b001aaed82b824sm7071010plz.144 - gsmtp
+
+quit: 221 2.0.0 closing connection w4-20020a170902904400b001aaed82b824sm7071010plz.144 - gsmtp
+
+CRITICAL - 2023-05-08 12:14:27 --> Invalid file: "otp_verification.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('otp_verification.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('otp_verification', [], true)
+ 3 APPPATH\Controllers\Home.php(125): view('otp_verification')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->sendEmail()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 12:36:15 --> Invalid file: "otp_verification.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('otp_verification.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('otp_verification', [], true)
+ 3 APPPATH\Controllers\Home.php(129): view('otp_verification')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->sendEmail_owner()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 12:39:33 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-08 12:39:33 --> 220 smtp.gmail.com ESMTP b13-20020a17090a8c8d00b0024deb445265sm14821653pjo.47 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dec:5223:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK b13-20020a17090a8c8d00b0024deb445265sm14821653pjo.47 - gsmtp
+
+to: 555 5.5.2 Syntax error. b13-20020a17090a8c8d00b0024deb445265sm14821653pjo.47 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. b13-20020a17090a8c8d00b0024deb445265sm14821653pjo.47 - gsmtp
+
+quit: 221 2.0.0 closing connection b13-20020a17090a8c8d00b0024deb445265sm14821653pjo.47 - gsmtp
+
+ERROR - 2023-05-08 12:58:35 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-08 12:58:35 --> 220 smtp.gmail.com ESMTP j21-20020aa78015000000b0063d666566d1sm6092848pfi.72 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dd7:4d2b:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:4dd7:4d2b:80cf:35f9:63ae:12b3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK j21-20020aa78015000000b0063d666566d1sm6092848pfi.72 - gsmtp
+
+to: 555 5.5.2 Syntax error. j21-20020aa78015000000b0063d666566d1sm6092848pfi.72 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. j21-20020aa78015000000b0063d666566d1sm6092848pfi.72 - gsmtp
+
+quit: 221 2.0.0 closing connection j21-20020aa78015000000b0063d666566d1sm6092848pfi.72 - gsmtp
+

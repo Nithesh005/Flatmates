@@ -166,11 +166,11 @@ class Dbmodels extends Model
     }
     public function owner_card_model()
     {
-        // $unique_id = session('u_id');
+        $unique_id = session('u_id');
         $db = \Config\Database::connect();
         $query = $db->table('new_house');
         $query->select('*');
-        $query->where('u_id', "FM_1001");
+        $query->where('u_id', "$unique_id");
         $res = $query->get()->getResultArray();
         // $res = "final answer";
 
@@ -217,4 +217,5 @@ class Dbmodels extends Model
             return false;
         }
     }
+    
 }
