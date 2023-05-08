@@ -12,7 +12,23 @@
 </head>
 
 <body>
-    <!-- <div class="tit">
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>About Us</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    
+
+    <body>
+        <!-- header -->
+         <?php require_once "commonheader.php"; ?>
+        <!-- header -->
+        
+        <header>
+            <h1>About Us</h1>
+        </header>
         <main>
             <header>
                 
@@ -97,9 +113,21 @@
                         <img src="<?php echo base_url(); ?>about_asset/nithi-normal.jpeg" alt="">
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Company Name. All rights reserved.</p>
+        </footer>
+        
+        <!-- Footer Start -->    
+        <div class="foot">
+            <?php require_once "footer.php"; ?>
+        </div>   
+        <!-- Footer End -->
+    </body>
+
+    </html>
+
 </body>
 <br>
         <br>

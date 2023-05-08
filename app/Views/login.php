@@ -24,7 +24,7 @@ $session = \Config\Services::session();
     <!-- header -->
     <?php require_once "header.php"; ?>
     <!-- header -->
-    <div class="container ">
+    <div class="container">
         <!-- icon header -->
         <div class="row">
             <div class="col-lg-5 col-md-4 "></div>
@@ -42,7 +42,7 @@ $session = \Config\Services::session();
         </div>
         <!-- jumbotron file -->
         <!-- owner login -->
-        <div class="row mb-4">
+        <div class="row mb-4" >
             <div class="col-lg-3 col-md-2"></div>
             <div class="col-lg-6 col-md-8">
                 <div class="tab-content content" id="pills-tabContent">

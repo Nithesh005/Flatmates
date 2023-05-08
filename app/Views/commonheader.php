@@ -25,27 +25,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Navbar brand -->
                 <!-- Left links -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <a href="<?php echo base_url('./public/index.php/home/index') ?>" class="nav-link">Home</a>
+                    <a href="<?php echo base_url('./public/index.php/home/index') ?>" class="nav-link" style="font-weight:700;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/about') ?>" class="nav-link">About</a>
+                        <a href="<?php echo base_url('./public/index.php/home/login') ?>" class="nav-link " style="font-weight:700;">Sign in</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" class="nav-link">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>" class="nav-link">contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/login') ?>" class="nav-link ">Sign in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/owner_register') ?>" class="nav-link text-dark">Owner reg</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>" class="nav-link text-dark">tenant reg</a>
+                        <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>" class="nav-link " style="font-weight:700;">Sign up</a>
                     </li>
                 </ul>
                 <!-- Left links -->
