@@ -120,7 +120,7 @@ class Dbmodels extends Model
         $query = $db->table('new_house');
         $query->select('*');
         $res = $query->get()->getResultArray();
-        $res = "final answer";
+        // $res = "final answer";
 
         return $res;
     }
