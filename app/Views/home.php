@@ -126,8 +126,7 @@
                                                     src="<?php echo base_url(); ?>/assets/assets_img/part3.png">
                                             </div>
                                             <div class="col-6 text-start">
-                                                <img class="img-fluid rounded w-90 wow zoomIn" data-wow-delay="0.7s"
-                                                    src="<?php echo base_url(); ?>/assets/assets_img/part4.png">
+                                                c
                                             </div>
                                         </div>
                                     </div>
