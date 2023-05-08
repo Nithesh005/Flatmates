@@ -198,6 +198,14 @@ class dbcontrollers extends BaseController
 
         echo json_encode($res);
     }
+    public function  tenant_card_controller()
+    {
+        $res = $this->datas->tenant_card_model();
+
+        echo json_encode($res);
+    }
+
+   
 
 
 

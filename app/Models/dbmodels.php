@@ -177,6 +177,18 @@ class Dbmodels extends Model
         return $res;
     }
 
+    public function tenant_card_model()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('new_house');
+        $query->select('*');
+        $res = $query->get()->getResultArray();
+        // $res = "final answer";
+        return $res;
+    }
+
+    
+
 
     public function new_house_data_model($tmp)
     {
