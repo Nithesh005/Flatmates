@@ -51,17 +51,24 @@ $session = \Config\Services::session();
         list-style-type: none;
         float: left;
         display: flex;
+        height: 50%;
     }
 
-    .tenant {
-        /*margin-left: 5px;*/
+    /* .tenant {
+        margin-left: 5px;
         margin-top: 3%;
         box-shadow: 5px 5px 5px 5px;
-        
-    }
-    .col-md-4{
-width: 200px;
-        /* margin: 2%; */
+        white-space: 5%;
+
+    }  */
+
+    .card {
+        background-color: #f1f1f1;
+        margin-bottom: 10px;
+        /* Adds space below each card */
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px;
+        /* Adds space inside each card */
     }
 </style>
 
@@ -131,7 +138,23 @@ width: 200px;
                             '</div>' +
                             '<a href="#" class="button button--piyo">' +
                             '<div class="button__wrapper">' +
-                            '<span class="button__text">DELETE</span>' +
+                            '<span class="button__text">APPLY</span>' +
+                            '</div>' +
+                            '<div class="characterBox">' +
+                            '<div class="character wakeup">' +
+                            '<div class="character__face"></div>' +
+                            '</div>' +
+                            '<div class="character wakeup">' +
+                            '<div class="character__face"></div>' +
+                            '</div>' +
+                            '<div class="character">' +
+                            '<div class="character__face"></div>' +
+                            '</div>' +
+                            '</div>' +
+                            '</a>' +
+                            '<a href="#" class="button1 button--piyo">' +
+                            '<div class="button__wrapper">' +
+                            '<span class="button__text">CHAT</span>' +
                             '</div>' +
                             '<div class="characterBox">' +
                             '<div class="character wakeup">' +
@@ -151,7 +174,8 @@ width: 200px;
                             '</div>' +
                             '<a class="ad-btn" href="#">View</a>' +
                             '</div>' +
-                            '</div>'
+                            '</div>' +
+                            '<br>'
 
                         );
                         $('#ads').append(element);

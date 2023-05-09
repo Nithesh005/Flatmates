@@ -25,3 +25,240 @@ in SYSTEMPATH\Database\BaseConnection.php on line 882.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-09 05:57:42 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-09 05:57:42 --> 220 smtp.gmail.com ESMTP s1-20020a17090a1c0100b0024e11f31012sm11448748pjs.5 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:632d:8dd1:944b:efae:241:ddae]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:632d:8dd1:944b:efae:241:ddae]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK s1-20020a17090a1c0100b0024e11f31012sm11448748pjs.5 - gsmtp
+
+to: 555 5.5.2 Syntax error. s1-20020a17090a1c0100b0024e11f31012sm11448748pjs.5 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. s1-20020a17090a1c0100b0024e11f31012sm11448748pjs.5 - gsmtp
+
+quit: 221 2.0.0 closing connection s1-20020a17090a1c0100b0024e11f31012sm11448748pjs.5 - gsmtp
+
+ERROR - 2023-05-09 06:44:09 --> mysqli_sql_exception: Table 'flatmates.ownerreg' doesn't exist in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 06:44:09 --> Table 'flatmates.ownerreg' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ownerreg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-09 06:44:14 --> mysqli_sql_exception: Table 'flatmates.ownerreg' doesn't exist in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 06:44:14 --> Table 'flatmates.ownerreg' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ownerreg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-09 06:44:27 --> mysqli_sql_exception: Table 'flatmates.ownerreg' doesn't exist in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 06:44:27 --> Table 'flatmates.ownerreg' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ownerreg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-09 06:44:33 --> mysqli_sql_exception: Table 'flatmates.ownerreg' doesn't exist in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 06:44:33 --> Table 'flatmates.ownerreg' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ownerreg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-09 06:47:03 --> mysqli_sql_exception: Table 'flatmates.ownerreg' doesn't exist in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 06:47:03 --> Table 'flatmates.ownerreg' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ownerreg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-09 06:47:08 --> mysqli_sql_exception: Table 'flatmates.ownerreg' doesn't exist in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 06:47:08 --> Table 'flatmates.ownerreg' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ownerreg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-09 06:50:20 --> mysqli_sql_exception: Table 'flatmates.ownerreg' doesn't exist in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 06:50:20 --> Table 'flatmates.ownerreg' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ownerreg`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(105): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\dbcontrollers.php(22): App\Models\Dbmodels->validate_ownerlogin_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->ownerlogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-09 07:33:00 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-09 07:33:00 --> 220 smtp.gmail.com ESMTP e5-20020a635005000000b0050bc03741ffsm675980pgb.84 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:6349:6b54:553f:4958:bd17:24f3]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:6349:6b54:553f:4958:bd17:24f3]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK e5-20020a635005000000b0050bc03741ffsm675980pgb.84 - gsmtp
+
+to: 555 5.5.2 Syntax error. e5-20020a635005000000b0050bc03741ffsm675980pgb.84 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. e5-20020a635005000000b0050bc03741ffsm675980pgb.84 - gsmtp
+
+quit: 221 2.0.0 closing connection e5-20020a635005000000b0050bc03741ffsm675980pgb.84 - gsmtp
+

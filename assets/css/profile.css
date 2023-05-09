@@ -1,0 +1,37 @@
+.padding {
+    padding: 3rem !important
+}
+.img-radius{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+.user-card-full {
+    overflow: hidden;
+}
+
+.bg-c-lite-green {
+    /* background: -webkit-gradient(linear, left top, right top, from(#f29263), to(#ee5a6f));
+    background: linear-gradient(to right, #ee5a6f, #f29263); */
+    background-color: rgb(81, 111, 245);
+    height: 80vh ;
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.card-block {
+    padding: 1.25rem;
+}
+
+.user-card-full .social-link li {
+    display: inline-block;
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
