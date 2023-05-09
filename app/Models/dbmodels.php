@@ -42,6 +42,37 @@ class Dbmodels extends Model
             return false;
         }
     }
+    public function reg_user_data_owner_model($tmp)
+    {
+        $db = \Config\Database::connect();
+
+        $my_demo_data_owner = [
+            "u_id" => $tmp['u_id'],
+            "name" => $tmp['sname'],
+            "email" => $tmp['email_id'],
+            "phone_no" => $tmp['mobile'],
+            "password" => $tmp['password_id'],
+            "occupation" => $tmp['occupation_id'],
+            "address" => $tmp['address_id'],
+            "city" => $tmp['city_id'],
+            "state" => $tmp['state_id'],
+            "photo_img" => $tmp['profile_image_name'],
+            "house_doc" => $tmp['smart_card_name'],
+            "aadhar_doc" => $tmp['aadhar_card_name'],
+            "aadhar_no" => $tmp['aadhar_id'],
+            // "status" => $tmp['family_type'],
+        ];
+
+        $query = $db->table('ownerreg');
+        $res = $query->insert($my_demo_data_owner);
+        // $res = true;
+        return $res;
+        // if ($res == true) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+    }
     // public function new_house_reg_data_model($reg_data)
     // {
     //     $db = \Config\Database::connect();
@@ -67,7 +98,7 @@ class Dbmodels extends Model
     {
         $db = \Config\Database::connect();
 
-        $query = $db->table('owner_reg');
+        $query = $db->table('ownerreg');
         $query->select('*');
         $query->where('email', $validate_owner['owner_mail']);
         $query->where('password', $validate_owner['owner_pasword']);
@@ -75,6 +106,7 @@ class Dbmodels extends Model
 
         if (count($res) == 1) {
             $this->session->set('u_id', $res[0]['u_id']);
+            $this->session->set('email', $res[0]['email']);
             return "success";
         } else {
             return "fail";
@@ -92,6 +124,7 @@ class Dbmodels extends Model
 
         if (count($res) == 1) {
             $this->session->set('u_id', $res[0]['u_id']);
+            $this->session->set('email', $res[0]['email']);
             return "success";
         } else {
             return "fail";
@@ -116,13 +149,28 @@ class Dbmodels extends Model
 
         return $intern_id;
     }
+    public function get_unique_id_owner()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('ownerreg');
+        $query->select('*');
+        $res = $query->get()->getResultArray();
+
+        if (count($res) > 0) {
+            $intern_id = 1001 + count($res);
+        } else {
+            $intern_id = 1001;
+        }
+
+        return $intern_id;
+    }
     public function owner_card_model()
     {
         $unique_id = session('u_id');
         $db = \Config\Database::connect();
         $query = $db->table('new_house');
         $query->select('*');
-        $query->where('u_id', "FM_1001");
+        $query->where('u_id', "$unique_id");
         $res = $query->get()->getResultArray();
         // $res = "final answer";
 
@@ -169,4 +217,5 @@ class Dbmodels extends Model
             return false;
         }
     }
+    
 }

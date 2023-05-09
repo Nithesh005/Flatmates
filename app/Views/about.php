@@ -12,22 +12,7 @@
 </head>
 
 <body>
-    <!-- <div class="tit">
-        <main>
-            <header>
-                
-            </header>
 
-            <section>
-                <h2>Who We Are</h2>
-                <p>We are a group of flatmates who decided to live together to save on rent and have a good time. We
-                    come
-                    from different backgrounds and have different interests, but we get along well and enjoy each
-                    other's
-                    company.</p>
-            </section>
-        </main>
-    </div> -->
 
     <div class="container">
         <div class="first">

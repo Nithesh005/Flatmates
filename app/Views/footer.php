@@ -21,26 +21,8 @@
     .pad {
         padding: 2rem;
     }
-
-    .social-link {
-        width: 30px;
-        height: 30px;
-        border: 1px solid #ddd;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #666;
-        border-radius: 50%;
-        transition: all 0.3s;
-        font-size: 0.9rem;
-        text-decoration: none;
-    }
-
-    .social-link:hover,
-    .social-link:focus {
-        background: #ddd;
-        text-decoration: none;
-        color: #555;
+    #center{
+        margin-top:20px;
     }
 </style>
 
@@ -50,24 +32,17 @@
         <div class="" style="background-color: skyblue;">
             <div class="row pad">
                 <div class="col text-center">
-                    <img src="assets/logo.png" style="height:50px; width:100px;">
-                    <h4>About Us</h4>
+                    <img src="<?php echo base_url(); ?>/assets/assets_img/logo.png" style="height:50px; width:100px;">
+                    <h4 id="center">About Us</h4>
                     <P>“
                         We are a leading online platform for booking hotels and resorts. We offer a wide range of accommodations at competitive prices, with easy booking and payment options.”</P>
                 </div>
-                <div class="col text-center">
-                    <h4>Contact Us</h4>
-
-                    <ul class="social mb-0 list-inline mt-3">
-                        <li class="list-inline-item"><a href="https://youtube.com/@SriMookambikaInfosolutions" class="social-link"><i class="fa fa-youtube"></i></a></li>
-                        <li class="list-inline-item"><a href="https://twitter.com/SriMookambikaI2" class="social-link"><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="https://instagram.com/srimookambikainfosolutions?igshid=YmMyMTA2M2Y=" class="social-link"><i class="fa fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.linkedin.com/company/sri-mookambika-infosolutions/" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-
+                <div class="col text-center" id="center">
+                   <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>"style="text-decoration:none;"> <h4  style="color:black;">Contact Us</h4></a>
+                    
                 </div>
-                <div class="col text-center">
-                    <h4>Services</h4>
+                <div class="col text-center" >
+                    <h4 id="center">Services</h4>
                     Search for and book hotels and resorts
                     View hotel details and amenities
                     Read and write reviews of hotels
@@ -79,10 +54,10 @@
             </div>
         </div>
         <!-- Copyright -->
-        <div class="text-center p-3">
+        <div class="text-center p-3" >
             © Copyright 2023 AURCM students
-            <a href="<?php echo base_url('./public/index.php/home/terms_conditions') ?>" style="text-decoration:none;" >Terms of Use</a>&nbsp
-            <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" style="text-decoration:none;">& &nbsp Privacy Policy</a>
+            <a href="<?php echo base_url('./public/index.php/home/terms_conditions') ?>" style="text-decoration:none;">Terms of Use</a>&nbsp&nbsp&
+            <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" style="text-decoration:none;"> &nbsp Privacy Policy</a>
             <!-- <a class="text-dark">MDBootstrap.com</a> -->
         </div>
 

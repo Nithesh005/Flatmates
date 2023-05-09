@@ -18,57 +18,21 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-            <!-- Toggle button -->
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- Collapsible wrapper -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Navbar brand -->
-                <!-- Left links -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home') ?>" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#footer" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#service" class="nav-link">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#footer" class="nav-link">contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="login.php" class="nav-link text-dark">Sign in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>" class="nav-link text-dark">Sign up</a>
-                    </li>
-                </ul>
-                <!-- Left links -->
-            </div>
-        </div>
-        <!-- Container wrapper -->
-    </nav>
-    <!-- Navbar -->
+    <!-- header -->
+        <?php require_once "commonheader.php"; ?>
+    <!-- header -->
     <div class="privacycontainer">
 
     <div class= "Container mt-20 lg:mt-28 mb-10">
         <h2 class="text-xl md:text-3xl text-gray-600 font-medium mt-10 mb-5">Privacy Policy</h2>
-        <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">FlatMate.in Limited (“FlatMate.in,” “we,” and “us”) respects the privacy of its users (“you”) and has developed this Privacy Policy to demonstrate its commitment to safeguarding your privacy. This Privacy Policy describes the information we collect and process through our mobile apps and website (“our Sites”), how that information may be used, with whom it may be shared, and your choices about such uses and disclosures.</p>
+        <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">  ( “we,” and “us”) respects the privacy of its users (“you”) and has developed this Privacy Policy to demonstrate its commitment to safeguarding your privacy. This Privacy Policy describes the information we collect and process through our mobile apps and website (“our Sites”), how that information may be used, with whom it may be shared, and your choices about such uses and disclosures.</p>
         <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">We encourage you to read this Privacy Policy carefully when using our Sites or property search or other services (“Services”) or when transacting business with us. By using our Sites or Services you are accepting the practices described in this Privacy Policy.</p>
-        <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">This Privacy Policy was last updated in December 2021 and may be subject to future revisions.</p>
+        <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">This Privacy Policy was last updated in May 2023 and may be subject to future revisions.</p>
         <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">Our Sites are not intended for children and we do not knowingly collect data relating to children.</p>
         <h3 class="text-lg md:text-xl text-custom-green font-medium mt-10 mb-5">Information we Collect About You</h3>
         <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify"><strong>In General. </strong></p>
-        <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">FlatMate.in is the data controller and responsible for our Sites and Services and for your Personal Data.</p>
-        <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">We have appointed a Privacy Officer who is responsible for overseeing questions in relation to this Privacy Policy. If you have any questions about this Privacy Policy, including any requests to exercise your legal rights, please contact the Privacy Officer:<!-- --> <a target="_blank" rel="noreferrer" class="text-custom-green underline" href="mailto:friends@flatmate.in">friends@flatmate.in.</a></p>
+        <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">Our website is the data controller and responsible for our Sites and Services and for your Personal Data.</p>
+        <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">We have appointed a Privacy Officer who is responsible for overseeing questions in relation to this Privacy Policy. If you have any questions about this Privacy Policy, including any requests to exercise your legal rights, please contact the Privacy Officer:<!-- --> <a target="_blank" rel="noreferrer" class="text-custom-green underline" href="mailto:flatemates09@gmail.com">flatemates09@gmail.com.</a></p>
         <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">It is important that the personal data we hold about you is accurate and current. Please keep us informed if your personal data changes during your relationship with us.</p>
         <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify"><strong>Third Party Links. </strong></p>
         <p class="text-gray-600 text-sm md:text-base mt-3 lg:leading-7 text-justify">Our Sites may include links to third-party websites, plug-ins and applications. Clicking on those links or enabling those connections may allow third parties to collect or share data about you. We do not control these third-party websites and are not responsible for their privacy statements. When you leave our Sites, we encourage you to read the privacy notice of every website you visit.</p>

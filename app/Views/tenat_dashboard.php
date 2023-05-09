@@ -1,3 +1,6 @@
+<?php
+$session = \Config\Services::session();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,6 +66,8 @@ width: 200px;
 </style>
 
 <body onload="getcardtenant()">
+    <!-- <h1>user id<?php //echo session('u_id'); ?></h1> -->
+
     <?php require_once "after_login_header.php"; ?>
     <div class="search-box">
         <form>

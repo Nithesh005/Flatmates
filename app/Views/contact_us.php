@@ -19,6 +19,9 @@
     <title>Document</title>
 </head>
 <body>
+  <!-- header -->
+  <?php require_once "commonheader.php"; ?>
+  <!-- header -->
 <div class="contact_us_6">
   <div class="responsive-container-block container">
     <form class="form-box">
@@ -90,6 +93,12 @@
     </div>
   </div>
 </div>
+
+        <!-- Footer Start -->    
+        <div class="foot">
+            <?php require_once "footer.php"; ?>
+        </div>   
+        <!-- Footer End -->
 </body>
 </html>
 
