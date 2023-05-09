@@ -46,11 +46,23 @@ $session = \Config\Services::session();
         width: 50px;
         background-color: #007bff;
     }
+
     ul li {
         list-style-type: none;
         float: left;
+        display: flex;
     }
 
+    .tenant {
+        /*margin-left: 5px;*/
+        margin-top: 3%;
+        box-shadow: 5px 5px 5px 5px;
+        
+    }
+    .col-md-4{
+width: 200px;
+        /* margin: 2%; */
+    }
 </style>
 
 <body onload="getcardtenant()">
@@ -63,14 +75,14 @@ $session = \Config\Services::session();
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
-    <div class="container">
+    <div class="">
         <div class="row" id="ads">
             <!-- Category Card -->
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <ul class="card rounded tenant_card">
 
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -97,10 +109,9 @@ $session = \Config\Services::session();
                     function (items) {
                         var element = $();
                         element = element.add(
-                            '<li>' +
+                            '<div class="col-md-4 tenant">' +
                             '<div class="card-image">' +
                             '<span class="card-notify-badge">Low KMS</span>' +
-                            '<span class="card-notify-year">2018</span>' +
                             '<img class="img-fluid" ' +
                             'src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" ' +
                             'alt="Alternate Text" />' +
@@ -140,10 +151,10 @@ $session = \Config\Services::session();
                             '</div>' +
                             '<a class="ad-btn" href="#">View</a>' +
                             '</div>' +
-                            '</li>'
+                            '</div>'
 
                         );
-                        $('.tenant_card').append(element);
+                        $('#ads').append(element);
 
                     }
                 );
