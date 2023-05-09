@@ -1,5 +1,6 @@
 .padding {
     padding: 3rem !important
+    
 }
 .img-radius{
     border-radius: 50%;
@@ -34,4 +35,9 @@
     margin: 0 10px 0 0;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+}
+/* image 1 */
+.page-container{
+margin-left: 10%;
+margin-top: 5%;
 }

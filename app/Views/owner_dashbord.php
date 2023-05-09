@@ -41,7 +41,6 @@ $session = \Config\Services::session();
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
 
-
                 <div class="modal-body">
                     <form class="row g-3 p-4"
                         action="<?php echo base_url('public/index.php/dbcontrollers/demo_reg'); ?>" method="post"
@@ -109,14 +108,11 @@ $session = \Config\Services::session();
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <input type="submit" class="btn btn-primary" id="post_btnn" value="Post">
                         </div>
-
-
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="">
         <div class="row" id="ads">
         </div>

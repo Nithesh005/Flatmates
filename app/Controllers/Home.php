@@ -52,6 +52,10 @@ class Home extends BaseController
     {
         return view('terms_conditions');
     }
+    public function profile()
+    {
+        return view('profile');
+    }
     public function privacy_policy()
     {
         return view('privacy_policy');

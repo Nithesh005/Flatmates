@@ -71,32 +71,20 @@
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon -->
-                <a class="text-reset me-3" href="#">
+                <!-- <a class="text-reset me-3" href="#">
                     <i class="fas fa-shopping-cart"></i>
-                </a>
+                </a> -->
 
                 <!-- Notifications -->
-                <div class="dropdown">
+                <!-- <div class="dropdown">
                     <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
                         role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-bell"></i>
-                        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        <i class="fas fa-bell">REQUESTS</i>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                        <li>
-                            <a class="dropdown-item" href="#">Some news</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Another news</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </li>
-                    </ul>
-                </div>
+                </div> -->
                 <!-- Avatar -->
-                    <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
-                        id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <a class=" d-flex align-items-center hidden-arrow" href="#"
+                        id="navbarDropdownMenuAvatar" onclick="profile()" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                         <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="rounded-circle" height="25"
                             alt="Black and White Portrait of a Man" loading="lazy" />
                     </a>
@@ -109,3 +97,8 @@
 </body>
 
 </html>
+<script>
+  function  profile(){
+    location.replace("<?php echo base_url(); ?>public/index.php/home/profile");
+  }
+</script>

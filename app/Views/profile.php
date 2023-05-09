@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/profile.css?version=<?php echo rand(); ?>">
   <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css"); ?>" />
   <link rel="stylesheet" href="<?php echo base_url("assets/fonts/css/all.css"); ?>" />
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/profile.css?version=<?php echo rand(); ?>">
 </head>
 
 <body>
