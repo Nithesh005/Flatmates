@@ -9,11 +9,8 @@ $session = \Config\Services::session();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Font aswesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- css -->
@@ -22,6 +19,14 @@ $session = \Config\Services::session();
 
 </head>
 <style>
+    ::-webkit-scrollbar {
+        width: 0px;
+        /* Width of the scrollbar */
+    }
+    body {
+        overflow-x: hidden;
+    }
+
     .search-box {
         position: relative;
         display: inline-block;
@@ -46,15 +51,29 @@ $session = \Config\Services::session();
         width: 50px;
         background-color: #007bff;
     }
+
     ul li {
         list-style-type: none;
         float: left;
+        display: flex;
     }
 
+    .tenant {
+        /*margin-left: 5px;*/
+        margin-top: 3%;
+        box-shadow: 5px 5px 5px 5px;
+
+    }
+
+    .col-md-4 {
+        width: 200px;
+        /* margin: 2%; */
+    }
 </style>
 
 <body onload="getcardtenant()">
-    <!-- <h1>user id<?php //echo session('u_id'); ?></h1> -->
+    <!-- <h1>user id<?php //echo session('u_id'); 
+                    ?></h1> -->
 
     <?php require_once "after_login_header.php"; ?>
     <div class="search-box">
@@ -63,14 +82,14 @@ $session = \Config\Services::session();
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
-    <div class="container">
+    <div class="">
         <div class="row" id="ads">
             <!-- Category Card -->
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <ul class="card rounded tenant_card">
 
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -89,24 +108,23 @@ $session = \Config\Services::session();
             url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_card_controller'); ?>",
             method: "POST",
             dataType: "json",
-            success: function (res) {
+            success: function(res) {
                 console.log(res);
                 console.log("ajax woking");
                 $('.tenant_card').empty();
                 res.forEach(
-                    function (items) {
+                    function(items) {
                         var element = $();
                         element = element.add(
-                            '<li>' +
+                            '<div class="col-md-4 tenant">' +
                             '<div class="card-image">' +
                             '<span class="card-notify-badge">Low KMS</span>' +
-                            '<span class="card-notify-year">2018</span>' +
                             '<img class="img-fluid" ' +
                             'src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" ' +
                             'alt="Alternate Text" />' +
                             '</div>' +
                             '<div class="card-image-overlay m-auto">' +
-                            '<span class="card-detail-badge">' + '₹' + + items.rent + '</span>' +
+                            '<span class="card-detail-badge">' + '₹' + +items.rent + '</span>' +
                             '<span class="card-detail-badge">' + items.BHK + '/' + 'BHK' + '</span>' +
                             '</div>' +
                             '<div class="col-12">' +
@@ -140,24 +158,22 @@ $session = \Config\Services::session();
                             '</div>' +
                             '<a class="ad-btn" href="#">View</a>' +
                             '</div>' +
-                            '</li>'
+                            '</div>'
 
                         );
-                        $('.tenant_card').append(element);
+                        $('#ads').append(element);
 
                     }
                 );
 
             },
-            error: function (er) {
+            error: function(er) {
                 // console.error(er);
                 console.log("error")
             }
         })
 
     }
-
-
 </script>
 
 </html>

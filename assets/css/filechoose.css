@@ -52,8 +52,11 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 15%;
 
 }
+
+
 
 /* Category Ads */
 
@@ -61,7 +64,9 @@ body {
 
 
  #ads {
-    margin: 30px 0 30px 0;
+    margin: 2%;
+    padding: 2%;
+    display: flex;
    
 }
 
