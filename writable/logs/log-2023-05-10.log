@@ -174,3 +174,12 @@ in SYSTEMPATH\Database\BaseConnection.php on line 645.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-10 18:03:48 --> Invalid file: "confirmpassword_forgot.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('confirmpassword_forgot.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('confirmpassword_forgot', [], true)
+ 3 APPPATH\Controllers\Home.php(81): view('confirmpassword_forgot')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->confirmpassword_forgot()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

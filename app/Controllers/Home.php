@@ -72,6 +72,14 @@ class Home extends BaseController
     {
         return view('tenat_dashboard');
     }
+    public function forgot_otp()
+    {
+        return view('forgot_otp');
+    }
+    public function confirmpassord_forgot()
+    {
+        return view('confirmpassord_forgot');
+    }
     public function about()
     {
         return view('about');
