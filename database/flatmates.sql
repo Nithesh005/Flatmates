@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2023 at 11:56 AM
+-- Generation Time: May 10, 2023 at 07:30 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -83,7 +83,8 @@ INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `msg`) V
 (2, 714641441, 441726217, 'soldra'),
 (3, 714641441, 441726217, 'haiiii ... ithu ipo msg pannathu'),
 (4, 441726217, 714641441, 'inga irukuuu '),
-(5, 714641441, 441726217, 'vanthucha');
+(5, 714641441, 441726217, 'vanthucha'),
+(6, 441726217, 714641441, 'hai');
 
 -- --------------------------------------------------------
 
@@ -105,19 +106,6 @@ CREATE TABLE `new_house` (
   `BHK` varchar(100) NOT NULL,
   `image` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `new_house`
---
-
-INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `members`, `rent`, `about`, `description`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES
-('121', '23', 'Jakkasamudram', 'a', 'a', '', 'aa', 'Dharmapuri', 'Tamil Nadu', 636805, '', 'Ai.avif'),
-('FM_1001', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png'),
-('FM_1002', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png'),
-('FM_1003', 'ssssssssss', '12e3', '33', '1221323', 'mathan', 'weqwdsdedwe', 'madurai', 'tamilnadu', 123456, '5bhk', 'img1-removebg-preview.png'),
-('FM_1004', '23', 'Jakkasamudram', '', '', '', '', 'Dharmapuri', 'Tamil Nadu', 636805, '', '1669833857260.jpg'),
-('FM_1005', '23', 'Jakkasamudram', '', '', '', '', 'Dharmapuri', 'Tamil Nadu', 636805, '', '1669833857260.jpg'),
-('FM_1006', 'sanja', 'Jakkasamudram', '', '', '', '', 'Dharmapuri', 'Tamil Nadu', 636805, '', 'cse.jpg');
 
 -- --------------------------------------------------------
 
@@ -148,7 +136,6 @@ CREATE TABLE `ownerreg` (
 --
 
 INSERT INTO `ownerreg` (`u_id`, `r_no`, `name`, `email`, `phone_no`, `password`, `occupation`, `house_no`, `address`, `city`, `state`, `photo_img`, `house_doc`, `aadhar_doc`, `aadhar_no`) VALUES
-('FM_1005', 0, 'nithesh', 'nitheshwaran003@gmail.com', 0, '123', 'developer', '', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'be nice.jpg', 'be nice_1.jpg', 'be nice_2.jpg', 1111111),
 ('FMOW_1002', 0, 'nithesh', 'nitheshwaran003@gmail.com', 0, '123', 'developer', '', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'ai_chip.jpg', 'ai_chip_1.jpg', 'ai_chip_2.jpg', 1111111);
 
 -- --------------------------------------------------------
@@ -204,10 +191,7 @@ CREATE TABLE `tenant_reg` (
 
 INSERT INTO `tenant_reg` (`u_id`, `r_no`, `name`, `email`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_doc`, `aadhar_no`, `phone_no`, `status`) VALUES
 ('121', 11, '', 'nithi@gmail.com', '1', '', '', '', '', '', '', '', 123456789, 1234567890, ''),
-('FM_1002', 0, 'nithesh', 'nitheshwaran003@gmail.com', '123', 'developer', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'AI.jpg', 'AI_1.jpg', 'AI_2.jpg', 1111111, 0, 'Family'),
-('FM_1003', 0, 'nithesh', 'nitheshwaran003@gmail.com', '123', 'developer', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'AI_1.jpg', 'AI_2.jpg', 'AI_3.jpg', 1111111, 0, ''),
-('', 0, 'mmm', 'mailing', '', '', '', '', '', '', '', '', 0, 0, ''),
-('FM_1005', 0, 'nithesh', 'nitheshwaran003@gmail.com', '123', 'developer', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'AI.jpg', 'AI_1.jpg', 'AI_2.jpg', 1111111, 0, 'Family');
+('', 0, 'mmm', 'mailing', '', '', '', '', '', '', '', '', 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -282,12 +266,6 @@ ALTER TABLE `messages`
   ADD PRIMARY KEY (`msg_id`);
 
 --
--- Indexes for table `new_house`
---
-ALTER TABLE `new_house`
-  ADD UNIQUE KEY `u_id` (`u_id`);
-
---
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -313,7 +291,7 @@ ALTER TABLE `voter_id`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `products`
