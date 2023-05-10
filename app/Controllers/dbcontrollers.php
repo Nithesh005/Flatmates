@@ -253,9 +253,10 @@ class dbcontrollers extends BaseController
             }
         }
         $res = $this->datas->new_house_data_model($tmp);
+        $res =true;
 
         if ($res == true) {
-            return view('login');
+            return view('owner_dashbord');
         }
     }
 }

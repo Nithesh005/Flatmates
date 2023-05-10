@@ -9,11 +9,8 @@ $session = \Config\Services::session();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Font aswesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- css -->
@@ -22,6 +19,14 @@ $session = \Config\Services::session();
 
 </head>
 <style>
+    ::-webkit-scrollbar {
+        width: 0px;
+        /* Width of the scrollbar */
+    }
+    body {
+        overflow-x: hidden;
+    }
+
     .search-box {
         position: relative;
         display: inline-block;
@@ -73,7 +78,8 @@ $session = \Config\Services::session();
 </style>
 
 <body onload="getcardtenant()">
-    <!-- <h1>user id<?php //echo session('u_id'); ?></h1> -->
+    <!-- <h1>user id<?php //echo session('u_id'); 
+                    ?></h1> -->
 
     <?php require_once "after_login_header.php"; ?>
     <div class="search-box">
@@ -108,12 +114,12 @@ $session = \Config\Services::session();
             url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_card_controller'); ?>",
             method: "POST",
             dataType: "json",
-            success: function (res) {
+            success: function(res) {
                 console.log(res);
                 console.log("ajax woking");
                 $('.tenant_card').empty();
                 res.forEach(
-                    function (items) {
+                    function(items) {
                         var element = $();
                         element = element.add(
                             '<div class="col-md-4 tenant">' +
@@ -123,7 +129,7 @@ $session = \Config\Services::session();
                             'alt="Alternate Text" />' +
                             '</div>' +
                             '<div class="card-image-overlay m-auto">' +
-                            '<span class="card-detail-badge">' + '₹' + + items.rent + '</span>' +
+                            '<span class="card-detail-badge">' + '₹' + +items.rent + '</span>' +
                             '<span class="card-detail-badge">' + items.BHK + '/' + 'BHK' + '</span>' +
                             '</div>' +
                             '<div class="col-12">' +
@@ -174,15 +180,13 @@ $session = \Config\Services::session();
                 );
 
             },
-            error: function (er) {
+            error: function(er) {
                 // console.error(er);
                 console.log("error")
             }
         })
 
     }
-
-
 </script>
 
 </html>

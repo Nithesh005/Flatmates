@@ -1,28 +1,45 @@
-CRITICAL - 2023-05-09 05:29:35 --> You must set the database table to be used with your query.
-in SYSTEMPATH\Database\BaseConnection.php on line 882.
- 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
- 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
- 3 APPPATH\Controllers\Home.php(90): CodeIgniter\Model->__call('insert_otp', [...])
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->sendEmail()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ERROR - 2023-05-09 05:34:15 --> mysqli_sql_exception: Column 'u_id' cannot be null in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(213): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(254): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 05:34:15 --> Column 'u_id' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:u_id:, :house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(213): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(254): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2023-05-09 05:29:47 --> You must set the database table to be used with your query.
-in SYSTEMPATH\Database\BaseConnection.php on line 882.
- 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
- 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
- 3 APPPATH\Controllers\Home.php(90): CodeIgniter\Model->__call('insert_otp', [...])
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->sendEmail()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
- 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2023-05-09 05:30:16 --> You must set the database table to be used with your query.
-in SYSTEMPATH\Database\BaseConnection.php on line 882.
- 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
- 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
- 3 APPPATH\Controllers\Home.php(90): CodeIgniter\Model->__call('insert_otp', [...])
- 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->sendEmail()
- 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ERROR - 2023-05-09 05:50:55 --> mysqli_sql_exception: Column 'u_id' cannot be null in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(213): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(254): App\Models\Dbmodels->new_house_data_model(Array)
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-09 05:50:55 --> Column 'u_id' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `about`, `description`, `members`, `rent`, `city`, `state`, `zipcode`, `BHK`, `image`) VALUES (:u_id:, :house_no:, :address:, :about:, :description:, :members:, :rent:, :city:, :state:, :zipcode:, :BHK:, :image:)', [...], false)
+ 2 APPPATH\Models\dbmodels.php(213): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(254): App\Models\Dbmodels->new_house_data_model([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 ERROR - 2023-05-09 05:57:42 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
