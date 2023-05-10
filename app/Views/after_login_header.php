@@ -13,6 +13,54 @@
         crossorigin="anonymous"></script>
     <title>Document</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/styles.css?version=<?php echo rand(); ?>">
+
+    <style>
+        .menu,
+        .drop-menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            display: inline-block;
+            position: relative;
+            color: rgba(0, 0, 0, .55);
+        }
+
+        .menu-item a {
+            text-decoration: none;
+            padding: 6px 10px;
+            /* color: #fff; */
+            display: block;
+        }
+
+        .drop-menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 100px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+        }
+
+        .drop-menu-item {
+            width: 100%;
+        }
+
+        .drop-menu-item:hover {
+            background-color: #eee;
+        }
+
+        .drop-menu-item a {
+            color: #555;
+        }
+
+        .menu-item:hover .drop-menu {
+            display: block;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -43,10 +91,12 @@
                         <a href="<?php echo base_url('./public/index.php/home/about') ?>" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" class="nav-link">Services</a>
+                        <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>"
+                            class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>" class="nav-link">contact</a>
+                        <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>"
+                            class="nav-link">contact</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo base_url('http://localhost/chatapp/index.php') ?>" class="nav-link"
@@ -71,56 +121,27 @@
                 </ul>
                 <!-- Left links -->
             </div>
-            <li class="nav-item">
-                        <div class="menu-wrap">
-                            <ul class="menu">
-                                <li class="menu-item">
-                                    <a href="#" style="color: rgba(0,0,0,.55); ">Sign up</a>
-                                    <ul class="drop-menu" style="position: absolute; z-index: 2;">
-                                        <li class="drop-menu-item">
-                                            <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>">Tenant</a>
-                                        </li>
-                                        <li class="drop-menu-item">
-                                            <a href="<?php echo base_url('./public/index.php/home/owner_register') ?>">Owner</a>
-                                        </li>
-                                    </ul>
+            
+                <div class="menu-wrap">
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a style="color: rgba(0,0,0,.55); margin-right:22px;"><i class="fa-regular fa-user"></i></a>
+                            <ul class="drop-menu dropdown-menu-right" style="position: absolute; z-index: 2;">
+                                <li class="drop-menu-item">
+                                    <a href="<?php echo base_url('./public/index.php/home/tenant_dashboard') ?>">Profile</a>
+                                </li>
+                                <li class="drop-menu-item">
+                                    <a href="<?php echo base_url('./public/index.php/home/login') ?>">Logout</a>
                                 </li>
                             </ul>
-                        </div>
-                    </li>
-            <!-- Collapsible wrapper -->
-
-            <!-- Right elements -->
-            <!-- <div class="d-flex align-items-center">
-                <!-- Icon -->
-                <a class="text-reset me-3" href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                </a> -->
-
-                <!-- Notifications -->
-                <!-- <div class="dropdown">
-                    <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-                        role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-bell"></i>
-                        <span class="badge rounded-pill badge-notification bg-danger">1</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                        <li>
-                            <a class="dropdown-item" href="#">Some news</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Another news</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Something else here</a>
                         </li>
                     </ul>
-                </div> -->
-                <!-- Avatar -->
-                
-            </div>
-            <!-- Right elements -->
+                </div>
+            
+
+
         </div>
+        <!-- Right elements -->
         <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
