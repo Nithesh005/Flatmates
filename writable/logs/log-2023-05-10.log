@@ -365,3 +365,21 @@ in APPPATH\Controllers\Home.php on line 21.
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-10 18:38:04 --> Class "App\Models\Dbmodels" not found
+in APPPATH\Controllers\Home.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-10 18:38:07 --> Class "App\Models\Dbmodels" not found
+in APPPATH\Controllers\Home.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-10 18:38:46 --> Class "App\Models\Dbmodels" not found
+in APPPATH\Controllers\Home.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
