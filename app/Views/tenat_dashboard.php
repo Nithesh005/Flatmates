@@ -56,18 +56,24 @@ $session = \Config\Services::session();
         list-style-type: none;
         float: left;
         display: flex;
+        height: 50%;
     }
 
-    .tenant {
-        /*margin-left: 5px;*/
+    /* .tenant {
+        margin-left: 5px;
         margin-top: 3%;
         box-shadow: 5px 5px 5px 5px;
+        white-space: 5%;
 
-    }
+    }  */
 
-    .col-md-4 {
-        width: 200px;
-        /* margin: 2%; */
+    .card {
+        background-color: #f1f1f1;
+        margin-bottom: 10px;
+        /* Adds space below each card */
+        padding: 10px;
+        box-shadow: 5px 5px 5px 5px;
+        /* Adds space inside each card */
     }
 </style>
 
@@ -118,7 +124,6 @@ $session = \Config\Services::session();
                         element = element.add(
                             '<div class="col-md-4 tenant">' +
                             '<div class="card-image">' +
-                            '<span class="card-notify-badge">Low KMS</span>' +
                             '<img class="img-fluid" ' +
                             'src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" ' +
                             'alt="Alternate Text" />' +
@@ -138,7 +143,7 @@ $session = \Config\Services::session();
                             '</div>' +
                             '<a href="#" class="button button--piyo">' +
                             '<div class="button__wrapper">' +
-                            '<span class="button__text">DELETE</span>' +
+                            '<span class="button__text">APPLY</span>' +
                             '</div>' +
                             '<div class="characterBox">' +
                             '<div class="character wakeup">' +
@@ -152,13 +157,21 @@ $session = \Config\Services::session();
                             '</div>' +
                             '</div>' +
                             '</a>' +
+                            '<a href="#" class="button1 button--piyo">' +
+                            '<div class="button__wrapper">' +
+                            '<span class="button__text">CHAT</span>' +
+                            '</div>' +
+                            '<div class="characterBox">' +
+                            '</div>' +
+                            '</a>' +
                             '<div class="card-body text-center">' +
                             '<div class="ad-title m-auto">' +
                             '<h5>Honda Accord LX</h5>' +
                             '</div>' +
                             '<a class="ad-btn" href="#">View</a>' +
                             '</div>' +
-                            '</div>'
+                            '</div>' +
+                            '<br>'
 
                         );
                         $('#ads').append(element);

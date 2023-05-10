@@ -153,3 +153,8 @@
 </body>
 
 </html>
+<script>
+  function  profile(){
+    location.replace("<?php echo base_url(); ?>public/index.php/home/profile");
+  }
+</script>
