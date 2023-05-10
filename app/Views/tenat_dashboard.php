@@ -118,7 +118,6 @@ $session = \Config\Services::session();
                         element = element.add(
                             '<div class="col-md-4 tenant">' +
                             '<div class="card-image">' +
-                            '<span class="card-notify-badge">Low KMS</span>' +
                             '<img class="img-fluid" ' +
                             'src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" ' +
                             'alt="Alternate Text" />' +
@@ -157,15 +156,6 @@ $session = \Config\Services::session();
                             '<span class="button__text">CHAT</span>' +
                             '</div>' +
                             '<div class="characterBox">' +
-                            '<div class="character wakeup">' +
-                            '<div class="character__face"></div>' +
-                            '</div>' +
-                            '<div class="character wakeup">' +
-                            '<div class="character__face"></div>' +
-                            '</div>' +
-                            '<div class="character">' +
-                            '<div class="character__face"></div>' +
-                            '</div>' +
                             '</div>' +
                             '</a>' +
                             '<div class="card-body text-center">' +
