@@ -12,6 +12,55 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/styles.css?version=<?php echo rand(); ?>">
+
+    <style>
+        .menu,
+        .drop-menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            display: inline-block;
+            position: relative;
+            color: rgba(0, 0, 0, .55);
+        }
+
+        .menu-item a {
+            text-decoration: none;
+            padding: 6px 10px;
+            /* color: #fff; */
+            display: block;
+        }
+
+        .drop-menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 100px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+        }
+
+        .drop-menu-item {
+            width: 100%;
+        }
+
+        .drop-menu-item:hover {
+            background-color: #eee;
+        }
+
+        .drop-menu-item a {
+            color: #555;
+        }
+
+        .menu-item:hover .drop-menu {
+            display: block;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -35,65 +84,72 @@
                 </a>
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a href="<?php echo base_url('./public/index.php/home') ?>" class="nav-link">Home</a>
+                    <li class="nav-item">
+                        <a href="<?php echo base_url('./public/index.php/home') ?>" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
+                        <a href="<?php echo base_url('./public/index.php/home/about') ?>" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#service" class="nav-link">Services</a>
+                        <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>"
+                            class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#footer" class="nav-link">contact</a>
+                        <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>"
+                            class="nav-link">contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('http://localhost/chatapp/index.php') ?>" class="nav-link" target="_blank">Chat</a>
+                        <a href="<?php echo base_url('http://localhost/chatapp/index.php') ?>" class="nav-link"
+                            target="_blank">Chat</a>
                     </li>
                     <!-- <li class="nav-item">
                     <a href="<?php echo base_url('./public/index.php/home/owner_register') ?>" class="nav-link text-dark">Sign in</a>
                     </li> -->
                     <li class="nav-item">
-                    <a href="<?php echo base_url('./public/index.php/home/logout') ?>" class="nav-link text-dark">Log Out</a>
+                        <a href="<?php echo base_url('./public/index.php/home/logout') ?>"
+                            class="nav-link text-dark">Log Out</a>
                     </li>
                     <li class="nav-item">
-                    <a href="<?php echo base_url('./public/index.php/home/tenant_filter') ?>" class="nav-link text-dark">tenant_filter</a>
+                        <a href="<?php echo base_url('./public/index.php/home/tenant_filter') ?>"
+                            class="nav-link text-dark">tenant_filter</a>
                     </li>
                     <li class="nav-item">
-                    <a href="<?php echo base_url('./public/index.php/home/otp_verification') ?>" class="nav-link text-dark">Otp verification</a>
+                        <a href="<?php echo base_url('./public/index.php/home/otp_verification') ?>"
+                            class="nav-link text-dark">Otp verification</a>
                     </li>
 
                 </ul>
                 <!-- Left links -->
             </div>
-            <!-- Collapsible wrapper -->
+            
+                <div class="menu-wrap">
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a style="color: rgba(0,0,0,.55); margin-right:22px;"><i class="fa-regular fa-user"></i></a>
+                            <ul class="drop-menu dropdown-menu-right" style="position: absolute; z-index: 2;">
+                                <li class="drop-menu-item">
+                                    <a href="<?php echo base_url('./public/index.php/home/tenant_dashboard') ?>">Profile</a>
+                                </li>
+                                <li class="drop-menu-item">
+                                    <a href="<?php echo base_url('./public/index.php/home/login') ?>">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            
 
-            <!-- Right elements -->
-            <div class="d-flex align-items-center">
-                <!-- Icon -->
-                <!-- <a class="text-reset me-3" href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                </a> -->
 
-                <!-- Notifications -->
-                <!-- <div class="dropdown">
-                    <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-                        role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-bell">REQUESTS</i>
-                    </a>
-                </div> -->
-                <!-- Avatar -->
-                    <a class=" d-flex align-items-center hidden-arrow" href="#"
-                        id="navbarDropdownMenuAvatar" onclick="profile()" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                        <img src="<?php echo base_url("/assets/images/boat.jpg") ?>" class="rounded-circle" height="25"
-                            alt="Black and White Portrait of a Man" loading="lazy" />
-                    </a>
-            </div>
-            <!-- Right elements -->
         </div>
+        <!-- Right elements -->
         <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
+
+    <!--bootstrap start -->
+    <script src="./assests/js/jquery.min.js"></script>
+    <script src="./assests/js/bootstrap.min.js"></script>
+    <!-- bootstrap end -->
 </body>
 
 </html>

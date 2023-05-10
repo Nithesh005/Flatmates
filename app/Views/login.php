@@ -85,7 +85,7 @@ $session = \Config\Services::session();
                             </div>
 
                             <div class="row m-3">
-                                <div class="col-6"><a href="">Create An Account?</a></div>
+                                <div class="col-6"><a href="<?php echo base_url('./public/index.php/home/owner_register') ?>">Create An Account?</a></div>
                                 <div class="col-6" style="display:flex;flex-direction:row-reverse;"><a href="">Forgot
                                         Password?</a></div>
                             </div>

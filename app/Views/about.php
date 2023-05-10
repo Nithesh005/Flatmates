@@ -13,6 +13,10 @@
 
 <body>
 
+    <!-- header -->
+    <?php require_once "commonheader.php"; ?>
+    <!-- header -->
+
 
     <div class="container">
         <div class="first">
@@ -20,18 +24,20 @@
                 <h1>ABOUT US</h1>
             </div>
             <br>
-        <br>
-        <br>
+            <br>
+            <br>
             <div>
 
-                <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to our website! We are a team of passionate individuals who believe in providing our
+                <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome
+                    to our website! We are a team of passionate individuals who believe in providing our
                     customers
                     with a seamless and hassle-free booking experience. Our goal is to make it easier for you to find
                     and
                     reserve your perfect room, whether you're looking for a short-term stay or a long-term rental.
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our dedicated customer support team is available around the clock to answer any questions or concerns
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our
+                    dedicated customer support team is available around the clock to answer any questions or concerns
                     you
                     may have, and to help you make the most of your booking experience.
                     Thank you for choosing our website, and we look forward to serving you
@@ -87,13 +93,14 @@
     </div>
 </body>
 <br>
-        <br>
-        <br><br>
-        <br>
-        <br><br>
-        <br>
-        <br><br>
-        <br>
-        <br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br>
 <?php require_once "footer.php"; ?>
+
 </html>
