@@ -25,7 +25,12 @@
     <script src="sweetalert2.min.js"></script>
     <link rel="stylesheet" href="sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .container .row_top{
+            margin-top: -160px;
+        }
 
+    </style>
 </head>
 
 <body>
@@ -33,7 +38,7 @@
     <?php require_once "header.php"; ?>
     <!-- header -->
     <div class="container mb-4">
-        <div class="row">
+        <div class="row row_top">
             <div class="col-lg-3"></div>
             <div class="col-lg-6">
                 <form action="<?php echo base_url('public/index.php/dbcontrollers/reg_user_data_owner'); ?>" method="post" enctype="multipart/form-data">
