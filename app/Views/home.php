@@ -68,37 +68,35 @@
 
     <!-- main  end-->
 
-    <!-- About -->
-    <div class="container-xxl py-5" id="about">
-        <div class="container1">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6">
-                    <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                    <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">TENANT</span></h1>
-                    <p class="mb-4">There is a very good chance that at some point in your life, you will have a
-                        flatmate. In fact, living in share accommodation is a rite of passage amongst most young adults
-                        worldwide, and is something everyone should experience – for good or bad.
-                    </p>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row g-3">
-                        <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-70 wow zoomIn" data-wow-delay="0.1s"
-                                src="<?php echo base_url(); ?>/assets/assets_img/room6.webp" style=" margin-top: 25%;">
+            <!-- About -->
+            <div class="container-xxl py-5" id="about">
+                <div class="container1">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-6">
+                            <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
+                            <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">TENANT</span></h1>
+                            <p class="mb-4">There is a very good chance that at some point in your life, you will have a flatmate. In fact, living in share accommodation is a rite of passage amongst most young adults worldwide, and is something everyone should experience – for good or bad.
+                            </p>
+                            <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
                         </div>
-                        <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-90 wow zoomIn" data-wow-delay="0.3s"
-                                src="<?php echo base_url(); ?>/assets/assets_img/rooms6.webp"" style=" margin-top:15%">
-                        </div>
-                        <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s"
-                                src="<?php echo base_url(); ?>/assets/assets_img/room4.webp"" style="
-                                margin-left:130px;margin-top:20px">
-                        </div>
-                        <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s"
-                                src="<?php echo base_url(); ?>/assets/assets_img/room5.webp"">
+                        <div class="col-lg-6">
+                            <div class="row g-3">
+                                <div class="col-6 text-end">
+                                    <img class="img-fluid rounded w-70 wow zoomIn" data-wow-delay="0.1s"
+                                        src="<?php echo base_url(); ?>/assets/assets_img/room6.webp" style=" margin-top: 25%;">
+                                </div>
+                                <div class="col-6 text-start">
+                                    <img class="img-fluid rounded w-90 wow zoomIn" data-wow-delay="0.3s"
+                                        src="<?php echo base_url(); ?>/assets/assets_img/rooms6.webp"" style=" margin-top:15%">
+                                </div>
+                                <div class="col-6 text-end">
+                                    <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s"
+                                        src="<?php echo base_url(); ?>/assets/assets_img/room4.webp"" style="
+                                        margin-left:130px;margin-top:20px">
+                                </div>
+                                <div class="col-6 text-start">
+                                    <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s"
+                                        src="<?php echo base_url(); ?>/assets/assets_img/room5.webp"">
                                 </div>
                             </div>
                         </div>

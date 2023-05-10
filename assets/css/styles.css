@@ -1,61 +1,66 @@
+body {
+    overflow-x: hidden;
+}
 
- .body{
-    background-color: rgb(255, 38, 0);
- }
- html{
+html {
     scroll-behavior: smooth;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-size: 43px;
     font-weight: bold;
 
 }
+
 .navbar {
     font-size: 23px;
 }
-.nav-item{
-padding: 13px;
-font-weight: 250;
+
+.nav-item {
+    padding: 13px;
+    font-weight: 250;
 }
 
 #navbarSupportedContent {
     margin-top: -18px;
     margin-bottom: -11px;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     background: #c0bebe;
 }
 
 
 
 /* main */
-.section-title{
+.section-title {
     font-size: 20px;
 }
-.display-3{
+
+.display-3 {
     font-size: 70px;
     font-weight: bold;
 }
-.w-100{
-    opacity: 0.5;   
+
+.w-100 {
+    opacity: 0.5;
 }
 
 /* main end*/
 
 
 /* About */
-.col-lg-6{
+.col-lg-6 {
     padding: 50px;
 }
 
 
 @media (max-width: 991.98px) {
-    .navbar-dark .navbar-nav .nav-link  {
+    .navbar-dark .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
-    
+
 }
 
 /*** Service ***/
@@ -107,7 +112,7 @@ font-weight: 250;
         position: relative;
         min-height: 450px;
     }
-    
+
     #header- .car-item img {
         position: absolute;
         width: 100%;
@@ -116,7 +121,7 @@ font-weight: 250;
     }
 }
 
-#gototop{
+#gototop {
     position: fixed;
     width: 50px;
     height: 50px;
@@ -127,36 +132,37 @@ font-weight: 250;
 
 /* main start */
 
-.banner-card{
+.banner-card {
     position: relative;
 }
-.banner-card img{
+
+.banner-card img {
     max-width: 100%;
     height: auto;
 }
-.banner-text{
+
+.banner-text {
     position: absolute;
     top: 35%;
-   margin-left: 69%;
+    margin-left: 69%;
     text-align: center;
     align-items: center;
     color: #ffffff;
     padding: 10px;
-    
+
 }
 
-@media  (max-width:991.98px){
-h1{
-    min-height: 30vh;
+@media (max-width:991.98px) {
+    h1 {
+        min-height: 30vh;
+    }
 }
-}
- 
+
 
 
 
 /* Terms & conditions start */
-.termscontainer
-{
+.termscontainer {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -168,20 +174,20 @@ h1{
 
 /* privacy_policy start*/
 
-td{
-    padding:0.7rem;
-    border:1px solid #6d6d6d
+td {
+    padding: 0.7rem;
+    border: 1px solid #6d6d6d
 }
-.privacycontainer{
-    padding:50px;
-    
+
+.privacycontainer {
+    padding: 50px;
+
 }
 
 
 
 /* exploremore start*/
-#post-1372
-{
+#post-1372 {
     padding: 80px;
 }
 
@@ -189,15 +195,15 @@ td{
 
 /* login page start */
 
-#logincontainer{
-    margin-top:50px;
+#logincontainer {
+    margin-top: 50px;
 }
 
 
 
 /* footer start */
 
-#center{
+#center {
     transition: .3s;
 
 }
@@ -206,11 +212,3 @@ td{
     letter-spacing: .5px;
     box-shadow: none;
 }
-
-
-
-
-
-
-
-
