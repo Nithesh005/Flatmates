@@ -20,7 +20,6 @@ class dbcontrollers extends BaseController
         $validate_owner['owner_mail'] = $this->request->getvar('owner_mail');
         $validate_owner['owner_pasword'] = $this->request->getvar('owner_pasword');
         $res = $this->datas->validate_ownerlogin_model($validate_owner);
-        // $res ="kkk";
         echo json_encode($res);
     }
     public function tenantlogin()
