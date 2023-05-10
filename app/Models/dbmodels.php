@@ -172,8 +172,6 @@ class Dbmodels extends Model
         $query->select('*');
         $query->where('u_id', "$unique_id");
         $res = $query->get()->getResultArray();
-        // $res = "final answer";
-
         return $res;
     }
 
@@ -183,7 +181,6 @@ class Dbmodels extends Model
         $query = $db->table('new_house');
         $query->select('*');
         $res = $query->get()->getResultArray();
-        // $res = "final answer";
         return $res;
     }
 

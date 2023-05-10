@@ -52,6 +52,10 @@ class Home extends BaseController
     {
         return view('terms_conditions');
     }
+    public function profile()
+    {
+        return view('profile');
+    }
     public function privacy_policy()
     {
         return view('privacy_policy');
@@ -60,9 +64,21 @@ class Home extends BaseController
     {
         return view('owner_dashbord');
     }
+    public function forgot()
+    {
+        return view('forgot');
+    }
     public function tenat_dashboard()
     {
         return view('tenat_dashboard');
+    }
+    public function forgot_otp()
+    {
+        return view('forgot_otp');
+    }
+    public function confirmpassord_forgot()
+    {
+        return view('confirmpassord_forgot');
     }
     public function about()
     {
