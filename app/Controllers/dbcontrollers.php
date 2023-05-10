@@ -20,6 +20,7 @@ class dbcontrollers extends BaseController
         $validate_owner['owner_mail'] = $this->request->getvar('owner_mail');
         $validate_owner['owner_pasword'] = $this->request->getvar('owner_pasword');
         $res = $this->datas->validate_ownerlogin_model($validate_owner);
+        // $res ="kkk";
         echo json_encode($res);
     }
     public function tenantlogin()
@@ -226,8 +227,8 @@ class dbcontrollers extends BaseController
         $my_file = $this->request->getFile('my_file');
 
         if (($my_file->getSize() > 0)) {
-            // $unique_id = $this->unique_id();
-            $directory = "./public/uploads/" . $u_id;
+            $unique_id = $this->unique_id();
+            $directory = "./public/uploads/" . $unique_id;
             if (!is_dir($directory)) {
                 mkdir($directory, 0777, TRUE);
             }
