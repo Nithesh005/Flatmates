@@ -10,7 +10,9 @@ body {
     font-size: 16px;
 
 }
-
+.container .row_top{
+    margin-top: -110px;
+}
 .container {
     margin-top: 10%;
 }

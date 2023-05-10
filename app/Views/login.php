@@ -27,6 +27,11 @@ $session = \Config\Services::session();
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        body{
+            overflow-y: hidden;
+        }
+    </style>
 </head>
 
 <body>
@@ -35,7 +40,7 @@ $session = \Config\Services::session();
     <!-- header -->
     <div class="container">
         <!-- icon header -->
-        <div class="row">
+        <div class="row row_top">
             <div class="col-lg-5 col-md-4 "></div>
             <div class="col-lg-2 col-md-4 col-sm-12">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
