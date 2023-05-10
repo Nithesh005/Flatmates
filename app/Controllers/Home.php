@@ -197,4 +197,19 @@ class Home extends BaseController
             return view('otp_verification_tenant');
         }
     }
+    // public function get_in_touch(){
+    //     $email = Services::email();
+    //     // $sender_mail = $this->request->getVar('entered_otp');
+    //     $email->setFrom('nitheshwaran003@gmail.com', 'Flatmates');
+    //     $email->setTo('flatmates09@gmail.com');
+    //     $email->setSubject('OTP Verification');
+    //     $email->setMessage('Your OTP: from flatmates ');
+    //     if ($email->send()){
+    //         echo 'OTP email sent successfully.';
+    //     }
+    //     else {
+    //         echo 'Error sending OTP email: ' . $email->printDebugger();
+    //     }
+
+    // }
 }
