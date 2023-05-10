@@ -106,7 +106,7 @@ $session = \Config\Services::session();
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <input type="submit" class="btn btn-primary" id="post_btnn" value="Post">
+                            <input type="submit" class="btn btn-primary" value="Post">
                         </div>
                     </form>
                 </div>
