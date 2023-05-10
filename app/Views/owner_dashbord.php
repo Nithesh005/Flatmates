@@ -18,9 +18,12 @@ $session = \Config\Services::session();
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Document</title>
     <style>
-        .card{
+        .owner_card {
             display: flex;
-            background-color: red;
+            flex-wrap: wrap;
+            gap: 80px;
+            /* justify-content: space-evenly; */
+            /* background-color: red; */
         }
     </style>
 </head>
@@ -111,21 +114,16 @@ $session = \Config\Services::session();
         </div>
     </div>
 
-    <div class="container">
 
 
-        <div class="container">
-            <br>
-            <br>
-            <div class="row" id="ads">
-                <!-- Category Card -->
-                <div class="card">
-                    <div class="owner_card">
-                    </div>
-                </div>
-            </div>
+    <div class="row" id="ads">
+        <!-- Category Card -->
+        <div class="owner_card">
         </div>
-        <!-- <img src="<?php echo base_url(); ?>public/public/uploads/FMOW_1002/be nice.jpg" height="200px" width="300px" alt=""> -->
+
+    </div>
+
+    <!-- <img src="<?php echo base_url(); ?>public/public/uploads/FMOW_1002/be nice.jpg" height="200px" width="300px" alt=""> -->
 
     </div>
 
@@ -181,6 +179,7 @@ $session = \Config\Services::session();
                     function(items) {
                         var element = $();
                         element = element.add(
+                            '<div class="card col-3 card_index">' +
                             '<div class="card-image">' +
                             '<span class="card-notify-badge">Low KMS</span>' +
                             '<span class="card-notify-year">2018</span>' +
@@ -207,7 +206,7 @@ $session = \Config\Services::session();
                             '<h5>Honda Accord LX</h5>' +
                             '</div>' +
                             '<a class="ad-btn" href="#">View</a>' +
-                            '</div>'
+                            '</div>' + '</div>'
 
                         );
                         $('.owner_card').append(element);
