@@ -64,6 +64,10 @@ class Home extends BaseController
     {
         return view('owner_dashbord');
     }
+    public function forgot()
+    {
+        return view('forgot');
+    }
     public function tenat_dashboard()
     {
         return view('tenat_dashboard');
