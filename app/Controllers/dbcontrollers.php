@@ -227,8 +227,8 @@ class dbcontrollers extends BaseController
         $my_file = $this->request->getFile('my_file');
 
         if (($my_file->getSize() > 0)) {
-            // $unique_id = $this->unique_id();
-            $directory = "./public/uploads/" . $u_id;
+            $unique_id = $this->unique_id();
+            $directory = "./public/uploads/" . $unique_id;
             if (!is_dir($directory)) {
                 mkdir($directory, 0777, TRUE);
             }
