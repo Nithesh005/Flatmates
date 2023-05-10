@@ -17,10 +17,17 @@ $session = \Config\Services::session();
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/filechoose.css?version=<?php echo rand(); ?>">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Document</title>
+    <style>
+        .card{
+            display: flex;
+            background-color: red;
+        }
+    </style>
 </head>
 
 <body onload="getcard()">
-    <!-- <h1>user id<?php //echo session('u_id'); ?></h1> -->
+    <!-- <h1>user id<?php //echo session('u_id'); 
+                    ?></h1> -->
 
     <?php require_once "after_login_header.php"; ?>
     <br>
@@ -112,12 +119,13 @@ $session = \Config\Services::session();
             <br>
             <div class="row" id="ads">
                 <!-- Category Card -->
-                <div>
-                    <div class="card rounded owner_card">
+                <div class="card">
+                    <div class="owner_card">
                     </div>
                 </div>
             </div>
         </div>
+        <!-- <img src="<?php echo base_url(); ?>public/public/uploads/FMOW_1002/be nice.jpg" height="200px" width="300px" alt=""> -->
 
     </div>
 
@@ -155,6 +163,9 @@ $session = \Config\Services::session();
     });
 
 
+    // '<img class="img-fluid" ' +
+    // 'src="<?php echo base_url(); ?>public/public/uploads/' + item.u_id + '/' + item.image + '" class="img-radius"  alt="User-Profile-Image"?>" '
+
     // card design
     function getcard() {
         $.ajax({
@@ -173,9 +184,10 @@ $session = \Config\Services::session();
                             '<div class="card-image">' +
                             '<span class="card-notify-badge">Low KMS</span>' +
                             '<span class="card-notify-year">2018</span>' +
+                            // items.u_id + items.image +
                             '<img class="img-fluid" ' +
-                            'src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" ' +
-                            'alt="Alternate Text" />' +
+                            'src="<?php echo base_url() ?>/public/public/uploads/' + items.u_id + '/' + items.image + '" ' +
+                            'alt="Alternate Text" height="100px" width="400px"  />' +
                             '</div>' +
                             '<div class="card-image-overlay m-auto">' +
                             '<span class="card-detail-badge">' + '₹' + +items.rent + '</span>' +
