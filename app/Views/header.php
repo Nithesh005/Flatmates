@@ -84,7 +84,7 @@
                         <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>" class="nav-link">Contact</a>
+                        <a href="mailto:flatemates09@mail.com" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo base_url('./public/index.php/home/login') ?>" class="nav-link ">Sign in</a>

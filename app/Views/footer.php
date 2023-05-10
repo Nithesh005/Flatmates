@@ -38,7 +38,7 @@
                         We are a leading online platform for booking hotels and resorts. We offer a wide range of accommodations at competitive prices, with easy booking and payment options.”</P>
                 </div>
                 <div class="col text-center" id="center">
-                   <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>"style="text-decoration:none;"> <h4  style="color:black;">Contact Us</h4></a>
+                   <a href="mailto:flatemates09@mail.com" style="text-decoration:none;"> <h4  style="color:black;">Contact Us</h4></a>
                     
                 </div>
                 <div class="col text-center" >

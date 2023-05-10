@@ -77,7 +77,7 @@
                             <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">TENANT</span></h1>
                             <p class="mb-4">There is a very good chance that at some point in your life, you will have a flatmate. In fact, living in share accommodation is a rite of passage amongst most young adults worldwide, and is something everyone should experience – for good or bad.
                             </p>
-                            <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                            <a class="btn btn-primary py-3 px-5 mt-2" href="<?php echo base_url('./public/index.php/home/about') ?>">Explore More</a>
                         </div>
                         <div class="col-lg-6">
                             <div class="row g-3">
