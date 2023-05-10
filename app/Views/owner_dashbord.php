@@ -191,6 +191,7 @@ $session = \Config\Services::session();
                             '<div class="card-image">' +
                             '<span class="card-notify-badge">Low KMS</span>' +
                             '<span class="card-notify-year">2018</span>' +
+                            // items.u_id+items.image+
                             '<img class="img-fluid" ' +
                             'src="<?php echo base_url() ?>/public/public/uploads/' + items.u_id + '/' + items.image + '" ' +
                             'alt="Alternate Text" height="100px" width="400px"  />' +
