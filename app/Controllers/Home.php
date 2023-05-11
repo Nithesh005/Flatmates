@@ -74,6 +74,7 @@ class Home extends BaseController
     }
     public function forgot_otp()
     {
+
         return view('forgot_otp');
     }
     public function confirmpassord_forgot()
