@@ -239,11 +239,11 @@ class Dbmodels extends Model
         // return "from model";
         if($res) {
             // Deletion was successful
-            return "ssss";
+            return "Successfully Deleted";
 
         } else {
             // Deletion failed
-            return "nooooo";
+            return "Couldn't Delete";
         }
     }
     

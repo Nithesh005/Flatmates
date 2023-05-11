@@ -17,6 +17,7 @@ $session = \Config\Services::session();
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/filechoose.css?version=<?php echo rand(); ?>">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Document</title>
+    
     <style>
         .owner_card {
             display: flex;
@@ -36,6 +37,10 @@ $session = \Config\Services::session();
             width: 100%;
         }
 
+        .add_house_row {
+            gap: 20px;
+        }
+
         /* .row>* {
             margin-left: 8%;
         } */
@@ -47,7 +52,8 @@ $session = \Config\Services::session();
 
     <?php require_once "after_login_header.php"; ?>
     <br>
-    <div class="container d-flex justify-content-end">
+    <div class="container d-flex justify-content-end add_house_row">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Requests</button>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
             Add New House</button>
     </div>
@@ -125,9 +131,9 @@ $session = \Config\Services::session();
         </div>
     </div>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary button2" data-toggle="modal" data-target="#exampleModal">
+    <!-- <button type="button" class="btn btn-primary button2" data-toggle="modal" data-target="#exampleModal">
         Requests
-    </button>
+    </button> -->
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -210,84 +216,84 @@ $session = \Config\Services::session();
 
     // card design
     // function getcard() {
-        $.ajax({
-            // url: "<?php echo base_url() ?>/public/index.php/Controllers/dbcontrollers/reg_user_data",
-            url: "<?php echo base_url('public/index.php/Dbcontrollers/owner_card'); ?>",
-            method: "POST",
-            dataType: "json",
-            success: function(res) {
-                console.log(res);
-                console.log("ajax woking");
-                $('.owner_card').empty();
-                res.forEach(
-                    function(items) {
-                        var element = $();
-                        element = element.add(
-                            '<div class="card col-3 card_index">' +
-                            '<div class="card-image">' +
-                            // '<span class="card-notify-badge">Low KMS</span>' +
-                            // '<span class="card-notify-year">2018</span>' +
-                            // items.u_id+items.image+
-                            '<img class="img-fluid" ' +
-                            'src="<?php echo base_url() ?>/public/public/uploads/' + items.u_id + '/' + items.image + '" ' +
-                            'alt="Alternate Text" height="100px" width="400px"  />' +
-                            '</div>' +
-                            '<div class="card-image-overlay m-auto">' +
-                            '<span class="card-detail-badge">' + '₹' + items.rent + '</span>' +
-                            '<span class="card-detail-badge">' + items.BHK + '/' + 'BHK' + '</span>' +
-                            '</div>' +
-                            '<div class="col-12">' +
-                            '<div class="card-body">' +
-                            '<h5 class="card-title">About Home</h5>' +
-                            '<div class="card-title house_no" id="'+items.house_no+'" value="mm">'+items.house_no+'</div>' +
-                            '<p class="card-text">' + items.description + '</p>' +
-                            '<p class="card-text">' + 'City' + ':' + items.city + '</p>' +
-                            '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
-                            '<br>' +
-                            '<button type="button" id="delete_btn" class="btn btn-danger">Delete Home</button>' +
-                            // '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
-                            '</div>' +
-                            '</div>' + '</div>'
+    $.ajax({
+        // url: "<?php echo base_url() ?>/public/index.php/Controllers/dbcontrollers/reg_user_data",
+        url: "<?php echo base_url('public/index.php/Dbcontrollers/owner_card'); ?>",
+        method: "POST",
+        dataType: "json",
+        success: function(res) {
+            console.log(res);
+            console.log("ajax woking");
+            $('.owner_card').empty();
+            res.forEach(
+                function(items) {
+                    var element = $();
+                    element = element.add(
+                        '<div class="card col-3 card_index">' +
+                        '<div class="card-image">' +
+                        // '<span class="card-notify-badge">Low KMS</span>' +
+                        // '<span class="card-notify-year">2018</span>' +
+                        // items.u_id+items.image+
+                        '<img class="img-fluid" ' +
+                        'src="<?php echo base_url() ?>/public/public/uploads/' + items.u_id + '/' + items.image + '" ' +
+                        'alt="Alternate Text" height="100px" width="400px"  />' +
+                        '</div>' +
+                        '<div class="card-image-overlay m-auto">' +
+                        '<span class="card-detail-badge">' + '₹' + items.rent + '</span>' +
+                        '<span class="card-detail-badge">' + items.BHK + '/' + 'BHK' + '</span>' +
+                        '</div>' +
+                        '<div class="col-12">' +
+                        '<div class="card-body">' +
+                        '<h5 class="card-title">About Home</h5>' +
+                        '<div class="card-title house_no" id="' + items.house_no + '" value="mm">' + items.house_no + '</div>' +
+                        '<p class="card-text">' + items.description + '</p>' +
+                        '<p class="card-text">' + 'City' + ':' + items.city + '</p>' +
+                        '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
+                        '<br>' +
+                        '<button type="button" id="delete_btn" class="btn btn-danger">Delete Home</button>' +
+                        // '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
+                        '</div>' +
+                        '</div>' + '</div>'
 
-                        );
-                        // element.find('.house_no').data('house_no', items.house_no);
-                        $('.owner_card').append(element);
+                    );
+                    // element.find('.house_no').data('house_no', items.house_no);
+                    $('.owner_card').append(element);
 
-                        element.find('#delete_btn').click(function() {
-                            var house_no = items.house_no;
-                            // alert(house_no);
-                            // alert(a);
-                            // Perform deletion logic for the corresponding card
-                            $.ajax({
-                                url: "<?php echo base_url('public/index.php/dbcontrollers/delete_owner_card'); ?>",
-                                method:"POST",
-                                data:{
-                                    house_no : house_no,
-                                },
-                                success:function(res){
-                                    alert(res);
-                                    return location.reload();
-                                },
-                                error:function(er){
-                                    alert("error");
-                                }
-                                
-                            })
-                        });
+                    element.find('#delete_btn').click(function() {
+                        var house_no = items.house_no;
+                        // alert(house_no);
+                        // alert(a);
+                        // Perform deletion logic for the corresponding card
+                        $.ajax({
+                            url: "<?php echo base_url('public/index.php/dbcontrollers/delete_owner_card'); ?>",
+                            method: "POST",
+                            data: {
+                                house_no: house_no,
+                            },
+                            success: function(res) {
+                                alert(res);
+                                return location.reload();
+                            },
+                            error: function(er) {
+                                alert("error");
+                            }
 
-                    }
+                        })
+                    });
 
-                );
-                // $('#delete_btn').click(function() {
-                //     alert("hai");
-                // });
+                }
 
-            },
-            error: function(er) {
-                // console.error(er);
-                console.log("error");
-            }
-        })
+            );
+            // $('#delete_btn').click(function() {
+            //     alert("hai");
+            // });
+
+        },
+        error: function(er) {
+            // console.error(er);
+            console.log("error");
+        }
+    })
 
     // }
     // $('#delete_btn').click(function() {
