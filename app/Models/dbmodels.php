@@ -183,6 +183,16 @@ class Dbmodels extends Model
         $res = $query->get()->getResultArray();
         return $res;
     }
+    public function  apply_button_model()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('new_house');
+        $query->select('*');
+        $res = $query->get()->getResultArray();
+        return $res;
+    }
+
+   
 
     public function profile_model()
     {

@@ -228,7 +228,12 @@ class dbcontrollers extends BaseController
         
     }
 
+    public function apply_button()
+    {
+        $res = $this->datas->apply_button_model();
 
+        echo json_encode($res);
+    }
 
 
 

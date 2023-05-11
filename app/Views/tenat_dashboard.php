@@ -193,13 +193,19 @@ $session = \Config\Services::session();
                             '</div>' +
                             '<div class="col-12">' +
                             '<div class="card-body">' +
-                            '<h5 class="card-title">About Home</h5>' +
+                            '<h6 class="card-title">House No</h6>' +
+                            '<p class="card-text">' + items.house_no + '</p>' +
+                            '<h6 class="card-title">DESCRIPTION</h6>' +
+                            '<p class="card-text">' + items.about + '</p>' +
+                            '<h6 class="card-title">About Home</h6>' +
                             '<p class="card-text">' + items.description + '</p>' +
+                            '<h6 class="card-title">Members allowed</h6>' +
+                            '<p class="card-text">' + items.members + '</p>' +
                             '<p class="card-text">' + 'City' + ':' + items.city + '</p>' +
                             '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
                             '<br>' +
                             '<div class="social_btn">' +
-                            '<button type="button" class="btn btn-info button4">Apply</button>' +
+                            '<button type="button" class="btn btn-info button4" id="apply_btn">Apply</button>' +
                             '<button type="button" class="btn btn-success button3">Chat</button>' +
                             '</div>' +
                             // '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
@@ -219,6 +225,22 @@ $session = \Config\Services::session();
         })
 
     }
+    $(document).on('click', '#apply_btn', function (event) {
+        event.preventDefault();
+            $.ajax({
+                url: "<?php echo base_url('public/index.php/dbcontrollers/apply_button'); ?>",
+                method: "POST",
+                dataType: "json",
+                success: function (res) {
+                    alert(res)
+                    console.log(res)
+                },
+                error: function (er) {
+                    console.log("Login Error");
+                    console.log(er);
+                }
+            });
+        });
 </script>
 <link href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.9.0/css/mdb.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.9.0/js/mdb.min.js"></script>
