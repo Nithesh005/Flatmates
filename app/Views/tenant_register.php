@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
-        .container .row_top{
+        .container .row_top {
             margin-top: -160px;
         }
     </style>
@@ -41,14 +41,14 @@
             <div class="col-lg-3"></div>
             <div class="col-lg-6">
                 <form action="<?php echo base_url('public/index.php/Dbcontrollers/reg_user_data'); ?>" method="post" enctype="multipart/form-data">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="jumbotron border border-2 border-info shadow shadow-sm  rounded ">
-                                <br>
-                                <h2 class="text-info text-center">Tenant Registeration</h2>
-                                <br>
-                                <!-- <div class="m-3">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="jumbotron border border-2 border-info shadow shadow-sm  rounded ">
+                                    <br>
+                                    <h2 class="text-info text-center">Tenant Registeration</h2>
+                                    <br>
+                                    <!-- <div class="m-3">
                                     <div class="form-outline mb-4 input-container">
                                         <input type="text" id="reg_no" name="reg_no" class="input" placeholder=" " onblur="Alphanumeric()" />
                                         <label for="form2Example11" class="placeholder label">Register No </label>
@@ -56,185 +56,185 @@
                                     </div>
                                 </div> -->
 
-                                <div class="m-3">
-                                    <div class="form-outline mb-4 input-container">
-                                        <input type="text" id="sname" name="sname" class="input" placeholder=" " onblur="validateUsername()" />
-                                        <label for="reg_name" class="placeholder label">Enter Name</label>
-                                        <span id="name_err"></span>
-                                        <!-- form2Example11 Enter Name -->
+                                    <div class="m-3">
+                                        <div class="form-outline mb-4 input-container">
+                                            <input type="text" id="sname" name="sname" class="input" placeholder=" " onblur="validateUsername()" />
+                                            <label for="reg_name" class="placeholder label">Enter Name</label>
+                                            <span id="name_err"></span>
+                                            <!-- form2Example11 Enter Name -->
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="m-3">
-                                    <div class="form-outline mb-4 input-container">
-                                        <input type="email" id="email_id" name="email_id" class="input" placeholder=" " onblur="validateEmail()" />
-                                        <label for="email_id" class="placeholder label">E-mail</label>
-                                        <span id="reg_mail_err"></span>
+                                    <div class="m-3">
+                                        <div class="form-outline mb-4 input-container">
+                                            <input type="email" id="email_id" name="email_id" class="input" placeholder=" " onblur="validateEmail()" />
+                                            <label for="email_id" class="placeholder label">E-mail</label>
+                                            <span id="reg_mail_err"></span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="m-3">
-                                    <div class="form-outline mb-4 input-container">
-                                        <input type="text" id="mobile" name="mobile" class="input" placeholder=" " onblur="validateMobile()" />
-                                        <label for="mobile" class="placeholder label">Enter Mobile</label>
-                                        <span id="mobile_err"></span>
+                                    <div class="m-3">
+                                        <div class="form-outline mb-4 input-container">
+                                            <input type="text" id="mobile" name="mobile" class="input" placeholder=" " onblur="validateMobile()" />
+                                            <label for="mobile" class="placeholder label">Enter Mobile</label>
+                                            <span id="mobile_err"></span>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="m-3">
-                                    <div class="form-outline mb-4 input-container">
-                                        <input type="password" id="password_id" name="password_id" class="input" placeholder=" " onblur="validatepassword()" />
-                                        <label for="password_id" class="placeholder label">Password</label>
-                                        <span id="password_err"></span>
+                                    <div class="m-3">
+                                        <div class="form-outline mb-4 input-container">
+                                            <input type="password" id="password_id" name="password_id" class="input" placeholder=" " onblur="validatepassword()" />
+                                            <label for="password_id" class="placeholder label">Password</label>
+                                            <span id="password_err"></span>
+                                        </div>
                                     </div>
-                                </div>
-
-
-                                <div class="m-3">
-                                    <div class="form-outline mb-4 input-container ">
-                                        <input type="text" id="occupation_id" name="occupation_id" class="input" placeholder=" " onblur="validateoccupation()" />
-                                        <label for="occupation_id" class="placeholder label">Occupation</label>
-                                        <span id="occupation_err"></span>
-                                    </div>
-                                </div>
-
-                                <div class="m-3">
-                                    <div class="form-outline mb-4 input-container ">
-                                        <input type="text" id="address_id" name="address_id" class="input" placeholder=" " onblur="validateaddress()" />
-                                        <label for="address_id" class="placeholder label">Address</label>
-                                        <span id="address_err"></span>
-                                    </div>
-                                </div>
-                                <div class="m-3">
-                                    <div class="form-outline mb-4 input-container ">
-                                        <input type="text" id="city_id" name="city_id" class="input" placeholder=" " onblur="validatecity()" />
-                                        <label for="city_id" class="placeholder label">City</label>
-                                        <span id="city_err"></span>
-                                    </div>
-                                </div>
-                                <div class="m-3">
-                                    <div class="form-outline mb-4 input-container ">
-                                        <input type="text" id="state_id" name="state_id" class="input" placeholder=" " onblur="validatestate()" />
-                                        <label for="state_id" class="placeholder label">State</label>
-                                        <span id="state_err"></span>
-                                    </div>
-                                </div>
 
 
-
-
-                                <div class="row mb-3">
-                                    <div class="col-4"></div>
-                                    <div class="col-4">
-                                        <button type="button" class="btn btn-lg mx-auto border border-2 border-info rounded text-info next_click" style="width:100%" id="reg_first_btn">Next</button>
+                                    <div class="m-3">
+                                        <div class="form-outline mb-4 input-container ">
+                                            <input type="text" id="occupation_id" name="occupation_id" class="input" placeholder=" " onblur="validateoccupation()" />
+                                            <label for="occupation_id" class="placeholder label">Occupation</label>
+                                            <span id="occupation_err"></span>
+                                        </div>
                                     </div>
-                                    <div class="col-4"></div>
+
+                                    <div class="m-3">
+                                        <div class="form-outline mb-4 input-container ">
+                                            <input type="text" id="address_id" name="address_id" class="input" placeholder=" " onblur="validateaddress()" />
+                                            <label for="address_id" class="placeholder label">Address</label>
+                                            <span id="address_err"></span>
+                                        </div>
+                                    </div>
+                                    <div class="m-3">
+                                        <div class="form-outline mb-4 input-container ">
+                                            <input type="text" id="city_id" name="city_id" class="input" placeholder=" " onblur="validatecity()" />
+                                            <label for="city_id" class="placeholder label">City</label>
+                                            <span id="city_err"></span>
+                                        </div>
+                                    </div>
+                                    <div class="m-3">
+                                        <div class="form-outline mb-4 input-container ">
+                                            <input type="text" id="state_id" name="state_id" class="input" placeholder=" " onblur="validatestate()" />
+                                            <label for="state_id" class="placeholder label">State</label>
+                                            <span id="state_err"></span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="row mb-3">
+                                        <div class="col-4"></div>
+                                        <div class="col-4">
+                                            <button type="button" class="btn btn-lg mx-auto border border-2 border-info rounded text-info next_click" style="width:100%" id="reg_first_btn">Next</button>
+                                        </div>
+                                        <div class="col-4"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- second -->
-                        <div class="carousel-item">
-                            <div class="jumbotron border border-2 border-info shadow shadow-sm  rounded ">
-                                <br>
-                                <h2 class="text-center text-info">Second Page</h2>
-                                <br>
-
-
-
-
-                                <div class="m-3">
-                                    <div class="form-outline mb-4 input-container">
-                                        <input type="text" name="profile_file_txt" id="profile_file_txt" class="input" placeholder=" " readonly>
-                                        <label for="form2Example11" class="placeholder label">Photo</label>
-                                        <div class="pin" id="pin_profile"><i class="fa-solid fa-paperclip pin-icon"></i></div>
-                                        <input type="file" accept="image/jpeg" name="profile_file" id="profile_file" class="hidden form-control form-control-md" onblur="checkFileSize()">
-                                        <span class="label_txt">Photo Lesser then 20KB and its only jpg,
-                                            jpeg
-                                            accept</span>
-                                    </div>
+                            <!-- second -->
+                            <div class="carousel-item">
+                                <div class="jumbotron border border-2 border-info shadow shadow-sm  rounded ">
                                     <br>
-                                </div>
-
-
-                                <div class="m-3">
-
-                                    <div class="form-outline mb-4 input-container">
-                                        <input type="text" name="resume_file_txt" id="resume_file_txt" class="input" placeholder=" " readonly>
-                                        <label for="form2Example11" class="placeholder label">Smart Card</label>
-                                        <div class="pin" id="pin_resume"><i class="fa-solid fa-paperclip pin-icon"></i></div>
-                                        <input type="file" accept="image/jpeg" id="smart_card" name="smart_card" class="hidden form-control form-control-md">
-                                        <span class="label_txt">Smart Card Lesser then 20KB and its only pdf ,
-                                            jpg, jpeg
-                                            accept</span>
-                                    </div>
+                                    <h2 class="text-center text-info">Second Page</h2>
                                     <br>
 
-                                </div>
 
-                                <div class="m-3">
 
-                                    <div class="form-outline mb-4 input-container">
-                                        <input type="text" name="aadhar_card" id="aadhar_card" class="input" placeholder=" " readonly>
-                                        <label for="form2Example11" class="placeholder label">Aadhar card </label>
-                                        <div class="pin" id="pin_bonafide"><i class="fa-solid fa-paperclip pin-icon"></i></div>
-                                        <input type="file" accept="image/jpeg" id="bonafide_check_file" name="aadhar_card" class="hidden form-control form-control-md">
-                                        <span class="label_txt">Aadhar card Lesser then 20KB and its only pdf , jpg,
-                                            jpeg
-                                            accept</span>
+
+                                    <div class="m-3">
+                                        <div class="form-outline mb-4 input-container">
+                                            <input type="text" name="profile_file_txt" id="profile_file_txt" class="input" placeholder=" " readonly>
+                                            <label for="form2Example11" class="placeholder label">Photo</label>
+                                            <div class="pin" id="pin_profile"><i class="fa-solid fa-paperclip pin-icon"></i></div>
+                                            <input type="file" accept="image/jpeg" name="profile_file" id="profile_file" class="hidden form-control form-control-md" onblur="checkFileSize()">
+                                            <span class="label_txt">Photo Lesser then 20KB and its only jpg,
+                                                jpeg
+                                                accept</span>
+                                        </div>
+                                        <br>
                                     </div>
-                                    <br>
-                                </div>
 
-                                <div class="row m-3 ">
-                                    <div class="col-lg-3 col-md-1 col-sm-1"></div>
-                                    <div class="col-lg-6 col-md-10 col-sm-10 button-next-back d-flex">
-                                        <button class="btn btn-lg mx-auto border border-2 border-primary rounded text-primary back_btn">Back</button>
-                                        <button class="btn btn-lg mx-auto border border-2 border-info rounded text-info next_click" id="reg_sec_btn">Next</button>
+
+                                    <div class="m-3">
+
+                                        <div class="form-outline mb-4 input-container">
+                                            <input type="text" name="resume_file_txt" id="resume_file_txt" class="input" placeholder=" " readonly>
+                                            <label for="form2Example11" class="placeholder label">Smart Card</label>
+                                            <div class="pin" id="pin_resume"><i class="fa-solid fa-paperclip pin-icon"></i></div>
+                                            <input type="file" accept="image/jpeg" id="smart_card" name="smart_card" class="hidden form-control form-control-md">
+                                            <span class="label_txt">Smart Card Lesser then 20KB and its only pdf ,
+                                                jpg, jpeg
+                                                accept</span>
+                                        </div>
+                                        <br>
+
                                     </div>
-                                    <div class="col-lg-3 col-md-1 col-sm-1"></div>
+
+                                    <div class="m-3">
+
+                                        <div class="form-outline mb-4 input-container">
+                                            <input type="text" name="aadhar_card" id="aadhar_card" class="input" placeholder=" " readonly>
+                                            <label for="form2Example11" class="placeholder label">Aadhar card </label>
+                                            <div class="pin" id="pin_bonafide"><i class="fa-solid fa-paperclip pin-icon"></i></div>
+                                            <input type="file" accept="image/jpeg" id="bonafide_check_file" name="aadhar_card" class="hidden form-control form-control-md">
+                                            <span class="label_txt">Aadhar card Lesser then 20KB and its only pdf , jpg,
+                                                jpeg
+                                                accept</span>
+                                        </div>
+                                        <br>
+                                    </div>
+
+                                    <div class="row m-3 ">
+                                        <div class="col-lg-3 col-md-1 col-sm-1"></div>
+                                        <div class="col-lg-6 col-md-10 col-sm-10 button-next-back d-flex">
+                                            <button class="btn btn-lg mx-auto border border-2 border-primary rounded text-primary back_btn">Back</button>
+                                            <button class="btn btn-lg mx-auto border border-2 border-info rounded text-info next_click" id="reg_sec_btn">Next</button>
+                                        </div>
+                                        <div class="col-lg-3 col-md-1 col-sm-1"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
 
-                        <!-- third -->
-                        <div class="carousel-item">
-                            <div class="jumbotron border border-2 border-info shadow shadow-sm  rounded ">
-                                <br>
-                                <h2 class="text-center text-info">Third Page</h2>
-                                <br>
-                                <div class="m-3">
-                                    <div class="form-outline mb-4 input-container">
-                                        <input type="text" id="aadhar_id" name="aadhar_id" class="input" placeholder=" " onblur="validateaadhar()" />
-                                        <label for="aadhar_id" class="placeholder label">Enter aadhar number</label>
-                                        <span id="aadhar_err"></span>
+                            <!-- third -->
+                            <div class="carousel-item">
+                                <div class="jumbotron border border-2 border-info shadow shadow-sm  rounded ">
+                                    <br>
+                                    <h2 class="text-center text-info">Third Page</h2>
+                                    <br>
+                                    <div class="m-3">
+                                        <div class="form-outline mb-4 input-container">
+                                            <input type="text" id="aadhar_id" name="aadhar_id" class="input" placeholder=" " onblur="validateaadhar()" />
+                                            <label for="aadhar_id" class="placeholder label">Enter aadhar number</label>
+                                            <span id="aadhar_err"></span>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="m-3">
-                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="family_type" id="family_type">
-                                        <option selected disabled>Looking House for</option>
-                                        <option value="Family">Family</option>
-                                        <option value="Bachelor">Bachelor</option>
-                                    </select>
-                                </div>
-
-
-                                <div class="row m-3">
-
-                                    <div class="col-lg-3 col-md-3 col-sm-1"></div>
-                                    <div class="col-lg-6 col-md-6 col-sm-10 button-next-back d-flex ">
-                                        <button class="btn btn-lg border border-2 border-primary rounded text-primary back_btn">Back</button>
-                                        <input type="submit" value="SUBMIT" class="btn btn-lg border border-2 border-info rounded text-info inter_register_btn" onclick="otp_verify()" id="reg_third_btn">
+                                    <div class="m-3">
+                                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="family_type" id="family_type">
+                                            <option selected disabled>Looking House for</option>
+                                            <option value="Family">Family</option>
+                                            <option value="Bachelor">Bachelor</option>
+                                        </select>
                                     </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-1"></div>
-                                </div>
 
+
+                                    <div class="row m-3">
+
+                                        <div class="col-lg-3 col-md-3 col-sm-1"></div>
+                                        <div class="col-lg-6 col-md-6 col-sm-10 button-next-back d-flex ">
+                                            <button class="btn btn-lg border border-2 border-primary rounded text-primary back_btn">Back</button>
+                                            <input type="submit" value="SUBMIT" class="btn btn-lg border border-2 border-info rounded text-info inter_register_btn" onclick="otp_verify()" id="reg_third_btn">
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-1"></div>
+                                    </div>
+
+
+                                </div>
 
                             </div>
 
                         </div>
-
                     </div>
-                </div>
                 </form>
 
 
@@ -247,10 +247,6 @@
     <script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
     <script>
-
-
-
-
         $('#reg_third_bt').click(function() {
             var sname = $('#sname').val();
             var email_id = $('#email_id').val();
@@ -305,11 +301,33 @@
             var get_tmp_index = $('.next_click');
             var get_index = get_tmp_index.index($(this));
             // alert(get_index);
-            $('.carousel').carousel('next');
-            $('.carousel').carousel({
-                interval: false
-            });
+            // if (validateUsername() && validateEmail() && validateMobile() && validatepassword() && validateoccupation() && validatehouseno() && validateaddress() && validatecity() && validatestate()) {
+                // alert("Success");
+                $('.carousel').carousel('next');
+                $('.carousel').carousel({
+                    interval: false
+                });
+            // } else {
+            //     alert("fail");
+            //     $('.carousel').carousel('pause');
+            // }
+
         });
+
+
+        // $(document).on('click', '.next_click', function(event) {
+        //     event.preventDefault();
+        //     alert("hi");
+        //     if(true){
+        //         // alert(validateUsername());
+        //         if(validateUsername()){
+        //             alert("hello");
+        //             // $('.carousel').carousel('next');
+        //         }
+
+        //     }
+        // });
+
 
         // previous button function
         $(document).on('click', '.back_btn', function(event) {

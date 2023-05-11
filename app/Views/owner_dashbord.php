@@ -56,7 +56,7 @@ $session = \Config\Services::session();
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Apply for New House</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
 
@@ -239,6 +239,7 @@ $session = \Config\Services::session();
                             '<div class="col-12">' +
                             '<div class="card-body">' +
                             '<h5 class="card-title">About Home</h5>' +
+                            '<div class="card-title house_no" id="'+items.house_no+'" value="mm">'+items.house_no+'</div>' +
                             '<p class="card-text">' + items.description + '</p>' +
                             '<p class="card-text">' + 'City' + ':' + items.city + '</p>' +
                             '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
@@ -249,15 +250,23 @@ $session = \Config\Services::session();
                             '</div>' + '</div>'
 
                         );
+                        // element.find('.house_no').data('house_no', items.house_no);
                         $('.owner_card').append(element);
+
                         element.find('#delete_btn').click(function() {
-                            // alert("hai");
+                            var house_no = items.house_no;
+                            // alert(house_no);
+                            // alert(a);
                             // Perform deletion logic for the corresponding card
                             $.ajax({
                                 url: "<?php echo base_url('public/index.php/dbcontrollers/delete_owner_card'); ?>",
                                 method:"POST",
+                                data:{
+                                    house_no : house_no,
+                                },
                                 success:function(res){
                                     alert(res);
+                                    return location.reload();
                                 },
                                 error:function(er){
                                     alert("error");

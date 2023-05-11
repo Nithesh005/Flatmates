@@ -219,9 +219,13 @@ class dbcontrollers extends BaseController
     public function  delete_owner_card()
     {
         // $res = 'from model';
-        // $res = $this->datas->delete_owner_card_model();
+        if($this->request->isAJAX()){
+            $house_no = $this->request->getvar('house_no');
+            $res = $this->datas->delete_owner_card_model($house_no);
+            echo json_encode($res);
 
-        echo json_encode("ok");
+        }
+        
     }
 
     public function apply_button()
