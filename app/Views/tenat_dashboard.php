@@ -183,7 +183,7 @@ $session = \Config\Services::session();
                             '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
                             '<br>' +
                             '<div class="social_btn">' +
-                            '<button type="button" class="btn btn-info button4">Apply</button>' +
+                            '<button type="button" class="btn btn-info button4" id="apply_btn">Apply</button>' +
                             '<button type="button" class="btn btn-success button3">Chat</button>' +
                             '</div>' +
                             // '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
@@ -203,6 +203,22 @@ $session = \Config\Services::session();
         })
 
     }
+    $(document).on('click', '#apply_btn', function (event) {
+        event.preventDefault();
+            $.ajax({
+                url: "<?php echo base_url('public/index.php/dbcontrollers/apply_button'); ?>",
+                method: "POST",
+                dataType: "json",
+                success: function (res) {
+                    alert(res)
+                    console.log(res)
+                },
+                error: function (er) {
+                    console.log("Login Error");
+                    console.log(er);
+                }
+            });
+        });
 </script>
 
 </html>
