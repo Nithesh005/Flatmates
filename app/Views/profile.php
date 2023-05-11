@@ -15,6 +15,9 @@
     .padding{
       width: 160%;
     }
+    .img_rad{
+      border-radius: 50%;
+    }
   </style>
 </head>
 
@@ -55,8 +58,8 @@
               '<div class="col-sm-4 bg-c-lite-green user-profile">'+
               '<div class="card-block text-center text-white">'+
               '<div class="m-b-25">'+
-              '<img class="img-fluid" '+
-              'src="<?php echo base_url() ?>/public/public/uploads/'+ items.photo_img +' "alt="Alternate Text" height="100px" width="400px"/>'+
+              '<img class="img-fluid img_rad" '+
+              'src="<?php echo base_url() ?>/public/public/uploads/'+items.u_id + '/'+ items.photo_img +' "alt="Alternate Text" height="100px" width="400px"/>'+
               '</div>' +
               '<h6 class="f-w-600">' + items.name + '</h6>'+
               '<p>' + items.occupation + '</p>'+
