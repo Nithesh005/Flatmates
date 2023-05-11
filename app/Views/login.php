@@ -84,7 +84,7 @@ $session = \Config\Services::session();
                                 <div class="form-outline mb-4 input-container">
                                     <input type="password" id="owner_pasword" name="reg_no" class="input"
                                         placeholder=" " onblur="passwordValidate1()" />
-                                    <label for="adminpasword" class="placeholder label">Enter Password</label>
+                                    <label for="adminpasword" type="password" class="placeholder label">Enter Password</label>
                                     <span id="adminPassworderr"></span>
                                 </div>
                             </div>
@@ -119,9 +119,9 @@ $session = \Config\Services::session();
 
                             <div class="m-3">
                                 <div class="form-outline mb-4 input-container">
-                                    <input type="text" id="tenant_password" name="reg_no" class="input" placeholder=" "
+                                    <input type="password" id="tenant_password" name="reg_no" class="input" placeholder=" "
                                         onblur="passwordValidate()" />
-                                    <label for="tenant_password" class="placeholder label">Enter Password</label>
+                                    <label for="tenant_password" type="password" class="placeholder label">Enter Password</label>
                                     <span id="adminPassworderrr"></span>
                                 </div>
 
