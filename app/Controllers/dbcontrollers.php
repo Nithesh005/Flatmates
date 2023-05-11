@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+// namespace App\Controllers\home;
 
 use App\Models\Dbmodels;
 use CodeIgniter\CLI\Console;
@@ -49,10 +50,10 @@ class dbcontrollers extends BaseController
         // files
         $profile_image = $this->request->getFile('profile_file');
         $smart_card = $this->request->getFile('smart_card');
-        
+
         $aadhar_card = $this->request->getFile('aadhar_card');
 
-        
+
         // $reg_data['sname'] = $this->request->getvar('sname');
         if (($profile_image->getSize() > 0)) {
             $unique_id = $this->unique_id();
@@ -117,15 +118,15 @@ class dbcontrollers extends BaseController
         $state_id = $this->request->getvar('state_id');
 
         $aadhar_id = $this->request->getvar('aadhar_id');
-        
+
 
         // files
         $profile_image = $this->request->getFile('profile_file');
         $smart_card = $this->request->getFile('resume_file');
-        
+
         $aadhar_card = $this->request->getFile('bonafide_check_file');
 
-        
+
         if (($profile_image->getSize() > 0)) {
             $unique_id = $this->unique_id();
             $directory = "./public/uploads/" . $unique_id;
@@ -190,8 +191,8 @@ class dbcontrollers extends BaseController
         $ex_id = 'FMOW_' . $ex_id;
         return $ex_id;
     }
-    
-    
+
+
 
     public function owner_card()
     {
@@ -206,7 +207,7 @@ class dbcontrollers extends BaseController
         echo json_encode($res);
     }
 
-    
+
     public function  profile_controller()
     {
         $res = $this->datas->profile_model();
@@ -214,7 +215,16 @@ class dbcontrollers extends BaseController
         echo json_encode($res);
     }
 
-   
+    // delete_owner_card
+    public function  delete_owner_card()
+    {
+        // $res = 'from model';
+        // $res = $this->datas->delete_owner_card_model();
+
+        echo json_encode("ok");
+    }
+
+
 
 
 
@@ -261,10 +271,10 @@ class dbcontrollers extends BaseController
             }
         }
         $res = $this->datas->new_house_data_model($tmp);
-        $res =true;
+        $res = true;
 
         if ($res == true) {
-            return view('owner_dashbord');
+            return redirect()->to('http://localhost/flatmates/public/index.php/home/owner_dashbord');
         }
     }
 }

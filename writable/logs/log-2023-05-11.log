@@ -20,3 +20,300 @@ in SYSTEMPATH\Database\BaseConnection.php on line 645.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-11 13:31:25 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(235): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-11 13:31:25 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `new_house`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(235): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-11 13:32:00 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(235): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-11 13:32:00 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `new_house`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(235): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:44:54 --> Unclosed '{' on line 9
+in APPPATH\Models\dbmodels.php on line 249.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\dbmodels.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Dbmodels')
+ 3 APPPATH\Controllers\Home.php(21): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Dbmodels')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:45:22 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:47:27 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:49:53 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:50:14 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:50:26 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:50:47 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:51:57 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:51:57 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:52:00 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:53:32 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:53:36 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:53:54 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:58:05 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:59:11 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:59:13 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:01:50 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:02:20 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:03:36 --> Call to a member function getSize() on null
+in APPPATH\Controllers\dbcontrollers.php on line 246.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:03:41 --> Call to a member function getSize() on null
+in APPPATH\Controllers\dbcontrollers.php on line 246.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:03:56 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:04:34 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:05:20 --> Call to a member function getSize() on null
+in APPPATH\Controllers\dbcontrollers.php on line 246.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:05:32 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:05:41 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:05:57 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:06:29 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:26:15 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 14:26:19 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 15:24:39 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 16:15:21 --> Undefined variable $tmp
+in APPPATH\Controllers\dbcontrollers.php on line 273.
+ 1 APPPATH\Controllers\dbcontrollers.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tmp', 'APPPATH\\Controllers\\dbcontrollers.php', 273)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 16:23:53 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(222): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 16:24:34 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(222): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 16:25:07 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(222): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 16:26:49 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(222): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 16:27:20 --> Call to a member function affectedRows() on null
+in APPPATH\Models\dbmodels.php on line 240.
+ 1 APPPATH\Controllers\dbcontrollers.php(222): App\Models\Dbmodels->delete_owner_card_model()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->delete_owner_card()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
