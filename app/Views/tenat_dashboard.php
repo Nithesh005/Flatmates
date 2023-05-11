@@ -177,8 +177,14 @@ $session = \Config\Services::session();
                             '</div>' +
                             '<div class="col-12">' +
                             '<div class="card-body">' +
-                            '<h5 class="card-title">About Home</h5>' +
+                            '<h6 class="card-title">House No</h6>' +
+                            '<p class="card-text">' + items.house_no + '</p>' +
+                            '<h6 class="card-title">DESCRIPTION</h6>' +
+                            '<p class="card-text">' + items.about + '</p>' +
+                            '<h6 class="card-title">About Home</h6>' +
                             '<p class="card-text">' + items.description + '</p>' +
+                            '<h6 class="card-title">Members allowed</h6>' +
+                            '<p class="card-text">' + items.members + '</p>' +
                             '<p class="card-text">' + 'City' + ':' + items.city + '</p>' +
                             '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
                             '<br>' +
