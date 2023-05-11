@@ -31,7 +31,7 @@ $session = \Config\Services::session();
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.min.js"></script>
-<link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <style>
         body {
             overflow-y: hidden;
@@ -249,16 +249,13 @@ $session = \Config\Services::session();
             }
         }
 
-
-
-
         $(document).on('click', '#owner_log_btn', function (event) {
             event.preventDefault();
-            alert('owner');
+            // alert('owner');
             var owner_mail = $('#owner_mail').val();
             var owner_pasword = $('#owner_pasword').val();
-            console.log(owner_mail);
-            console.log(owner_pasword);
+            // console.log(owner_mail);
+            // console.log(owner_pasword);
             $.ajax({
                 url: "<?php echo base_url('public/index.php/dbcontrollers/ownerlogin'); ?>",
                 method: "POST",
@@ -275,10 +272,12 @@ $session = \Config\Services::session();
                         )
                         location.replace("<?php echo base_url(); ?>public/index.php/home/owner_dashbord");
                     } else if (res === "fail") {
-                        alert("Invalid Owner");
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Invalid Owner',
+                        })
 
                     }
-
                 },
                 error: function (er) {
                     console.log("Login Error");
@@ -289,11 +288,11 @@ $session = \Config\Services::session();
         });
         $(document).on('click', '#tanet_log_btn', function (event) {
             event.preventDefault();
-            alert('tanent');
+            // alert('tanent');
             var tenant_mail = $('#tenant_mail').val();
             var tenant_password = $('#tenant_password').val();
-            console.log(tenant_mail)
-            console.log(tenant_password)
+            // console.log(tenant_mail)
+            // console.log(tenant_password)
             $.ajax({
                 url: "<?php echo base_url('public/index.php/dbcontrollers/tenantlogin'); ?>",
                 method: "POST",
@@ -305,16 +304,13 @@ $session = \Config\Services::session();
                 success: function (res) {
                     // console.log("Admin Login");
                     if (res === "success") {
-                        Swal.fire(
-                            'success'
-                        )
+
                         location.replace("<?php echo base_url('./public/index.php/home/tenat_dashboard') ?>");
                     } else if (res === "fail") {
                         Swal.fire({
                             icon: 'error',
                             title: 'Invalid User name or Password',
                         })
-
                     }
                     // alert(res);
                     // console.log(res);
@@ -325,7 +321,6 @@ $session = \Config\Services::session();
                     console.log(er);
                 }
             });
-
         });
     </script>
 
