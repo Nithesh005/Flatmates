@@ -128,7 +128,7 @@
                             <a style="color: rgba(0,0,0,.55); margin-right:22px;"><i class="fa-regular fa-user"></i></a>
                             <ul class="drop-menu dropdown-menu-right" style="position: absolute; z-index: 2;">
                                 <li class="drop-menu-item">
-                                    <a href="<?php echo base_url('./public/index.php/home/tenant_dashboard') ?>">Profile</a>
+                                    <a href="<?php echo base_url('./public/index.php/home/profile') ?>">Profile</a>
                                 </li>
                                 <li class="drop-menu-item">
                                     <a href="<?php echo base_url('./public/index.php/home/login') ?>">Logout</a>
