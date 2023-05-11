@@ -228,21 +228,22 @@ class Dbmodels extends Model
     }
 
     // delete_owner_card_model
-    public function delete_owner_card_model()
+    public function delete_owner_card_model($house_no)
     {
         $db = \Config\Database::connect();
         $query = $db->table('new_house');
-        $query->where('house_no', 'new');
-        $query->delete();
+        $query->where('house_no',$house_no);
+        $res = $query->delete();
         // $query->delete(['u_id' => '1001']);
         // $res = $query->get()->getResultArray();
         // return "from model";
-        if ($this->db->affectedRows() > 0) {
+        if($res) {
             // Deletion was successful
             return "ssss";
+
         } else {
             // Deletion failed
-            return false;
+            return "nooooo";
         }
     }
     
