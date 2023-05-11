@@ -27,8 +27,13 @@ $session = \Config\Services::session();
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- sweetalert -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <style>
-        body{
+        body {
             overflow-y: hidden;
         }
     </style>
@@ -84,14 +89,18 @@ $session = \Config\Services::session();
                                 <div class="form-outline mb-4 input-container">
                                     <input type="password" id="owner_pasword" name="reg_no" class="input"
                                         placeholder=" " onblur="passwordValidate1()" />
-                                    <label for="adminpasword" class="placeholder label">Enter Password</label>
+                                    <label for="adminpasword" type="password" class="placeholder label">Enter
+                                        Password</label>
                                     <span id="adminPassworderr"></span>
                                 </div>
                             </div>
 
                             <div class="row m-3">
-                                <div class="col-6"><a href="<?php echo base_url('./public/index.php/home/owner_register') ?>">Create An Account?</a></div>
-                                <div class="col-6" style="display:flex;flex-direction:row-reverse;"><a href="<?php echo base_url('./public/index.php/home/forgot') ?>">Forgot
+                                <div class="col-6"><a
+                                        href="<?php echo base_url('./public/index.php/home/owner_register') ?>">Create
+                                        An Account?</a></div>
+                                <div class="col-6" style="display:flex;flex-direction:row-reverse;"><a
+                                        href="<?php echo base_url('./public/index.php/home/forgot') ?>">Forgot
                                         Password?</a></div>
                             </div>
 
@@ -119,15 +128,19 @@ $session = \Config\Services::session();
 
                             <div class="m-3">
                                 <div class="form-outline mb-4 input-container">
-                                    <input type="text" id="tenant_password" name="reg_no" class="input" placeholder=" "
-                                        onblur="passwordValidate()" />
-                                    <label for="tenant_password" class="placeholder label">Enter Password</label>
+                                    <input type="password" id="tenant_password" name="reg_no" class="input"
+                                        placeholder=" " onblur="passwordValidate()" />
+                                    <label for="tenant_password" type="password" class="placeholder label">Enter
+                                        Password</label>
                                     <span id="adminPassworderrr"></span>
                                 </div>
 
                                 <div class="row m-3">
-                                    <div class="col-6"><a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>">Create An Account?</a></div>
-                                    <div class="col-6" style="display:flex;flex-direction:row-reverse;"><a href="<?php echo base_url('./public/index.php/home/forgot') ?>"
+                                    <div class="col-6"><a
+                                            href="<?php echo base_url('./public/index.php/home/tenant_register') ?>">Create
+                                            An Account?</a></div>
+                                    <div class="col-6" style="display:flex;flex-direction:row-reverse;"><a
+                                            href="<?php echo base_url('./public/index.php/home/forgot') ?>"
                                             onclick="forgot()">Forgot
                                             Password?</a></div>
                                 </div>
@@ -154,12 +167,12 @@ $session = \Config\Services::session();
 
     <script>
 
-function forgot(){
+        function forgot() {
             // location.replace( "<?php echo base_url('./public/index.php/home/forgot') ?>");
             alert("hello")
             location.replace("<?php echo base_url(); ?>public/index.php/home/forgot");
         }
-        
+
         // owner email validation
 
         function Alphanumeric() {
@@ -236,16 +249,13 @@ function forgot(){
             }
         }
 
-
-
-
         $(document).on('click', '#owner_log_btn', function (event) {
             event.preventDefault();
-            alert('owner');
+            // alert('owner');
             var owner_mail = $('#owner_mail').val();
             var owner_pasword = $('#owner_pasword').val();
-            console.log(owner_mail);
-            console.log(owner_pasword);
+            // console.log(owner_mail);
+            // console.log(owner_pasword);
             $.ajax({
                 url: "<?php echo base_url('public/index.php/dbcontrollers/ownerlogin'); ?>",
                 method: "POST",
@@ -255,15 +265,19 @@ function forgot(){
                     owner_pasword: owner_pasword,
                 },
                 success: function (res) {
-                    alert(res);
                     if (res === "success") {
                         // alert("login success");
+                        Swal.fire(
+                            'success'
+                        )
                         location.replace("<?php echo base_url(); ?>public/index.php/home/owner_dashbord");
                     } else if (res === "fail") {
-                        alert("Invalid Owner");
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Invalid Owner',
+                        })
 
                     }
-
                 },
                 error: function (er) {
                     console.log("Login Error");
@@ -274,11 +288,11 @@ function forgot(){
         });
         $(document).on('click', '#tanet_log_btn', function (event) {
             event.preventDefault();
-            alert('tanent');
+            // alert('tanent');
             var tenant_mail = $('#tenant_mail').val();
             var tenant_password = $('#tenant_password').val();
-            console.log(tenant_mail)
-            console.log(tenant_password)
+            // console.log(tenant_mail)
+            // console.log(tenant_password)
             $.ajax({
                 url: "<?php echo base_url('public/index.php/dbcontrollers/tenantlogin'); ?>",
                 method: "POST",
@@ -288,14 +302,15 @@ function forgot(){
                     tenant_password: tenant_password,
                 },
                 success: function (res) {
-                    alert(res);
                     // console.log("Admin Login");
                     if (res === "success") {
-                        // alert("login success");
+
                         location.replace("<?php echo base_url('./public/index.php/home/tenat_dashboard') ?>");
                     } else if (res === "fail") {
-                        alert("Invalid tenant");
-
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Invalid User name or Password',
+                        })
                     }
                     // alert(res);
                     // console.log(res);
@@ -306,7 +321,6 @@ function forgot(){
                     console.log(er);
                 }
             });
-
         });
     </script>
 

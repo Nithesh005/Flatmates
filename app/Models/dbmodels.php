@@ -184,6 +184,18 @@ class Dbmodels extends Model
         return $res;
     }
 
+    public function profile_model()
+    {
+        $unique_id = session('u_id');
+        $db = \Config\Database::connect();
+        $query = $db->table('tenant_reg');
+        $query->select('*');
+        $query->where('u_id', "$unique_id");
+        $res = $query->get()->getResultArray();
+        return $res;
+    }
+
+
     
 
 
