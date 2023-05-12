@@ -86,6 +86,10 @@ $session = \Config\Services::session();
             width: 50px;
             height: 50px;
         }
+
+        .mov {
+            margin-left: 5%;
+        }
     </style>
 </head>
 
@@ -199,20 +203,20 @@ $session = \Config\Services::session();
                     </button>
                 </div>
                 <!-- <div class="modal-body"> -->
-                    <!-- <div class="card accepted"> -->
-                        <div class="card-content">
-                            <div class="user-info">
-                                <img src="https://i.imgur.com/cMSVQZC.jpg" alt="User Photo" class="user-photo">
-                                <p class="username">John Doe</p>
-                                <button class="accept-button">Accept</button>
-                                <button class="reject-button">Reject</button>
+                <!-- <div class="card accepted"> -->
+                <div class="card-content">
+                    <!-- <div class="user-info">
+                        <div class="user-info" style="display: flex;  justify-content: center; align-items: center;">
+                            <img src="https://i.imgur.com/cMSVQZC.jpg" alt="User Photo" class="user-photo">
+                            <p class="username" style="font-size: 30px;">John Doe</p>
+                            <div class="mov">
+                            <button class="accept-button" style="height:5%;" onclick="accept_btn()">Accept</button>
+                            <button class="reject-button" style="height:5%;" onclick="reject_btn()">Reject</button>
                             </div>
-                                <!-- <div class="action-buttons">
-                                
-                                </div> -->
+                            
                         </div>
-                    <!-- </div> -->
-                <!-- </div> -->
+                    </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -247,6 +251,14 @@ $session = \Config\Services::session();
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
+
+    function accept_btn() {
+        alert("accpted");
+    }
+    function reject_btn() {
+        alert("rejected");
+    }
+
     document.querySelector("html").classList.add('js');
 
     var fileInput = document.querySelector(".input-file"),
@@ -273,39 +285,47 @@ $session = \Config\Services::session();
 
 
     $.ajax({
-    url: "<?php echo base_url('public/index.php/Dbcontrollers/get_requests') ?>",
-    method: "POST",
-    dataType: "json",
-    success: function(res){
-        alert(res);
-        $('.individual_req').empty();
-        res.forEach(function(item){
-            var element = $();
-            element = element.add(
-                '<div class="name">Your Name goes here .. </div>'+
-                '<div class="yes">👍</div>'+
-                '<div class="no">👎</div>'
-            );
-            $('.individual_req').append(element);
-        });
-    },
-    error:function(er){
-        alert(er);
-    }
-});
+        url: "<?php echo base_url('public/index.php/Dbcontrollers/get_requests') ?>",
+        method: "POST",
+        dataType: "json",
+        success: function (res) {
+            alert(res);
+            console.log("hii")
+            // $('.card-content').empty();
+            res.forEach(function (item) {
+                var element = $();
+                element = element.add(
+                    '<div class="user-info">'+
+                    '<div class="user-info" style="display: flex;  justify-content: center; align-items: center;">'+
+                    '<img src="https://i.imgur.com/cMSVQZC.jpg" alt="User Photo" class="user-photo">'+
+                    '<p class="username" style="font-size: 30px;">John Doe</p>'+
+                    '<div class="mov">'+
+                    '<button class="accept-button" style="height:5%;" onclick="accept_btn()">Accept</button>'+
+                    '<button class="reject-button" style="height:5%;" onclick="reject_btn()">Reject</button>'+
+                    '</div>'+
+                    '</div>'+
+                    '</div>'
+                );
+                $('.card-content').append(element);
+            });
+        },
+        error: function (er) {
+            alert(er);
+        }
+    });
 
 
-        $.ajax({
+    $.ajax({
         // url: "<?php echo base_url() ?>/public/index.php/Controllers/dbcontrollers/reg_user_data",
         url: "<?php echo base_url('public/index.php/Dbcontrollers/owner_card'); ?>",
         method: "POST",
         dataType: "json",
-        success: function(res) {
+        success: function (res) {
             console.log(res);
             console.log("ajax woking");
             $('.owner_card').empty();
             res.forEach(
-                function(items) {
+                function (items) {
                     var element = $();
                     element = element.add(
                         '<div class="card col-3 card_index">' +
@@ -338,7 +358,7 @@ $session = \Config\Services::session();
                     // element.find('.house_no').data('house_no', items.house_no);
                     $('.owner_card').append(element);
 
-                    element.find('#delete_btn').click(function() {
+                    element.find('#delete_btn').click(function () {
                         var house_no = items.house_no;
                         // alert(house_no);
                         // alert(a);
@@ -349,11 +369,11 @@ $session = \Config\Services::session();
                             data: {
                                 house_no: house_no,
                             },
-                            success: function(res) {
+                            success: function (res) {
                                 alert(res);
                                 return location.reload();
                             },
-                            error: function(er) {
+                            error: function (er) {
                                 alert("error");
                             }
 
@@ -368,16 +388,18 @@ $session = \Config\Services::session();
             // });
 
         },
-        error: function(er) {
+        error: function (er) {
             // console.error(er);
             console.log("error");
         }
     })
 
-    // }
-    // $('#delete_btn').click(function() {
-    //     alert("hai");
-    // })
+        // }
+        // $('#delete_btn').click(function() {
+        //     alert("hai");
+        // })
+
+
 </script>
 
 
