@@ -214,6 +214,27 @@ $session = \Config\Services::session();
 
                         );
                         $('.tenant_card').append(element);
+                        element.find('#apply_btn').click(function() {
+                            // event.preventDefault();
+                            var house_no = items.house_no;
+                            // alert(house_no);
+                                $.ajax({
+                                    url: "<?php echo base_url('public/index.php/dbcontrollers/apply_button'); ?>",
+                                    method: "POST",
+                                    dataType: "json",
+                                    data:{
+                                        house_no:house_no,
+                                    },
+                                    success: function (res) {
+                                        alert(res)
+                                        console.log(res)
+                                    },
+                                    error: function (er) {
+                                        console.log("Login Error");
+                                        console.log(er);
+                                    }
+                                });
+                        });
 
                     }
                 );
@@ -225,22 +246,6 @@ $session = \Config\Services::session();
         })
 
     }
-    $(document).on('click', '#apply_btn', function (event) {
-        event.preventDefault();
-            $.ajax({
-                url: "<?php echo base_url('public/index.php/dbcontrollers/apply_button'); ?>",
-                method: "POST",
-                dataType: "json",
-                success: function (res) {
-                    alert(res)
-                    console.log(res)
-                },
-                error: function (er) {
-                    console.log("Login Error");
-                    console.log(er);
-                }
-            });
-        });
 </script>
 <link href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.9.0/css/mdb.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.9.0/js/mdb.min.js"></script>

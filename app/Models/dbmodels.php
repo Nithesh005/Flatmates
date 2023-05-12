@@ -183,16 +183,29 @@ class Dbmodels extends Model
         $res = $query->get()->getResultArray();
         return $res;
     }
-    public function  apply_button_model()
+    public function  apply_button_model($house_no)
     {
         $db = \Config\Database::connect();
+
         $query = $db->table('new_house');
-        $query->select('*');
-        $res = $query->get()->getResultArray();
-        return $res;
+        $data = [
+            'requests' => 'Requested',
+            // Add more columns and values as needed
+        ];
+
+        // Set the WHERE condition for the update query
+        $query->where('house_no', $house_no);
+
+        // Execute the update query
+        $res = $query->update($data);
+        if (!empty($res)) {
+            return true; // Update successful
+        } else {
+            return false; // Update failed
+        }
     }
 
-   
+
 
     public function profile_model()
     {
@@ -205,8 +218,28 @@ class Dbmodels extends Model
         return $res;
     }
 
+    // get_requests_model
+    public function get_requests_model()
+    {
+        $unique_id = session('u_id');
+        $db = \Config\Database::connect();
+        $query = $db->table('new_house');
+        $query->select('*');
+        // $query->where('u_id', "$unique_id");
+        $array = [
+            'u_id' => $unique_id, 'requests' => "Requested"
+        ];
+        $query->where($array);
+        $res = $query->get()->getResultArray();
+        if (!empty($res)) {
+            return true; // Update successful
+        } else {
+            return false; // Update failed
+        }
+    }
 
-    
+
+
 
 
     public function new_house_data_model($tmp)
@@ -242,19 +275,17 @@ class Dbmodels extends Model
     {
         $db = \Config\Database::connect();
         $query = $db->table('new_house');
-        $query->where('house_no',$house_no);
+        $query->where('house_no', $house_no);
         $res = $query->delete();
         // $query->delete(['u_id' => '1001']);
         // $res = $query->get()->getResultArray();
         // return "from model";
-        if($res) {
+        if ($res) {
             // Deletion was successful
             return "Successfully Deleted";
-
         } else {
             // Deletion failed
             return "Couldn't Delete";
         }
     }
-    
 }
