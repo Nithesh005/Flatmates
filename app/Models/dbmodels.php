@@ -232,7 +232,7 @@ class Dbmodels extends Model
         $query->where($array);
         $res = $query->get()->getResultArray();
         if (!empty($res)) {
-            return true; // Update successful
+            return $res; // Update successful
         } else {
             return false; // Update failed
         }
