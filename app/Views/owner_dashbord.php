@@ -205,17 +205,16 @@ $session = \Config\Services::session();
                 <!-- <div class="modal-body"> -->
                 <!-- <div class="card accepted"> -->
                 <div class="card-content">
-                    <!-- <div class="user-info">
+                    <div class="user-info">
                         <div class="user-info" style="display: flex;  justify-content: center; align-items: center;">
                             <img src="https://i.imgur.com/cMSVQZC.jpg" alt="User Photo" class="user-photo">
                             <p class="username" style="font-size: 30px;">John Doe</p>
                             <div class="mov">
                             <button class="accept-button" style="height:5%;" onclick="accept_btn()">Accept</button>
                             <button class="reject-button" style="height:5%;" onclick="reject_btn()">Reject</button>
-                            </div>
-                            
+                            </div>   
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -285,14 +284,15 @@ $session = \Config\Services::session();
 
 
     $.ajax({
-        url: "<?php echo base_url('public/index.php/Dbcontrollers/get_requests') ?>",
+        url: "<?php echo base_url('public/index.php/Dbcontrollers/get_requests'); ?>",
         method: "POST",
         dataType: "json",
         success: function (res) {
             alert(res);
             console.log("hii")
-            // $('.card-content').empty();
-            res.forEach(function (item) {
+            $('.card-content').empty();
+            res.forEach(
+                function (item) {
                 var element = $();
                 element = element.add(
                     '<div class="user-info">'+
