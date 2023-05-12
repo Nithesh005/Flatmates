@@ -331,3 +331,213 @@ in APPPATH\Models\dbmodels.php on line 240.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-11 22:05:42 --> mysqli_sql_exception: Unknown column 'column1' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `new_hou...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `new_hou...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `new_hou...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_hou...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-11 22:05:42 --> Unknown column 'column1' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_house` SET `column1` = :column1:, `column2` = :column2:
+WHERE `requests` = :requests:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-11 22:06:01 --> mysqli_sql_exception: Unknown column 'column1' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `new_hou...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `new_hou...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `new_hou...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_hou...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-11 22:06:01 --> Unknown column 'column1' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_house` SET `column1` = :column1:, `column2` = :column2:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-11 22:07:17 --> mysqli_sql_exception: Unknown column 'column1' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `new_hou...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `new_hou...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `new_hou...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_hou...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-11 22:07:17 --> Unknown column 'column1' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_house` SET `column1` = :column1:, `column2` = :column2:
+WHERE `requests` = :requests:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-11 22:07:29 --> mysqli_sql_exception: Unknown column 'column1' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `new_hou...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `new_hou...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `new_hou...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_hou...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-11 22:07:29 --> Unknown column 'column1' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_house` SET `column1` = :column1:, `column2` = :column2:
+WHERE `requests` = :requests:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-11 22:09:43 --> mysqli_sql_exception: Unknown column 'column1' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `new_hou...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `new_hou...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `new_hou...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_hou...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-11 22:09:43 --> Unknown column 'column1' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_house` SET `column1` = :column1:, `column2` = :column2:
+WHERE `requests` = :requests:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-11 22:14:10 --> mysqli_sql_exception: Unknown column 'column1' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `new_hou...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `new_hou...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `new_hou...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_hou...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-11 22:14:10 --> Unknown column 'column1' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_house` SET `column1` = :column1:, `column2` = :column2:
+WHERE `house_no` = :house_no:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-11 22:14:49 --> mysqli_sql_exception: Unknown column 'column2' in 'field list' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `new_hou...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `new_hou...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `new_hou...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_hou...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-11 22:14:49 --> Unknown column 'column2' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `new_house` SET `house_no` = :house_no.1:, `column2` = :column2:
+WHERE `house_no` = :house_no:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(200): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\dbcontrollers.php(233): App\Models\Dbmodels->apply_button_model()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->apply_button()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-11 22:49:38 --> mysqli_sql_exception: Unknown column 'requests' in 'where clause' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(233): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->get_requests_model()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->get_requests()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-11 22:49:38 --> Unknown column 'requests' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tenant_reg`
+WHERE `u_id` = :u_id:
+AND `requests` = :requests:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(233): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->get_requests_model()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->get_requests()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-11 22:49:58 --> mysqli_sql_exception: Unknown column 'requests' in 'where clause' in C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Flatmates\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Flatmates\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Flatmates\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Flatmates\app\Models\dbmodels.php(233): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->get_requests_model()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\dbcontrollers->get_requests()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-11 22:49:58 --> Unknown column 'requests' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tenant_reg`
+WHERE `u_id` = :u_id:
+AND `requests` = :requests:', [...], false)
+ 2 APPPATH\Models\dbmodels.php(233): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\dbcontrollers.php(221): App\Models\Dbmodels->get_requests_model()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->get_requests()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

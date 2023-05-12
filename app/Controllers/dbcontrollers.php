@@ -214,6 +214,14 @@ class dbcontrollers extends BaseController
 
         echo json_encode($res);
     }
+    
+    // get_requests
+    public function  get_requests()
+    {
+        $res = $this->datas->get_requests_model();
+
+        echo json_encode($res);
+    }
 
     // delete_owner_card
     public function  delete_owner_card()
@@ -230,7 +238,8 @@ class dbcontrollers extends BaseController
 
     public function apply_button()
     {
-        $res = $this->datas->apply_button_model();
+        $house_no = $this->request->getvar('house_no');
+        $res = $this->datas->apply_button_model($house_no);
 
         echo json_encode($res);
     }

@@ -1,0 +1,103 @@
+CRITICAL - 2023-05-12 05:57:31 --> Undefined variable $tmp
+in APPPATH\Controllers\dbcontrollers.php on line 172.
+ 1 APPPATH\Controllers\dbcontrollers.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tmp', 'APPPATH\\Controllers\\dbcontrollers.php', 172)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->reg_user_data_owner()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-12 06:01:20 --> Email: sendWithSmtp throwed ErrorException: stream_socket_enable_crypto(): SSL: Handshake timed out in C:\xampp\htdocs\Flatmates\system\Email\Email.php:1883
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'stream_socket_e...', 'C:\\xampp\\htdocs...', 1883)
+#1 C:\xampp\htdocs\Flatmates\system\Email\Email.php(1883): stream_socket_enable_crypto(Resource id #101, true, 57)
+#2 C:\xampp\htdocs\Flatmates\system\Email\Email.php(1782): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\Flatmates\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\Flatmates\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\Flatmates\app\Controllers\Home.php(138): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(934): App\Controllers\Home->sendEmail_owner()
+#7 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\Flatmates\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Flatmates\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-12 06:01:20 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-12 06:01:20 --> 220 smtp.gmail.com ESMTP e8-20020a17090301c800b001acacff3a70sm5335827plh.125 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [106.198.126.33]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+CRITICAL - 2023-05-12 06:08:40 --> Undefined variable $tmp
+in APPPATH\Controllers\dbcontrollers.php on line 291.
+ 1 APPPATH\Controllers\dbcontrollers.php(291): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tmp', 'APPPATH\\Controllers\\dbcontrollers.php', 291)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\dbcontrollers->demo_reg()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dbcontrollers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-12 06:09:40 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-12 06:09:40 --> 220 smtp.gmail.com ESMTP h24-20020a17090a9c1800b00247735d1463sm18103308pjp.39 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:338d:4b0b:c489:7757:a37:b0f]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:338d:4b0b:c489:7757:a37:b0f]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK h24-20020a17090a9c1800b00247735d1463sm18103308pjp.39 - gsmtp
+
+to: 555 5.5.2 Syntax error. h24-20020a17090a9c1800b00247735d1463sm18103308pjp.39 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. h24-20020a17090a9c1800b00247735d1463sm18103308pjp.39 - gsmtp
+
+quit: 221 2.0.0 closing connection h24-20020a17090a9c1800b00247735d1463sm18103308pjp.39 - gsmtp
+
+ERROR - 2023-05-12 06:09:56 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-12 06:09:56 --> 220 smtp.gmail.com ESMTP l11-20020a170903244b00b001aaed55aff3sm6994328pls.137 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:338d:4b0b:c489:7757:a37:b0f]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2401:4900:338d:4b0b:c489:7757:a37:b0f]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 250 2.1.0 OK l11-20020a170903244b00b001aaed55aff3sm6994328pls.137 - gsmtp
+
+to: 555 5.5.2 Syntax error. l11-20020a170903244b00b001aaed55aff3sm6994328pls.137 - gsmtp
+
+The following SMTP error was encountered: 555 5.5.2 Syntax error. l11-20020a170903244b00b001aaed55aff3sm6994328pls.137 - gsmtp
+
+quit: 221 2.0.0 closing connection l11-20020a170903244b00b001aaed55aff3sm6994328pls.137 - gsmtp
+

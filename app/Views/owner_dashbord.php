@@ -20,7 +20,7 @@ $session = \Config\Services::session();
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/filechoose.css?version=<?php echo rand(); ?>">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Document</title>
-    
+
     <style>
         .owner_card {
             display: flex;
@@ -42,6 +42,11 @@ $session = \Config\Services::session();
 
         .add_house_row {
             gap: 20px;
+        }
+
+        .individual_req {
+            display: flex;
+            justify-content: space-between;
         }
 
         /* .row>* {
@@ -267,12 +272,30 @@ $session = \Config\Services::session();
     });
 
 
-    // '<img class="img-fluid" ' +
-    // 'src="<?php echo base_url(); ?>public/public/uploads/' + item.u_id + '/' + item.image + '" class="img-radius"  alt="User-Profile-Image"?>" '
-
-    // card design
-    // function getcard() {
     $.ajax({
+    url: "<?php echo base_url('public/index.php/Dbcontrollers/get_requests') ?>",
+    method: "POST",
+    dataType: "json",
+    success: function(res){
+        alert(res);
+        $('.individual_req').empty();
+        res.forEach(function(item){
+            var element = $();
+            element = element.add(
+                '<div class="name">Your Name goes here .. </div>'+
+                '<div class="yes">👍</div>'+
+                '<div class="no">👎</div>'
+            );
+            $('.individual_req').append(element);
+        });
+    },
+    error:function(er){
+        alert(er);
+    }
+});
+
+
+        $.ajax({
         // url: "<?php echo base_url() ?>/public/index.php/Controllers/dbcontrollers/reg_user_data",
         url: "<?php echo base_url('public/index.php/Dbcontrollers/owner_card'); ?>",
         method: "POST",
