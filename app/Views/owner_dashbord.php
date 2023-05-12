@@ -20,6 +20,7 @@ $session = \Config\Services::session();
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/filechoose.css?version=<?php echo rand(); ?>">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Document</title>
+    
     <style>
         .owner_card {
             display: flex;
@@ -37,6 +38,10 @@ $session = \Config\Services::session();
 
         .btn-danger {
             width: 100%;
+        }
+
+        .add_house_row {
+            gap: 20px;
         }
 
         /* .row>* {
@@ -84,7 +89,8 @@ $session = \Config\Services::session();
 
     <?php require_once "after_login_header.php"; ?>
     <br>
-    <div class="container d-flex justify-content-end">
+    <div class="container d-flex justify-content-end add_house_row">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Requests</button>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
             Add New House</button>
     </div>
@@ -172,9 +178,9 @@ $session = \Config\Services::session();
         </div>
     </div>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary button2" data-toggle="modal" data-target="#exampleModal">
+    <!-- <button type="button" class="btn btn-primary button2" data-toggle="modal" data-target="#exampleModal">
         Requests
-    </button>
+    </button> -->
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -271,12 +277,12 @@ $session = \Config\Services::session();
         url: "<?php echo base_url('public/index.php/Dbcontrollers/owner_card'); ?>",
         method: "POST",
         dataType: "json",
-        success: function (res) {
+        success: function(res) {
             console.log(res);
             console.log("ajax woking");
             $('.owner_card').empty();
             res.forEach(
-                function (items) {
+                function(items) {
                     var element = $();
                     element = element.add(
                         '<div class="card col-3 card_index">' +
@@ -309,7 +315,7 @@ $session = \Config\Services::session();
                     // element.find('.house_no').data('house_no', items.house_no);
                     $('.owner_card').append(element);
 
-                    element.find('#delete_btn').click(function () {
+                    element.find('#delete_btn').click(function() {
                         var house_no = items.house_no;
                         // alert(house_no);
                         // alert(a);
@@ -320,11 +326,11 @@ $session = \Config\Services::session();
                             data: {
                                 house_no: house_no,
                             },
-                            success: function (res) {
+                            success: function(res) {
                                 alert(res);
                                 return location.reload();
                             },
-                            error: function (er) {
+                            error: function(er) {
                                 alert("error");
                             }
 
@@ -339,7 +345,7 @@ $session = \Config\Services::session();
             // });
 
         },
-        error: function (er) {
+        error: function(er) {
             // console.error(er);
             console.log("error");
         }
