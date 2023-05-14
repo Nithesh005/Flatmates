@@ -85,6 +85,10 @@ class Home extends BaseController
     {
         return view('about');
     }
+    public function graph()
+    {
+        return view('graph');
+    }
     // public function otp_verification_owner()
     // {
     //     return view('otp_verification_owner');
