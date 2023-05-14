@@ -31,6 +31,11 @@ class Home extends BaseController
 
         return view('login');
     }
+    public function chat()
+    {
+
+        return view('chat');
+    }
     public function exploremore()
     {
 
