@@ -98,6 +98,9 @@
                     <li class="nav-item">
                         <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>" class="nav-link">contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="<?php echo base_url('./public/index.php/home/graph') ?>" class="nav-link">graph</a>
+                    </li>
                     <!-- <li class="nav-item">
                         <a href="<?php echo base_url('http://localhost/chatapp/index.php') ?>" class="nav-link" target="_blank">Chat</a>
                     </li> -->
