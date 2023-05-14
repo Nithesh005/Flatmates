@@ -237,7 +237,7 @@ $session = \Config\Services::session();
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
     function chat_owner() {
-        location.replace("<?php echo base_url('./public/index.php/home/chat') ?>");
+        location.replace("<?php echo base_url('./public/index.php/home/owner_chat') ?>");
     }
 
     function accept_btn() {
