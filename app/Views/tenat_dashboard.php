@@ -216,12 +216,11 @@ $session = \Config\Services::session();
                             '<br>' +
                             '<div class="social_btn">' +
                             '<button type="button" class="btn btn-info button4" id="apply_btn" onclick="changeText()">Apply</button>' +
-                            '<button type="button" class="btn btn-success button3">Chat</button>' +
+                            '<button type="button" class="btn btn-success button3" onclick="chat_page()">Chat</button>' +
                             '</div>' +
                             // '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
                             '</div>' +
                             '</div>' + '</div>'
-
                         );
                         $('.tenant_card').append(element);
                         element.find('#apply_btn').click(function () {
@@ -261,6 +260,9 @@ $session = \Config\Services::session();
         button.innerHTML = "Applied";
         // button.classList.add("applied");
         // button.disabled = true;
+    }
+    function chat_page(){
+        location.replace("<?php echo base_url('./public/index.php/home/chat') ?>");
     }
 </script>
 <link href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.9.0/css/mdb.min.css" rel="stylesheet" />
