@@ -104,7 +104,7 @@ class Dbmodels extends Model
         $query->where('password', $validate_owner['owner_pasword']);
         $res = $query->get()->getResultArray();
 
-        if (count($res) == 1) {
+        if (count($res) ==1) {
             $this->session->set('u_id', $res[0]['u_id']);
             $this->session->set('email', $res[0]['email']);
             return "success";
@@ -248,6 +248,28 @@ class Dbmodels extends Model
             return "fail";
         }
     }
+    // owner_msg_model
+    public function owner_msg_model($msg_data)
+    {
+        // $reciver_house_no = session('house_no');
+        // $reciver = $this->getowner_from_house_no($reciver_house_no);
+        $unique_id = session('u_id');
+        $db = \Config\Database::connect();
+        $message_data = [
+            "u_id" => $unique_id,
+            "msg" => $msg_data['message'],
+            "sender" => $unique_id,
+            "reciver"=> "FMTN_1003",
+        ];
+        $query = $db->table('message_table');
+        $res = $query->insert($message_data);
+        $res=true;
+        if ($res == true) {
+            return $msg_data['message'];
+        } else {
+            return "fail";
+        }
+    }
 
     // get_requests_model
     public function get_requests_model()
@@ -269,6 +291,50 @@ class Dbmodels extends Model
             return false; // Update failed
         }
     }
+    // owner_msg_retrive_model
+    public function owner_msg_retrive_model()
+    {
+        $unique_id = session('u_id');
+        $db = \Config\Database::connect();
+        $query = $db->table('message_table');
+        $query->select('msg');
+        // $query->where('u_id', "$unique_id");
+        $array = [
+            'u_id' => $unique_id, 
+            // 'requests' => "Requested"
+        ];
+        $query->where($array);
+        $query->orWhere('reciver', $unique_id);
+        $res = $query->get()->getResultArray();
+        if (!empty($res)) {
+            return $res; // Update successful
+        } else {
+            return false; // Update failed
+        }
+    }
+    // tenant_msg_retrive_model
+    public function tenant_msg_retrive_model()
+    {
+        // $reciver_house_no = session('house_no');
+        // $reciver = $this->getowner_from_house_no($reciver_house_no);
+        $unique_id = session('u_id');
+        $db = \Config\Database::connect();
+        $query = $db->table('message_table');
+        $query->select('msg');
+        // $query->where('u_id', "$unique_id");
+        $array = [
+            'sender' => $unique_id, 
+            // 'requests' => "Requested"
+        ];
+        $query->where($array);
+        $query->orWhere('reciver', $unique_id);
+        $res = $query->get()->getResultArray();
+        if (!empty($res)) {
+            return $res; // Update successful
+        } else {
+            return false; // Update failed
+        }
+    }
 
 
 
@@ -278,7 +344,7 @@ class Dbmodels extends Model
     {
         $db = \Config\Database::connect();
         $new_house_data = [
-            "u_id" =>  $tmp['u_id'],
+            "u_id" => session('u_id'),
             "house_no" => $tmp['house_no'],
             "address" => $tmp['inputAddress'],
             "about" => $tmp['inputAddress2'],

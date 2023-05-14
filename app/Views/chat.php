@@ -22,7 +22,7 @@ $session = \Config\Services::session();
 </head>
 
 <body>
-    <p>Hello, <?= session('house_no') ?></p>
+    <!-- <p>Hello, <?= session('house_no') ?></p> -->
     <?php require_once "after_login_header.php"; ?>
     <div class="jumbotron">
         <div id="framechat">
@@ -98,6 +98,39 @@ $session = \Config\Services::session();
     //         return false;
     //     }
     // });
+
+
+    // retrive message
+    $.ajax({
+        url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_msg_retrive'); ?>",
+        method: "POST",
+        dataType: "json",
+        success: function(res) {
+            console.log(res);
+            if (res) {
+                $.each(res, function(index, message) {
+                    var paragraph = $('<li class="sent"><img src="<?php echo base_url("assets/user-img.jpg"); ?>" alt="username" /><p>' + message.msg + '</p></li>');
+                    paragraph.addClass('sent');
+                    $('.messages ul').append(paragraph);
+                    $('.reply_msg').append(paragraph);
+                });
+                $('#message').val('');
+            } else {
+                alert("Data didn't reach the recipient.");
+            }
+        },
+        error: function(er) {
+            alert(er);
+        }
+    });
+
+
+
+
+
+
+
+
     $('#send').click(function() {
         var message = $('#message').val()
         // var house_no = "<?= session('house_no')?>";

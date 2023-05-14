@@ -234,13 +234,29 @@ class dbcontrollers extends BaseController
             echo json_encode($res);
         }
     }
+    // owner_msg_retrive
+    public function  owner_msg_retrive()
+    {
+        // $res = 'from model';
+        // if ($this->request->isAJAX()) {
+        // $house_no = $this->request->getvar('house_no');
+        $res = $this->datas->owner_msg_retrive_model();
+        echo json_encode($res);
+        // }
+    }
+    // tenant_msg_retrive
+    public function  tenant_msg_retrive()
+    {
+        $res = $this->datas->tenant_msg_retrive_model();
+        echo json_encode($res);
+    }
 
     public function apply_button()
     {
         $house_no = $this->request->getvar('house_no');
-        // $res = $this->datas->apply_button_model($house_no);
+        $res = $this->datas->apply_button_model($house_no);
         session()->set('id', $house_no);
-        echo json_encode($house_no);
+        echo json_encode($res);
     }
     // chat_page
     public function chat_page()
@@ -261,10 +277,18 @@ class dbcontrollers extends BaseController
         $res = $this->datas->tenant_msg_model($msg_data);
         echo json_encode($res);
     }
+    // owner_msg
+    public function owner_msg()
+    {
+        $msg_data['message'] = $this->request->getvar('message');
+        // $msg_data['house_no'] = $this->request->getvar('house_no');
+        $res = $this->datas->owner_msg_model($msg_data);
+        echo json_encode($res);
+    }
 
 
 
-    public function demo_reg()
+    public function new_house_reg()
     {
         helper(['filesystem']);
         $u_id = session('u_id');
