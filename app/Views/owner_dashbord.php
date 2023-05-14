@@ -236,7 +236,6 @@ $session = \Config\Services::session();
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
-
     function chat_owner() {
         location.replace("<?php echo base_url('./public/index.php/home/chat') ?>");
     }
