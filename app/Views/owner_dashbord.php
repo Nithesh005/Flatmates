@@ -96,9 +96,11 @@ $session = \Config\Services::session();
     <?php require_once "after_login_header.php"; ?>
     <br>
     <div class="container d-flex justify-content-end add_house_row">
+        <button type="button" class="btn btn-primary" onclick="chat_owner()">chat</button>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Requests</button>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
             Add New House</button>
+
     </div>
 
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -204,6 +206,7 @@ $session = \Config\Services::session();
 
 
 
+
     <div class="row" id="ads">
         <!-- Category Card -->
         <div class="owner_card">
@@ -233,6 +236,11 @@ $session = \Config\Services::session();
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
+
+    function chat_owner() {
+        location.replace("<?php echo base_url('./public/index.php/home/chat') ?>");
+    }
+
     function accept_btn() {
         alert("accpted");
     }
