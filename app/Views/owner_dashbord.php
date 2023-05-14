@@ -9,11 +9,8 @@ $session = \Config\Services::session();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Font aswesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- css -->
@@ -104,8 +101,7 @@ $session = \Config\Services::session();
             Add New House</button>
     </div>
 
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -115,9 +111,7 @@ $session = \Config\Services::session();
 
 
                 <div class="modal-body">
-                    <form class="row g-3 p-4"
-                        action="<?php echo base_url('public/index.php/dbcontrollers/demo_reg'); ?>" method="post"
-                        enctype="multipart/form-data">
+                    <form class="row g-3 p-4" action="<?php echo base_url('public/index.php/dbcontrollers/demo_reg'); ?>" method="post" enctype="multipart/form-data">
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">House number</label>
                             <input type="text" class="form-control" id="house_no" placeholder="20/93" name="house_no">
@@ -125,39 +119,32 @@ $session = \Config\Services::session();
 
                         <div class="col-6">
                             <label for="inputAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" name="inputAddress"
-                                placeholder="1234 Main St">
+                            <input type="text" class="form-control" id="inputAddress" name="inputAddress" placeholder="1234 Main St">
                         </div>
                         <div class="col-12">
                             <label for="inputAddress2" class="form-label">About your house</label>
-                            <input type="text" class="form-control" id="inputAddress2" name="inputAddress2"
-                                placeholder="Apartment, studio, or floor">
+                            <input type="text" class="form-control" id="inputAddress2" name="inputAddress2" placeholder="Apartment, studio, or floor">
                         </div>
                         <div class="col-12">
                             <label for="Description" class="form-label">Description</label>
-                            <textarea class="form-control" id="Description" name="Description"
-                                placeholder="Nearby facilities"></textarea>
+                            <textarea class="form-control" id="Description" name="Description" placeholder="Nearby facilities"></textarea>
                         </div>
                         <div class="col-md-6">
                             <label for="Members_allowed" class="form-label">Members allowed</label>
-                            <input type="text" class="form-control" id="Members_allowed" name="Members_allowed"
-                                placeholder="5 members">
+                            <input type="text" class="form-control" id="Members_allowed" name="Members_allowed" placeholder="5 members">
                         </div>
                         <div class="col-md-6">
                             <label for="Rent_amount" class="form-label">Rent Amount</label>
-                            <input type="text" class="form-control" id="Rent_amount" name="Rent_amount"
-                                placeholder="₹15000-/Per Month">
+                            <input type="text" class="form-control" id="Rent_amount" name="Rent_amount" placeholder="₹15000-/Per Month">
                         </div>
                         <div class="col-md-6">
                             <label for="inputCity" class="form-label">City</label>
-                            <input type="text" class="form-control" id="inputCity" name="inputCity"
-                                placeholder="Madurai">
+                            <input type="text" class="form-control" id="inputCity" name="inputCity" placeholder="Madurai">
                         </div>
 
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">State</label>
-                            <input type="text" class="form-control" id="inputstate" name="inputstate"
-                                placeholder="Tamilnadu">
+                            <input type="text" class="form-control" id="inputstate" name="inputstate" placeholder="Tamilnadu">
                         </div>
 
                         <div class="col-md-6">
@@ -192,8 +179,7 @@ $session = \Config\Services::session();
     </button> -->
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -247,10 +233,10 @@ $session = \Config\Services::session();
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
-
     function accept_btn() {
         alert("accpted");
     }
+
     function reject_btn() {
         alert("rejected");
     }
@@ -261,16 +247,16 @@ $session = \Config\Services::session();
         button = document.querySelector(".input-file-trigger"),
         the_return = document.querySelector(".file-return");
 
-    button.addEventListener("keydown", function (event) {
+    button.addEventListener("keydown", function(event) {
         if (event.keyCode == 13 || event.keyCode == 32) {
             fileInput.focus();
         }
     });
-    button.addEventListener("click", function (event) {
+    button.addEventListener("click", function(event) {
         fileInput.focus();
         return false;
     });
-    fileInput.addEventListener("change", function (event) {
+    fileInput.addEventListener("change", function(event) {
         var files = this.files;
         var filenames = "";
         for (var i = 0; i < files.length; i++) {
@@ -284,33 +270,30 @@ $session = \Config\Services::session();
         url: "<?php echo base_url('public/index.php/Dbcontrollers/get_requests') ?>",
         method: "POST",
         dataType: "json",
-        success: function (res) {
-            // alert(res);
+        success: function(res) {
+            // console.log(res);
             $('.card-content').empty();
-            res.forEach(
-                function (item) {
-                    // $('.card-content').append('<h1>haiii</h1>');
-                    // alert("kk");
-                    var element = $();
-                    element = element.add(
-                        '<div class="user-info">' +
-                        '<div class="user-info" style="display: flex;  justify-content: center; align-items: center;">' +
-                        '<img src="https://i.imgur.com/cMSVQZC.jpg" alt="User Photo" class="user-photo">' +
-                        '<p class="username" style="font-size: 30px;">' + items.name + '</p>' +
-                        '<div class="mov">' +
-                        '<button class="accept-button" style="height:5%;" onclick="accept_btn()">Accept</button>' +
-                        '<button class="reject-button" style="height:5%;" onclick="reject_btn()">Reject</button>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>'
-                    );
-                    $('.card-content').append(element);
-                });
+
+            $.each(res, function(index, item) {
+                var element = $('<div class="user-info">' +
+                    '<div class="user-info" style="display: flex;  justify-content: center; align-items: center;">' +
+                    '<img src="https://i.imgur.com/cMSVQZC.jpg" alt="User Photo" class="user-photo">' +
+                    '<p class="username" style="font-size: 30px;">' + item.name + '</p>' +
+                    '<div class="mov">' +
+                    '<button class="accept-button" style="height:5%;" onclick="accept_btn()">Accept</button>' +
+                    '<button class="reject-button" style="height:5%;" onclick="reject_btn()">Reject</button>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>'
+                );
+                $('.card-content').append(element);
+            });
         },
-        error: function (er) {
+        error: function(er) {
             alert(er);
         }
     });
+
 
 
     $.ajax({
@@ -318,12 +301,12 @@ $session = \Config\Services::session();
         url: "<?php echo base_url('public/index.php/Dbcontrollers/owner_card'); ?>",
         method: "POST",
         dataType: "json",
-        success: function (res) {
+        success: function(res) {
             console.log(res);
-            console.log("ajax woking");
+            // alert("ajax woking");
             $('.owner_card').empty();
             res.forEach(
-                function (items) {
+                function(items) {
                     var element = $();
                     element = element.add(
                         '<div class="card col-3 card_index">' +
@@ -336,7 +319,7 @@ $session = \Config\Services::session();
                         'alt="Alternate Text" height="100px" width="400px"  />' +
                         '</div>' +
                         '<div class="card-image-overlay m-auto">' +
-                        '<span class="card-detail-badge">' + '₹' + items.rent +  '/' +'</span>' +
+                        '<span class="card-detail-badge">' + '₹' + items.rent + '/' + '</span>' +
                         '<span class="card-detail-badge">' + items.BHK + '-' + 'BHK' + '</span>' +
                         '</div>' +
                         '<div class="col-12">' +
@@ -356,7 +339,7 @@ $session = \Config\Services::session();
                     // element.find('.house_no').data('house_no', items.house_no);
                     $('.owner_card').append(element);
 
-                    element.find('#delete_btn').click(function () {
+                    element.find('#delete_btn').click(function() {
                         var house_no = items.house_no;
                         // alert(house_no);
                         // alert(a);
@@ -367,11 +350,11 @@ $session = \Config\Services::session();
                             data: {
                                 house_no: house_no,
                             },
-                            success: function (res) {
+                            success: function(res) {
                                 alert(res);
                                 return location.reload();
                             },
-                            error: function (er) {
+                            error: function(er) {
                                 alert("error");
                             }
 
@@ -386,18 +369,16 @@ $session = \Config\Services::session();
             // });
 
         },
-        error: function (er) {
+        error: function(er) {
             // console.error(er);
             console.log("error");
         }
     })
 
-        // }
-        // $('#delete_btn').click(function() {
-        //     alert("hai");
-        // })
-
-
+    // }
+    // $('#delete_btn').click(function() {
+    //     alert("hai");
+    // })
 </script>
 
 

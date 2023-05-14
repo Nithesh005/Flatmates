@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use App\Models\Dbmodels;
 use CodeIgniter\CLI\Console;
+use Config\Services;
 
 class dbcontrollers extends BaseController
 {
@@ -214,7 +215,7 @@ class dbcontrollers extends BaseController
 
         echo json_encode($res);
     }
-    
+
     // get_requests
     public function  get_requests()
     {
@@ -227,20 +228,37 @@ class dbcontrollers extends BaseController
     public function  delete_owner_card()
     {
         // $res = 'from model';
-        if($this->request->isAJAX()){
+        if ($this->request->isAJAX()) {
             $house_no = $this->request->getvar('house_no');
             $res = $this->datas->delete_owner_card_model($house_no);
             echo json_encode($res);
-
         }
-        
     }
 
     public function apply_button()
     {
         $house_no = $this->request->getvar('house_no');
-        $res = $this->datas->apply_button_model($house_no);
+        // $res = $this->datas->apply_button_model($house_no);
+        session()->set('id', $house_no);
+        echo json_encode($house_no);
+    }
+    // chat_page
+    public function chat_page()
+    {
+        $house_no = $this->request->getvar('house_no');
+        // $res = $this->datas->apply_button_model($house_no);
+        session()->set('house_no', $house_no);
+        // $session = Services::session();
+        // $session->destroy();
+        echo json_encode($house_no);
+    }
 
+    // tenant_msg
+    public function tenant_msg()
+    {
+        $msg_data['message'] = $this->request->getvar('message');
+        $msg_data['house_no'] = $this->request->getvar('house_no');
+        $res = $this->datas->tenant_msg_model($msg_data);
         echo json_encode($res);
     }
 
