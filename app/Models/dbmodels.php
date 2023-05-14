@@ -217,6 +217,37 @@ class Dbmodels extends Model
         $res = $query->get()->getResultArray();
         return $res;
     }
+    public function getowner_from_house_no($reciver_house_no){
+        $reciver_house_no_sess = session('house_no');
+        $db = \Config\Database::connect();
+        $query = $db->table('new_house');
+        $query->select('*');
+        $query->where('house_no', $reciver_house_no_sess);
+        $res = $query->get()->getRowArray();
+        return $res['u_id'];
+    }
+    // tenant_msg_model
+    public function tenant_msg_model($msg_data)
+    {
+        $reciver_house_no = session('house_no');
+        $reciver = $this->getowner_from_house_no($reciver_house_no);
+        $unique_id = session('u_id');
+        $db = \Config\Database::connect();
+        $message_data = [
+            "u_id" => $unique_id,
+            "msg" => $msg_data['message'],
+            "sender" => $unique_id,
+            "reciver"=> $reciver,
+        ];
+        $query = $db->table('message_table');
+        $res = $query->insert($message_data);
+        $res=true;
+        if ($res == true) {
+            return $msg_data['message'];
+        } else {
+            return "fail";
+        }
+    }
 
     // get_requests_model
     public function get_requests_model()
@@ -227,7 +258,8 @@ class Dbmodels extends Model
         $query->select('*');
         // $query->where('u_id', "$unique_id");
         $array = [
-            'u_id' => $unique_id, 'requests' => "Requested"
+            'u_id' => $unique_id, 
+            'requests' => "Requested"
         ];
         $query->where($array);
         $res = $query->get()->getResultArray();
