@@ -252,7 +252,7 @@ $session = \Config\Services::session();
 <script>
 
     function chat_owner() {
-        location.replace("<?php echo base_url('./public/index.php/home/chat') ?>");
+        location.replace("<?php echo base_url('./public/index.php/home/owner_chat') ?>");
     }
 
     function accept_btn() {
