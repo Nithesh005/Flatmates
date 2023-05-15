@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2023 at 09:18 PM
+-- Generation Time: May 15, 2023 at 10:58 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -111,7 +111,9 @@ INSERT INTO `message_table` (`u_id`, `msg`, `sender`, `reciver`) VALUES
 ('FMTN_1003', 'na tha', 'FMTN_1003', 'FMOW_1002'),
 ('FMTN_1003', 'kekutha', 'FMTN_1003', 'FMOW_1002'),
 ('FMTN_1003', 'dei', 'FMTN_1003', 'FMOW_1002'),
-('FMTN_1003', 'hai', 'FMTN_1003', 'FMOW_1002');
+('FMTN_1003', 'hai', 'FMTN_1003', 'FMOW_1002'),
+('FMTN_1003', 'hai gowtham', 'FMTN_1003', 'FMOW_1002'),
+('FMOW_1002', 'yes da', 'FMOW_1002', 'FMTN_1003');
 
 -- --------------------------------------------------------
 
@@ -205,6 +207,30 @@ INSERT INTO `products` (`id`, `district`, `price`, `street`, `room_avail`) VALUE
 (1, 'madurai', 5000, '', ''),
 (2, 'dharmapuri', 6000, '', ''),
 (3, 'madurai', 4000, 'dhanihnko nagar', '10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tenant_as_owner`
+--
+
+CREATE TABLE `tenant_as_owner` (
+  `u_id` varchar(20) NOT NULL,
+  `house_no` varchar(20) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `rent` varchar(100) NOT NULL,
+  `about` varchar(1000) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `occupation` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tenant_as_owner`
+--
+
+INSERT INTO `tenant_as_owner` (`u_id`, `house_no`, `address`, `rent`, `about`, `city`, `image`, `occupation`) VALUES
+('FMTN_1003', '12', 'aurcm', '15000', 'college', 'Madurai', '3840x2160.jpg', '');
 
 -- --------------------------------------------------------
 

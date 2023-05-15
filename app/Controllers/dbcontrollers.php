@@ -259,8 +259,14 @@ class dbcontrollers extends BaseController
     // tenant_as_owner_reg
     public function  tenant_as_owner_reg()
     {
-        // $house_no = $this->request->getvar('house_no');
-        $res = $this->datas->tenant_as_owner_reg_model();
+        $data['house_no'] = $this->request->getvar('house_no');
+        $data['address'] = $this->request->getvar('address');
+        $data['rent'] = $this->request->getvar('rent');
+        $data['about'] = $this->request->getvar('about');
+        $data['city'] = $this->request->getvar('city');
+        $data['image'] = $this->request->getvar('image');
+        // $data['occupation'] = $this->request->getvar('occupation');
+        $res = $this->datas->tenant_as_owner_reg_model($data);
         // $res = "hai";
         echo json_encode($res);
     }

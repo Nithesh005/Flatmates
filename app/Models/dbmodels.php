@@ -262,19 +262,19 @@ class Dbmodels extends Model
 
 
 // tenant_as_owner_reg_model
-    public function tenant_as_owner_reg_model()
+    public function tenant_as_owner_reg_model($data)
     {
         $unique_id = session('u_id');
         $db = \Config\Database::connect();
         $data=[
             'u_id' => $unique_id,
-            'house_no' => $unique_id,
-            'address' => $unique_id,
-            'rent' => $unique_id,
-            'about' => $unique_id,
-            'city' => $unique_id,
-            'image' => $unique_id,
-            'occupation' => $unique_id,
+            'house_no' => $data['house_no'],
+            'address' => $data['address'],
+            'rent' => $data['rent'],
+            'about' => $data['about'],
+            'city' => $data['city'],
+            'image' => $data['image'],
+            // 'occupation' => $data['occupation'],
         ];
         $query = $db->table('tenant_as_owner');
         $query->insert($data);
