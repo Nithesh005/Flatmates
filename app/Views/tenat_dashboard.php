@@ -241,7 +241,7 @@ $session = \Config\Services::session();
                                     <p class="card-text"> 'City ': Nagercoil'</p>
                                     <p class="card-text"> 'Zipcode ': 629704</p>
                                     <br>
-                                    <button type="button" id="delete_btn" class="btn btn-success">Share Home</button>
+                                    <button type="button" id="share_btn" class="btn btn-success">Share Home</button>
                                 </div>
                             </div>
                         </div>
