@@ -248,6 +248,14 @@ class dbcontrollers extends BaseController
         // $res = "hai";
         echo json_encode($res);
     }
+    // my_house
+    public function  my_house()
+    {
+        // $house_no = $this->request->getvar('house_no');
+        $res = $this->datas->my_house_model();
+        // $res = "hai";
+        echo json_encode($res);
+    }
 
     // delete_owner_card
     public function  delete_owner_card()
