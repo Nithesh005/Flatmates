@@ -1,0 +1,12 @@
+$.ajax({
+                    url: "<?php echo base_url('public/index.php/Dbcontrollers/accept_status') ?>",
+                    method: "POST",
+                    dataType: "json",
+                    success: function(res){
+                        console.log(res);
+                    },
+                    error :function(er){
+
+                    }
+
+                })

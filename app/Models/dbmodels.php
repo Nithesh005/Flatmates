@@ -192,16 +192,48 @@ class Dbmodels extends Model
         $data = [
             'requests' => 'Requested',
             'tenent_id' => $unique_id,
-             // Add more columns and values as needed
         ];
-
-        // Set the WHERE condition for the update query
         $query->where('house_no', $house_no);
-
-        // Execute the update query
         $res = $query->update($data);
         if (!empty($res)) {
             return true; // Update successful
+        } else {
+            return false; // Update failed
+        }
+    }
+
+    // accept_status_model
+    public function  accept_status_model($house_no)
+    {
+        $db = \Config\Database::connect();
+
+        $query = $db->table('new_house');
+        $res = $query->get()->getResultArray();
+        $data = [
+            'accept_status' => 'Accepted',
+        ];
+        $query->where('house_no', $house_no);
+        $res = $query->update($data);
+        if (!empty($res)) {
+            return $res; // Update successful
+        } else {
+            return false; // Update failed
+        }
+    }
+    // reject_status_model
+    public function  reject_status_model($house_no)
+    {
+        $db = \Config\Database::connect();
+
+        $query = $db->table('new_house');
+        $res = $query->get()->getResultArray();
+        $data = [
+            'accept_status' => 'Rejected',
+        ];
+        $query->where('house_no', $house_no);
+        $res = $query->update($data);
+        if (!empty($res)) {
+            return $res; // Update successful
         } else {
             return false; // Update failed
         }
