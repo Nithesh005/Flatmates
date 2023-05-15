@@ -346,7 +346,7 @@ $session = \Config\Services::session();
 
     })
     // card design
-    function getcardtenant() {
+    
         $.ajax({
             // url: "<?php echo base_url() ?>/public/index.php/Controllers/dbcontrollers/reg_user_data",
             url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_card_controller'); ?>",
