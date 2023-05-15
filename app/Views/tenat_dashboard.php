@@ -95,6 +95,9 @@ $session = \Config\Services::session();
     }
 
     .btn-danger {
+        width: 100%;
+    }
+    .btn-success {
         width: 20%;
     }
 
@@ -233,7 +236,6 @@ $session = \Config\Services::session();
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="card-content myhouse ">
-
                     </div>
                 </div>
             </div>
@@ -279,7 +281,26 @@ $session = \Config\Services::session();
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="card-content ">
-
+                <div class="card col-3 card_index">
+                        <div class="card-image">
+                            <img class="img-fluid" src="<?php echo base_url() ?>" alt="Alternate Text" height="100px" width="400px" />
+                        </div>
+                        <div class="card-image-overlay m-auto">
+                            <span class="card-detail-badge"> ₹ 6000 </span>
+                            <span class="card-detail-badge"> 5BHK </span>
+                        </div>
+                        <div class="col-12">
+                            <div class="card-body">
+                                <h5 class="card-title">About Home</h5>
+                                <div class="card-title house_no" id=" items.house_no" value="mm"> nice home </div>
+                                <p class="card-text"> description : Nice Home</p>
+                                <p class="card-text"> 'City ': Nagercoil'</p>
+                                <p class="card-text"> 'Zipcode ': 629704</p>
+                                <br>
+                                <button type="button" id="delete_btn" class="btn btn-danger">Delete Home</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,7 +327,7 @@ $session = \Config\Services::session();
 <script>
     // get tenant shared house
     $.ajax({
-        url: "<?php echo base_url('public/index.php/Dbcontrollers/get_tenant_shared_house') ?>",
+        url: "<?php echo base_url('public/index.php/dbcontrollers/get_tenant_shared_house') ?>",
         method: "POST",
         dataType: "json",
         success: function(res) {
@@ -367,7 +388,7 @@ $session = \Config\Services::session();
                         '<p class="card-text">' + 'City' + ':' + items.city + '</p>' +
                         '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
                         '<br>' +
-                        '<button type="button" id="delete_btn" class="btn btn-danger">Delete Home</button>' +
+                        '<button type="button" id="delete_btn" class="btn btn-success">Share Home</button>' +
                         '</div>' +
                         '</div>' +
                         '</div>'
