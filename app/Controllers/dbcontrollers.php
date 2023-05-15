@@ -232,8 +232,21 @@ class dbcontrollers extends BaseController
         echo json_encode($res);
     }
 
-    public function test(){
-        echo "ok";
+    // accept_status
+    public function  accept_status()
+    {
+        $house_no = $this->request->getvar('house_no');
+        $res = $this->datas->accept_status_model($house_no);
+        // $res = "hai";
+        echo json_encode($res);
+    }
+    // reject_status
+    public function  reject_status()
+    {
+        $house_no = $this->request->getvar('house_no');
+        $res = $this->datas->reject_status_model($house_no);
+        // $res = "hai";
+        echo json_encode($res);
     }
 
     // delete_owner_card
