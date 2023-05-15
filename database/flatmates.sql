@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2023 at 12:43 PM
+-- Generation Time: May 15, 2023 at 09:18 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 -- Database: `flatmates`
 --
 
--- --------------------------------------------------------f
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `aadhar_card`
@@ -133,19 +133,20 @@ CREATE TABLE `new_house` (
   `BHK` varchar(100) NOT NULL,
   `image` varchar(200) NOT NULL,
   `requests` varchar(100) NOT NULL,
-  `tenent_id` varchar(100) NOT NULL
+  `tenent_id` varchar(100) NOT NULL,
+  `accept_status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `new_house`
 --
 
-INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `members`, `rent`, `about`, `description`, `city`, `state`, `zipcode`, `BHK`, `image`, `requests`, `tenent_id`) VALUES
-('FMOW_1002', '15', 'anna university regional campus madurai', '4', '15k', 'G06', 'AURCM', 'madurai', 'Tamil Nadu', 625019, '4', 'Study.jpg', 'Requested', ''),
-('FMOW_1002', '4', 'anna university regional campus madurai', '', '', '', '', 'madurai', 'Tamil Nadu', 625019, '', 'apparment.jpg', 'Requested', ''),
-('FMOW_1002', '55', '', '', '', '', '', '', '', 0, '', 'be kind.jpg', 'Requested', ''),
-('FMOW_1002', '12', 'aurcm', '100', '15000', 'college', 'college', 'Madurai', 'Tamilnadu', 629704, '4', '3840x2160.jpg', 'Requested', 'FMTN_1003'),
-('FMOW_1002', '3', 'kanyakumari', '4', '160000', 'mathan', 'college', 'nagercoil', 'tamilnadu', 629704, '4', 'pexels-matheus-bertelli-2980955.jpg', 'Requested', 'FMTN_1003');
+INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `members`, `rent`, `about`, `description`, `city`, `state`, `zipcode`, `BHK`, `image`, `requests`, `tenent_id`, `accept_status`) VALUES
+('FMOW_1002', '15', 'anna university regional campus madurai', '4', '15k', 'G06', 'AURCM', 'madurai', 'Tamil Nadu', 625019, '4', 'Study.jpg', 'Requested', '', 'Accepted'),
+('FMOW_1002', '4', 'anna university regional campus madurai', '', '', '', '', 'madurai', 'Tamil Nadu', 625019, '', 'apparment.jpg', 'Requested', '', 'Accepted'),
+('FMOW_1002', '55', '', '', '', '', '', '', '', 0, '', 'be kind.jpg', 'Requested', '', 'Accepted'),
+('FMOW_1002', '12', 'aurcm', '100', '15000', 'college', 'college', 'Madurai', 'Tamilnadu', 629704, '4', '3840x2160.jpg', 'Requested', 'FMTN_1003', 'Accepted'),
+('FMOW_1002', '3', 'kanyakumari', '4', '160000', 'mathan', 'college', 'nagercoil', 'tamilnadu', 629704, '4', 'pexels-matheus-bertelli-2980955.jpg', 'Requested', 'FMTN_1003', 'Rejected');
 
 -- --------------------------------------------------------
 
