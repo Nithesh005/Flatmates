@@ -370,7 +370,7 @@ $session = \Config\Services::session();
                         '<p class="card-text">' + 'City' + ':' + items.city + '</p>' +
                         '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
                         '<br>' +
-                        '<button type="button" id="share_btn" class="btn btn-success">Share Home</button>' +
+                        '<button type="button" id="share_btn" class="btn btn-success" onclick="shareText()">Share Home</button>' +
                         '</div>' +
                         '</div>' +
                         '</div>'
@@ -510,7 +510,7 @@ $session = \Config\Services::session();
 
   
     function shareText() {
-        var button = document.getElementById("shareButton");
+        var button = document.getElementById("share_btn");
         var text = "Shared";
 
         // Change the text
