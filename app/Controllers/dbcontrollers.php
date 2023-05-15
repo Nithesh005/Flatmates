@@ -225,9 +225,15 @@ class dbcontrollers extends BaseController
     // get_requests
     public function  get_requests()
     {
-        $res = $this->datas->get_requests_model();
+        $res = $this->datas->get_requests_model("FMTN_1003");
 
+        // echo "<pre>";
+        // print_r($res);
         echo json_encode($res);
+    }
+
+    public function test(){
+        echo "ok";
     }
 
     // delete_owner_card

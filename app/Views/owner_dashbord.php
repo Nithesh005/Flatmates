@@ -92,7 +92,6 @@ $session = \Config\Services::session();
 
 <body onload="getcar()">
 
-
     <?php require_once "header_owner.php"; ?>
     <br>
     <div class="container d-flex justify-content-end add_house_row">
@@ -181,8 +180,8 @@ $session = \Config\Services::session();
     </button> -->
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-xl" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Requests</h5>
@@ -236,6 +235,8 @@ $session = \Config\Services::session();
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
+        
+    console.log('<?php echo session('u_id'); ?>')
     function chat_owner() {
         location.replace("<?php echo base_url('./public/index.php/home/owner_chat') ?>");
     }
@@ -278,7 +279,7 @@ $session = \Config\Services::session();
         method: "POST",
         dataType: "json",
         success: function(res) {
-            // console.log(res);
+            console.log(res);
             $('.card-content').empty();
 
             $.each(res, function(index, item) {

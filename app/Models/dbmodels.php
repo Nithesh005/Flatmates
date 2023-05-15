@@ -185,12 +185,14 @@ class Dbmodels extends Model
     }
     public function  apply_button_model($house_no)
     {
+        $unique_id = session('u_id');
         $db = \Config\Database::connect();
 
         $query = $db->table('new_house');
         $data = [
             'requests' => 'Requested',
-            // Add more columns and values as needed
+            'tenent_id' => $unique_id,
+             // Add more columns and values as needed
         ];
 
         // Set the WHERE condition for the update query
@@ -283,24 +285,29 @@ class Dbmodels extends Model
     }
 
     // get_requests_model
-    public function get_requests_model()
+    public function get_requests_model($uid)
     {
-        $unique_id = session('u_id');
+        // $unique_id = session('u_id');
         $db = \Config\Database::connect();
-        $query = $db->table('new_house');
-        $query->select('*');
-        // $query->where('u_id', "$unique_id");
-        $array = [
-            'u_id' => $unique_id, 
-            'requests' => "Requested"
-        ];
-        $query->where($array);
+        $query = $db->table('new_house  as d');
+        $query->select('d.*,s.*');
+        $query->join('tenant_reg as s','s.u_id=d.tenent_id');
+        
+        $query->where('s.u_id', $uid);
+        // $array = [
+        //     'u_id' => $unique_id, 
+        //     'requests' => "Requested"
+        // ];
+       // $query->where('d.tenent_id','name');
         $res = $query->get()->getResultArray();
-        if (!empty($res)) {
+        if (count($res)>0) {
             return $res; // Update successful
         } else {
-            return false; // Update failed
+            return "false"; // Update failed
         }
+
+
+    // return $uid;
     }
     // owner_msg_retrive_model
     public function owner_msg_retrive_model()
