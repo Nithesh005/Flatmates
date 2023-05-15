@@ -31,6 +31,11 @@ class Home extends BaseController
 
         return view('login');
     }
+    public function owner_profile()
+    {
+
+        return view('owner_profile');
+    }
 
     public function owner_chat()
     {

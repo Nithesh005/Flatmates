@@ -215,6 +215,12 @@ class dbcontrollers extends BaseController
 
         echo json_encode($res);
     }
+    public function  profile_owner_controller()
+    {
+        $res = $this->datas->profile_owner_model();
+
+        echo json_encode($res);
+    }
 
     // get_requests
     public function  get_requests()

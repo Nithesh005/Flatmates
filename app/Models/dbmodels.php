@@ -217,6 +217,17 @@ class Dbmodels extends Model
         $res = $query->get()->getResultArray();
         return $res;
     }
+
+    public function profile_owner_model()
+    {
+        $unique_id = session('u_id');
+        $db = \Config\Database::connect();
+        $query = $db->table('ownerreg');
+        $query->select('*');
+        $query->where('u_id', "$unique_id");
+        $res = $query->get()->getResultArray();
+        return $res;
+    }
     public function getowner_from_house_no($reciver_house_no){
         $reciver_house_no_sess = session('house_no');
         $db = \Config\Database::connect();
