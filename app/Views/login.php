@@ -33,9 +33,7 @@ $session = \Config\Services::session();
     <script src="sweetalert2.min.js"></script>
     <link rel="stylesheet" href="sweetalert2.min.css">
     <style>
-        body {
-            overflow-y: hidden;
-        }
+
     </style>
 </head>
 
@@ -67,7 +65,7 @@ $session = \Config\Services::session();
         <!-- owner login -->
         <div class="row mb-4">
             <div class="col-lg-3 col-md-2"></div>
-            <div class="col-lg-6 col-md-8">
+            <div class="col-lg-6 col-md-8 pad" >
                 <div class="tab-content content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab">

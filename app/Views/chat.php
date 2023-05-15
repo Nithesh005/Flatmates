@@ -68,38 +68,7 @@ $session = \Config\Services::session();
     $('.messages').animate({
         scrollTop: $('.messages ul').height()
     }, "fast");
-
-    // function newMessage() {
-
-    //     var message = $('.input-group textarea').val();
-    //     if ($.trim(message) == '') {
-    //         message = $('.input-group .emoji-wysiwyg-editor').html();
-    //         if ($.trim(message) == '') {
-    //             return false;
-    //         }
-    //     }
-    //     $('<li class="sent"><img src="<?php echo base_url("assets/user-img.jpg"); ?>" alt="username" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
-    //     $('.input-group textarea').val('');
-    //     $('.input-group .emoji-wysiwyg-editor').html('');
-
-    //     $('.messages').animate({
-    //         scrollTop: $('.messages ul').height()
-    //     }, "fast");
-    // };
-
-    // $('.submit').click(function() {
-    //     newMessage();
-    // });
-
-    // // $('#framechat .content .message-input ').on(function (e) {
-    // $('#framechat .content .input-group ').on('keydown', function(e) {
-    //     if (e.which == send) {
-    //         newMessage();
-    //         return false;
-    //     }
-    // });
-
-
+    
     // retrive message
     $.ajax({
         url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_msg_retrive'); ?>",

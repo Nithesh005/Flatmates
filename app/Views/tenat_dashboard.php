@@ -10,10 +10,16 @@ $session = \Config\Services::session();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <!-- Font aswesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- css -->
@@ -35,6 +41,10 @@ $session = \Config\Services::session();
         position: relative;
         display: inline-block;
         vertical-align: middle;
+    }
+
+    .btn-success {
+        width: 100%;
     }
 
     .search-box input[type="text"] {
@@ -69,10 +79,91 @@ $session = \Config\Services::session();
         margin-top: -4.3%;
 
     }
+    .owner_card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            /* justify-content: space-evenly; */
+            /* background-color: red; */
+        }
 
-    .btn-success {
-        width: 50%;
-    }
+        .button2 {
+            margin-left: 76%;
+            margin-top: -4.3%;
+
+        }
+
+        .btn-danger {
+            width: 100%;
+        }
+
+        .add_house_row {
+            gap: 20px;
+        }
+
+        .individual_req {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* .row>* {
+            margin-left: 8%;
+        } */
+        .action-buttons {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .accept-button,
+        .reject-button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .accept-button {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        .reject-button {
+            background-color: #F44336;
+            color: #fff;
+        }
+
+        .accepted {
+            height: 50px;
+        }
+
+        .user-photo {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        .mov {
+            margin-left: 5%;
+        }
+        .image_req{
+            border-radius: 50%;
+        }
+        .user-info{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-around;
+            /* gap: 100px; */
+            /* width: 100%; */
+        }
+        .username{
+            /* background-color: #F44336; */
+            display: flex;
+            justify-content: center;
+            justify-content: center;
+        }
 
     .btn-info {
         width: 50%;
@@ -100,27 +191,11 @@ $session = \Config\Services::session();
 <body onload="getcardtenant()">
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Requests</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Not Yet
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+
     <!-- <h1>user id<?php //echo session('u_id'); 
-                    ?></h1> -->
+    ?></h1> -->
 
     <?php require_once "after_login_header.php"; ?>
 
@@ -137,13 +212,118 @@ $session = \Config\Services::session();
                 <i class="fas fa-search"></i>
             </button>
         </div>
-
-        <div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                My House</button>
+        <div class="container d-flex justify-content-end add_house_row">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".exampleModal">My
+                house</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target=".exampleModal1">Requests</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".exampleModal2">Shared
+                House</button>
         </div>
+        <div class="modal fade exampleModal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">My house</h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="card col-3 card_index">
+                            <div class="card-image">
+                                <img class="img-fluid" src="<?php echo base_url() ?>" alt="Alternate Text"
+                                    height="100px" width="400px" />
+                            </div>
+                            <div class="card-image-overlay m-auto">
+                                <span class="card-detail-badge"> ₹ 6000 </span>
+                                <span class="card-detail-badge"> 5BHK </span>
+                            </div>
+                            <div class="col-12">
+                                <div class="card-body">
+                                    <h5 class="card-title">About Home</h5>
+                                    <div class="card-title house_no" id=" items.house_no" value="mm"> nice home </div>
+                                    <p class="card-text"> description : Nice Home</p>
+                                    <p class="card-text"> 'City ': Nagercoil'</p>
+                                    <p class="card-text"> 'Zipcode ': 629704</p>
+                                    <br>
+                                    <button type="button" id="delete_btn" class="btn btn-success">Share Home</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade exampleModal1" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Request Page</h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="user-info">
+                            <div class="user-info"
+                                style="display: flex;  justify-content: center; align-items: center;">
+                                <img class="image_req"
+                                    src="<?php echo base_url() ?>/public/public/uploads/ item.u_id + / item.photo_img + "
+                                    alt="Alternate Text" height="50px" width="50px" />
+                            </div>
+                            <p class="username" style="font-size: 20px;"> item.name + </p>
+                            <p class="email" style="font-size: 20px;"> item.email + </p>
+                            <p class="email" style="font-size: 20px;"> item.occupation + </p>
+                            <p class="occupation" style="font-size: 20px;"> item.status + </p>
+                            <div class="mov">
+                                <button class="accept-button" style="height:5%;" onclick="accept_btn()">Accept</button>
+                                <button class="reject-button" style="height:5%;" onclick="reject_btn()">Reject</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade exampleModal2" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Shared House</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="card-content">
+                    <div class="card col-3 card_index">
+                        <div class="card-image">
+                            <img class="img-fluid" src="<?php echo base_url() ?>" alt="Alternate Text" height="100px"
+                                width="400px" />
+                        </div>
+                        <div class="card-image-overlay m-auto">
+                            <span class="card-detail-badge"> ₹ 6000 </span>
+                            <span class="card-detail-badge"> 5BHK </span>
+                        </div>
+                        <div class="col-12">
+                            <div class="card-body">
+                                <h5 class="card-title">About Home</h5>
+                                <div class="card-title house_no" id=" items.house_no" value="mm"> nice home </div>
+                                <p class="card-text"> description : Nice Home</p>
+                                <p class="card-text"> 'City ': Nagercoil'</p>
+                                <p class="card-text"> 'Zipcode ': 629704</p>
+                                <br>
+                                <button type="button" id="delete_btn" class="btn btn-danger">Delete Home</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     </div>
+
 
 
 
@@ -170,12 +350,12 @@ $session = \Config\Services::session();
             url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_card_controller'); ?>",
             method: "POST",
             dataType: "json",
-            success: function(res) {
+            success: function (res) {
                 console.log(res);
                 console.log("ajax woking");
                 $('.tenant_card').empty();
                 res.forEach(
-                    function(items) {
+                    function (items) {
                         var element = $();
                         element = element.add(
                             '<div class="card col-3 card_index">' +
@@ -189,18 +369,14 @@ $session = \Config\Services::session();
                             '</div>' +
                             '<div class="card-image-overlay m-auto">' +
                             '<span class="card-detail-badge">' + '₹' + items.rent + '/' + '</span>' +
-                            '<span class="card-detail-badge">' + items.BHK + '/' + 'BHK' + '</span>' +
+                            '<span class="card-detail-badge">' + items.BHK + '-' + 'BHK' + '</span>' +
                             '</div>' +
                             '<div class="col-12">' +
                             '<div class="card-body">' +
-                            '<h6 class="card-title">House No</h6>' +
-                            '<p class="card-text">' + items.house_no + '</p>' +
-                            '<h6 class="card-title">DESCRIPTION</h6>' +
-                            '<p class="card-text">' + items.about + '</p>' +
-                            '<h6 class="card-title">About Home</h6>' +
-                            '<p class="card-text">' + items.description + '</p>' +
-                            '<h6 class="card-title">Members allowed</h6>' +
-                            '<p class="card-text">' + items.members + '</p>' +
+                            '<p class="card-text">' +'House No'+ ':' + items.house_no + '</p>' +
+                            '<p class="card-text">' + 'DESCRIPTION' + ':' + items.description + '</p>' +
+                            '<p class="card-text">' + 'About Home' + ':' + items.about + '</p>' +
+                            '<p class="card-text">'+'Members allowed'+ ':' + items.members + '</p>' +
                             '<p class="card-text">' + 'City' + ':' + items.city + '</p>' +
                             '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
                             '<br>' +
@@ -214,7 +390,7 @@ $session = \Config\Services::session();
                         );
                         $('.tenant_card').append(element);
                         var house_no = items.house_no;
-                        element.find('#apply_btn').click(function() {
+                        element.find('#apply_btn').click(function () {
                             // event.preventDefault();
                             alert(house_no);
                             $.ajax({
@@ -224,18 +400,18 @@ $session = \Config\Services::session();
                                 data: {
                                     house_no: house_no,
                                 },
-                                success: function(res) {
+                                success: function (res) {
                                     var button = document.getElementById("apply_btn");
                                     button.innerHTML = "Applied";
                                     // alert(res)
                                 },
-                                error: function(er) {
+                                error: function (er) {
                                     console.log("Login Error");
                                     console.log(er);
                                 }
                             });
                         });
-                        element.find('#chat_btn').click(function() {
+                        element.find('#chat_btn').click(function () {
                             // alert(house_no)
                             $.ajax({
                                 url: "<?php echo base_url('public/index.php/Dbcontrollers/chat_page'); ?>",
@@ -244,11 +420,11 @@ $session = \Config\Services::session();
                                 data: {
                                     house_no: house_no,
                                 },
-                                success: function(res) {
+                                success: function (res) {
                                     // alert(res)
                                     location.replace("<?php echo base_url('./public/index.php/home/chat') ?>");
                                 },
-                                error: function(er) {
+                                error: function (er) {
                                     alert(res)
                                 }
                             })
@@ -256,7 +432,7 @@ $session = \Config\Services::session();
                     }
                 );
             },
-            error: function(er) {
+            error: function (er) {
                 // console.error(er);
                 console.log("error")
             }

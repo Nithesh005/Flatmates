@@ -63,12 +63,29 @@
         .search_box{
             margin-top: 0.5rem;
         }
+               /* goback btn */
+               .goback-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .goback-button:hover {
+            background-color: #45a049;
+        }
     </style>
 
 
 </head>
 
 <body>
+          <button class="goback-button" onclick="goBack()">Go Back</button>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <!-- Container wrapper -->
@@ -93,14 +110,14 @@
                         <a href="<?php echo base_url('./public/index.php/home/about') ?>" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" class="nav-link">Services</a>
+                        <a href="<?php echo base_url('./public/index.php/home/sevices') ?>" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>" class="nav-link">contact</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="<?php echo base_url('./public/index.php/home/graph') ?>" class="nav-link">graph</a>
-                    </li>
+                    </li> -->
                     <!-- <li class="nav-item">
                         <a href="<?php echo base_url('http://localhost/chatapp/index.php') ?>" class="nav-link" target="_blank">Chat</a>
                     </li> -->
@@ -168,5 +185,8 @@
 <script>
     function profile() {
         location.replace("<?php echo base_url(); ?>public/index.php/home/owner_profile");
+    }
+    function goBack() {
+        history.back();
     }
 </script>

@@ -11,6 +11,10 @@
   <!-- Icon Font Stylesheet -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+<script src="sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- stylesheet-->
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/contact.css?version=<?php echo rand(); ?>">
@@ -59,7 +63,7 @@
               <textarea class="textinput" id="i5vyy-3" placeholder="Please enter query..."></textarea>
             </div>
           </div>
-          <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-2">
+          <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-2" onclick="alertmessage()">
             Submit
           </button>
         </div>
@@ -70,7 +74,7 @@
             Reach us at
           </p>
           <p class="text-blk map-contactus-subhead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis diam lectus sapien.
+          Are you tired of living alone and want to share your living space with friendly and like-minded individuals?
           </p>
           <div class="social-media-links mob">
             <a class="social-icon-link" href="#" id="ix94i-2-2">
@@ -99,5 +103,18 @@
   </div>
   <!-- Footer End -->
 </body>
+
+<script>
+  function alertmessage (){
+    Swal.fire({
+  title: 'Sweet!',
+  text: 'Thanks for your Response',
+  imageUrl: 'https://unsplash.it/400/200',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'Custom image',
+})
+  }
+</script>
 
 </html>
