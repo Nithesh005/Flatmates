@@ -147,7 +147,10 @@ $session = \Config\Services::session();
         width: 50px;
         height: 50px;
     }
-
+    .disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
     .mov {
         margin-left: 5%;
     }
@@ -384,11 +387,12 @@ $session = \Config\Services::session();
                         '<div class="card-body">' +
                         '<p class="card-text">' + 'About Home' + ':' + items.about + '</p>' +
                         '<div class="card-title house_no" id="' + items.house_no + '" value="mm">' + items.house_no + '</div>' +
+                        '<p class="card-text">' + 'Address' + ':' + items.address + '</p>' +
                         '<p class="card-text">' + 'description' + ':' + items.description + '</p>' +
                         '<p class="card-text">' + 'City' + ':' + items.city + '</p>' +
                         '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
                         '<br>' +
-                        '<button type="button" id="delete_btn" class="btn btn-success">Share Home</button>' +
+                        '<button type="button" id="shareButton" class="btn btn-success" onclick="shareText()">Share Home</button>' +
                         '</div>' +
                         '</div>' +
                         '</div>'
@@ -497,8 +501,17 @@ $session = \Config\Services::session();
     })
 
 
-    function chat_page() {
+  
+    function shareText() {
+        var button = document.getElementById("shareButton");
+        var text = "Shared";
 
+        // Change the text
+        button.innerText = text;
+
+        // Disable the button
+        button.disabled = true;
+        button.classList.add("disabled");
     }
 </script>
 <link href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.9.0/css/mdb.min.css" rel="stylesheet" />
