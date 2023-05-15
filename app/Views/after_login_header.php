@@ -63,13 +63,29 @@
         .search_box{
             margin-top: 0.5rem;
         }
+               /* goback btn */
+               .goback-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .goback-button:hover {
+            background-color: #45a049;
+        }
     </style>
 
 
 </head>
 
 <body>
-    <!-- Navbar -->
+<!-- <button class="goback-button" onclick="goBack()">Go Back</button> -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <!-- Container wrapper -->
         <div class="container-fluid">
@@ -99,8 +115,11 @@
                         <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>" class="nav-link">contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/graph') ?>" class="nav-link">graph</a>
+                        <a href="<?php echo base_url('./public/index.php/home/shared_page') ?>" class="nav-link">Shared Homes</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a href="<?php echo base_url('./public/index.php/home/graph') ?>" class="nav-link">graph</a>
+                    </li> -->
                     <!-- <li class="nav-item">
                         <a href="<?php echo base_url('http://localhost/chatapp/index.php') ?>" class="nav-link" target="_blank">Chat</a>
                     </li> -->
@@ -169,4 +188,7 @@
     function profile() {
         location.replace("<?php echo base_url(); ?>public/index.php/home/profile");
     }
+    // function goBack() {
+    //     history.back();
+    // }
 </script>

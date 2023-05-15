@@ -357,9 +357,6 @@ $session = \Config\Services::session();
                     element = element.add(
                         '<div class="card col-3 card_index">' +
                         '<div class="card-image">' +
-                        // '<span class="card-notify-badge">Low KMS</span>' +
-                        // '<span class="card-notify-year">2018</span>' +
-                        // items.u_id+items.image+
                         '<img class="img-fluid" ' +
                         'src="<?php echo base_url() ?>/public/public/uploads/' + items.u_id + '/' + items.image + '" ' +
                         'alt="Alternate Text" height="100px" width="400px"  />' +
@@ -377,7 +374,6 @@ $session = \Config\Services::session();
                         '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
                         '<br>' +
                         '<button type="button" id="delete_btn" class="btn btn-danger">Delete Home</button>' +
-                        // '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
                         '</div>' +
                         '</div>' + '</div>'
 

@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <title>Document</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/styles.css?version=<?php echo rand(); ?>">
 
@@ -57,15 +60,35 @@
         display: block;
     }
 
+    /* goback btn */
+    .goback-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #ffffff;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .goback-button:hover {
+        background-color: #45a049;
+    }
 </style>
 
 <body>
+    <!-- <button class="goback-button" onclick="goBack()">Go Back</button> -->
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <!-- Container wrapper -->
         <div class="container-fluid">
             <!-- Toggle button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
 
@@ -81,10 +104,11 @@
                         <a href="<?php echo base_url('./public/index.php/home/about') ?>" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url('./public/index.php/home/privacy_policy') ?>" class="nav-link">Services</a>
+                        <a href="<?php echo base_url('./public/index.php/home/services') ?>"
+                            class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="mailto:flatemates09@mail.com" class="nav-link">Contact</a>
+                        <a href="<?php echo base_url('./public/index.php/home/contact_us') ?>" class="nav-link">contact</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo base_url('./public/index.php/home/login') ?>" class="nav-link ">Sign in</a>
@@ -96,10 +120,12 @@
                                     <a href="#" style="color: rgba(0,0,0,.55); ">Sign up</a>
                                     <ul class="drop-menu" style="position: absolute; z-index: 2;">
                                         <li class="drop-menu-item">
-                                            <a href="<?php echo base_url('./public/index.php/home/tenant_register') ?>">Tenant</a>
+                                            <a
+                                                href="<?php echo base_url('./public/index.php/home/tenant_register') ?>">Tenant</a>
                                         </li>
                                         <li class="drop-menu-item">
-                                            <a href="<?php echo base_url('./public/index.php/home/owner_register') ?>">Owner</a>
+                                            <a
+                                                href="<?php echo base_url('./public/index.php/home/owner_register') ?>">Owner</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -120,6 +146,10 @@
     <!-- bootstrap end -->
 
 </body>
-
+<script>
+    // function goBack() {
+    //     history.back();
+    // }
+</script>
 
 </html>
