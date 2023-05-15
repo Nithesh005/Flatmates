@@ -285,7 +285,7 @@ $session = \Config\Services::session();
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="card-content">
-                    <div class="card col-3 card_index">
+                    <!-- <div class="card col-3 card_index">
                         <div class="card-image">
                             <img class="img-fluid" src="<?php echo base_url() ?>" alt="Alternate Text" height="100px" width="400px" />
                         </div>
@@ -304,7 +304,7 @@ $session = \Config\Services::session();
                                 <button type="button" id="delete_btn" class="btn btn-danger">Delete Home</button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -379,7 +379,7 @@ $session = \Config\Services::session();
 
     })
     // card design
-    function getcardtenant() {
+    
         $.ajax({
             // url: "<?php echo base_url() ?>/public/index.php/Controllers/dbcontrollers/reg_user_data",
             url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_card_controller'); ?>",
@@ -473,7 +473,6 @@ $session = \Config\Services::session();
             }
         })
 
-    }
 
     function chat_page() {
 
