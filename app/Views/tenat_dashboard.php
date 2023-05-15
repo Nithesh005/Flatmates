@@ -338,7 +338,7 @@ $session = \Config\Services::session();
         method: "POST",
         dataType: "json",
         success: function(res) {
-            alert("tenent as a owner");
+            // alert("tenent as a owner");
             console.log(res);
         },
         error: function(er) {
