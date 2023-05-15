@@ -238,6 +238,27 @@ class Dbmodels extends Model
             return false; // Update failed
         }
     }
+    // my_house_model
+    public function  my_house_model()
+    {
+        $unique_id = session('u_id');
+        $db = \Config\Database::connect();
+        $query = $db->table('new_house');
+        $query->select('*');
+        // $data = [
+        //     'u_id'=>'FMTN_1003',
+        //     'accept_status' => 'Accepted',
+        // ];
+        // $query->where('house_no', $house_no);
+        $query->where('tenent_id', $unique_id);
+        $query->where('accept_status', "Accepted");
+        $res = $query->get()->getResultArray();
+        if (!empty($res)) {
+            return  $res; // Update successful
+        } else {
+            return false; // Update failed
+        }
+    }
 
 
 

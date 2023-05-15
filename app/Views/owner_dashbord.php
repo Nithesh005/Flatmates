@@ -338,7 +338,7 @@ $session = \Config\Services::session();
                     },
                     success: function(res) {
                         alert(res);
-                        // Reload the page after accepting
+                        // send accept mail
                         location.reload();
                     },
                     error: function(er) {
@@ -361,6 +361,7 @@ $session = \Config\Services::session();
                     },
                     success: function(res) {
                         console.log(res);
+                        // send reject mail
                         location.reload();
                     },
                     error: function(er) {
