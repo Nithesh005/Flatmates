@@ -229,7 +229,6 @@ $session = \Config\Services::session();
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="card-content">
-
                 </div>
             </div>
         </div>
