@@ -233,7 +233,7 @@ $session = \Config\Services::session();
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="card-content myhouse ">
-                        
+
                     </div>
                 </div>
             </div>
@@ -304,6 +304,39 @@ $session = \Config\Services::session();
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
+    // get tenant shared house
+    $.ajax({
+        url: "<?php echo base_url('public/index.php/Dbcontrollers/get_tenant_shared_house') ?>",
+        method: "POST",
+        dataType: "json",
+        success: function(res) {
+            alert("tenent as a owner");
+            console.log(res);
+        },
+        error: function(er) {
+
+        }
+
+    })
+
+
+
+
+
+    // tenant as owner
+    $('#share_btn').click(function() {
+        // alert("yes da");
+        $.ajax({
+            url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_as_owner_reg') ?>",
+            method: "POST",
+            dataType: "json",
+            success: function(res) {
+                console.log(res);
+            },
+            error: function(er) {}
+
+        })
+    })
     // my house
     $.ajax({
         url: "<?php echo base_url('public/index.php/Dbcontrollers/my_house') ?>",

@@ -6,11 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Font aswesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- css -->
@@ -120,7 +117,7 @@
             gap: 20px;
         }
 
-        .card-content{
+        .card-content {
             display: flex;
             flex-direction: row;
             margin: 5%;
@@ -135,8 +132,7 @@
 
         <div class="card col-3 card_index">
             <div class="card-image">
-                <img class="img-fluid" src="<?php echo base_url() ?>" alt="Alternate Text" height="100px"
-                    width="400px" />
+                <img class="img-fluid" src="<?php echo base_url() ?>" alt="Alternate Text" height="100px" width="400px" />
             </div>
             <div class="card-image-overlay m-auto">
                 <span class="card-detail-badge"> ₹ 6000 </span>
@@ -151,10 +147,8 @@
                     <p class="card-text"> 'Zipcode ': 629704</p>
                     <br>
                     <div class="social_btn">
-                        <button type="button" class="btn btn-info button4" id="apply_btn"
-                            onclick="changeText()">Apply</button>
-                        <button type="button" class="btn btn-success button3" id="chat_btn"
-                            onclick="chat_page()">Chat</button>
+                        <button type="button" class="btn btn-info button4" id="apply_btn" onclick="changeText()">Apply</button>
+                        <button type="button" class="btn btn-success button3" id="chat_btn" onclick="chat_page()">Chat</button>
                     </div>
                 </div>
             </div>
@@ -162,5 +156,19 @@
     </div>
 
 </body>
+<script>
+    $.ajax({
+        url: "<?php echo base_url('public/index.php/Dbcontrollers/tao_cards')?>",
+        method: "POST",
+        dataType: "json",
+        success: function(res) {
+            alert(res);
+        },
+        error: function(er) {
+
+        }
+
+    })
+</script>
 
 </html>

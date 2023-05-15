@@ -256,16 +256,35 @@ class dbcontrollers extends BaseController
         // $res = "hai";
         echo json_encode($res);
     }
+    // tenant_as_owner_reg
+    public function  tenant_as_owner_reg()
+    {
+        // $house_no = $this->request->getvar('house_no');
+        $res = $this->datas->tenant_as_owner_reg_model();
+        // $res = "hai";
+        echo json_encode($res);
+    }
 
     // delete_owner_card
     public function  delete_owner_card()
     {
-        // $res = 'from model';
-        if ($this->request->isAJAX()) {
-            $house_no = $this->request->getvar('house_no');
-            $res = $this->datas->delete_owner_card_model($house_no);
-            echo json_encode($res);
-        }
+        $house_no = $this->request->getvar('house_no');
+        $res = $this->datas->delete_owner_card_model($house_no);
+        echo json_encode($res);
+    }
+    // get_tenant_shared_house
+    public function  get_tenant_shared_house()
+    {
+        $house_no = $this->request->getvar('house_no');
+        $res = $this->datas->get_tenant_shared_house_card_model($house_no);
+        echo json_encode($res);
+    }
+    // tenant_as_owner_cards
+    public function  tao_cards()
+    {
+        // $house_no = $this->request->getvar('house_no');
+        // $res = $this->datas->tenant_as_owner_cards_model();
+        echo json_encode("hai");
     }
     // owner_msg_retrive
     public function  owner_msg_retrive()

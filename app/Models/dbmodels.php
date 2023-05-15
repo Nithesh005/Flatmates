@@ -261,7 +261,53 @@ class Dbmodels extends Model
     }
 
 
+// tenant_as_owner_reg_model
+    public function tenant_as_owner_reg_model()
+    {
+        $unique_id = session('u_id');
+        $db = \Config\Database::connect();
+        $data=[
+            'u_id' => $unique_id,
+            'house_no' => $unique_id,
+            'address' => $unique_id,
+            'rent' => $unique_id,
+            'about' => $unique_id,
+            'city' => $unique_id,
+            'image' => $unique_id,
+            'occupation' => $unique_id,
+        ];
+        $query = $db->table('tenant_as_owner');
+        $query->insert($data);
+        $res = $query->get()->getResultArray();
+        if ($res == true) {
+            return $res;
+        } else {
+            return "fail";
+        }
+    }
 
+    // get_tenant_shared_house_card_model
+    public function get_tenant_shared_house_card_model()
+    {
+        $unique_id = session('u_id');
+        $db = \Config\Database::connect();
+        $query = $db->table('tenant_as_owner');
+        $query->select('*');
+        $query->where('u_id', "$unique_id");
+        $res = $query->get()->getResultArray();
+        return $res;
+    }
+    // tenant_as_owner_cards_model
+    public function tenant_as_owner_cards_model()
+    {
+        $unique_id = session('u_id');
+        $db = \Config\Database::connect();
+        $query = $db->table('tenant_as_owner');
+        $query->select('*');
+        // $query->where('u_id', "$unique_id");
+        $res = $query->get()->getResultArray();
+        return "hai";
+    }
     public function profile_model()
     {
         $unique_id = session('u_id');
@@ -307,7 +353,7 @@ class Dbmodels extends Model
         ];
         $query = $db->table('message_table');
         $res = $query->insert($message_data);
-        $res=true;
+        // $res=true;
         if ($res == true) {
             return $msg_data['message'];
         } else {
