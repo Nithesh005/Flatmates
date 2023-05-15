@@ -225,9 +225,15 @@ class dbcontrollers extends BaseController
     // get_requests
     public function  get_requests()
     {
-        $res = $this->datas->get_requests_model();
+        $res = $this->datas->get_requests_model("FMTN_1003");
 
+        // echo "<pre>";
+        // print_r($res);
         echo json_encode($res);
+    }
+
+    public function test(){
+        echo "ok";
     }
 
     // delete_owner_card
@@ -244,9 +250,9 @@ class dbcontrollers extends BaseController
     public function apply_button()
     {
         $house_no = $this->request->getvar('house_no');
-        // $res = $this->datas->apply_button_model($house_no);
+        $res = $this->datas->apply_button_model($house_no);
         session()->set('id', $house_no);
-        echo json_encode($house_no);
+        echo json_encode($res);
     }
     // chat_page
     public function chat_page()

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2023 at 06:52 PM
+-- Generation Time: May 15, 2023 at 12:43 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -132,17 +132,20 @@ CREATE TABLE `new_house` (
   `zipcode` bigint(100) NOT NULL,
   `BHK` varchar(100) NOT NULL,
   `image` varchar(200) NOT NULL,
-  `requests` varchar(100) NOT NULL
+  `requests` varchar(100) NOT NULL,
+  `tenent_id` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `new_house`
 --
 
-INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `members`, `rent`, `about`, `description`, `city`, `state`, `zipcode`, `BHK`, `image`, `requests`) VALUES
-('FMOW_1002', '15', 'anna university regional campus madurai', '4', '15k', 'G06', 'AURCM', 'madurai', 'Tamil Nadu', 625019, '4', 'Study.jpg', 'Requested'),
-('FMOW_1002', '4', 'anna university regional campus madurai', '', '', '', '', 'madurai', 'Tamil Nadu', 625019, '', 'apparment.jpg', 'Requested'),
-('FMOW_1002', '55', '', '', '', '', '', '', '', 0, '', 'be kind.jpg', 'Requested');
+INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `members`, `rent`, `about`, `description`, `city`, `state`, `zipcode`, `BHK`, `image`, `requests`, `tenent_id`) VALUES
+('FMOW_1002', '15', 'anna university regional campus madurai', '4', '15k', 'G06', 'AURCM', 'madurai', 'Tamil Nadu', 625019, '4', 'Study.jpg', 'Requested', ''),
+('FMOW_1002', '4', 'anna university regional campus madurai', '', '', '', '', 'madurai', 'Tamil Nadu', 625019, '', 'apparment.jpg', 'Requested', ''),
+('FMOW_1002', '55', '', '', '', '', '', '', '', 0, '', 'be kind.jpg', 'Requested', ''),
+('FMOW_1002', '12', 'aurcm', '100', '15000', 'college', 'college', 'Madurai', 'Tamilnadu', 629704, '4', '3840x2160.jpg', 'Requested', 'FMTN_1003'),
+('FMOW_1002', '3', 'kanyakumari', '4', '160000', 'mathan', 'college', 'nagercoil', 'tamilnadu', 629704, '4', 'pexels-matheus-bertelli-2980955.jpg', 'Requested', 'FMTN_1003');
 
 -- --------------------------------------------------------
 
@@ -173,8 +176,7 @@ CREATE TABLE `ownerreg` (
 --
 
 INSERT INTO `ownerreg` (`u_id`, `r_no`, `name`, `email`, `phone_no`, `password`, `occupation`, `house_no`, `address`, `city`, `state`, `photo_img`, `house_doc`, `aadhar_doc`, `aadhar_no`) VALUES
-('FMOW_1002', 0, 'nithesh', 'nitheshwaran003@gmail.com', 0, '123', 'developer', '', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'ai_chip.jpg', 'ai_chip_1.jpg', 'ai_chip_2.jpg', 1111111),
-('FMOW_1002', 0, ' n', 'n@gmail.com', 0, '1', '', '', 'anna university regional campus madurai', 'madurai', 'Tamil Nadu', 'solo nature.jpg', 'beack.jpg', 'boat.jpg', 2147483647),
+('FMOW_1002', 0, 'nithesh', 'nitheshwaran003@gmail.com', 0, '123', 'developer', '', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'Study.jpg', 'ai_chip_1.jpg', 'ai_chip_2.jpg', 1111111),
 ('FMOW_1003', 0, 'hai', '', 0, '', '', '', '', '', '', 'beack_1.jpg', '', '', 2147483647),
 ('FMOW_1004', 0, 'rose', 'jeyaroselinj@gmail.com', 2147483647, '', 'huhcv', '', 'siva', 'sivaga', 'tamilnadu', 'be kind.jpg', 'AI.jpg', 'be nice.jpg', 2147483647),
 ('FMOW_1005', 0, 'rose', 'jeyaroselinj@gmail.com', 2147483647, 'tyui78889', 'tyuutyuu', '', 'fghhjui', 'rtyuiui', 'Tamil Nadu', 'be nice_1.jpg', 'boat.jpg', 'beack.jpg', 2147483647),
