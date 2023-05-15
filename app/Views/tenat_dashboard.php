@@ -216,7 +216,7 @@ $session = \Config\Services::session();
                         var house_no = items.house_no;
                         element.find('#apply_btn').click(function() {
                             // event.preventDefault();
-                            // alert(house_no);
+                            alert(house_no);
                             $.ajax({
                                 url: "<?php echo base_url('public/index.php/dbcontrollers/apply_button'); ?>",
                                 method: "POST",
@@ -245,7 +245,8 @@ $session = \Config\Services::session();
                                     house_no: house_no,
                                 },
                                 success: function(res) {
-                                    alert(res)
+                                    // alert(res)
+                                    location.replace("<?php echo base_url('./public/index.php/home/chat') ?>");
                                 },
                                 error: function(er) {
                                     alert(res)

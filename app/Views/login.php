@@ -265,6 +265,7 @@ $session = \Config\Services::session();
                     owner_pasword: owner_pasword,
                 },
                 success: function (res) {
+                    alert(res);
                     if (res === "success") {
                         // alert("login success");
                         Swal.fire(

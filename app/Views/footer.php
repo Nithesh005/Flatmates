@@ -19,7 +19,7 @@
     }
 
     .pad {
-        padding: 2rem;
+        padding: 0.5rem;
     }
     #center{
         margin-top:20px;
@@ -35,7 +35,9 @@
                     <img src="<?php echo base_url(); ?>/assets/assets_img/logo.png" style="height:50px; width:100px;">
                     <h4 id="center">About Us</h4>
                     <P>“
-                        We are a leading online platform for booking hotels and resorts. We offer a wide range of accommodations at competitive prices, with easy booking and payment options.”</P>
+                        We are a leading online platform for booking hotels and resorts. 
+                        <!-- We offer a wide range of accommodations at competitive prices, with easy booking and payment options. -->
+                        ”</P>
                 </div>
                 <div class="col text-center" id="center">
                    <a href="mailto:flatemates09@mail.com" style="text-decoration:none;"> <h4  style="color:black;">Contact Us</h4></a>
@@ -44,12 +46,12 @@
                 <div class="col text-center" >
                     <h4 id="center">Services</h4>
                     Search for and book hotels and resorts
-                    View hotel details and amenities
+                    <!-- View hotel details and amenities
                     Read and write reviews of hotels
                     Manage your bookings and reservations
                     Contact customer support for assistance
                     Receive personalized recommendations based on your preferences
-                    Get exclusive deals and discounts on accommodations
+                    Get exclusive deals and discounts on accommodations -->
                 </div>
             </div>
         </div>

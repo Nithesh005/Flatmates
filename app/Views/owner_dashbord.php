@@ -112,7 +112,7 @@ $session = \Config\Services::session();
 
 
                 <div class="modal-body">
-                    <form class="row g-3 p-4" action="<?php echo base_url('public/index.php/dbcontrollers/demo_reg'); ?>" method="post" enctype="multipart/form-data">
+                    <form class="row g-3 p-4" action="<?php echo base_url('public/index.php/dbcontrollers/new_house_reg'); ?>" method="post" enctype="multipart/form-data">
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">House number</label>
                             <input type="text" class="form-control" id="house_no" placeholder="20/93" name="house_no">
