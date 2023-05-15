@@ -275,8 +275,8 @@ class dbcontrollers extends BaseController
     // get_tenant_shared_house
     public function  get_tenant_shared_house()
     {
-        $house_no = $this->request->getvar('house_no');
-        $res = $this->datas->get_tenant_shared_house_card_model($house_no);
+        // $house_no = $this->request->getvar('house_no');
+        $res = $this->datas->get_tenant_shared_house_card_model();
         echo json_encode($res);
     }
     // tenant_as_owner_cards

@@ -306,7 +306,7 @@ class Dbmodels extends Model
         $query->select('*');
         // $query->where('u_id', "$unique_id");
         $res = $query->get()->getResultArray();
-        return "hai";
+        return $res;
     }
     public function profile_model()
     {

@@ -158,7 +158,7 @@
 </body>
 <script>
     $.ajax({
-        url: "<?php echo base_url('public/index.php/Dbcontrollers/tao_cards')?>",
+        url: "<?php echo base_url('public/index.php/dbcontrollers/tao_cards')?>",
         method: "POST",
         dataType: "json",
         success: function(res) {
