@@ -295,7 +295,7 @@ $session = \Config\Services::session();
                         </div>
                         <div class="col-12">
                             <div class="card-body">
-                                <h5 class="card-title">About Home</h5>
+                                <h5 class="card-title">About Homee</h5>
                                 <div class="card-title house_no" id=" items.house_no" value="mm"> nice home </div>
                                 <p class="card-text"> description : Nice Home</p>
                                 <p class="card-text"> 'City ': Nagercoil'</p>
@@ -332,6 +332,39 @@ $session = \Config\Services::session();
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
+    // get tenant shared house
+    $.ajax({
+        url: "<?php echo base_url('public/index.php/Dbcontrollers/get_tenant_shared_house') ?>",
+        method: "POST",
+        dataType: "json",
+        success: function(res) {
+            alert("tenent as a owner");
+            console.log(res);
+        },
+        error: function(er) {
+
+        }
+
+    })
+
+
+
+
+
+    // tenant as owner
+    $('#share_btn').click(function() {
+        // alert("yes da");
+        $.ajax({
+            url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_as_owner_reg') ?>",
+            method: "POST",
+            dataType: "json",
+            success: function(res) {
+                console.log(res);
+            },
+            error: function(er) {}
+
+        })
+    })
     // my house
     $.ajax({
         url: "<?php echo base_url('public/index.php/Dbcontrollers/my_house') ?>",
