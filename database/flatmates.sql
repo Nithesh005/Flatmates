@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2023 at 10:58 PM
+-- Generation Time: May 16, 2023 at 09:12 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -148,7 +148,9 @@ INSERT INTO `new_house` (`u_id`, `house_no`, `address`, `members`, `rent`, `abou
 ('FMOW_1002', '4', 'anna university regional campus madurai', '', '', '', '', 'madurai', 'Tamil Nadu', 625019, '', 'apparment.jpg', 'Requested', '', 'Accepted'),
 ('FMOW_1002', '55', '', '', '', '', '', '', '', 0, '', 'be kind.jpg', 'Requested', '', 'Accepted'),
 ('FMOW_1002', '12', 'aurcm', '100', '15000', 'college', 'college', 'Madurai', 'Tamilnadu', 629704, '4', '3840x2160.jpg', 'Requested', 'FMTN_1003', 'Accepted'),
-('FMOW_1002', '3', 'kanyakumari', '4', '160000', 'mathan', 'college', 'nagercoil', 'tamilnadu', 629704, '4', 'pexels-matheus-bertelli-2980955.jpg', 'Requested', 'FMTN_1003', 'Rejected');
+('FMOW_1002', '3', 'kanyakumari', '4', '160000', 'mathan', 'college', 'nagercoil', 'tamilnadu', 629704, '4', 'pexels-matheus-bertelli-2980955.jpg', 'Requested', 'FMTN_1003', 'Rejected'),
+('FMOW_1006', '111', '', '', '', '', '', '', '', 0, '', 'Ai.avif', 'Requested', 'FMTN_1003', ''),
+('FMOW_1006', '24', 'nr', '', '', '', '', '', '', 0, '', 'apparment.jpg', 'Requested', 'FMTN_1003', '');
 
 -- --------------------------------------------------------
 
@@ -183,7 +185,8 @@ INSERT INTO `ownerreg` (`u_id`, `r_no`, `name`, `email`, `phone_no`, `password`,
 ('FMOW_1003', 0, 'hai', '', 0, '', '', '', '', '', '', 'beack_1.jpg', '', '', 2147483647),
 ('FMOW_1004', 0, 'rose', 'jeyaroselinj@gmail.com', 2147483647, '', 'huhcv', '', 'siva', 'sivaga', 'tamilnadu', 'be kind.jpg', 'AI.jpg', 'be nice.jpg', 2147483647),
 ('FMOW_1005', 0, 'rose', 'jeyaroselinj@gmail.com', 2147483647, 'tyui78889', 'tyuutyuu', '', 'fghhjui', 'rtyuiui', 'Tamil Nadu', 'be nice_1.jpg', 'boat.jpg', 'beack.jpg', 2147483647),
-('FMOW_1006', 0, 'rose', 'jeyaroselinj@gmail.com', 2147483647, 'tyui78889', 'tyuutyuu', '', 'fghhjui', 'rtyuiui', 'Tamil Nadu', 'be nice_2.jpg', 'boat_1.jpg', 'beack_1.jpg', 2147483647);
+('FMOW_1006', 0, 'rose', 'jeyaroselinj@gmail.com', 2147483647, 'tyui78889', 'tyuutyuu', '', 'fghhjui', 'rtyuiui', 'Tamil Nadu', 'be nice_2.jpg', 'boat_1.jpg', 'beack_1.jpg', 2147483647),
+('FMOW_1006', 0, 'mathan', 'mazzmathan2002@gmail.com', 2147483647, 'tyui78889', 'developer', '', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'AI.jpg', 'ai_chip.jpg', 'be kind.jpg', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -222,15 +225,19 @@ CREATE TABLE `tenant_as_owner` (
   `about` varchar(1000) NOT NULL,
   `city` varchar(100) NOT NULL,
   `image` varchar(100) NOT NULL,
-  `occupation` varchar(100) NOT NULL
+  `occupation` varchar(100) NOT NULL,
+  `share_status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tenant_as_owner`
 --
 
-INSERT INTO `tenant_as_owner` (`u_id`, `house_no`, `address`, `rent`, `about`, `city`, `image`, `occupation`) VALUES
-('FMTN_1003', '12', 'aurcm', '15000', 'college', 'Madurai', '3840x2160.jpg', '');
+INSERT INTO `tenant_as_owner` (`u_id`, `house_no`, `address`, `rent`, `about`, `city`, `image`, `occupation`, `share_status`) VALUES
+('FMTN_1003', '12', 'aurcm', '15000', 'college', 'Madurai', '3840x2160.jpg', '', 'no'),
+('FMTN_1003', '12', 'aurcm', '15000', 'college', 'Madurai', '3840x2160.jpg', '', 'no'),
+('FMTN_1003', '12', 'aurcm', '15000', 'college', 'Madurai', '3840x2160.jpg', '', 'no'),
+('FMTN_1003', '12', 'aurcm', '15000', 'college', 'Madurai', '3840x2160.jpg', '', 'no');
 
 -- --------------------------------------------------------
 
@@ -262,7 +269,8 @@ CREATE TABLE `tenant_reg` (
 
 INSERT INTO `tenant_reg` (`u_id`, `r_no`, `name`, `email`, `password`, `occupation`, `address`, `city`, `state`, `photo_img`, `smartcard_doc`, `aadhar_doc`, `aadhar_no`, `phone_no`, `status`) VALUES
 ('', 0, 'mmm', 'mailing', '', '', '', '', '', '', '', '', 0, 0, ''),
-('FMTN_1003', 0, 'nithi', 'nithi@gmail.com', '1', 'developer', 'anna university regional campus madurai', 'madurai', 'Tamil Nadu', 'cse.jpg', 'ai_chip.jpg', 'coding.jpg', 2147483647, 1234567890, 'Family');
+('FMTN_1003', 0, 'nithi', 'nithi@gmail.com', '1', 'developer', 'anna university regional campus madurai', 'madurai', 'Tamil Nadu', 'cse.jpg', 'ai_chip.jpg', 'coding.jpg', 2147483647, 1234567890, 'Family'),
+('FMTN_1003', 0, 'mathan', 'mazzmathan2002@gmail.com', 'tyui78889', 'developer', 'Jakkasamudram', 'Dharmapuri', 'Tamil Nadu', 'AI_1.jpg', 'ai_chip_1.jpg', 'be kind_1.jpg', 2147483647, 2147483647, 'Bachelor');
 
 -- --------------------------------------------------------
 
