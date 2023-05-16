@@ -225,6 +225,7 @@ class dbcontrollers extends BaseController
     // get_requests
     public function  get_requests()
     {
+        $unique_id = session('u_id');
         $res = $this->datas->get_requests_model("FMTN_1003");
 
         // echo "<pre>";

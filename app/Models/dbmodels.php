@@ -391,7 +391,6 @@ class Dbmodels extends Model
         $query = $db->table('new_house  as d');
         $query->select('d.*,s.*');
         $query->join('tenant_reg as s','s.u_id=d.tenent_id');
-        
         $query->where('s.u_id', $uid);
         // $array = [
         //     'u_id' => $unique_id, 

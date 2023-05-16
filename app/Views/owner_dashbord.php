@@ -339,6 +339,7 @@ $session = \Config\Services::session();
                     success: function(res) {
                         alert(res);
                         // send accept mail
+                        // window.location.href = "<?php echo base_url('public/index.php/home/accept_house') ?>";
                         location.reload();
                     },
                     error: function(er) {

@@ -259,4 +259,35 @@ class Home extends BaseController
     //     }
 
     // }
+    public function accept_house()
+    {
+        $session = Services::session();
+        $email_id = session('email_id');
+        // $otp = mt_rand(100000, 999999);
+        // $this->session->set('storedOTP', $otp);
+
+        // $res = $this->datas->insert_otp($otp);
+        // $u_id = session('u_id');
+
+        $email = Services::email();
+
+        $email->setFrom('flatmates09@gmail.com', 'Flatmates');
+        $email->setTo($email_id);
+        // $email->setTo('nitheshwaran003@gmail.com');
+        // $email->setTo('nitheshwaran003@gmail.com');
+        // $email->setCC('another@another-example.com');
+        // $email->setBCC('them@their-example.com');
+
+        $email->setSubject('OTP Verification');
+        $email->setMessage('Your OTP: from flatmates ');
+
+        if ($email->send()) {
+            echo 'OTP email sent successfully.';
+        } else {
+            echo 'Error sending OTP email: ' . $email->printDebugger();
+            $session = Services::session();
+            $session->destroy();
+        }
+        return view('otp_verification_owner');
+    }
 }
