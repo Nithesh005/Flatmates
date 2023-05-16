@@ -38,6 +38,7 @@ class dbcontrollers extends BaseController
         // data
         $sname = $this->request->getvar('sname');
         $email_id = $this->request->getvar('email_id');
+        // $this->session->set('email_id', $tmp['email_id']);
         $mobile = $this->request->getvar('mobile');
         $password_id = $this->request->getvar('password_id');
         $occupation_id = $this->request->getvar('occupation_id');
