@@ -321,7 +321,8 @@ class dbcontrollers extends BaseController
     
     public function tenant_delete_btn()
     {
-        $res = $this->datas->tenant_delete_button_model();
+        $house_no = $this->request->getvar('house_no');
+        $res = $this->datas->tenant_delete_button_model($house_no);
         echo json_encode($res);
     }
 

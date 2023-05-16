@@ -170,19 +170,19 @@
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
-    $.ajax({
-        url: "<?php echo base_url('public/index.php/dbcontrollers/tao_cards') ?>",
-        method: "POST",
-        dataType: "json",
-        success: function (res) {
-            alert(res);
+    // $.ajax({
+    //     url: "<?php echo base_url('public/index.php/dbcontrollers/tao_cards') ?>",
+    //     method: "POST",
+    //     dataType: "json",
+    //     success: function (res) {
+    //         alert(res);
             
-        },
-        error: function (er) {
+    //     },
+    //     error: function (er) {
 
-        }
+    //     }
 
-    })
+    // })
     // $('.apply_card').append(element);
     //                 var house_no = items.house_no;
                     $('#apply_btn').click(function () {
