@@ -316,6 +316,23 @@ class dbcontrollers extends BaseController
         session()->set('id', $house_no);
         echo json_encode($res);
     }
+
+    
+    public function tenant_delete_btn()
+    {
+        $res = $this->datas->tenant_delete_button_model();
+        echo json_encode($res);
+    }
+
+    public function tenant_apply_button()
+    {
+        // $house_no = $this->request->getvar('house_no');
+        // $res = $this->datas->tenant_apply_button_model($house_no);
+        // session()->set('id', $house_no);
+        // echo json_encode($res);
+        $res = $this->datas->tenant_apply_button_model();
+        echo json_encode($res);
+    }
     // chat_page
     public function chat_page()
     {

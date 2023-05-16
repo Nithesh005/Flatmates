@@ -202,6 +202,51 @@ class Dbmodels extends Model
         }
     }
 
+
+    public function tenant_apply_button_model()
+    {
+        // $unique_id = session('u_id');
+        // $db = \Config\Database::connect();
+
+        // $query = $db->table('new_house');
+        // $data = [
+        //     'requests' => 'Requested',
+        //     'tenent_id' => $unique_id,
+        // ];
+        // $query->where('house_no', $house_no);
+        // $res = $query->update($data);
+        // if (!empty($res)) {
+        //     return true; // Update successful
+        // } else {
+        //     return false; // Update failed
+        // }
+        $db = \Config\Database::connect();
+        $query = $db->table('tenant_as_owner');
+        $query->select('*');
+        $res = $query->get()->getResultArray();
+        return $res;
+    }
+
+    
+    public function tenant_delete_button_model($house_no)
+    {
+        // $db = \Config\Database::connect();
+        // $query = $db->table('tenant_as_owner');
+        // $query->select('*');
+        // $res = $query->get()->getResultArray();
+        // return $res;
+        $db = \Config\Database::connect();
+        $query = $db->table('tenant_as_owner');
+        $query->where('house_no', $house_no);
+        $res = $query->delete();
+
+        if ($res) {
+            return "Successfully Deleted";
+        } else {
+            return "Couldn't Delete";
+        }
+    }
+
     // accept_status_model
     public function  accept_status_model($house_no)
     {
