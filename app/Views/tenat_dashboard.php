@@ -226,7 +226,7 @@ $session = \Config\Services::session();
         <div class="container d-flex justify-content-end add_house_row">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".exampleModal">My
                 house</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".exampleModal1">Requests</button>
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".exampleModal1">Requests</button> -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".exampleModal2">Shared
                 House</button>
         </div>

@@ -136,7 +136,7 @@
     <div class="card-content">
 
 
-        <div class="card col-3 card_index apply_card">
+        <!-- <div class="card col-3 card_index apply_card">
             <div class="card-image">
                 <img class="img-fluid" src="<?php echo base_url() ?>" alt="Alternate Text" height="100px"
                     width="400px" />
@@ -160,7 +160,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
 </body>
@@ -181,41 +181,40 @@
                 function (items) {
                     var element = $();
                     element = element.add(
-                        '<div class="card col-3 card_index apply_card">'+
+                        '<div class="card col-3 card_index apply_card">' +
                         '<div class="card-image">' +
                         '<img class="img-fluid" ' +
                         'src="<?php echo base_url() ?>/public/public/uploads/' + items.u_id + '/' + items.image + '" ' +
                         'alt="Alternate Text" height="100px" width="400px"  />' +
                         '</div>' +
-                            '<div class="card-image-overlay m-auto">'+
-                                '<span class="card-detail-badge"> ₹ 6000 </span>'+
-                                '<span class="card-detail-badge"> 5BHK </span>'+
-                            '</div>'+
-                            '<div class="col-12">'+
-                                '<div class="card-body">'+
-                                    '<h5 class="card-title">About Home</h5>'+
-                                    '<div class="card-title house_no" id=" items.house_no" value="mm"> nice home </div>'+
-                                    '<p class="card-text">' + 'House No' + ':' + items.house_no + '</p>' +
-                        '<p class="card-text">' + 'DESCRIPTION' + ':' + items.description + '</p>' +
+                        '<div class="card-image-overlay m-auto">' +
+                        '<span class="card-detail-badge"> ₹ 6000 </span>' +
+                        '<span class="card-detail-badge"> 5BHK </span>' +
+                        '</div>' +
+                        '<div class="col-12">' +
+                        '<div class="card-body">' +
+                        '<p class="card-text">' + 'House No' + ':' + items.house_no + '</p>' +
+                        '<p class="card-text">' + 'Occupation' + ':' + items.occupation + '</p>' +
                         '<p class="card-text">' + 'About Home' + ':' + items.about + '</p>' +
-                        '<p class="card-text">' + 'Members allowed' + ':' + items.members + '</p>' +
+                        // '<p class="card-text">' + 'Members allowed' + ':' + items.members + '</p>' +
                         '<p class="card-text">' + 'City' + ':' + items.city + '</p>' +
-                        '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
-                                    '<br>'+
-                                        '<div class="social_btn">'+
-                                            '<button type="button" class="btn btn-info button4" id="apply_btn">Apply</button>'+
-                                            '<button type="button" class="btn btn-success button3" id="chat_btn"onclick="chat_page()">Chat</button>'+
-                                        '</div>'+
-                                '</div>'+
-                            '</div>'+
+                        // '<p class="card-text">' + 'Zipcode' + ':' + items.zipcode + '</p>' +
+                        '<br>' +
+                        '<div class="social_btn">' +
+                        '<button type="button" class="btn btn-info button4" id="apply_btn">Apply</button>' +
+                        '<button type="button" class="btn btn-success button3" id="chat_btn"onclick="chat_page()">Chat</button>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
                         '</div>'
                     )
                     $('.card-content').append(element);
-                }
-            )
+             
+                })
         },
         error: function (er) {
-
+            console.log("Login Error");
+               console.log(er);
         }
 
     })
