@@ -136,7 +136,7 @@
     <div class="card-content">
 
 
-        <div class="card col-3 card_index">
+        <div class="card col-3 card_index apply_card">
             <div class="card-image">
                 <img class="img-fluid" src="<?php echo base_url() ?>" alt="Alternate Text" height="100px"
                     width="400px" />
@@ -165,6 +165,10 @@
     </div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
+<script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
     $.ajax({
         url: "<?php echo base_url('public/index.php/dbcontrollers/tao_cards') ?>",
@@ -172,12 +176,38 @@
         dataType: "json",
         success: function (res) {
             alert(res);
+            
         },
         error: function (er) {
 
         }
 
     })
+    // $('.apply_card').append(element);
+    //                 var house_no = items.house_no;
+                    $('#apply_btn').click(function () {
+                        // event.preventDefault();
+                        // alert(house_no);
+                        $.ajax({
+                            url: "<?php echo base_url('public/index.php/dbcontrollers/tenant_apply_button'); ?>",
+                            method: "POST",
+                            dataType: "json",
+                            // data: {
+                            //     house_no: house_no,
+                            // },
+                            success: function (res) {
+                                console.log("ajax woking");
+                                console.log(res)
+                                // var button = document.getElementById("apply_btn");
+                                // button.innerHTML = "Applied";
+                                // alert(res)
+                            },
+                            error: function (er) {
+                                console.log("Login Error");
+                                console.log(er);
+                            }
+                        });
+                    });
 
 
 </script>
