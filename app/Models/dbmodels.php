@@ -230,17 +230,18 @@ class Dbmodels extends Model
     
     public function tenant_delete_button_model($house_no)
     {
-        // $db = \Config\Database::connect();
-        // $query = $db->table('tenant_as_owner');
-        // $query->select('*');
-        // $res = $query->get()->getResultArray();
-        // return $res;
+        $unique_id = session('u_id');
         $db = \Config\Database::connect();
         $query = $db->table('tenant_as_owner');
+        $query->where('u_id', $unique_id);
         $query->where('house_no', $house_no);
-        $res = $query->delete();
-
-        if ($res) {
+        $data = [
+            'u_id' => $unique_id,
+            'share_status' => 'no',
+        ];
+        $res = $query->update($data);
+    //    return $res;
+        if ($res == true) {
             return "Successfully Deleted";
         } else {
             return "Couldn't Delete";
@@ -319,6 +320,7 @@ class Dbmodels extends Model
             'about' => $data['about'],
             'city' => $data['city'],
             'image' => $data['image'],
+            'share_status'=>"yes",
             // 'occupation' => $data['occupation'],
         ];
         $query = $db->table('tenant_as_owner');
@@ -339,6 +341,7 @@ class Dbmodels extends Model
         $query = $db->table('tenant_as_owner');
         $query->select('*');
         $query->where('u_id', "$unique_id");
+        $query->where('share_status', "yes");
         $res = $query->get()->getResultArray();
         return $res;
     }

@@ -10,16 +10,10 @@ $session = \Config\Services::session();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Font aswesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- css -->
@@ -212,7 +206,7 @@ $session = \Config\Services::session();
 
 
     <!-- <h1>user id<?php //echo session('u_id'); 
-    ?></h1> -->
+                    ?></h1> -->
 
     <?php require_once "after_login_header.php"; ?>
 
@@ -232,13 +226,11 @@ $session = \Config\Services::session();
         <div class="container d-flex justify-content-end add_house_row">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".exampleModal">My
                 house</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-target=".exampleModal1">Requests</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".exampleModal1">Requests</button>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".exampleModal2">Shared
                 House</button>
         </div>
-        <div class="modal fade exampleModal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade exampleModal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -250,8 +242,7 @@ $session = \Config\Services::session();
                 </div>
             </div>
         </div>
-        <div class="modal fade exampleModal1" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade exampleModal1" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -260,11 +251,8 @@ $session = \Config\Services::session();
                     </div>
                     <div class="card-content">
                         <div class="user-info">
-                            <div class="user-info"
-                                style="display: flex;  justify-content: center; align-items: center;">
-                                <img class="image_req"
-                                    src="<?php echo base_url() ?>/public/public/uploads/ item.u_id + / item.photo_img + "
-                                    alt="Alternate Text" height="50px" width="50px" />
+                            <div class="user-info" style="display: flex;  justify-content: center; align-items: center;">
+                                <img class="image_req" src="<?php echo base_url() ?>/public/public/uploads/ item.u_id + / item.photo_img + " alt="Alternate Text" height="50px" width="50px" />
                             </div>
                             <p class="username" style="font-size: 20px;"> item.name + </p>
                             <p class="email" style="font-size: 20px;"> item.email + </p>
@@ -282,8 +270,7 @@ $session = \Config\Services::session();
         </div>
     </div>
 
-    <div class="modal fade exampleModal2" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade exampleModal2" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
@@ -293,8 +280,7 @@ $session = \Config\Services::session();
                 <div class="card-content ">
                     <div class="card col-3 card_index myshare">
                         <div class="card-image">
-                            <img class="img-fluid" src="<?php echo base_url() ?>" alt="Alternate Text" height="100px"
-                                width="400px" />
+                            <img class="img-fluid" src="<?php echo base_url() ?>" alt="Alternate Text" height="100px" width="400px" />
                         </div>
                         <div class="card-image-overlay m-auto">
                             <span class="card-detail-badge"> ₹ 6000 </span>
@@ -336,19 +322,18 @@ $session = \Config\Services::session();
 <script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
-
     // get tenant shared house
 
     $.ajax({
         url: "<?php echo base_url('public/index.php/dbcontrollers/get_tenant_shared_house') ?>",
         method: "POST",
         dataType: "json",
-        success: function (res) {
+        success: function(res) {
             console.log("ajax woking");
             console.log(res);
             $('.myshare').empty();
             res.forEach(
-                function (items) {
+                function(items) {
                     var element = $();
                     element = element.add(
                         '<img class="img-fluid" ' +
@@ -373,13 +358,36 @@ $session = \Config\Services::session();
                         '<button type="button" id="delete_btn" class="btn btn-danger">Delete Home</button>' +
                         '</div>' +
                         '</div>'
-
                     )
                     $('.myshare').append(element);
+                    var house_no = items.house_no;
+                    $('#delete_btn').click(function() {
+                        // event.preventDefault();
+                        // alert(house_no);
+                        $.ajax({
+                            url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_delete_btn'); ?>",
+                            method: "POST",
+                            dataType: "json",
+                            data: {
+                                house_no: house_no,
+                            },
+                            success: function(res) {
+                                // console.log("delete ajax woking");
+                                // shareText();
+                                console.log(res);
+                                location.reload();
+                            },
+                            error: function(er) {
+                                console.log("Login Error");
+                                console.log(er);
+                            }
+                        });
+                    })
+
                 }
             )
         },
-        error: function (er) {
+        error: function(er) {
             console.log("error")
         }
 
@@ -398,12 +406,12 @@ $session = \Config\Services::session();
         url: "<?php echo base_url('public/index.php/Dbcontrollers/my_house') ?>",
         method: "POST",
         dataType: "json",
-        success: function (res) {
+        success: function(res) {
             console.log(res);
             console.log("ajax woking");
             $('.myhouse').empty();
             res.forEach(
-                function (items) {
+                function(items) {
                     var element = $();
                     element = element.add(
                         '<div class="card col-3 card_index">' +
@@ -431,7 +439,7 @@ $session = \Config\Services::session();
                     );
                     $('.myhouse').append(element);
                     // tenant as owner
-                    $('#share_btn').click(function () {
+                    $('#share_btn').click(function() {
                         var house_no = items.house_no;
                         var address = items.address;
                         var rent = items.rent;
@@ -452,16 +460,18 @@ $session = \Config\Services::session();
                                 image: image,
                                 // occupation:occupation,
                             },
-                            success: function (res) {
+                            success: function(res) {
                                 console.log(res);
+                                location.reload();
+                                // alert(res);
                             },
-                            error: function (er) { }
+                            error: function(er) {}
 
                         })
                     })
                 });
         },
-        error: function (er) {
+        error: function(er) {
             // console.error(er);
             console.log("error")
         }
@@ -473,12 +483,12 @@ $session = \Config\Services::session();
         url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_card_controller'); ?>",
         method: "POST",
         dataType: "json",
-        success: function (res) {
+        success: function(res) {
             console.log(res);
             console.log("ajax woking");
             $('.tenant_card').empty();
             res.forEach(
-                function (items) {
+                function(items) {
                     var element = $();
                     element = element.add(
                         '<div class="card col-3 card_index">' +
@@ -513,7 +523,7 @@ $session = \Config\Services::session();
                     );
                     $('.tenant_card').append(element);
                     var house_no = items.house_no;
-                    element.find('#apply_btn').click(function () {
+                    element.find('#apply_btn').click(function() {
                         // event.preventDefault();
                         alert(house_no);
                         $.ajax({
@@ -523,18 +533,18 @@ $session = \Config\Services::session();
                             data: {
                                 house_no: house_no,
                             },
-                            success: function (res) {
+                            success: function(res) {
                                 var button = document.getElementById("apply_btn");
                                 button.innerHTML = "Applied";
                                 // alert(res)
                             },
-                            error: function (er) {
+                            error: function(er) {
                                 console.log("Login Error");
                                 console.log(er);
                             }
                         });
                     });
-                    element.find('#chat_btn').click(function () {
+                    element.find('#chat_btn').click(function() {
                         // alert(house_no)
                         $.ajax({
                             url: "<?php echo base_url('public/index.php/Dbcontrollers/chat_page'); ?>",
@@ -543,44 +553,26 @@ $session = \Config\Services::session();
                             data: {
                                 house_no: house_no,
                             },
-                            success: function (res) {
+                            success: function(res) {
                                 // alert(res)
                                 location.replace("<?php echo base_url('./public/index.php/home/chat') ?>");
                             },
-                            error: function (er) {
+                            error: function(er) {
                                 alert(res)
                             }
                         })
                     })
-                    $('#delete_btn').click(function () {
-                        // event.preventDefault();
-                        alert(house_no);
-                        $.ajax({
-                            url: "<?php echo base_url('public/index.php/Dbcontrollers/tenant_delete_btn'); ?>",
-                            method: "POST",
-                            dataType: "json",
-                            data: {
-                                house_no: house_no,
-                            },
-                            success: function (res) {
-                                console.log("delete ajax woking");
-                                console.log(res)
-                              
-                            },
-                            error: function (er) {
-                                console.log("Login Error");
-                                console.log(er);
-                            }
-                        });
-                    })
                 }
             );
         },
-        error: function (er) {
+        error: function(er) {
             // console.error(er);
             console.log("error")
         }
     })
+
+
+
 
 
 
